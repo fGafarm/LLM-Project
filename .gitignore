@@ -1,0 +1,44 @@
+# Environment
+backend/.env
+.env
+*.env
+!.env.example
+
+# Keys and credentials
+backend/keys/*.json
+keys/*.json
+*.pem
+*.key
+
+# Outputs
+backend/output/
+**/EDINET_DL/
+**/*.zip
+**/errors_*.json
+**/manifest_*.json
+**/logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.venv/
+venv/
+env/
+.eggs/
+*.egg-info/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
