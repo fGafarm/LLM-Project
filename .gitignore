@@ -18,6 +18,39 @@ backend/output/
 **/manifest_*.json
 **/logs/
 
+# Data stores (synced via R2, not git)
+xbrl_store/
+financial_analysis_system/xbrl_store/
+fixed_assets_store/
+land_price_data/
+pdf_xbrl/
+
+# StockFlow lives in its own repo (fGafarm/kinmyakucode)
+StockFlow/
+
+# Reports (large, locally generated)
+financial_analysis_system/Report*/
+financial_analysis_system/log/
+financial_analysis_system/all_*.txt
+financial_analysis_system/audit_*.txt
+financial_analysis_system/batch_*.json
+financial_analysis_system/batch_*.log
+financial_analysis_system/*.png
+
+# Batch progress / temp
+batch_progress*.json
+*_resume.log
+*_output.log
+*.tmp
+_tmp_*
+chemstat*.png
+
+# Untracked workspaces
+PDF_Getter/
+.claude/
+_buzz_*.json
+_tmp_*.py
+
 # Python
 __pycache__/
 *.pyc

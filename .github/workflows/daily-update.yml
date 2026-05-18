@@ -1,0 +1,89 @@
+name: Daily Stock Data Update
+
+on:
+  schedule:
+    # 21:00 UTC = 06:00 JST (daily)
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout LLM-Project (this repo)
+        uses: actions/checkout@v4
+        with:
+          path: project
+
+      - name: Checkout kinmyakucode (frontend repo)
+        uses: actions/checkout@v4
+        with:
+          repository: fGafarm/kinmyakucode
+          token: ${{ secrets.KINMYAKU_PUSH_TOKEN }}
+          path: project/StockFlow
+          fetch-depth: 2
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r project/requirements-daily.txt
+
+      - name: Download data from R2
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        working-directory: project
+        run: |
+          python r2_sync.py download financial_analysis_system/xbrl_store fixed_assets_store land_price_data
+
+      - name: Run daily_update
+        env:
+          EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
+          Fudousan_API_KEY: ${{ secrets.FUDOUSAN_API_KEY }}
+          PROJECT_ROOT: ${{ github.workspace }}/project
+          PDF_ROOT: ${{ github.workspace }}/project/pdf_xbrl
+        working-directory: project
+        run: |
+          python daily_update.py --days 2
+
+      - name: Upload changed data back to R2
+        if: always()
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        working-directory: project
+        run: |
+          python r2_sync.py upload-changed financial_analysis_system/xbrl_store fixed_assets_store --since 14400
+
+      - name: Commit and push frontend changes
+        working-directory: project/StockFlow
+        run: |
+          git config user.name "kinmyaku-bot"
+          git config user.email "bot@kinmyakucode.com"
+          git add frontend/public/data/
+          if git diff --cached --quiet; then
+            echo "No frontend changes to commit"
+            exit 0
+          fi
+          DATE=$(date -u +%Y-%m-%d)
+          git commit -m "daily: auto-update ($DATE) [bot]"
+          git push origin main
+
+      - name: Upload log artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-update-log
+          path: project/logs/*.log
+          retention-days: 14
