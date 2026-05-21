@@ -28,14 +28,22 @@ from typing import Optional
 # Summary iXBRL 主要タグ → 内部フィールド名のマッピング
 # ============================================================
 TANSHIN_TAG_MAP = {
-    # P/L (連結)
+    # P/L (連結) — J-GAAP
     "tse-ed-t:NetSales": "revenue",
-    "tse-ed-t:Revenue": "revenue",  # IFRS
     "tse-ed-t:OperatingIncome": "operating_income",
     "tse-ed-t:OrdinaryIncome": "ordinary_income",
     "tse-ed-t:NetIncome": "net_income",
     "tse-ed-t:ProfitAttributableToOwnersOfParent": "net_income",
     "tse-ed-t:ComprehensiveIncome": "comprehensive_income",
+    # P/L (連結) — IFRS
+    "tse-ed-t:SalesIFRS": "revenue",
+    "tse-ed-t:Revenue": "revenue",
+    "tse-ed-t:RevenueIFRS": "revenue",
+    "tse-ed-t:OperatingIncomeIFRS": "operating_income",
+    "tse-ed-t:ProfitBeforeTaxIFRS": "ordinary_income",
+    "tse-ed-t:ProfitIFRS": "net_income_total",
+    "tse-ed-t:ProfitAttributableToOwnersOfParentIFRS": "net_income",
+    "tse-ed-t:ComprehensiveIncomeIFRS": "comprehensive_income",
     # B/S (連結)
     "tse-ed-t:TotalAssets": "total_assets",
     "tse-ed-t:NetAssets": "net_assets",
@@ -55,19 +63,26 @@ TANSHIN_TAG_MAP = {
     "tse-ed-t:DividendPayoutRatioAnnual": "dividend_payout_ratio",
     # Ratios
     "tse-ed-t:NetIncomeToShareholdersEquityRatio": "roe",
+    "tse-ed-t:NetIncomeToShareholdersEquityRatioIFRS": "roe",
     "tse-ed-t:OperatingIncomeToNetSalesRatio": "operating_margin",
+    "tse-ed-t:OperatingIncomeToSalesRatioIFRS": "operating_margin",
     "tse-ed-t:OrdinaryIncomeToTotalAssetsRatio": "roa",
+    "tse-ed-t:ProfitBeforeTaxToTotalAssetsRatioIFRS": "roa",
     # Forecast (来期予想)
     "tse-ed-t:ForecastNetSales": "forecast_revenue",
     "tse-ed-t:ForecastOperatingIncome": "forecast_operating_income",
     "tse-ed-t:ForecastOrdinaryIncome": "forecast_ordinary_income",
     "tse-ed-t:ForecastNetIncome": "forecast_net_income",
     "tse-ed-t:ForecastNetIncomePerShare": "forecast_eps",
-    # YoY rates (already %)
+    # YoY rates (already %) - J-GAAP
     "tse-ed-t:ChangeInNetSales": "revenue_growth_rate",
     "tse-ed-t:ChangeInOperatingIncome": "operating_income_growth_rate",
     "tse-ed-t:ChangeInOrdinaryIncome": "ordinary_income_growth_rate",
     "tse-ed-t:ChangeInNetIncome": "net_income_growth_rate",
+    # YoY rates - IFRS
+    "tse-ed-t:ChangeInSalesIFRS": "revenue_growth_rate",
+    "tse-ed-t:ChangeInOperatingIncomeIFRS": "operating_income_growth_rate",
+    "tse-ed-t:ChangeInProfitBeforeTaxIFRS": "ordinary_income_growth_rate",
 }
 
 
@@ -88,12 +103,14 @@ QUARTER_SUFFIX_MAP = {"01": None, "02": 1, "03": 2, "04": 3}
 
 def _parse_filename(name: str) -> Optional[tuple]:
     """Parse TDnet ixbrl filename like:
-    tse-acedjpfr-76020-2026-03-31-01-2026-05-13-...
+    tse-acedjpfr-76020-2026-03-31-01-2026-05-13-... (J-GAAP)
+    tse-acediffr-64570-2026-03-31-01-2026-05-15-... (IFRS)
+    tse-acedusfr-...                                   (US-GAAP)
 
     Returns: (ticker, period_end YYYY-MM-DD, quarter or None, announcement YYYY-MM-DD)
     """
     m = re.search(
-        r"tse-acedjp(?:fr|sm|cn)-(\d{4,5})-(\d{4}-\d{2}-\d{2})-(\d{2})-(\d{4}-\d{2}-\d{2})",
+        r"tse-(?:aced|aned|qned)(?:jp|if|us)(?:fr|sm|cn)-(\d{4,5})-(\d{4}-\d{2}-\d{2})-(\d{2})-(\d{4}-\d{2}-\d{2})",
         name,
     )
     if not m:
@@ -165,6 +182,9 @@ def extract_tanshin_data(zip_bytes: bytes) -> Optional[TanshinExtractResult]:
         m = re.search(rf'\b{key}="([^"]*)"', s)
         return m.group(1) if m else None
 
+    # Detect if Consolidated contexts exist (avoid "NonConsolidatedMember" substring trap)
+    has_consolidated = bool(re.search(r"(?<!Non)ConsolidatedMember", content))
+
     buckets: dict[str, dict[str, float]] = {}
     for m in open_pattern.finditer(content):
         attrs, val_text = m.group(1), m.group(2)
@@ -176,7 +196,7 @@ def extract_tanshin_data(zip_bytes: bytes) -> Optional[TanshinExtractResult]:
         if tag_name not in TANSHIN_TAG_MAP:
             continue
         # Only "Consolidated" results (skip NonConsolidatedMember unless solo company)
-        if "NonConsolidatedMember" in ctx and "ConsolidatedMember" in content:
+        if "NonConsolidatedMember" in ctx and has_consolidated:
             continue
         # Classify context
         if "ForecastMember" in ctx:
