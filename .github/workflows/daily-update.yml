@@ -67,6 +67,7 @@ jobs:
           python r2_sync.py upload-changed financial_analysis_system/xbrl_store fixed_assets_store --since 14400
 
       - name: Commit and push frontend changes
+        id: push_frontend
         working-directory: project/StockFlow
         run: |
           git config user.name "kinmyaku-bot"
@@ -74,11 +75,25 @@ jobs:
           git add frontend/public/data/
           if git diff --cached --quiet; then
             echo "No frontend changes to commit"
+            echo "pushed=false" >> $GITHUB_OUTPUT
             exit 0
           fi
           DATE=$(date -u +%Y-%m-%d)
+          # 送信前にdiff URLリスト用ファイルを生成
+          git diff --cached --name-only > /tmp/changed.txt
           git commit -m "daily: auto-update ($DATE) [bot]"
           git push origin main
+          echo "pushed=true" >> $GITHUB_OUTPUT
+
+      - name: Notify Bing IndexNow (changed companies)
+        if: steps.push_frontend.outputs.pushed == 'true'
+        working-directory: project/StockFlow
+        continue-on-error: true
+        run: |
+          # Cloudflare Pages のデプロイ完了を 60秒待ってから送信
+          # (Bing は IndexNow キーファイルを取得して検証するため、本番にキーが配置されてからping)
+          sleep 60
+          python scripts/indexnow_submit.py --mode changed --diff-file /tmp/changed.txt
 
       - name: Upload log artifact
         if: always()
