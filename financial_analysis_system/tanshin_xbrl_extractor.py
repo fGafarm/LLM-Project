@@ -103,25 +103,87 @@ QUARTER_SUFFIX_MAP = {"01": None, "02": 1, "03": 2, "04": 3}
 
 def _parse_filename(name: str) -> Optional[tuple]:
     """Parse TDnet ixbrl filename like:
-    tse-acedjpfr-76020-2026-03-31-01-2026-05-13-... (J-GAAP)
-    tse-acediffr-64570-2026-03-31-01-2026-05-15-... (IFRS)
-    tse-acedusfr-...                                   (US-GAAP)
+    tse-acedjpfr-76020-2026-03-31-01-2026-05-13-... (J-GAAP Attachment)
+    tse-acediffr-64570-2026-03-31-01-2026-05-15-... (IFRS Attachment)
+    tse-acedusfr-...                                   (US-GAAP Attachment)
 
     Returns: (ticker, period_end YYYY-MM-DD, quarter or None, announcement YYYY-MM-DD)
     """
     m = re.search(
-        r"tse-(?:aced|aned|qned)(?:jp|if|us)(?:fr|sm|cn)-(\d{4,5})-(\d{4}-\d{2}-\d{2})-(\d{2})-(\d{4}-\d{2}-\d{2})",
+        r"tse-(?:aced|aned|qned)(?:jp|if|us)(?:fr|sm|cn)-([0-9A-Z]{4,5})-(\d{4}-\d{2}-\d{2})-(\d{2})-(\d{4}-\d{2}-\d{2})",
         name,
     )
     if not m:
         return None
     ticker_raw = m.group(1)
-    ticker = ticker_raw[:4]  # strip check digit
+    ticker = ticker_raw[:4]  # strip check digit (alpha-numeric tickers like 130A0 → 130A)
     period_end = m.group(2)
     suffix = m.group(3)
     announcement = m.group(4)
     quarter = QUARTER_SUFFIX_MAP.get(suffix)
     return ticker, period_end, quarter, announcement
+
+
+def _parse_summary_only_filename(name: str) -> Optional[tuple]:
+    """Parse Summary-only filename like:
+    tse-acedjpsm-59380-20260518359380-ixbrl.htm
+    tse-acedifsm-59380-20260518359380-ixbrl.htm
+    tse-qnedjpsm-130A0-202605113130A0-ixbrl.htm (alpha-numeric ticker)
+
+    Returns: (ticker, announcement YYYY-MM-DD)
+    """
+    m = re.search(
+        r"tse-(?:aced|aned|qned)(?:jp|if|us)sm-([0-9A-Z]{4,5})-(\d{8})[0-9A-Z]+-ixbrl",
+        name,
+    )
+    if not m:
+        return None
+    ticker = m.group(1)[:4]
+    dt = m.group(2)
+    announcement = f"{dt[:4]}-{dt[4:6]}-{dt[6:8]}"
+    return ticker, announcement
+
+
+def _extract_period_end_from_context(content: str) -> Optional[tuple]:
+    """Extract (period_end, quarter) by reading <xbrli:context> periods.
+
+    Looks for the CurrentYearDuration or CurrentQuarterDuration context.
+    Returns (period_end_str, quarter int or None).
+    """
+    # Find context blocks with id containing 'Current'
+    context_pattern = re.compile(
+        r'<xbrli:context\s+id="([^"]+)">(.*?)</xbrli:context>',
+        re.DOTALL,
+    )
+    end_pattern = re.compile(r"<xbrli:endDate>(\d{4}-\d{2}-\d{2})</xbrli:endDate>")
+
+    current_year_end = None
+    current_q_end = None
+    quarter = None
+    for m in context_pattern.finditer(content):
+        cid, body = m.group(1), m.group(2)
+        em = end_pattern.search(body)
+        if not em:
+            continue
+        end_date = em.group(1)
+        if "CurrentAccumulatedQ1" in cid:
+            current_q_end = end_date
+            quarter = 1
+        elif "CurrentAccumulatedQ2" in cid or "CurrentYTDDuration" in cid:
+            if quarter is None:
+                current_q_end = end_date
+                quarter = 2
+        elif "CurrentAccumulatedQ3" in cid:
+            current_q_end = end_date
+            quarter = 3
+        elif "CurrentYearDuration" in cid:
+            current_year_end = end_date
+
+    if current_year_end:
+        return current_year_end, None
+    if current_q_end:
+        return current_q_end, quarter
+    return None
 
 
 def _to_number(s: str) -> Optional[float]:
@@ -152,17 +214,27 @@ def extract_tanshin_data(zip_bytes: bytes) -> Optional[TanshinExtractResult]:
     summary_path = summary_paths[0]
     content = zf.read(summary_path).decode("utf-8", errors="replace")
 
-    # Parse filename → period info (filename inside Summary/ may have different layout)
-    # Try Attachment/*ixbrl.htm filenames which include period_end and suffix
+    # Parse filename → period info. Strategy:
+    # 1. Try Attachment iXBRLs (have period_end-suffix-announcement in filename)
+    # 2. Fallback: parse Summary filename (ticker + announcement only) + read
+    #    <xbrli:context> in Summary content to get period_end.
     attach_paths = [n for n in zf.namelist() if "/Attachment/" in n and n.endswith("-ixbrl.htm")]
     parsed = None
     for p in attach_paths:
         parsed = _parse_filename(Path(p).name)
         if parsed:
             break
+
     if not parsed:
-        # Fall back to summary filename
-        parsed = _parse_filename(Path(summary_path).name)
+        # Summary-only: derive ticker+announcement from Summary filename,
+        # and period_end+quarter from xbrli:context inside Summary content.
+        sum_parse = _parse_summary_only_filename(Path(summary_path).name)
+        period_info = _extract_period_end_from_context(content)
+        if sum_parse and period_info:
+            ticker, announcement = sum_parse
+            period_end, quarter = period_info
+            parsed = (ticker, period_end, quarter, announcement)
+
     if not parsed:
         return None
     ticker, period_end, quarter, announcement = parsed

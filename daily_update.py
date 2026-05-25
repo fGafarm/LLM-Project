@@ -742,6 +742,27 @@ def main():
     unique_tickers = list(dict.fromkeys(all_affected))
     pushed = git_commit_push(unique_tickers, dates[-1], log)
 
+    # Step 8: Audit - 過去N日のTDnet全件 vs xbrl_storeを突合し catastrophic miss を検知
+    log.info("Step 8: Tanshin audit (TDnet vs xbrl_store)")
+    audit_cmd = [
+        PYTHON,
+        str(PROJECT_ROOT / "tanshin_audit.py"),
+        "--days", "7",
+    ]
+    try:
+        audit_result = subprocess.run(
+            audit_cmd, capture_output=True, text=True, timeout=600,
+            encoding="utf-8", errors="replace",
+            env={**os.environ, "PROJECT_ROOT": str(PROJECT_ROOT), "XBRL_STORE": str(XBRL_STORE)},
+        )
+        for line in (audit_result.stdout or "").splitlines()[-15:]:
+            log.info(f"  {line}")
+        if audit_result.returncode != 0:
+            log.warning(f"  AUDIT WARNING: tanshin_audit returned {audit_result.returncode}")
+            # exit code 1 にせず警告止まり (cron 自動実行を止めない)
+    except Exception as e:
+        log.error(f"  Audit error: {e}")
+
     log.info(f"{'='*60}")
     log.info(f"Pipeline complete: {len(unique_tickers)} companies updated, push={'OK' if pushed else 'skipped'}")
     log.info(f"{'='*60}")
