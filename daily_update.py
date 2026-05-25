@@ -574,8 +574,9 @@ def download_tanshinn(date_str: str, industry_map: dict, log: logging.Logger) ->
                     "zip_path": zip_path, "quarter": quarter, "date_str": date_str,
                 })
 
-        if not found_any:
-            break
+        # NOTE: pre-2026-05-25 までは「page1 に 決算短信 があり、なくなったら終了」だったが
+        # TDnet は時間降順表示で、5/25のように朝の決算短信が page2-4 に押し下がる場合あり。
+        # 404 / empty で break するのは fetch_tdnet_page で既に処理済。ここでは継続する。
         page += 1
         time.sleep(0.5)
 
