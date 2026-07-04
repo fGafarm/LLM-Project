@@ -151,10 +151,14 @@ def safe_filename(s: str) -> str:
 def download_reports(docs: list[EdinetDoc], api_key: str, log: logging.Logger) -> list[dict]:
     downloaded = []
     for doc in docs:
-        year_dir = PDF_ROOT / str(doc.fiscal_year) / "有報"
+        # S0 T4: 半期報告書(160)/訂正半期(170) を「訂正有報」と誤ラベルして 有報/ フォルダに
+        # 保存していたバグの修正。有報フォルダは年度抽出 (xbrl_batch_extractor) の入力なので、
+        # 半期が混ざると {year}.json に中間期の数値が入る (減収-50%クラスタの原因、591社)
+        DOC_LABELS = {"120": "有報", "130": "訂正有報", "160": "半期報告書", "170": "訂正半期報告書"}
+        doc_type_label = DOC_LABELS.get(doc.doc_type_code, "その他")
+        subfolder = "半期" if doc.doc_type_code in ("160", "170") else "有報"
+        year_dir = PDF_ROOT / str(doc.fiscal_year) / subfolder
         year_dir.mkdir(parents=True, exist_ok=True)
-
-        doc_type_label = "有報" if doc.doc_type_code == "120" else "訂正有報"
         period_compact = doc.period_end.replace("-", "")
         fname = f"{doc.ticker}_{safe_filename(doc.filer_name)}_{period_compact}_{doc_type_label}_{doc.doc_id}.zip"
         zip_path = year_dir / fname

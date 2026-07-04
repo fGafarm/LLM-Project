@@ -1,0 +1,5558 @@
+{
+ "contaminated": [
+  {
+   "dir": "1376_カネコ種苗株式会社",
+   "code": "1376",
+   "year": 2026,
+   "interim_tags": 140,
+   "currentyear_tags": 0,
+   "revenue": 28838895000.0,
+   "source_file": "1376_カネコ種苗株式会社_20260531_訂正有報_S100XEGI.zip"
+  },
+  {
+   "dir": "1377_株式会社　サカタのタネ",
+   "code": "1377",
+   "year": 2026,
+   "interim_tags": 193,
+   "currentyear_tags": 0,
+   "revenue": 47746000000.0,
+   "source_file": "1377_株式会社　サカタのタネ_20260531_訂正有報_S100XFGH.zip"
+  },
+  {
+   "dir": "137A_Ｃｏｃｏｌｉｖｅ株式会社",
+   "code": "137A",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "137A_Ｃｏｃｏｌｉｖｅ株式会社_20260531_訂正有報_S100XF55.zip"
+  },
+  {
+   "dir": "1381_株式会社アクシーズ",
+   "code": "1381",
+   "year": 2026,
+   "interim_tags": 150,
+   "currentyear_tags": 0,
+   "revenue": 14550000000.0,
+   "source_file": "1381_株式会社アクシーズ_20260630_訂正有報_S100XJ7I.zip"
+  },
+  {
+   "dir": "1382_株式会社ホーブ",
+   "code": "1382",
+   "year": 2026,
+   "interim_tags": 130,
+   "currentyear_tags": 0,
+   "revenue": 1256192000.0,
+   "source_file": "1382_株式会社ホーブ_20260630_訂正有報_S100XK16.zip"
+  },
+  {
+   "dir": "1383_ベルグアース株式会社",
+   "code": "1383",
+   "year": 2026,
+   "interim_tags": 167,
+   "currentyear_tags": 0,
+   "revenue": 3496053000.0,
+   "source_file": "1383_ベルグアース株式会社_20261031_訂正有報_S100YC2J.zip"
+  },
+  {
+   "dir": "1401_株式会社エムビーエス",
+   "code": "1401",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "1401_株式会社エムビーエス_20260531_訂正有報_S100XFBE.zip"
+  },
+  {
+   "dir": "1407_株式会社ウエストホールディングス",
+   "code": "1407",
+   "year": 2026,
+   "interim_tags": 177,
+   "currentyear_tags": 0,
+   "revenue": 15180000000.0,
+   "source_file": "1407_株式会社ウエストホールディングス_20260831_訂正有報_S100XYGC.zip"
+  },
+  {
+   "dir": "1414_ショーボンドホールディングス株式会社",
+   "code": "1414",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 42864000000.0,
+   "source_file": "1414_ショーボンドホールディングス株式会社_20260630_訂正有報_S100XKFB.zip"
+  },
+  {
+   "dir": "1419_タマホーム株式会社",
+   "code": "1419",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 88443000000.0,
+   "source_file": "1419_タマホーム株式会社_20260531_訂正有報_S100XF5Y.zip"
+  },
+  {
+   "dir": "141A_株式会社トライアルホールディングス",
+   "code": "141A",
+   "year": 2026,
+   "interim_tags": 206,
+   "currentyear_tags": 0,
+   "revenue": 674117000000.0,
+   "source_file": "141A_株式会社トライアルホールディングス_20260630_訂正有報_S100XKRV.zip"
+  },
+  {
+   "dir": "1430_ファーストコーポレーション株式会社",
+   "code": "1430",
+   "year": 2026,
+   "interim_tags": 143,
+   "currentyear_tags": 0,
+   "revenue": 15258729000.0,
+   "source_file": "1430_ファーストコーポレーション株式会社_20260531_訂正有報_S100XFGS.zip"
+  },
+  {
+   "dir": "1434_ＪＥＳＣＯホールディングス株式会社",
+   "code": "1434",
+   "year": 2026,
+   "interim_tags": 188,
+   "currentyear_tags": 0,
+   "revenue": 10934080000.0,
+   "source_file": "1434_ＪＥＳＣＯホールディングス株式会社_20260831_訂正有報_S100XY5T.zip"
+  },
+  {
+   "dir": "1438_株式会社岐阜造園",
+   "code": "1438",
+   "year": 2026,
+   "interim_tags": 146,
+   "currentyear_tags": 0,
+   "revenue": 3385263000.0,
+   "source_file": "1438_株式会社岐阜造園_20260930_訂正有報_S100Y4IJ.zip"
+  },
+  {
+   "dir": "1444_株式会社ニッソウ",
+   "code": "1444",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 2611732000.0,
+   "source_file": "1444_株式会社ニッソウ_20260731_訂正有報_S100XREG.zip"
+  },
+  {
+   "dir": "1446_株式会社キャンディル",
+   "code": "1446",
+   "year": 2026,
+   "interim_tags": 141,
+   "currentyear_tags": 0,
+   "revenue": 7717100000.0,
+   "source_file": "1446_株式会社キャンディル_20260930_訂正有報_S100Y3RG.zip"
+  },
+  {
+   "dir": "156A_マテリアルグループ株式会社",
+   "code": "156A",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 4399691000.0,
+   "source_file": "156A_マテリアルグループ株式会社_20260831_訂正有報_S100XYRF.zip"
+  },
+  {
+   "dir": "157A_グリーンモンスター株式会社",
+   "code": "157A",
+   "year": 2026,
+   "interim_tags": 144,
+   "currentyear_tags": 0,
+   "revenue": 1008207000.0,
+   "source_file": "157A_グリーンモンスター株式会社_20260630_訂正有報_S100XL0F.zip"
+  },
+  {
+   "dir": "1716_第一カッター興業株式会社",
+   "code": "1716",
+   "year": 2026,
+   "interim_tags": 183,
+   "currentyear_tags": 0,
+   "revenue": 10893755000.0,
+   "source_file": "1716_第一カッター興業株式会社_20260630_訂正有報_S100XKJF.zip"
+  },
+  {
+   "dir": "1764_工藤建設株式会社",
+   "code": "1764",
+   "year": 2026,
+   "interim_tags": 182,
+   "currentyear_tags": 0,
+   "revenue": 12528355000.0,
+   "source_file": "1764_工藤建設株式会社_20260630_訂正有報_S100XL1E.zip"
+  },
+  {
+   "dir": "1783_株式会社ｆａｎｔａｓｉｓｔａ",
+   "code": "1783",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 1603734000.0,
+   "source_file": "1783_株式会社ｆａｎｔａｓｉｓｔａ_20260331_訂正有報_S100Y457.zip"
+  },
+  {
+   "dir": "1788_株式会社三東工業社",
+   "code": "1788",
+   "year": 2026,
+   "interim_tags": 133,
+   "currentyear_tags": 0,
+   "revenue": 4988653000.0,
+   "source_file": "1788_株式会社三東工業社_20260630_訂正有報_S100XKPT.zip"
+  },
+  {
+   "dir": "1795_株式会社マサル",
+   "code": "1795",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 5146705000.0,
+   "source_file": "1795_株式会社マサル_20260930_訂正有報_S100Y3KW.zip"
+  },
+  {
+   "dir": "1813_株式会社不動テトラ",
+   "code": "1813",
+   "year": 2026,
+   "interim_tags": 192,
+   "currentyear_tags": 0,
+   "revenue": 37299000000.0,
+   "source_file": "1813_株式会社不動テトラ_20260331_訂正有報_S100XF9Z.zip"
+  },
+  {
+   "dir": "1840_株式会社土屋ホールディングス",
+   "code": "1840",
+   "year": 2026,
+   "interim_tags": 188,
+   "currentyear_tags": 0,
+   "revenue": 14018966000.0,
+   "source_file": "1840_株式会社土屋ホールディングス_20260430_訂正有報_S100YBO4.zip"
+  },
+  {
+   "dir": "1844_株式会社大盛工業",
+   "code": "1844",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 3603920000.0,
+   "source_file": "1844_株式会社大盛工業_20260731_訂正有報_S100XP0Z.zip"
+  },
+  {
+   "dir": "1887_日本国土開発株式会社",
+   "code": "1887",
+   "year": 2026,
+   "interim_tags": 204,
+   "currentyear_tags": 0,
+   "revenue": 68323000000.0,
+   "source_file": "1887_日本国土開発株式会社_20260531_訂正有報_S100XFIE.zip"
+  },
+  {
+   "dir": "189A_株式会社Ｄ＆Ｍカンパニー",
+   "code": "189A",
+   "year": 2026,
+   "interim_tags": 136,
+   "currentyear_tags": 0,
+   "revenue": 853926000.0,
+   "source_file": "189A_株式会社Ｄ＆Ｍカンパニー_20260531_訂正有報_S100XFFV.zip"
+  },
+  {
+   "dir": "190A_Ｃｈｏｒｄｉａ　Ｔｈｅｒａｐｅｕｔｉｃｓ株式会社",
+   "code": "190A",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "190A_Ｃｈｏｒｄｉａ　Ｔｈｅｒａｐｅｕｔｉｃｓ株式会社_20260831_訂正有報_S100XYSP.zip"
+  },
+  {
+   "dir": "192A_インテグループ株式会社",
+   "code": "192A",
+   "year": 2026,
+   "interim_tags": 18,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "192A_インテグループ株式会社_20260531_訂正有報_S100XFDD.zip"
+  },
+  {
+   "dir": "194A_株式会社ＷＯＬＶＥＳ　ＨＡＮＤ",
+   "code": "194A",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 2798207000.0,
+   "source_file": "194A_株式会社ＷＯＬＶＥＳ　ＨＡＮＤ_20260630_訂正有報_S100XL5M.zip"
+  },
+  {
+   "dir": "196A_株式会社ＭＦＳ",
+   "code": "196A",
+   "year": 2026,
+   "interim_tags": 139,
+   "currentyear_tags": 0,
+   "revenue": 3250805000.0,
+   "source_file": "196A_株式会社ＭＦＳ_20260630_訂正有報_S100XL0X.zip"
+  },
+  {
+   "dir": "197A_株式会社タウンズ",
+   "code": "197A",
+   "year": 2026,
+   "interim_tags": 20,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "197A_株式会社タウンズ_20260630_訂正有報_S100XL2T.zip"
+  },
+  {
+   "dir": "198A_ＰｏｓｔＰｒｉｍｅ株式会社",
+   "code": "198A",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 322963000.0,
+   "source_file": "198A_ＰｏｓｔＰｒｉｍｅ株式会社_20260531_訂正有報_S100XFQV.zip"
+  },
+  {
+   "dir": "1997_暁飯島工業株式会社",
+   "code": "1997",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "1997_暁飯島工業株式会社_20260228_訂正有報_S100XXU0.zip"
+  },
+  {
+   "dir": "205A_株式会社ロゴスホールディングス",
+   "code": "205A",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 20292814000.0,
+   "source_file": "205A_株式会社ロゴスホールディングス_20260531_訂正有報_S100XFRD.zip"
+  },
+  {
+   "dir": "208A_株式会社構造計画研究所ホールディングス",
+   "code": "208A",
+   "year": 2026,
+   "interim_tags": 180,
+   "currentyear_tags": 0,
+   "revenue": 9678733000.0,
+   "source_file": "208A_株式会社構造計画研究所ホールディングス_20260630_訂正有報_S100XL6E.zip"
+  },
+  {
+   "dir": "211A_株式会社カドス・コーポレーション",
+   "code": "211A",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": 3903000000.0,
+   "source_file": null
+  },
+  {
+   "dir": "2120_株式会社ＬＩＦＵＬＬ",
+   "code": "2120",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 14901000000.0,
+   "source_file": "2120_株式会社ＬＩＦＵＬＬ_20260930_訂正有報_S100Y2UN.zip"
+  },
+  {
+   "dir": "2122_株式会社インタースペース",
+   "code": "2122",
+   "year": 2026,
+   "interim_tags": 141,
+   "currentyear_tags": 0,
+   "revenue": 4945871000.0,
+   "source_file": "2122_株式会社インタースペース_20260930_訂正有報_S100Y3L7.zip"
+  },
+  {
+   "dir": "2153_Ｅ・Ｊホールディングス株式会社",
+   "code": "2153",
+   "year": 2026,
+   "interim_tags": 189,
+   "currentyear_tags": 0,
+   "revenue": 10238000000.0,
+   "source_file": "2153_Ｅ・Ｊホールディングス株式会社_20260531_訂正有報_S100XFIR.zip"
+  },
+  {
+   "dir": "2154_株式会社オープンアップグループ",
+   "code": "2154",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 83572000000.0,
+   "source_file": "2154_株式会社オープンアップグループ_20260630_訂正有報_S100XJX4.zip"
+  },
+  {
+   "dir": "2157_株式会社コシダカホールディングス",
+   "code": "2157",
+   "year": 2026,
+   "interim_tags": 185,
+   "currentyear_tags": 0,
+   "revenue": 38932992000.0,
+   "source_file": "2157_株式会社コシダカホールディングス_20260831_訂正有報_S100XY97.zip"
+  },
+  {
+   "dir": "2164_株式会社地域新聞社",
+   "code": "2164",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2164_株式会社地域新聞社_20260831_訂正有報_S100XY7U.zip"
+  },
+  {
+   "dir": "2168_株式会社パソナグループ",
+   "code": "2168",
+   "year": 2026,
+   "interim_tags": 203,
+   "currentyear_tags": 0,
+   "revenue": 154527000000.0,
+   "source_file": "2168_株式会社パソナグループ_20260531_訂正有報_S100XFCT.zip"
+  },
+  {
+   "dir": "2180_株式会社サニーサイドアップグループ",
+   "code": "2180",
+   "year": 2026,
+   "interim_tags": 177,
+   "currentyear_tags": 0,
+   "revenue": 13508963000.0,
+   "source_file": "2180_株式会社サニーサイドアップグループ_20260630_訂正有報_S100XKXS.zip"
+  },
+  {
+   "dir": "2185_株式会社シイエム・シイ",
+   "code": "2185",
+   "year": 2026,
+   "interim_tags": 168,
+   "currentyear_tags": 0,
+   "revenue": 10235983000.0,
+   "source_file": "2185_株式会社シイエム・シイ_20260930_訂正有報_S100Y2XT.zip"
+  },
+  {
+   "dir": "218A_株式会社Ｌｉｂｅｒａｗａｒｅ",
+   "code": "218A",
+   "year": 2026,
+   "interim_tags": 133,
+   "currentyear_tags": 0,
+   "revenue": 697213000.0,
+   "source_file": "218A_株式会社Ｌｉｂｅｒａｗａｒｅ_20260731_訂正有報_S100XQRN.zip"
+  },
+  {
+   "dir": "2198_アイ・ケイ・ケイホールディングス株式会社",
+   "code": "2198",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 11022095000.0,
+   "source_file": "2198_アイ・ケイ・ケイホールディングス株式会社_20261031_訂正有報_S100YA5N.zip"
+  },
+  {
+   "dir": "2301_株式会社学情",
+   "code": "2301",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2301_株式会社学情_20261031_訂正有報_S100YAZX.zip"
+  },
+  {
+   "dir": "2303_株式会社ドーン",
+   "code": "2303",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2303_株式会社ドーン_20260531_訂正有報_S100XEKD.zip"
+  },
+  {
+   "dir": "2304_株式会社ＣＳＳホールディングス",
+   "code": "2304",
+   "year": 2026,
+   "interim_tags": 180,
+   "currentyear_tags": 0,
+   "revenue": 10383058000.0,
+   "source_file": "2304_株式会社ＣＳＳホールディングス_20260331_訂正有報_S100Y3NM.zip"
+  },
+  {
+   "dir": "2315_株式会社ＣＡＩＣＡ　ＤＩＧＩＴＡＬ",
+   "code": "2315",
+   "year": 2026,
+   "interim_tags": 167,
+   "currentyear_tags": 0,
+   "revenue": 2989927000.0,
+   "source_file": "2315_株式会社ＣＡＩＣＡ　ＤＩＧＩＴＡＬ_20261031_訂正有報_S100YB98.zip"
+  },
+  {
+   "dir": "2345_株式会社クシム",
+   "code": "2345",
+   "year": 2026,
+   "interim_tags": 119,
+   "currentyear_tags": 0,
+   "revenue": 47472000.0,
+   "source_file": "2345_株式会社ＨＯＤＬ１_20261031_訂正有報_S100YBOF.zip"
+  },
+  {
+   "dir": "2353_日本駐車場開発株式会社",
+   "code": "2353",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 19909227000.0,
+   "source_file": "2353_日本駐車場開発株式会社_20260131_訂正有報_S100XJ75.zip"
+  },
+  {
+   "dir": "2370_株式会社メディネット",
+   "code": "2370",
+   "year": 2026,
+   "interim_tags": 18,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2370_株式会社メディネット_20260930_訂正有報_S100Y3SH.zip"
+  },
+  {
+   "dir": "2373_株式会社ケア２１",
+   "code": "2373",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 24802632000.0,
+   "source_file": "2373_株式会社ケア２１_20261031_訂正有報_S100YAUL.zip"
+  },
+  {
+   "dir": "2375_ギグワークス株式会社",
+   "code": "2375",
+   "year": 2026,
+   "interim_tags": 180,
+   "currentyear_tags": 0,
+   "revenue": 11451738000.0,
+   "source_file": "2375_ギグワークス株式会社_20261031_訂正有報_S100YAFT.zip"
+  },
+  {
+   "dir": "2385_株式会社総医研ホールディングス",
+   "code": "2385",
+   "year": 2026,
+   "interim_tags": 140,
+   "currentyear_tags": 0,
+   "revenue": 2414229000.0,
+   "source_file": "2385_株式会社総医研ホールディングス_20260630_訂正有報_S100XKJ6.zip"
+  },
+  {
+   "dir": "2388_株式会社ウェッジホールディングス",
+   "code": "2388",
+   "year": 2026,
+   "interim_tags": 139,
+   "currentyear_tags": 0,
+   "revenue": 524876000.0,
+   "source_file": "2388_株式会社ウェッジホールディングス_20260930_訂正有報_S100Y4I4.zip"
+  },
+  {
+   "dir": "2391_株式会社プラネット",
+   "code": "2391",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2391_株式会社プラネット_20260131_訂正有報_S100XQ5A.zip"
+  },
+  {
+   "dir": "2404_株式会社鉄人化ホールディングス",
+   "code": "2404",
+   "year": 2026,
+   "interim_tags": 182,
+   "currentyear_tags": 0,
+   "revenue": 4910088000.0,
+   "source_file": "2404_株式会社鉄人化ホールディングス_20260831_訂正有報_S100XYO5.zip"
+  },
+  {
+   "dir": "2410_株式会社キャリアデザインセンター",
+   "code": "2410",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2410_株式会社キャリアデザインセンター_20260930_訂正有報_S100Y4D4.zip"
+  },
+  {
+   "dir": "2424_株式会社ブラス",
+   "code": "2424",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 6911014000.0,
+   "source_file": "2424_株式会社ブラス_20260131_訂正有報_S100XPVQ.zip"
+  },
+  {
+   "dir": "2428_ウェルネット株式会社",
+   "code": "2428",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2428_ウェルネット株式会社_20260630_訂正有報_S100XKC5.zip"
+  },
+  {
+   "dir": "2437_Ｓｈｉｎｗａ　Ｗｉｓｅ　Ｈｏｌｄｉｎｇｓ株式会社",
+   "code": "2437",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 606539000.0,
+   "source_file": "2437_Ｓｈｉｎｗａ　Ｗｉｓｅ　Ｈｏｌｄｉｎｇｓ株式会社_20260531_訂正有報_S100XF69.zip"
+  },
+  {
+   "dir": "2449_株式会社プラップジャパン",
+   "code": "2449",
+   "year": 2026,
+   "interim_tags": 152,
+   "currentyear_tags": 0,
+   "revenue": 3568000000.0,
+   "source_file": "2449_株式会社プラップジャパン_20260831_訂正有報_S100XYMZ.zip"
+  },
+  {
+   "dir": "2459_アウンコンサルティング株式会社",
+   "code": "2459",
+   "year": 2026,
+   "interim_tags": 133,
+   "currentyear_tags": 0,
+   "revenue": 100899000.0,
+   "source_file": "2459_アウンコンサルティング株式会社_20260531_訂正有報_S100XEUZ.zip"
+  },
+  {
+   "dir": "245A_株式会社ＩＮＧＳ",
+   "code": "245A",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "245A_株式会社ＩＮＧＳ_20260831_訂正有報_S100XYSS.zip"
+  },
+  {
+   "dir": "2462_ライク株式会社",
+   "code": "2462",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 31914781000.0,
+   "source_file": "2462_ライク株式会社_20260531_訂正有報_S100XFIB.zip"
+  },
+  {
+   "dir": "246A_株式会社アスア",
+   "code": "246A",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "246A_株式会社アスア_20260630_訂正有報_S100XL80.zip"
+  },
+  {
+   "dir": "2477_手間いらず株式会社",
+   "code": "2477",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2477_手間いらず株式会社_20260630_訂正有報_S100XKAJ.zip"
+  },
+  {
+   "dir": "2481_株式会社タウンニュース社",
+   "code": "2481",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2481_株式会社タウンニュース社_20260630_訂正有報_S100XKJB.zip"
+  },
+  {
+   "dir": "2484_株式会社出前館",
+   "code": "2484",
+   "year": 2026,
+   "interim_tags": 117,
+   "currentyear_tags": 0,
+   "revenue": 17979000000.0,
+   "source_file": "2484_株式会社出前館_20260831_訂正有報_S100XXZI.zip"
+  },
+  {
+   "dir": "2485_株式会社ティア",
+   "code": "2485",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 11422000000.0,
+   "source_file": "2485_株式会社ティア_20260930_訂正有報_S100Y48B.zip"
+  },
+  {
+   "dir": "2498_株式会社オリエンタルコンサルタンツホールディングス",
+   "code": "2498",
+   "year": 2026,
+   "interim_tags": 184,
+   "currentyear_tags": 0,
+   "revenue": 49046059000.0,
+   "source_file": "2498_株式会社オリエンタルコンサルタンツホールディングス_20260930_訂正有報_S100Y36U.zip"
+  },
+  {
+   "dir": "2652_株式会社まんだらけ",
+   "code": "2652",
+   "year": 2026,
+   "interim_tags": 32,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2652_株式会社まんだらけ_20260930_訂正有報_S100Y431.zip"
+  },
+  {
+   "dir": "2667_株式会社イメージワン",
+   "code": "2667",
+   "year": 2026,
+   "interim_tags": 27,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2667_株式会社イメージワン_20260930_訂正有報_S100Y3R2.zip"
+  },
+  {
+   "dir": "2678_アスクル株式会社",
+   "code": "2678",
+   "year": 2026,
+   "interim_tags": 193,
+   "currentyear_tags": 0,
+   "revenue": 208725000000.0,
+   "source_file": "2678_アスクル株式会社_20260520_訂正有報_S100XIYO.zip"
+  },
+  {
+   "dir": "2689_オルバヘルスケアホールディングス株式会社",
+   "code": "2689",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 62444669000.0,
+   "source_file": "2689_オルバヘルスケアホールディングス株式会社_20260630_訂正有報_S100XKW2.zip"
+  },
+  {
+   "dir": "2695_くら寿司株式会社",
+   "code": "2695",
+   "year": 2026,
+   "interim_tags": 147,
+   "currentyear_tags": 0,
+   "revenue": 125253000000.0,
+   "source_file": "2695_くら寿司株式会社_20261031_訂正有報_S100YAY1.zip"
+  },
+  {
+   "dir": "2722_株式会社ＩＫホールディングス",
+   "code": "2722",
+   "year": 2026,
+   "interim_tags": 150,
+   "currentyear_tags": 0,
+   "revenue": 7441031000.0,
+   "source_file": "2722_株式会社ＩＫホールディングス_20260531_訂正有報_S100XFLY.zip"
+  },
+  {
+   "dir": "2735_株式会社ワッツ",
+   "code": "2735",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 31275323000.0,
+   "source_file": "2735_株式会社ワッツ_20260831_訂正有報_S100XXYD.zip"
+  },
+  {
+   "dir": "2736_フェスタリアホールディングス株式会社",
+   "code": "2736",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 4976817000.0,
+   "source_file": "2736_フェスタリアホールディングス株式会社_20260831_訂正有報_S100XYN1.zip"
+  },
+  {
+   "dir": "2762_株式会社ＳＡＮＫＯ　ＭＡＲＫＥＴＩＮＧ　ＦＯＯＤＳ",
+   "code": "2762",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 4985000000.0,
+   "source_file": "2762_株式会社ＳＡＮＫＯ　ＭＡＲＫＥＴＩＮＧ　ＦＯＯＤＳ_20260630_訂正有報_S100XL6P.zip"
+  },
+  {
+   "dir": "2769_株式会社ヴィレッジヴァンガードコーポレーション",
+   "code": "2769",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 10784000000.0,
+   "source_file": "2769_株式会社ヴィレッジヴァンガードコーポレーション_20260531_訂正有報_S100XF4M.zip"
+  },
+  {
+   "dir": "276A_ククレブ・アドバイザーズ株式会社",
+   "code": "276A",
+   "year": 2026,
+   "interim_tags": 149,
+   "currentyear_tags": 0,
+   "revenue": 909050000.0,
+   "source_file": "276A_ククレブ・アドバイザーズ株式会社_20260831_訂正有報_S100XYGS.zip"
+  },
+  {
+   "dir": "277A_グロービング株式会社",
+   "code": "277A",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 5651722000.0,
+   "source_file": "277A_グロービング株式会社_20260531_訂正有報_S100XF6B.zip"
+  },
+  {
+   "dir": "2791_大黒天物産株式会社",
+   "code": "2791",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 156189000000.0,
+   "source_file": "2791_大黒天物産株式会社_20260531_訂正有報_S100XFI3.zip"
+  },
+  {
+   "dir": "2792_株式会社ハニーズホールディングス",
+   "code": "2792",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 28905877000.0,
+   "source_file": "2792_株式会社ハニーズホールディングス_20260531_訂正有報_S100XFHA.zip"
+  },
+  {
+   "dir": "2796_ファーマライズホールディングス株式会社",
+   "code": "2796",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 33602000000.0,
+   "source_file": "2796_ファーマライズホールディングス株式会社_20260531_訂正有報_S100XF31.zip"
+  },
+  {
+   "dir": "2820_株式会社やまみ",
+   "code": "2820",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2820_株式会社やまみ_20260630_訂正有報_S100XKN7.zip"
+  },
+  {
+   "dir": "2874_横浜冷凍株式会社",
+   "code": "2874",
+   "year": 2026,
+   "interim_tags": 190,
+   "currentyear_tags": 0,
+   "revenue": 64228000000.0,
+   "source_file": "2874_横浜冷凍株式会社_20260930_訂正有報_S100Y48T.zip"
+  },
+  {
+   "dir": "2901_株式会社ウェルディッシュ",
+   "code": "2901",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 1640000000.0,
+   "source_file": "2901_株式会社ウェルディッシュ_20260831_訂正有報_S100Y3FX.zip"
+  },
+  {
+   "dir": "2904_一正蒲鉾株式会社",
+   "code": "2904",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 19587696000.0,
+   "source_file": "2904_一正蒲鉾株式会社_20260630_訂正有報_S100XKNK.zip"
+  },
+  {
+   "dir": "2917_株式会社大森屋",
+   "code": "2917",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 8250966000.0,
+   "source_file": "2917_株式会社大森屋_20260930_訂正有報_S100Y3XL.zip"
+  },
+  {
+   "dir": "2926_株式会社　篠崎屋",
+   "code": "2926",
+   "year": 2026,
+   "interim_tags": 18,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2926_株式会社　篠崎屋_20260930_訂正有報_S100Y2HM.zip"
+  },
+  {
+   "dir": "2927_株式会社ＡＦＣ－ＨＤアムスライフサイエンス",
+   "code": "2927",
+   "year": 2026,
+   "interim_tags": 189,
+   "currentyear_tags": 0,
+   "revenue": 16846179000.0,
+   "source_file": "2927_株式会社ＡＦＣ－ＨＤアムスライフサイエンス_20260831_訂正有報_S100XXJB.zip"
+  },
+  {
+   "dir": "2929_株式会社ファーマフーズ",
+   "code": "2929",
+   "year": 2026,
+   "interim_tags": 167,
+   "currentyear_tags": 0,
+   "revenue": 32441000000.0,
+   "source_file": "2929_株式会社ファーマフーズ_20260731_訂正有報_S100XQ4S.zip"
+  },
+  {
+   "dir": "2934_ジェイフロンティア株式会社",
+   "code": "2934",
+   "year": 2026,
+   "interim_tags": 175,
+   "currentyear_tags": 0,
+   "revenue": 10675438000.0,
+   "source_file": "2934_ジェイフロンティア株式会社_20260531_訂正有報_S100XFQN.zip"
+  },
+  {
+   "dir": "2938_株式会社オカムラ食品工業",
+   "code": "2938",
+   "year": 2026,
+   "interim_tags": 149,
+   "currentyear_tags": 0,
+   "revenue": 18776000000.0,
+   "source_file": "2938_株式会社オカムラ食品工業_20260630_訂正有報_S100XKQ1.zip"
+  },
+  {
+   "dir": "2961_日本調理機株式会社",
+   "code": "2961",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2961_日本調理機株式会社_20260930_訂正有報_S100Y3ME.zip"
+  },
+  {
+   "dir": "2962_株式会社テクニスコ",
+   "code": "2962",
+   "year": 2026,
+   "interim_tags": 143,
+   "currentyear_tags": 0,
+   "revenue": 1854115000.0,
+   "source_file": "2962_株式会社テクニスコ_20260630_訂正有報_S100XL6I.zip"
+  },
+  {
+   "dir": "2978_株式会社ツクルバ",
+   "code": "2978",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 5241512000.0,
+   "source_file": "2978_株式会社ツクルバ_20260731_訂正有報_S100XR3Q.zip"
+  },
+  {
+   "dir": "2991_株式会社ランドネット",
+   "code": "2991",
+   "year": 2026,
+   "interim_tags": 177,
+   "currentyear_tags": 0,
+   "revenue": 51483000000.0,
+   "source_file": "2991_株式会社ランドネット_20260731_訂正有報_S100XQR7.zip"
+  },
+  {
+   "dir": "2999_ホームポジション株式会社",
+   "code": "2999",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "2999_ホームポジション株式会社_20260831_訂正有報_S100XY5O.zip"
+  },
+  {
+   "dir": "3021_株式会社パシフィックネット",
+   "code": "3021",
+   "year": 2026,
+   "interim_tags": 141,
+   "currentyear_tags": 0,
+   "revenue": 5012494000.0,
+   "source_file": "3021_株式会社パシフィックネット_20260531_訂正有報_S100XFKD.zip"
+  },
+  {
+   "dir": "3028_株式会社アルペン",
+   "code": "3028",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 137155000000.0,
+   "source_file": "3028_株式会社アルペン_20260630_訂正有報_S100XKNY.zip"
+  },
+  {
+   "dir": "3035_ケイティケイ株式会社",
+   "code": "3035",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 9743078000.0,
+   "source_file": "3035_ケイティケイ株式会社_20260220_訂正有報_S100XVMM.zip"
+  },
+  {
+   "dir": "3041_株式会社ビューティカダンホールディングス",
+   "code": "3041",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 3785524000.0,
+   "source_file": "3041_株式会社ビューティカダンホールディングス_20260630_訂正有報_S100XL5H.zip"
+  },
+  {
+   "dir": "3045_株式会社カワサキ",
+   "code": "3045",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3045_株式会社カワサキ_20260831_訂正有報_S100XYH3.zip"
+  },
+  {
+   "dir": "3046_株式会社ジンズホールディングス",
+   "code": "3046",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 50512000000.0,
+   "source_file": "3046_株式会社ジンズホールディングス_20260831_訂正有報_S100XY3Z.zip"
+  },
+  {
+   "dir": "3048_株式会社ビックカメラ",
+   "code": "3048",
+   "year": 2026,
+   "interim_tags": 189,
+   "currentyear_tags": 0,
+   "revenue": 508429000000.0,
+   "source_file": "3048_株式会社ビックカメラ_20260831_訂正有報_S100XYAC.zip"
+  },
+  {
+   "dir": "3067_株式会社東京一番フーズ",
+   "code": "3067",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 4018061000.0,
+   "source_file": "3067_株式会社東京一番フーズ_20260930_訂正有報_S100Y4CQ.zip"
+  },
+  {
+   "dir": "3076_あいホールディングス株式会社",
+   "code": "3076",
+   "year": 2026,
+   "interim_tags": 189,
+   "currentyear_tags": 0,
+   "revenue": 40778000000.0,
+   "source_file": "3076_あいホールディングス株式会社_20260630_訂正有報_S100XLNC.zip"
+  },
+  {
+   "dir": "3082_株式会社きちりホールディングス",
+   "code": "3082",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 8509306000.0,
+   "source_file": "3082_株式会社きちりホールディングス_20260630_訂正有報_S100XJHK.zip"
+  },
+  {
+   "dir": "3097_株式会社物語コーポレーション",
+   "code": "3097",
+   "year": 2026,
+   "interim_tags": 182,
+   "currentyear_tags": 0,
+   "revenue": 72299000000.0,
+   "source_file": "3097_株式会社物語コーポレーション_20260630_訂正有報_S100XK02.zip"
+  },
+  {
+   "dir": "3121_マーチャント・バンカーズ株式会社",
+   "code": "3121",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 1628711000.0,
+   "source_file": "3121_マーチャント・バンカーズ株式会社_20261031_訂正有報_S100YBCL.zip"
+  },
+  {
+   "dir": "3135_株式会社マーケットエンタープライズ",
+   "code": "3135",
+   "year": 2026,
+   "interim_tags": 146,
+   "currentyear_tags": 0,
+   "revenue": 12966052000.0,
+   "source_file": "3135_株式会社マーケットエンタープライズ_20260630_訂正有報_S100XKSK.zip"
+  },
+  {
+   "dir": "3140_ＢＲＵＮＯ株式会社",
+   "code": "3140",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 7384000000.0,
+   "source_file": "3140_ＢＲＵＮＯ株式会社_20260630_訂正有報_S100XKO5.zip"
+  },
+  {
+   "dir": "3148_株式会社クリエイトＳＤホールディングス",
+   "code": "3148",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 241926000000.0,
+   "source_file": "3148_株式会社クリエイトＳＤホールディングス_20260531_訂正有報_S100XF7O.zip"
+  },
+  {
+   "dir": "3154_メディアスホールディングス株式会社",
+   "code": "3154",
+   "year": 2026,
+   "interim_tags": 195,
+   "currentyear_tags": 0,
+   "revenue": 149211026000.0,
+   "source_file": "3154_メディアスホールディングス株式会社_20260630_訂正有報_S100XKN4.zip"
+  },
+  {
+   "dir": "3160_株式会社大光",
+   "code": "3160",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 37871565000.0,
+   "source_file": "3160_株式会社大光_20260531_訂正有報_S100XFL0.zip"
+  },
+  {
+   "dir": "3168_株式会社ＭＥＲＦ",
+   "code": "3168",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 45592251000.0,
+   "source_file": "3168_株式会社ＭＥＲＦ_20260831_訂正有報_S100XY5G.zip"
+  },
+  {
+   "dir": "3172_ティーライフ株式会社",
+   "code": "3172",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 5329000000.0,
+   "source_file": "3172_ティーライフ株式会社_20260731_訂正有報_S100XOWA.zip"
+  },
+  {
+   "dir": "3174_株式会社ハピネス・アンド・ディ",
+   "code": "3174",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 4387503000.0,
+   "source_file": "3174_株式会社ハピネス・アンド・ディ_20260831_訂正有報_S100XYTQ.zip"
+  },
+  {
+   "dir": "3176_三洋貿易株式会社",
+   "code": "3176",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 70258000000.0,
+   "source_file": "3176_三洋貿易株式会社_20260930_訂正有報_S100Y2QS.zip"
+  },
+  {
+   "dir": "3187_株式会社ミラタップ",
+   "code": "3187",
+   "year": 2026,
+   "interim_tags": 27,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3187_株式会社ミラタップ_20260930_訂正有報_S100Y41X.zip"
+  },
+  {
+   "dir": "3189_株式会社ＡＮＡＰホールディングス",
+   "code": "3189",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 1086349000.0,
+   "source_file": "3189_株式会社ＡＮＡＰホールディングス_20260831_訂正有報_S100XYTF.zip"
+  },
+  {
+   "dir": "3191_株式会社ジョイフル本田",
+   "code": "3191",
+   "year": 2026,
+   "interim_tags": 181,
+   "currentyear_tags": 0,
+   "revenue": 64147000000.0,
+   "source_file": "3191_株式会社ジョイフル本田_20260620_訂正有報_S100XIHZ.zip"
+  },
+  {
+   "dir": "3193_株式会社エターナルホスピタリティグループ",
+   "code": "3193",
+   "year": 2026,
+   "interim_tags": 180,
+   "currentyear_tags": 0,
+   "revenue": 25393038000.0,
+   "source_file": "3193_株式会社エターナルホスピタリティグループ_20260731_訂正有報_S100XQPF.zip"
+  },
+  {
+   "dir": "3195_株式会社ジェネレーションパス",
+   "code": "3195",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 9655153000.0,
+   "source_file": "3195_株式会社ジェネレーションパス_20261031_訂正有報_S100YAK5.zip"
+  },
+  {
+   "dir": "3236_株式会社プロパスト",
+   "code": "3236",
+   "year": 2026,
+   "interim_tags": 22,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3236_株式会社プロパスト_20260531_訂正有報_S100XFD5.zip"
+  },
+  {
+   "dir": "3242_株式会社アーバネットコーポレーション",
+   "code": "3242",
+   "year": 2026,
+   "interim_tags": 150,
+   "currentyear_tags": 0,
+   "revenue": 22304566000.0,
+   "source_file": "3242_株式会社アーバネットコーポレーション_20260630_訂正有報_S100XJ84.zip"
+  },
+  {
+   "dir": "3245_株式会社ディア・ライフ",
+   "code": "3245",
+   "year": 2026,
+   "interim_tags": 149,
+   "currentyear_tags": 0,
+   "revenue": 13986000000.0,
+   "source_file": "3245_株式会社ディア・ライフ_20260331_訂正有報_S100Y34N.zip"
+  },
+  {
+   "dir": "3248_株式会社アールエイジ",
+   "code": "3248",
+   "year": 2026,
+   "interim_tags": 137,
+   "currentyear_tags": 0,
+   "revenue": 1666906000.0,
+   "source_file": "3248_株式会社アールエイジ_20260430_訂正有報_S100YB45.zip"
+  },
+  {
+   "dir": "325A_株式会社ＴＥＮＴＩＡＬ",
+   "code": "325A",
+   "year": 2026,
+   "interim_tags": 26,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "325A_株式会社ＴＥＮＴＩＡＬ_20260831_訂正有報_S100XYSZ.zip"
+  },
+  {
+   "dir": "3271_株式会社　ＴＨＥグローバル社",
+   "code": "3271",
+   "year": 2026,
+   "interim_tags": 167,
+   "currentyear_tags": 0,
+   "revenue": 11854000000.0,
+   "source_file": "3271_株式会社　ＴＨＥグローバル社_20260630_訂正有報_S100XL54.zip"
+  },
+  {
+   "dir": "3286_トラストホールディングス株式会社",
+   "code": "3286",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 5098774000.0,
+   "source_file": "3286_トラストホールディングス株式会社_20260630_訂正有報_S100XKY2.zip"
+  },
+  {
+   "dir": "3297_株式会社東武住販",
+   "code": "3297",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3297_株式会社東武住販_20260531_訂正有報_S100XF7Q.zip"
+  },
+  {
+   "dir": "3300_株式会社アンビションＤＸホールディングス",
+   "code": "3300",
+   "year": 2026,
+   "interim_tags": 191,
+   "currentyear_tags": 0,
+   "revenue": 23965879000.0,
+   "source_file": "3300_株式会社アンビションＤＸホールディングス_20260630_訂正有報_S100XKLW.zip"
+  },
+  {
+   "dir": "3321_ミタチ産業株式会社",
+   "code": "3321",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 58348232000.0,
+   "source_file": "3321_ミタチ産業株式会社_20260531_訂正有報_S100XFA4.zip"
+  },
+  {
+   "dir": "3323_レカム株式会社",
+   "code": "3323",
+   "year": 2026,
+   "interim_tags": 151,
+   "currentyear_tags": 0,
+   "revenue": 6964665000.0,
+   "source_file": "3323_レカム株式会社_20260930_訂正有報_S100Y4BB.zip"
+  },
+  {
+   "dir": "3349_株式会社コスモス薬品",
+   "code": "3349",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 537175000000.0,
+   "source_file": "3349_株式会社コスモス薬品_20260531_訂正有報_S100XEJG.zip"
+  },
+  {
+   "dir": "3359_株式会社ｃｏｔｔａ",
+   "code": "3359",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 8419161000.0,
+   "source_file": "3359_株式会社ｃｏｔｔａ_20260930_訂正有報_S100Y2MX.zip"
+  },
+  {
+   "dir": "340A_株式会社ジグザグ",
+   "code": "340A",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "340A_株式会社ジグザグ_20260531_訂正有報_S100XFFB.zip"
+  },
+  {
+   "dir": "3418_株式会社バルニバービ",
+   "code": "3418",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 7398834000.0,
+   "source_file": "3418_株式会社バルニバービ_20260731_訂正有報_S100XQKH.zip"
+  },
+  {
+   "dir": "3421_株式会社稲葉製作所",
+   "code": "3421",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 19744510000.0,
+   "source_file": "3421_株式会社稲葉製作所_20260731_訂正有報_S100XQY8.zip"
+  },
+  {
+   "dir": "3426_アトムリビンテック株式会社",
+   "code": "3426",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3426_アトムリビンテック株式会社_20260630_訂正有報_S100XK96.zip"
+  },
+  {
+   "dir": "3439_株式会社三ツ知",
+   "code": "3439",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 6185237000.0,
+   "source_file": "3439_株式会社三ツ知_20260630_訂正有報_S100XK9O.zip"
+  },
+  {
+   "dir": "3440_日創グループ株式会社",
+   "code": "3440",
+   "year": 2026,
+   "interim_tags": 168,
+   "currentyear_tags": 0,
+   "revenue": 10592000000.0,
+   "source_file": "3440_日創グループ株式会社_20260831_訂正有報_S100XYK4.zip"
+  },
+  {
+   "dir": "3441_株式会社山王",
+   "code": "3441",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 6747128000.0,
+   "source_file": "3441_株式会社山王_20260731_訂正有報_S100XQSL.zip"
+  },
+  {
+   "dir": "3446_株式会社ジェイテックコーポレーション",
+   "code": "3446",
+   "year": 2026,
+   "interim_tags": 149,
+   "currentyear_tags": 0,
+   "revenue": 646253000.0,
+   "source_file": "3446_株式会社ジェイテックコーポレーション_20260630_訂正有報_S100XL4S.zip"
+  },
+  {
+   "dir": "3457_株式会社Ａｎｄ　Ｄｏホールディングス",
+   "code": "3457",
+   "year": 2026,
+   "interim_tags": 177,
+   "currentyear_tags": 0,
+   "revenue": 25971000000.0,
+   "source_file": "3457_株式会社Ａｎｄ　Ｄｏホールディングス_20260630_訂正有報_S100XLMY.zip"
+  },
+  {
+   "dir": "3461_株式会社パルマ",
+   "code": "3461",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3461_株式会社パルマ_20260930_訂正有報_S100Y2XC.zip"
+  },
+  {
+   "dir": "3469_株式会社デュアルタップ",
+   "code": "3469",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 3108656000.0,
+   "source_file": "3469_株式会社デュアルタップ_20260630_訂正有報_S100XL3B.zip"
+  },
+  {
+   "dir": "3475_株式会社グッドコムアセット",
+   "code": "3475",
+   "year": 2026,
+   "interim_tags": 173,
+   "currentyear_tags": 0,
+   "revenue": 29390315000.0,
+   "source_file": "3475_株式会社グッドコムアセット_20261031_訂正有報_S100YAYG.zip"
+  },
+  {
+   "dir": "3480_株式会社ジェイ・エス・ビー",
+   "code": "3480",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 45837069000.0,
+   "source_file": "3480_株式会社ジェイ・エス・ビー_20261031_訂正有報_S100YBI3.zip"
+  },
+  {
+   "dir": "3494_株式会社マリオン",
+   "code": "3494",
+   "year": 2026,
+   "interim_tags": 26,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3494_株式会社マリオン_20260930_訂正有報_S100Y2OX.zip"
+  },
+  {
+   "dir": "3495_香陵住販株式会社",
+   "code": "3495",
+   "year": 2026,
+   "interim_tags": 173,
+   "currentyear_tags": 0,
+   "revenue": 7772060000.0,
+   "source_file": "3495_香陵住販株式会社_20260930_訂正有報_S100Y3WU.zip"
+  },
+  {
+   "dir": "3496_株式会社アズーム",
+   "code": "3496",
+   "year": 2026,
+   "interim_tags": 146,
+   "currentyear_tags": 0,
+   "revenue": 7806930000.0,
+   "source_file": "3496_株式会社アズーム_20260930_訂正有報_S100Y278.zip"
+  },
+  {
+   "dir": "3501_ＳＵＭＩＮＯＥ株式会社",
+   "code": "3501",
+   "year": 2026,
+   "interim_tags": 185,
+   "currentyear_tags": 0,
+   "revenue": 52962000000.0,
+   "source_file": "3501_ＳＵＭＩＮＯＥ株式会社_20260531_訂正有報_S100XFOR.zip"
+  },
+  {
+   "dir": "350A_デジタルグリッド株式会社",
+   "code": "350A",
+   "year": 2026,
+   "interim_tags": 117,
+   "currentyear_tags": 0,
+   "revenue": 3328825000.0,
+   "source_file": "350A_デジタルグリッド株式会社_20260731_訂正有報_S100XQ4D.zip"
+  },
+  {
+   "dir": "3536_アクサスホールディングス株式会社",
+   "code": "3536",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 6382027000.0,
+   "source_file": "3536_アクサスホールディングス株式会社_20260831_訂正有報_S100XYCV.zip"
+  },
+  {
+   "dir": "3538_株式会社ウイルプラスホールディングス",
+   "code": "3538",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 42096279000.0,
+   "source_file": "3538_株式会社ウイルプラスホールディングス_20260630_訂正有報_S100XKAI.zip"
+  },
+  {
+   "dir": "3539_株式会社ＪＭホールディングス",
+   "code": "3539",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 101189000000.0,
+   "source_file": "3539_株式会社ＪＭホールディングス_20260731_訂正有報_S100XR0Z.zip"
+  },
+  {
+   "dir": "3541_株式会社農業総合研究所",
+   "code": "3541",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3541_株式会社農業総合研究所_20260831_訂正有報_S100XYSC.zip"
+  },
+  {
+   "dir": "3556_リネットジャパングループ株式会社",
+   "code": "3556",
+   "year": 2026,
+   "interim_tags": 175,
+   "currentyear_tags": 0,
+   "revenue": 6668990000.0,
+   "source_file": "3556_リネットジャパングループ株式会社_20260930_訂正有報_S100Y3D0.zip"
+  },
+  {
+   "dir": "3560_株式会社ほぼ日",
+   "code": "3560",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3560_株式会社ほぼ日_20260831_訂正有報_S100XY0S.zip"
+  },
+  {
+   "dir": "3563_株式会社ＦＯＯＤ　＆　ＬＩＦＥ　ＣＯＭＰＡＮＩＥＳ",
+   "code": "3563",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 254182000000.0,
+   "source_file": "3563_株式会社ＦＯＯＤ　＆　ＬＩＦＥ　ＣＯＭＰＡＮＩＥＳ_20260930_訂正有報_S100Y3GH.zip"
+  },
+  {
+   "dir": "3597_株式会社自重堂",
+   "code": "3597",
+   "year": 2026,
+   "interim_tags": 146,
+   "currentyear_tags": 0,
+   "revenue": 6810196000.0,
+   "source_file": "3597_株式会社自重堂_20260630_訂正有報_S100XKPR.zip"
+  },
+  {
+   "dir": "3607_株式会社クラウディアホールディングス",
+   "code": "3607",
+   "year": 2026,
+   "interim_tags": 196,
+   "currentyear_tags": 0,
+   "revenue": 7265000000.0,
+   "source_file": "3607_株式会社クラウディアホールディングス_20260831_訂正有報_S100XYIB.zip"
+  },
+  {
+   "dir": "3624_アクセルマーク株式会社",
+   "code": "3624",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 642548000.0,
+   "source_file": "3624_アクセルマーク株式会社_20260930_訂正有報_S100Y3LH.zip"
+  },
+  {
+   "dir": "3625_テックファームホールディングス株式会社",
+   "code": "3625",
+   "year": 2026,
+   "interim_tags": 147,
+   "currentyear_tags": 0,
+   "revenue": 3351801000.0,
+   "source_file": "3625_テックファームホールディングス株式会社_20260630_訂正有報_S100XKX7.zip"
+  },
+  {
+   "dir": "3632_グリーホールディングス株式会社",
+   "code": "3632",
+   "year": 2026,
+   "interim_tags": 161,
+   "currentyear_tags": 0,
+   "revenue": 25472000000.0,
+   "source_file": "3632_グリーホールディングス株式会社_20260630_訂正有報_S100XJG7.zip"
+  },
+  {
+   "dir": "3639_株式会社ボルテージ",
+   "code": "3639",
+   "year": 2026,
+   "interim_tags": 143,
+   "currentyear_tags": 0,
+   "revenue": 1243332000.0,
+   "source_file": "3639_株式会社ボルテージ_20260630_訂正有報_S100XL0J.zip"
+  },
+  {
+   "dir": "3645_株式会社メディカルネット",
+   "code": "3645",
+   "year": 2026,
+   "interim_tags": 173,
+   "currentyear_tags": 0,
+   "revenue": 3330488000.0,
+   "source_file": "3645_株式会社メディカルネット_20260531_訂正有報_S100XFCO.zip"
+  },
+  {
+   "dir": "3647_株式会社ジー・スリーホールディングス",
+   "code": "3647",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 36404000.0,
+   "source_file": "3647_株式会社アスリナ_20260831_訂正有報_S100XY89.zip"
+  },
+  {
+   "dir": "3653_株式会社モルフォ",
+   "code": "3653",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 1152127000.0,
+   "source_file": "3653_株式会社モルフォ_20261031_訂正有報_S100YBBP.zip"
+  },
+  {
+   "dir": "3655_株式会社ブレインパッド",
+   "code": "3655",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 5867203000.0,
+   "source_file": "3655_株式会社ブレインパッド_20260630_訂正有報_S100XKVN.zip"
+  },
+  {
+   "dir": "3660_株式会社アイスタイル",
+   "code": "3660",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 40089000000.0,
+   "source_file": "3660_株式会社アイスタイル_20260630_訂正有報_S100XK5O.zip"
+  },
+  {
+   "dir": "3662_株式会社エイチームホールディングス",
+   "code": "3662",
+   "year": 2026,
+   "interim_tags": 187,
+   "currentyear_tags": 0,
+   "revenue": 11319000000.0,
+   "source_file": "3662_株式会社エイチームホールディングス_20260731_訂正有報_S100XQJ9.zip"
+  },
+  {
+   "dir": "3668_株式会社コロプラ",
+   "code": "3668",
+   "year": 2026,
+   "interim_tags": 149,
+   "currentyear_tags": 0,
+   "revenue": 10088000000.0,
+   "source_file": "3668_株式会社コロプラ_20260930_訂正有報_S100Y3NG.zip"
+  },
+  {
+   "dir": "3672_株式会社オルトプラス",
+   "code": "3672",
+   "year": 2026,
+   "interim_tags": 131,
+   "currentyear_tags": 0,
+   "revenue": 1331898000.0,
+   "source_file": "3672_株式会社オルトプラス_20260930_訂正有報_S100Y3Q4.zip"
+  },
+  {
+   "dir": "3674_株式会社オークファン",
+   "code": "3674",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 2643193000.0,
+   "source_file": "3674_株式会社オークファン_20260331_訂正有報_S100Y4DO.zip"
+  },
+  {
+   "dir": "3675_株式会社クロス・マーケティンググループ",
+   "code": "3675",
+   "year": 2026,
+   "interim_tags": 151,
+   "currentyear_tags": 0,
+   "revenue": 15102461000.0,
+   "source_file": "3675_株式会社クロス・マーケティンググループ_20260630_訂正有報_S100XK8C.zip"
+  },
+  {
+   "dir": "367A_プリモグローバルホールディングス株式会社",
+   "code": "367A",
+   "year": 2026,
+   "interim_tags": 131,
+   "currentyear_tags": 0,
+   "revenue": 15391000000.0,
+   "source_file": "367A_プリモグローバルホールディングス株式会社_20260831_訂正有報_S100XYIK.zip"
+  },
+  {
+   "dir": "3687_株式会社フィックスターズ",
+   "code": "3687",
+   "year": 2026,
+   "interim_tags": 146,
+   "currentyear_tags": 0,
+   "revenue": 5442443000.0,
+   "source_file": "3687_株式会社フィックスターズ_20260930_訂正有報_S100Y3V7.zip"
+  },
+  {
+   "dir": "3690_株式会社イルグルム",
+   "code": "3690",
+   "year": 2026,
+   "interim_tags": 187,
+   "currentyear_tags": 0,
+   "revenue": 2886666000.0,
+   "source_file": "3690_株式会社イルグルム_20260930_訂正有報_S100Y2PQ.zip"
+  },
+  {
+   "dir": "3691_株式会社デジタルプラス",
+   "code": "3691",
+   "year": 2026,
+   "interim_tags": 143,
+   "currentyear_tags": 0,
+   "revenue": 730648000.0,
+   "source_file": "3691_株式会社デジタルプラス_20260930_訂正有報_S100Y4HQ.zip"
+  },
+  {
+   "dir": "3697_株式会社ＳＨＩＦＴ",
+   "code": "3697",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 72035000000.0,
+   "source_file": "3697_株式会社ＳＨＩＦＴ_20260831_訂正有報_S100XYKB.zip"
+  },
+  {
+   "dir": "3698_株式会社ＣＲＩ・ミドルウェア",
+   "code": "3698",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 1849047000.0,
+   "source_file": "3698_株式会社ＣＲＩ・ミドルウェア_20260930_訂正有報_S100Y3X6.zip"
+  },
+  {
+   "dir": "369A_株式会社エータイ",
+   "code": "369A",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "369A_株式会社エータイ_20260831_訂正有報_S100XYGF.zip"
+  },
+  {
+   "dir": "3710_ジョルダン株式会社",
+   "code": "3710",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 1651803000.0,
+   "source_file": "3710_ジョルダン株式会社_20260930_訂正有報_S100Y49B.zip"
+  },
+  {
+   "dir": "3712_株式会社情報企画",
+   "code": "3712",
+   "year": 2026,
+   "interim_tags": 133,
+   "currentyear_tags": 0,
+   "revenue": 2193887000.0,
+   "source_file": "3712_株式会社情報企画_20260930_訂正有報_S100Y2WO.zip"
+  },
+  {
+   "dir": "3723_日本ファルコム株式会社",
+   "code": "3723",
+   "year": 2026,
+   "interim_tags": 27,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3723_日本ファルコム株式会社_20260930_訂正有報_S100Y3DZ.zip"
+  },
+  {
+   "dir": "372A_株式会社レント",
+   "code": "372A",
+   "year": 2026,
+   "interim_tags": 201,
+   "currentyear_tags": 0,
+   "revenue": 26294765000.0,
+   "source_file": "372A_株式会社レント_20260531_訂正有報_S100XFM2.zip"
+  },
+  {
+   "dir": "3733_株式会社ソフトウェア・サービス",
+   "code": "3733",
+   "year": 2026,
+   "interim_tags": 133,
+   "currentyear_tags": 0,
+   "revenue": 24334000000.0,
+   "source_file": "3733_株式会社ソフトウェア・サービス_20261031_訂正有報_S100Y8T6.zip"
+  },
+  {
+   "dir": "373A_株式会社リップス",
+   "code": "373A",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "373A_株式会社リップス_20260831_訂正有報_S100XY8G.zip"
+  },
+  {
+   "dir": "3747_株式会社インタートレード",
+   "code": "3747",
+   "year": 2026,
+   "interim_tags": 144,
+   "currentyear_tags": 0,
+   "revenue": 868821000.0,
+   "source_file": "3747_株式会社インタートレード_20260930_訂正有報_S100Y4AG.zip"
+  },
+  {
+   "dir": "3760_株式会社ケイブ",
+   "code": "3760",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 5604140000.0,
+   "source_file": "3760_株式会社ケイブ_20260531_訂正有報_S100XEAT.zip"
+  },
+  {
+   "dir": "3769_ＧＭＯペイメントゲートウェイ株式会社",
+   "code": "3769",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 46084000000.0,
+   "source_file": "3769_ＧＭＯペイメントゲートウェイ株式会社_20260930_訂正有報_S100Y43E.zip"
+  },
+  {
+   "dir": "378A_株式会社ヒット",
+   "code": "378A",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 2716321000.0,
+   "source_file": "378A_株式会社ヒット_20260630_訂正有報_S100XKJQ.zip"
+  },
+  {
+   "dir": "3791_株式会社ＩＧポート",
+   "code": "3791",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 6210164000.0,
+   "source_file": "3791_株式会社ＩＧポート_20260531_訂正有報_S100XFDE.zip"
+  },
+  {
+   "dir": "3804_株式会社システム　ディ",
+   "code": "3804",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 3027870000.0,
+   "source_file": "3804_株式会社システム　ディ_20261031_訂正有報_S100YB1C.zip"
+  },
+  {
+   "dir": "3810_サイバーステップ株式会社",
+   "code": "3810",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 955000000.0,
+   "source_file": "3810_サイバーステップ株式会社_20260531_訂正有報_S100XFNR.zip"
+  },
+  {
+   "dir": "3815_株式会社メディア工房",
+   "code": "3815",
+   "year": 2026,
+   "interim_tags": 132,
+   "currentyear_tags": 0,
+   "revenue": 828053000.0,
+   "source_file": "3815_株式会社メディア工房_20260831_訂正有報_S100XYF1.zip"
+  },
+  {
+   "dir": "3816_株式会社大和コンピューター",
+   "code": "3816",
+   "year": 2026,
+   "interim_tags": 143,
+   "currentyear_tags": 0,
+   "revenue": 1551333000.0,
+   "source_file": "3816_株式会社大和コンピューター_20260731_訂正有報_S100XQJL.zip"
+  },
+  {
+   "dir": "3823_ＴＨＥ　ＷＨＹ　ＨＯＷ　ＤＯ　ＣＯＭＰＡＮＹ株式会社",
+   "code": "3823",
+   "year": 2026,
+   "interim_tags": 176,
+   "currentyear_tags": 0,
+   "revenue": 2332000000.0,
+   "source_file": null
+  },
+  {
+   "dir": "3836_株式会社アバントグループ",
+   "code": "3836",
+   "year": 2026,
+   "interim_tags": 178,
+   "currentyear_tags": 0,
+   "revenue": 15202569000.0,
+   "source_file": "3836_株式会社アバントグループ_20260630_訂正有報_S100XJYA.zip"
+  },
+  {
+   "dir": "3854_株式会社アイル",
+   "code": "3854",
+   "year": 2026,
+   "interim_tags": 161,
+   "currentyear_tags": 0,
+   "revenue": 10360750000.0,
+   "source_file": "3854_株式会社アイル_20260731_訂正有報_S100XQCW.zip"
+  },
+  {
+   "dir": "3856_Ａｂａｌａｎｃｅ株式会社",
+   "code": "3856",
+   "year": 2026,
+   "interim_tags": 224,
+   "currentyear_tags": 0,
+   "revenue": 58662000000.0,
+   "source_file": "3856_Ａｂａｌａｎｃｅ株式会社_20260331_訂正有報_S100XFGE.zip"
+  },
+  {
+   "dir": "386A_株式会社みのや",
+   "code": "386A",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "386A_株式会社みのや_20260630_訂正有報_S100XKJ3.zip"
+  },
+  {
+   "dir": "387A_フラー株式会社",
+   "code": "387A",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "387A_フラー株式会社_20260630_訂正有報_S100XJON.zip"
+  },
+  {
+   "dir": "3892_株式会社岡山製紙",
+   "code": "3892",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3892_株式会社岡山製紙_20260531_訂正有報_S100XFHK.zip"
+  },
+  {
+   "dir": "3900_株式会社クラウドワークス",
+   "code": "3900",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 11116411000.0,
+   "source_file": "3900_株式会社クラウドワークス_20260331_訂正有報_S100Y3TI.zip"
+  },
+  {
+   "dir": "3916_デジタル・インフォメーション・テクノロジー株式会社",
+   "code": "3916",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 12753150000.0,
+   "source_file": "3916_デジタル・インフォメーション・テクノロジー株式会社_20260630_訂正有報_S100XL7E.zip"
+  },
+  {
+   "dir": "3920_アイビーシー株式会社",
+   "code": "3920",
+   "year": 2026,
+   "interim_tags": 26,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3920_アイビーシー株式会社_20260930_訂正有報_S100Y3SW.zip"
+  },
+  {
+   "dir": "3930_株式会社はてな",
+   "code": "3930",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": 2718000000.0,
+   "source_file": null
+  },
+  {
+   "dir": "3939_株式会社カナミックネットワーク",
+   "code": "3939",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 3134723000.0,
+   "source_file": "3939_株式会社カナミックネットワーク_20260930_訂正有報_S100Y3HG.zip"
+  },
+  {
+   "dir": "3958_笹徳印刷株式会社",
+   "code": "3958",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 6178586000.0,
+   "source_file": "3958_笹徳印刷株式会社_20260630_訂正有報_S100XKJ2.zip"
+  },
+  {
+   "dir": "3965_株式会社キャピタル・アセット・プランニング",
+   "code": "3965",
+   "year": 2026,
+   "interim_tags": 139,
+   "currentyear_tags": 0,
+   "revenue": 5487529000.0,
+   "source_file": "3965_株式会社キャピタル・アセット・プランニング_20260930_訂正有報_S100Y46S.zip"
+  },
+  {
+   "dir": "3974_ＳＣＡＴ株式会社",
+   "code": "3974",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 1321622000.0,
+   "source_file": "3974_ＳＣＡＴ株式会社_20261031_訂正有報_S100Y9TW.zip"
+  },
+  {
+   "dir": "3984_株式会社ユーザーローカル",
+   "code": "3984",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3984_株式会社ユーザーローカル_20260630_訂正有報_S100XKRD.zip"
+  },
+  {
+   "dir": "3985_テモナ株式会社",
+   "code": "3985",
+   "year": 2026,
+   "interim_tags": 139,
+   "currentyear_tags": 0,
+   "revenue": 905555000.0,
+   "source_file": "3985_テモナ株式会社_20260930_訂正有報_S100Y3WG.zip"
+  },
+  {
+   "dir": "3986_株式会社ビーブレイクシステムズ",
+   "code": "3986",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "3986_株式会社ビーブレイクシステムズ_20260630_訂正有報_S100XKRT.zip"
+  },
+  {
+   "dir": "3987_エコモット株式会社",
+   "code": "3987",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 1161469000.0,
+   "source_file": "3987_エコモット株式会社_20260831_訂正有報_S100XYNM.zip"
+  },
+  {
+   "dir": "3988_株式会社ＳＹＳホールディングス",
+   "code": "3988",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 7616720000.0,
+   "source_file": "3988_株式会社ＳＹＳホールディングス_20260731_訂正有報_S100XQX3.zip"
+  },
+  {
+   "dir": "3989_シェアリングテクノロジー株式会社",
+   "code": "3989",
+   "year": 2026,
+   "interim_tags": 141,
+   "currentyear_tags": 0,
+   "revenue": 4328454000.0,
+   "source_file": "3989_シェアリングテクノロジー株式会社_20260331_訂正有報_S100Y433.zip"
+  },
+  {
+   "dir": "3991_ウォンテッドリー株式会社",
+   "code": "3991",
+   "year": 2026,
+   "interim_tags": 122,
+   "currentyear_tags": 0,
+   "revenue": 2332767000.0,
+   "source_file": "3991_ウォンテッドリー株式会社_20260831_訂正有報_S100XYRU.zip"
+  },
+  {
+   "dir": "3992_株式会社ニーズウェル",
+   "code": "3992",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 5206433000.0,
+   "source_file": "3992_株式会社ニーズウェル_20260930_訂正有報_S100Y3MM.zip"
+  },
+  {
+   "dir": "3993_株式会社ＰＫＳＨＡ　Ｔｅｃｈｎｏｌｏｇｙ",
+   "code": "3993",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 18712941000.0,
+   "source_file": "3993_株式会社ＰＫＳＨＡ　Ｔｅｃｈｎｏｌｏｇｙ_20260930_訂正有報_S100Y3XP.zip"
+  },
+  {
+   "dir": "4014_株式会社カラダノート",
+   "code": "4014",
+   "year": 2026,
+   "interim_tags": 27,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4014_株式会社カラダノート_20260731_訂正有報_S100XR36.zip"
+  },
+  {
+   "dir": "4015_ペイクラウドホールディングス株式会社",
+   "code": "4015",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 4723810000.0,
+   "source_file": "4015_ペイクラウドホールディングス株式会社_20260831_訂正有報_S100XY65.zip"
+  },
+  {
+   "dir": "402A_株式会社アクセルスペースホールディングス",
+   "code": "402A",
+   "year": 2026,
+   "interim_tags": 141,
+   "currentyear_tags": 0,
+   "revenue": 564447000.0,
+   "source_file": "402A_株式会社アクセルスペースホールディングス_20260531_訂正有報_S100XFLE.zip"
+  },
+  {
+   "dir": "4051_ＧＭＯフィナンシャルゲート株式会社",
+   "code": "4051",
+   "year": 2026,
+   "interim_tags": 131,
+   "currentyear_tags": 0,
+   "revenue": 10515437000.0,
+   "source_file": "4051_ＧＭＯフィナンシャルゲート株式会社_20260930_訂正有報_S100Y43V.zip"
+  },
+  {
+   "dir": "4052_フィーチャ株式会社",
+   "code": "4052",
+   "year": 2026,
+   "interim_tags": 114,
+   "currentyear_tags": 0,
+   "revenue": 205400000.0,
+   "source_file": "4052_フィーチャ株式会社_20260630_訂正有報_S100XK7W.zip"
+  },
+  {
+   "dir": "4054_日本情報クリエイト株式会社",
+   "code": "4054",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4054_日本情報クリエイト株式会社_20260630_訂正有報_S100XKKX.zip"
+  },
+  {
+   "dir": "4055_ティアンドエスグループ株式会社",
+   "code": "4055",
+   "year": 2026,
+   "interim_tags": 129,
+   "currentyear_tags": 0,
+   "revenue": 2254269000.0,
+   "source_file": "4055_ティアンドエスグループ株式会社_20260930_訂正有報_S100Y3B0.zip"
+  },
+  {
+   "dir": "4057_株式会社インターファクトリー",
+   "code": "4057",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4057_株式会社インターファクトリー_20260531_訂正有報_S100XFL2.zip"
+  },
+  {
+   "dir": "4059_株式会社まぐまぐ",
+   "code": "4059",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4059_株式会社まぐまぐ_20260930_訂正有報_S100Y40P.zip"
+  },
+  {
+   "dir": "4068_ベイシス株式会社",
+   "code": "4068",
+   "year": 2026,
+   "interim_tags": 148,
+   "currentyear_tags": 0,
+   "revenue": 4161067000.0,
+   "source_file": "4068_ベイシス株式会社_20260630_訂正有報_S100XKSV.zip"
+  },
+  {
+   "dir": "4071_株式会社プラスアルファ・コンサルティング",
+   "code": "4071",
+   "year": 2026,
+   "interim_tags": 136,
+   "currentyear_tags": 0,
+   "revenue": 9341962000.0,
+   "source_file": "4071_株式会社プラスアルファ・コンサルティング_20260930_訂正有報_S100Y39H.zip"
+  },
+  {
+   "dir": "4073_株式会社ジィ・シィ企画",
+   "code": "4073",
+   "year": 2026,
+   "interim_tags": 26,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4073_株式会社ジィ・シィ企画_20260630_訂正有報_S100XKMC.zip"
+  },
+  {
+   "dir": "4075_ブレインズテクノロジー株式会社",
+   "code": "4075",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": 990000000.0,
+   "source_file": null
+  },
+  {
+   "dir": "4076_株式会社シイエヌエス",
+   "code": "4076",
+   "year": 2026,
+   "interim_tags": 130,
+   "currentyear_tags": 0,
+   "revenue": 3753159000.0,
+   "source_file": "4076_株式会社シイエヌエス_20260531_訂正有報_S100XFDH.zip"
+  },
+  {
+   "dir": "407A_株式会社ＵＮＩＣＯＮホールディングス",
+   "code": "407A",
+   "year": 2026,
+   "interim_tags": 127,
+   "currentyear_tags": 0,
+   "revenue": 9487861000.0,
+   "source_file": "407A_株式会社ＵＮＩＣＯＮホールディングス_20260630_訂正有報_S100XKO0.zip"
+  },
+  {
+   "dir": "4124_大阪油化工業株式会社",
+   "code": "4124",
+   "year": 2026,
+   "interim_tags": 130,
+   "currentyear_tags": 0,
+   "revenue": 727181000.0,
+   "source_file": "4124_大阪油化工業株式会社_20260930_訂正有報_S100Y3QH.zip"
+  },
+  {
+   "dir": "414A_株式会社オーバーラップホールディングス",
+   "code": "414A",
+   "year": 2026,
+   "interim_tags": 114,
+   "currentyear_tags": 0,
+   "revenue": 4143000000.0,
+   "source_file": "414A_株式会社オーバーラップホールディングス_20260831_訂正有報_S100XYTA.zip"
+  },
+  {
+   "dir": "4165_株式会社プレイド",
+   "code": "4165",
+   "year": 2026,
+   "interim_tags": 176,
+   "currentyear_tags": 0,
+   "revenue": 7766667000.0,
+   "source_file": "4165_株式会社プレイド_20260930_訂正有報_S100Y40F.zip"
+  },
+  {
+   "dir": "4172_東和ハイシステム株式会社",
+   "code": "4172",
+   "year": 2026,
+   "interim_tags": 18,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4172_Ｈｉクラテス株式会社_20260930_訂正有報_S100Y3DY.zip"
+  },
+  {
+   "dir": "4176_株式会社ココナラ",
+   "code": "4176",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 4991173000.0,
+   "source_file": "4176_株式会社ココナラ_20260831_訂正有報_S100XYFU.zip"
+  },
+  {
+   "dir": "4194_ビジョナル株式会社",
+   "code": "4194",
+   "year": 2026,
+   "interim_tags": 143,
+   "currentyear_tags": 0,
+   "revenue": 46610000000.0,
+   "source_file": "4194_ビジョナル株式会社_20260731_訂正有報_S100XQQJ.zip"
+  },
+  {
+   "dir": "4196_株式会社ネオマーケティング",
+   "code": "4196",
+   "year": 2026,
+   "interim_tags": 131,
+   "currentyear_tags": 0,
+   "revenue": 1385168000.0,
+   "source_file": "4196_株式会社ネオマーケティング_20260930_訂正有報_S100Y3UR.zip"
+  },
+  {
+   "dir": "4198_株式会社テンダ",
+   "code": "4198",
+   "year": 2026,
+   "interim_tags": 152,
+   "currentyear_tags": 0,
+   "revenue": 2490792000.0,
+   "source_file": "4198_株式会社テンダ_20260531_訂正有報_S100XEJA.zip"
+  },
+  {
+   "dir": "4199_ワンダープラネット株式会社",
+   "code": "4199",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4199_ワンダープラネット株式会社_20260228_訂正有報_S100XY4A.zip"
+  },
+  {
+   "dir": "4243_株式会社ニックス",
+   "code": "4243",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 2268887000.0,
+   "source_file": "4243_株式会社ニックス_20260930_訂正有報_S100Y3SQ.zip"
+  },
+  {
+   "dir": "4260_株式会社ハイブリッドテクノロジーズ",
+   "code": "4260",
+   "year": 2026,
+   "interim_tags": 150,
+   "currentyear_tags": 0,
+   "revenue": 3200402000.0,
+   "source_file": "4260_株式会社ハイブリッドテクノロジーズ_20260930_訂正有報_S100Y4JG.zip"
+  },
+  {
+   "dir": "4263_サスメド株式会社",
+   "code": "4263",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4263_サスメド株式会社_20260630_訂正有報_S100XKPX.zip"
+  },
+  {
+   "dir": "428A_サイプレス・ホールディングス株式会社",
+   "code": "428A",
+   "year": 2026,
+   "interim_tags": 124,
+   "currentyear_tags": 0,
+   "revenue": 6105881000.0,
+   "source_file": "428A_サイプレス・ホールディングス株式会社_20260831_訂正有報_S100XY74.zip"
+  },
+  {
+   "dir": "4320_株式会社ＣＥホールディングス",
+   "code": "4320",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 10877435000.0,
+   "source_file": "4320_株式会社ＣＥホールディングス_20260331_訂正有報_S100Y26V.zip"
+  },
+  {
+   "dir": "4326_株式会社インテージホールディングス",
+   "code": "4326",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 31688495000.0,
+   "source_file": "4326_株式会社インテージホールディングス_20260630_訂正有報_S100XJA9.zip"
+  },
+  {
+   "dir": "4335_ＩＰＳホールディングス株式会社",
+   "code": "4335",
+   "year": 2026,
+   "interim_tags": 147,
+   "currentyear_tags": 0,
+   "revenue": 1825926000.0,
+   "source_file": "4335_ＩＰＳホールディングス株式会社_20260630_訂正有報_S100XJXP.zip"
+  },
+  {
+   "dir": "4346_株式会社ＮＥＸＹＺ．Ｇｒｏｕｐ",
+   "code": "4346",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 13615000000.0,
+   "source_file": "4346_株式会社ＮＥＸＹＺ．Ｇｒｏｕｐ_20260930_訂正有報_S100Y4DK.zip"
+  },
+  {
+   "dir": "4370_モビルス株式会社",
+   "code": "4370",
+   "year": 2026,
+   "interim_tags": 137,
+   "currentyear_tags": 0,
+   "revenue": 1008273000.0,
+   "source_file": "4370_モビルス株式会社_20260831_訂正有報_S100XY05.zip"
+  },
+  {
+   "dir": "4376_株式会社くふうカンパニーホールディングス",
+   "code": "4376",
+   "year": 2026,
+   "interim_tags": 187,
+   "currentyear_tags": 0,
+   "revenue": 7361000000.0,
+   "source_file": "4376_株式会社くふうカンパニーホールディングス_20260930_訂正有報_S100Y466.zip"
+  },
+  {
+   "dir": "4378_株式会社ＣＩＮＣ",
+   "code": "4378",
+   "year": 2026,
+   "interim_tags": 125,
+   "currentyear_tags": 0,
+   "revenue": 852819000.0,
+   "source_file": "4378_株式会社ＣＩＮＣ_20261031_訂正有報_S100YAU5.zip"
+  },
+  {
+   "dir": "4384_ラクスル株式会社",
+   "code": "4384",
+   "year": 2026,
+   "interim_tags": 193,
+   "currentyear_tags": 0,
+   "revenue": 35748000000.0,
+   "source_file": "4384_ラクスル株式会社_20260731_訂正有報_S100XRJA.zip"
+  },
+  {
+   "dir": "4385_株式会社メルカリ",
+   "code": "4385",
+   "year": 2026,
+   "interim_tags": 149,
+   "currentyear_tags": 0,
+   "revenue": 106255000000.0,
+   "source_file": "4385_株式会社メルカリ_20260630_訂正有報_S100XKP2.zip"
+  },
+  {
+   "dir": "4391_ロジザード株式会社",
+   "code": "4391",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4391_ロジザード株式会社_20260630_訂正有報_S100XKQF.zip"
+  },
+  {
+   "dir": "4393_株式会社バンク・オブ・イノベーション",
+   "code": "4393",
+   "year": 2026,
+   "interim_tags": 104,
+   "currentyear_tags": 0,
+   "revenue": 6172000000.0,
+   "source_file": "4393_株式会社バンク・オブ・イノベーション_20260930_訂正有報_S100Y3VU.zip"
+  },
+  {
+   "dir": "4397_株式会社チームスピリット",
+   "code": "4397",
+   "year": 2026,
+   "interim_tags": 130,
+   "currentyear_tags": 0,
+   "revenue": 2881795000.0,
+   "source_file": "4397_株式会社チームスピリット_20260831_訂正有報_S100XY6L.zip"
+  },
+  {
+   "dir": "4398_株式会社ブロードバンドセキュリティ",
+   "code": "4398",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4398_株式会社ブロードバンドセキュリティ_20260630_訂正有報_S100XKOX.zip"
+  },
+  {
+   "dir": "4412_株式会社サイエンスアーツ",
+   "code": "4412",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4412_株式会社サイエンスアーツ_20260831_訂正有報_S100XYIZ.zip"
+  },
+  {
+   "dir": "4418_株式会社ＪＤＳＣ",
+   "code": "4418",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 11182487000.0,
+   "source_file": "4418_株式会社ＪＤＳＣ_20260630_訂正有報_S100XL50.zip"
+  },
+  {
+   "dir": "4421_株式会社ディ・アイ・システム",
+   "code": "4421",
+   "year": 2026,
+   "interim_tags": 137,
+   "currentyear_tags": 0,
+   "revenue": 3603719000.0,
+   "source_file": "4421_株式会社ディ・アイ・システム_20260930_訂正有報_S100Y3YV.zip"
+  },
+  {
+   "dir": "4422_ＶＡＬＵＥＮＥＸ株式会社",
+   "code": "4422",
+   "year": 2026,
+   "interim_tags": 112,
+   "currentyear_tags": 0,
+   "revenue": 423417000.0,
+   "source_file": "4422_ＶＡＬＵＥＮＥＸ株式会社_20260731_訂正有報_S100XPTS.zip"
+  },
+  {
+   "dir": "4424_株式会社Ａｍａｚｉａ",
+   "code": "4424",
+   "year": 2026,
+   "interim_tags": 128,
+   "currentyear_tags": 0,
+   "revenue": 1542379000.0,
+   "source_file": "4424_株式会社Ａｍａｚｉａ_20260331_訂正有報_S100Y427.zip"
+  },
+  {
+   "dir": "4427_株式会社ＥｄｕＬａｂ",
+   "code": "4427",
+   "year": 2026,
+   "interim_tags": 146,
+   "currentyear_tags": 0,
+   "revenue": 2893056000.0,
+   "source_file": "4427_株式会社ＥｄｕＬａｂ_20260930_訂正有報_S100Y3J2.zip"
+  },
+  {
+   "dir": "4430_東海ソフト株式会社",
+   "code": "4430",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 6177026000.0,
+   "source_file": "4430_東海ソフト株式会社_20260531_訂正有報_S100XFOS.zip"
+  },
+  {
+   "dir": "4433_株式会社ヒト・コミュニケーションズ・ホールディングス",
+   "code": "4433",
+   "year": 2026,
+   "interim_tags": 188,
+   "currentyear_tags": 0,
+   "revenue": 31102000000.0,
+   "source_file": "4433_株式会社ヒト・コミュニケーションズ・ホールディングス_20260228_訂正有報_S100XYIR.zip"
+  },
+  {
+   "dir": "4439_株式会社東名",
+   "code": "4439",
+   "year": 2026,
+   "interim_tags": 152,
+   "currentyear_tags": 0,
+   "revenue": 14942916000.0,
+   "source_file": "4439_株式会社東名_20260831_訂正有報_S100XY14.zip"
+  },
+  {
+   "dir": "4440_株式会社ヴィッツ",
+   "code": "4440",
+   "year": 2026,
+   "interim_tags": 149,
+   "currentyear_tags": 0,
+   "revenue": 2618706000.0,
+   "source_file": "4440_株式会社ヴィッツ_20260831_訂正有報_S100XY2P.zip"
+  },
+  {
+   "dir": "4441_トビラシステムズ株式会社",
+   "code": "4441",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4441_トビラシステムズ株式会社_20261031_訂正有報_S100Y9NO.zip"
+  },
+  {
+   "dir": "4443_Ｓａｎｓａｎ株式会社",
+   "code": "4443",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 25381000000.0,
+   "source_file": "4443_Ｓａｎｓａｎ株式会社_20260531_訂正有報_S100XFM9.zip"
+  },
+  {
+   "dir": "4445_リビン・テクノロジーズ株式会社",
+   "code": "4445",
+   "year": 2026,
+   "interim_tags": 129,
+   "currentyear_tags": 0,
+   "revenue": 1733331000.0,
+   "source_file": "4445_リビン・テクノロジーズ株式会社_20260930_訂正有報_S100Y4HG.zip"
+  },
+  {
+   "dir": "4446_Ｌｉｎｋ－Ｕグループ株式会社",
+   "code": "4446",
+   "year": 2026,
+   "interim_tags": 128,
+   "currentyear_tags": 0,
+   "revenue": 2285163000.0,
+   "source_file": "4446_Ｌｉｎｋ－Ｕグループ株式会社_20260731_訂正有報_S100XQZU.zip"
+  },
+  {
+   "dir": "4447_株式会社ピー・ビーシステムズ",
+   "code": "4447",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4447_株式会社ピー・ビーシステムズ_20260930_訂正有報_S100Y44C.zip"
+  },
+  {
+   "dir": "4465_株式会社ニイタカ",
+   "code": "4465",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 12139093000.0,
+   "source_file": "4465_株式会社ニイタカ_20260531_訂正有報_S100XFH2.zip"
+  },
+  {
+   "dir": "4475_ＨＥＮＮＧＥ株式会社",
+   "code": "4475",
+   "year": 2026,
+   "interim_tags": 144,
+   "currentyear_tags": 0,
+   "revenue": 6128859000.0,
+   "source_file": "4475_ＨＥＮＮＧＥ株式会社_20260930_訂正有報_S100Y20I.zip"
+  },
+  {
+   "dir": "4478_フリー株式会社",
+   "code": "4478",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 19941241000.0,
+   "source_file": "4478_フリー株式会社_20260630_訂正有報_S100XKAL.zip"
+  },
+  {
+   "dir": "4479_株式会社マクアケ",
+   "code": "4479",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4479_株式会社マクアケ_20260930_訂正有報_S100Y1G2.zip"
+  },
+  {
+   "dir": "4495_株式会社アイキューブドシステムズ",
+   "code": "4495",
+   "year": 2026,
+   "interim_tags": 130,
+   "currentyear_tags": 0,
+   "revenue": 2127906000.0,
+   "source_file": "4495_株式会社アイキューブドシステムズ_20260630_訂正有報_S100XKCD.zip"
+  },
+  {
+   "dir": "4499_株式会社Ｓｐｅｅｅ",
+   "code": "4499",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 8164101000.0,
+   "source_file": "4499_株式会社Ｓｐｅｅｅ_20260930_訂正有報_S100Y492.zip"
+  },
+  {
+   "dir": "4554_富士製薬工業株式会社",
+   "code": "4554",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 29716000000.0,
+   "source_file": "4554_富士製薬工業株式会社_20260930_訂正有報_S100Y2Z6.zip"
+  },
+  {
+   "dir": "4575_株式会社キャンバス",
+   "code": "4575",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4575_株式会社キャンバス_20260630_訂正有報_S100XKJK.zip"
+  },
+  {
+   "dir": "4577_ダイト株式会社",
+   "code": "4577",
+   "year": 2026,
+   "interim_tags": 185,
+   "currentyear_tags": 0,
+   "revenue": 25141000000.0,
+   "source_file": "4577_ダイト株式会社_20260531_訂正有報_S100XFIM.zip"
+  },
+  {
+   "dir": "4599_株式会社ステムリム",
+   "code": "4599",
+   "year": 2026,
+   "interim_tags": 22,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4599_株式会社ステムリム_20260731_訂正有報_S100XQE0.zip"
+  },
+  {
+   "dir": "4627_ナトコ株式会社",
+   "code": "4627",
+   "year": 2026,
+   "interim_tags": 178,
+   "currentyear_tags": 0,
+   "revenue": 11514147000.0,
+   "source_file": "4627_ナトコ株式会社_20260430_訂正有報_S100YAH4.zip"
+  },
+  {
+   "dir": "4657_株式会社環境管理センター",
+   "code": "4657",
+   "year": 2026,
+   "interim_tags": 183,
+   "currentyear_tags": 0,
+   "revenue": 2067786000.0,
+   "source_file": "4657_株式会社環境管理センター_20260630_訂正有報_S100XKK6.zip"
+  },
+  {
+   "dir": "4666_パーク二四株式会社（定款上の商号　パーク２４株式会社）",
+   "code": "4666",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 202275000000.0,
+   "source_file": "4666_パーク二四株式会社（定款上の商号　パーク２４株式会社）_20261031_訂正有報_S100YB9V.zip"
+  },
+  {
+   "dir": "4668_株式会社明光ネットワークジャパン",
+   "code": "4668",
+   "year": 2026,
+   "interim_tags": 187,
+   "currentyear_tags": 0,
+   "revenue": 12901000000.0,
+   "source_file": "4668_株式会社明光ネットワークジャパン_20260831_訂正有報_S100XXYL.zip"
+  },
+  {
+   "dir": "4707_株式会社キタック",
+   "code": "4707",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 1778677000.0,
+   "source_file": "4707_株式会社キタック_20261020_訂正有報_S100Y71D.zip"
+  },
+  {
+   "dir": "4716_日本オラクル株式会社",
+   "code": "4716",
+   "year": 2026,
+   "interim_tags": 26,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4716_日本オラクル株式会社_20260531_訂正有報_S100XF0J.zip"
+  },
+  {
+   "dir": "4728_株式会社トーセ",
+   "code": "4728",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 3459011000.0,
+   "source_file": "4728_株式会社トーセ_20260831_訂正有報_S100XYM2.zip"
+  },
+  {
+   "dir": "4754_株式会社トスネット",
+   "code": "4754",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 5613886000.0,
+   "source_file": "4754_株式会社トスネット_20260930_訂正有報_S100Y471.zip"
+  },
+  {
+   "dir": "4760_株式会社アルファ",
+   "code": "4760",
+   "year": 2026,
+   "interim_tags": 146,
+   "currentyear_tags": 0,
+   "revenue": 3330668000.0,
+   "source_file": "4760_株式会社アルファ_20260831_訂正有報_S100XWYB.zip"
+  },
+  {
+   "dir": "4767_株式会社テー・オー・ダブリュー",
+   "code": "4767",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 10201161000.0,
+   "source_file": "4767_株式会社テー・オー・ダブリュー_20260630_訂正有報_S100XKPW.zip"
+  },
+  {
+   "dir": "4769_株式会社ＩＣ",
+   "code": "4769",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 5305146000.0,
+   "source_file": "4769_株式会社ＩＣ_20260930_訂正有報_S100Y356.zip"
+  },
+  {
+   "dir": "4809_パラカ株式会社",
+   "code": "4809",
+   "year": 2026,
+   "interim_tags": 26,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4809_パラカ株式会社_20260930_訂正有報_S100Y3WW.zip"
+  },
+  {
+   "dir": "4825_株式会社ウェザーニューズ",
+   "code": "4825",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 12133355000.0,
+   "source_file": "4825_株式会社ウェザーニューズ_20260531_訂正有報_S100XEVL.zip"
+  },
+  {
+   "dir": "4826_株式会社ＣＩＪ",
+   "code": "4826",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 14230680000.0,
+   "source_file": "4826_株式会社ＣＩＪ_20260630_訂正有報_S100XK5U.zip"
+  },
+  {
+   "dir": "4829_日本エンタープライズ株式会社",
+   "code": "4829",
+   "year": 2026,
+   "interim_tags": 148,
+   "currentyear_tags": 0,
+   "revenue": 2189902000.0,
+   "source_file": "4829_日本エンタープライズ株式会社_20260531_訂正有報_S100XFJ2.zip"
+  },
+  {
+   "dir": "4845_株式会社スカラ",
+   "code": "4845",
+   "year": 2026,
+   "interim_tags": 148,
+   "currentyear_tags": 0,
+   "revenue": 4007354000.0,
+   "source_file": "4845_株式会社スカラ_20260630_訂正有報_S100XKV9.zip"
+  },
+  {
+   "dir": "4847_株式会社インテリジェント　ウェイブ",
+   "code": "4847",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4847_株式会社インテリジェント　ウェイブ_20260630_訂正有報_S100XJO6.zip"
+  },
+  {
+   "dir": "4880_セルソース株式会社",
+   "code": "4880",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 1775588000.0,
+   "source_file": "4880_セルソース株式会社_20261031_訂正有報_S100YA7Z.zip"
+  },
+  {
+   "dir": "4884_クリングルファーマ株式会社",
+   "code": "4884",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4884_クリングルファーマ株式会社_20260930_訂正有報_S100Y2Q5.zip"
+  },
+  {
+   "dir": "4885_室町ケミカル株式会社",
+   "code": "4885",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "4885_室町ケミカル株式会社_20260531_訂正有報_S100XFQT.zip"
+  },
+  {
+   "dir": "4928_株式会社ノエビアホールディングス",
+   "code": "4928",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 30615000000.0,
+   "source_file": "4928_株式会社ノエビアホールディングス_20260930_訂正有報_S100Y34M.zip"
+  },
+  {
+   "dir": "4931_新日本製薬株式会社",
+   "code": "4931",
+   "year": 2026,
+   "interim_tags": 147,
+   "currentyear_tags": 0,
+   "revenue": 20517000000.0,
+   "source_file": "4931_新日本製薬株式会社_20260930_訂正有報_S100Y3SY.zip"
+  },
+  {
+   "dir": "4934_プレミアアンチエイジング株式会社",
+   "code": "4934",
+   "year": 2026,
+   "interim_tags": 147,
+   "currentyear_tags": 0,
+   "revenue": 7342000000.0,
+   "source_file": "4934_プレミアアンチエイジング株式会社_20260131_訂正有報_S100XQJB.zip"
+  },
+  {
+   "dir": "4936_株式会社アクシージア",
+   "code": "4936",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 6774883000.0,
+   "source_file": "4936_株式会社アクシージア_20260731_訂正有報_S100XQMI.zip"
+  },
+  {
+   "dir": "4937_株式会社Ｗａｑｏｏ",
+   "code": "4937",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 1133473000.0,
+   "source_file": "4937_株式会社Ｗａｑｏｏ_20260930_訂正有報_S100Y3R1.zip"
+  },
+  {
+   "dir": "4958_長谷川香料株式会社",
+   "code": "4958",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 37585000000.0,
+   "source_file": "4958_長谷川香料株式会社_20260930_訂正有報_S100Y3QR.zip"
+  },
+  {
+   "dir": "4976_東洋ドライルーブ株式会社",
+   "code": "4976",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 2668234000.0,
+   "source_file": "4976_東洋ドライルーブ株式会社_20260630_訂正有報_S100XKHT.zip"
+  },
+  {
+   "dir": "4996_クミアイ化学工業株式会社",
+   "code": "4996",
+   "year": 2026,
+   "interim_tags": 186,
+   "currentyear_tags": 0,
+   "revenue": 102919000000.0,
+   "source_file": "4996_クミアイ化学工業株式会社_20261031_訂正有報_S100Y9R9.zip"
+  },
+  {
+   "dir": "5026_株式会社トリプルアイズ",
+   "code": "5026",
+   "year": 2026,
+   "interim_tags": 132,
+   "currentyear_tags": 0,
+   "revenue": 2809958000.0,
+   "source_file": "5026_株式会社トリプルアイズ_20260831_訂正有報_S100XYJ5.zip"
+  },
+  {
+   "dir": "5034_株式会社ｕｎｅｒｒｙ",
+   "code": "5034",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5034_株式会社ｕｎｅｒｒｙ_20260630_訂正有報_S100XKKM.zip"
+  },
+  {
+   "dir": "5036_日本ビジネスシステムズ株式会社",
+   "code": "5036",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 86377000000.0,
+   "source_file": "5036_日本ビジネスシステムズ株式会社_20260930_訂正有報_S100Y3DA.zip"
+  },
+  {
+   "dir": "5125_株式会社ファインズ",
+   "code": "5125",
+   "year": 2026,
+   "interim_tags": 21,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5125_株式会社ファインズ_20260630_訂正有報_S100XL92.zip"
+  },
+  {
+   "dir": "5129_株式会社ＦＩＸＥＲ",
+   "code": "5129",
+   "year": 2026,
+   "interim_tags": 115,
+   "currentyear_tags": 0,
+   "revenue": 1563000000.0,
+   "source_file": "5129_株式会社ＦＩＸＥＲ_20260831_訂正有報_S100XYBQ.zip"
+  },
+  {
+   "dir": "5131_リンカーズ株式会社",
+   "code": "5131",
+   "year": 2026,
+   "interim_tags": 117,
+   "currentyear_tags": 0,
+   "revenue": 644298000.0,
+   "source_file": "5131_リンカーズ株式会社_20260731_訂正有報_S100XR7C.zip"
+  },
+  {
+   "dir": "5132_株式会社ｐｌｕｓｚｅｒｏ",
+   "code": "5132",
+   "year": 2026,
+   "interim_tags": 26,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5132_株式会社ｐｌｕｓｚｅｒｏ_20261031_訂正有報_S100YA77.zip"
+  },
+  {
+   "dir": "5134_株式会社ＰＯＰＥＲ",
+   "code": "5134",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5134_株式会社ＰＯＰＥＲ_20260430_訂正有報_S100Y9IL.zip"
+  },
+  {
+   "dir": "5136_ｔｒｉｐｌａ株式会社",
+   "code": "5136",
+   "year": 2026,
+   "interim_tags": 140,
+   "currentyear_tags": 0,
+   "revenue": 1662464000.0,
+   "source_file": "5136_ｔｒｉｐｌａ株式会社_20261031_訂正有報_S100YB8S.zip"
+  },
+  {
+   "dir": "5137_株式会社スマートドライブ",
+   "code": "5137",
+   "year": 2026,
+   "interim_tags": 145,
+   "currentyear_tags": 0,
+   "revenue": 1584205000.0,
+   "source_file": "5137_株式会社スマートドライブ_20260930_訂正有報_S100Y3LC.zip"
+  },
+  {
+   "dir": "5218_株式会社オハラ",
+   "code": "5218",
+   "year": 2026,
+   "interim_tags": 188,
+   "currentyear_tags": 0,
+   "revenue": 15131731000.0,
+   "source_file": "5218_株式会社オハラ_20261031_訂正有報_S100YAGV.zip"
+  },
+  {
+   "dir": "5254_株式会社Ａｒｅｎｔ",
+   "code": "5254",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 2109812000.0,
+   "source_file": "5254_株式会社Ａｒｅｎｔ_20260630_訂正有報_S100XKH4.zip"
+  },
+  {
+   "dir": "5256_株式会社Ｆｕｓｉｃ",
+   "code": "5256",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5256_株式会社Ｆｕｓｉｃ_20260630_訂正有報_S100XKTU.zip"
+  },
+  {
+   "dir": "5380_新東株式会社",
+   "code": "5380",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5380_新東株式会社_20260630_訂正有報_S100XK51.zip"
+  },
+  {
+   "dir": "5532_株式会社リアルゲイト",
+   "code": "5532",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5532_株式会社リアルゲイト_20260930_訂正有報_S100Y2LH.zip"
+  },
+  {
+   "dir": "5533_株式会社エリッツホールディングス",
+   "code": "5533",
+   "year": 2026,
+   "interim_tags": 191,
+   "currentyear_tags": 0,
+   "revenue": 3526345000.0,
+   "source_file": "5533_株式会社エリッツホールディングス_20260930_訂正有報_S100Y49M.zip"
+  },
+  {
+   "dir": "5570_株式会社ジェノバ",
+   "code": "5570",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5570_株式会社ジェノバ_20260930_訂正有報_S100Y386.zip"
+  },
+  {
+   "dir": "5572_株式会社Ｒｉｄｇｅ－ｉ",
+   "code": "5572",
+   "year": 2026,
+   "interim_tags": 124,
+   "currentyear_tags": 0,
+   "revenue": 1150566000.0,
+   "source_file": "5572_株式会社Ｒｉｄｇｅ－ｉ_20260731_訂正有報_S100XQNG.zip"
+  },
+  {
+   "dir": "5574_株式会社ＡＢＥＪＡ",
+   "code": "5574",
+   "year": 2026,
+   "interim_tags": 20,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5574_株式会社ＡＢＥＪＡ_20260831_訂正有報_S100XYUO.zip"
+  },
+  {
+   "dir": "5575_株式会社Ｇｌｏｂｅｅ",
+   "code": "5575",
+   "year": 2026,
+   "interim_tags": 20,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5575_株式会社Ｇｌｏｂｅｅ_20260531_訂正有報_S100XFMJ.zip"
+  },
+  {
+   "dir": "5578_ＡＲアドバンストテクノロジ株式会社",
+   "code": "5578",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 7948344000.0,
+   "source_file": "5578_ＡＲアドバンストテクノロジ株式会社_20260831_訂正有報_S100XYIE.zip"
+  },
+  {
+   "dir": "5580_株式会社プロディライト",
+   "code": "5580",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 1524034000.0,
+   "source_file": "5580_株式会社プロディライト_20260831_訂正有報_S100XYEB.zip"
+  },
+  {
+   "dir": "5582_株式会社グリッド",
+   "code": "5582",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5582_株式会社グリッド_20260630_訂正有報_S100XL95.zip"
+  },
+  {
+   "dir": "5586_株式会社Ｌａｂｏｒｏ．ＡＩ",
+   "code": "5586",
+   "year": 2026,
+   "interim_tags": 112,
+   "currentyear_tags": 0,
+   "revenue": 1326196000.0,
+   "source_file": "5586_株式会社Ｌａｂｏｒｏ．ＡＩ_20260930_訂正有報_S100Y3PS.zip"
+  },
+  {
+   "dir": "5587_株式会社インバウンドプラットフォーム",
+   "code": "5587",
+   "year": 2026,
+   "interim_tags": 144,
+   "currentyear_tags": 0,
+   "revenue": 1991939000.0,
+   "source_file": "5587_株式会社インバウンドプラットフォーム_20260930_訂正有報_S100Y3JP.zip"
+  },
+  {
+   "dir": "5698_株式会社エンビプロ・ホールディングス",
+   "code": "5698",
+   "year": 2026,
+   "interim_tags": 182,
+   "currentyear_tags": 0,
+   "revenue": 21528657000.0,
+   "source_file": "5698_株式会社エンビプロ・ホールディングス_20260630_訂正有報_S100XKL7.zip"
+  },
+  {
+   "dir": "5724_株式会社アサカ理研",
+   "code": "5724",
+   "year": 2026,
+   "interim_tags": 184,
+   "currentyear_tags": 0,
+   "revenue": 5283311000.0,
+   "source_file": "5724_株式会社アサカ理研_20260930_訂正有報_S100Y4GD.zip"
+  },
+  {
+   "dir": "5843_ニッポンインシュア株式会社",
+   "code": "5843",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5843_ニッポンインシュア株式会社_20260930_訂正有報_S100Y3KY.zip"
+  },
+  {
+   "dir": "5884_株式会社クラダシ",
+   "code": "5884",
+   "year": 2026,
+   "interim_tags": 126,
+   "currentyear_tags": 0,
+   "revenue": 1683661000.0,
+   "source_file": "5884_株式会社クラダシ_20260630_訂正有報_S100XKMV.zip"
+  },
+  {
+   "dir": "5885_株式会社ジーデップ・アドバンス",
+   "code": "5885",
+   "year": 2026,
+   "interim_tags": 27,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5885_株式会社ジーデップ・アドバンス_20260531_訂正有報_S100XFR8.zip"
+  },
+  {
+   "dir": "5903_シンポ株式会社",
+   "code": "5903",
+   "year": 2026,
+   "interim_tags": 147,
+   "currentyear_tags": 0,
+   "revenue": 3520031000.0,
+   "source_file": "5903_シンポ株式会社_20260630_訂正有報_S100XJ67.zip"
+  },
+  {
+   "dir": "5921_川岸工業株式会社",
+   "code": "5921",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "5921_川岸工業株式会社_20260930_訂正有報_S100Y3SU.zip"
+  },
+  {
+   "dir": "5932_三協立山株式会社",
+   "code": "5932",
+   "year": 2026,
+   "interim_tags": 186,
+   "currentyear_tags": 0,
+   "revenue": 178758000000.0,
+   "source_file": "5932_三協立山株式会社_20260531_訂正有報_S100XEHG.zip"
+  },
+  {
+   "dir": "5967_ＴＯＮＥ株式会社",
+   "code": "5967",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 3407232000.0,
+   "source_file": "5967_ＴＯＮＥ株式会社_20260531_訂正有報_S100XFPQ.zip"
+  },
+  {
+   "dir": "5987_株式会社オーネックス",
+   "code": "5987",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 2654308000.0,
+   "source_file": "5987_株式会社オーネックス_20260630_訂正有報_S100XKWZ.zip"
+  },
+  {
+   "dir": "6030_株式会社アドベンチャー",
+   "code": "6030",
+   "year": 2026,
+   "interim_tags": 143,
+   "currentyear_tags": 0,
+   "revenue": 13352381000.0,
+   "source_file": "6030_株式会社アドベンチャー_20260630_訂正有報_S100XKUI.zip"
+  },
+  {
+   "dir": "6036_ＫｅｅＰｅｒ技研株式会社",
+   "code": "6036",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "6036_ＫｅｅＰｅｒ技研株式会社_20260630_訂正有報_S100XLNY.zip"
+  },
+  {
+   "dir": "6037_楽待株式会社",
+   "code": "6037",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": null
+  },
+  {
+   "dir": "6038_株式会社イード",
+   "code": "6038",
+   "year": 2026,
+   "interim_tags": 161,
+   "currentyear_tags": 0,
+   "revenue": 2995131000.0,
+   "source_file": "6038_株式会社イード_20260630_訂正有報_S100XL5R.zip"
+  },
+  {
+   "dir": "6040_日本スキー場開発株式会社",
+   "code": "6040",
+   "year": 2026,
+   "interim_tags": 178,
+   "currentyear_tags": 0,
+   "revenue": 5450676000.0,
+   "source_file": "6040_日本スキー場開発株式会社_20260131_訂正有報_S100XQSU.zip"
+  },
+  {
+   "dir": "6044_株式会社三機サービス",
+   "code": "6044",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 11926407000.0,
+   "source_file": "6044_株式会社三機サービス_20260531_訂正有報_S100XFNC.zip"
+  },
+  {
+   "dir": "6046_株式会社リンクバル",
+   "code": "6046",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 493958000.0,
+   "source_file": "6046_株式会社リンクバル_20260930_訂正有報_S100Y2SH.zip"
+  },
+  {
+   "dir": "6047_株式会社Ｇｕｎｏｓｙ",
+   "code": "6047",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 3279000000.0,
+   "source_file": "6047_株式会社Ｇｕｎｏｓｙ_20260531_訂正有報_S100XFDN.zip"
+  },
+  {
+   "dir": "6049_株式会社イトクロ",
+   "code": "6049",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "6049_株式会社イトクロ_20261031_訂正有報_S100YA45.zip"
+  },
+  {
+   "dir": "6050_イー・ガーディアン株式会社",
+   "code": "6050",
+   "year": 2026,
+   "interim_tags": 138,
+   "currentyear_tags": 0,
+   "revenue": 5464691000.0,
+   "source_file": "6050_イー・ガーディアン株式会社_20260930_訂正有報_S100Y2PG.zip"
+  },
+  {
+   "dir": "6061_株式会社ユニバーサル園芸社",
+   "code": "6061",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 10537405000.0,
+   "source_file": "6061_株式会社ユニバーサル園芸社_20260630_訂正有報_S100XL3M.zip"
+  },
+  {
+   "dir": "6062_株式会社チャーム・ケア・コーポレーション",
+   "code": "6062",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 22327000000.0,
+   "source_file": "6062_株式会社チャーム・ケア・コーポレーション_20260630_訂正有報_S100XJIE.zip"
+  },
+  {
+   "dir": "6080_Ｍ＆Ａキャピタルパートナーズ株式会社",
+   "code": "6080",
+   "year": 2026,
+   "interim_tags": 136,
+   "currentyear_tags": 0,
+   "revenue": 13447458000.0,
+   "source_file": "6080_Ｍ＆Ａキャピタルパートナーズ株式会社_20260930_訂正有報_S100Y3XA.zip"
+  },
+  {
+   "dir": "6087_株式会社アビスト",
+   "code": "6087",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "6087_株式会社アビスト_20260930_訂正有報_S100Y3AZ.zip"
+  },
+  {
+   "dir": "6090_ヒューマン・メタボローム・テクノロジーズ株式会社",
+   "code": "6090",
+   "year": 2026,
+   "interim_tags": 142,
+   "currentyear_tags": 0,
+   "revenue": 659216000.0,
+   "source_file": "6090_ヒューマン・メタボローム・テクノロジーズ株式会社_20260630_訂正有報_S100XKLC.zip"
+  },
+  {
+   "dir": "6091_株式会社ウエスコホールディングス",
+   "code": "6091",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 8655249000.0,
+   "source_file": "6091_株式会社ウエスコホールディングス_20260731_訂正有報_S100XQ4W.zip"
+  },
+  {
+   "dir": "6094_株式会社フリークアウト・ホールディングス",
+   "code": "6094",
+   "year": 2026,
+   "interim_tags": 176,
+   "currentyear_tags": 0,
+   "revenue": 29368906000.0,
+   "source_file": "6094_株式会社フリークアウト・ホールディングス_20260930_訂正有報_S100Y4DW.zip"
+  },
+  {
+   "dir": "6150_タケダ機械株式会社",
+   "code": "6150",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 2309240000.0,
+   "source_file": "6150_タケダ機械株式会社_20260531_訂正有報_S100XFD7.zip"
+  },
+  {
+   "dir": "6159_ミクロン精密株式会社",
+   "code": "6159",
+   "year": 2026,
+   "interim_tags": 168,
+   "currentyear_tags": 0,
+   "revenue": 1851483000.0,
+   "source_file": "6159_ミクロン精密株式会社_20260831_訂正有報_S100XYEL.zip"
+  },
+  {
+   "dir": "6176_株式会社ブランジスタ",
+   "code": "6176",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 2472085000.0,
+   "source_file": "6176_株式会社ブランジスタ_20260930_訂正有報_S100Y468.zip"
+  },
+  {
+   "dir": "6189_株式会社グローバルキッズＣＯＭＰＡＮＹ",
+   "code": "6189",
+   "year": 2026,
+   "interim_tags": 148,
+   "currentyear_tags": 0,
+   "revenue": 16868000000.0,
+   "source_file": "6189_株式会社グローバルキッズＣＯＭＰＡＮＹ_20260930_訂正有報_S100Y4D9.zip"
+  },
+  {
+   "dir": "6191_株式会社エアトリ",
+   "code": "6191",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 17739000000.0,
+   "source_file": "6191_株式会社エアトリ_20260930_訂正有報_S100Y4G0.zip"
+  },
+  {
+   "dir": "6194_株式会社アトラエ",
+   "code": "6194",
+   "year": 2026,
+   "interim_tags": 20,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "6194_株式会社アトラエ_20260930_訂正有報_S100Y41P.zip"
+  },
+  {
+   "dir": "6196_株式会社ストライク",
+   "code": "6196",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "6196_株式会社ストライクグループ_20260930_訂正有報_S100Y3Q5.zip"
+  },
+  {
+   "dir": "6198_株式会社キャリア",
+   "code": "6198",
+   "year": 2026,
+   "interim_tags": 132,
+   "currentyear_tags": 0,
+   "revenue": 6664078000.0,
+   "source_file": "6198_株式会社キャリア_20260930_訂正有報_S100Y4CZ.zip"
+  },
+  {
+   "dir": "6199_株式会社セラク",
+   "code": "6199",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 12489793000.0,
+   "source_file": "6199_株式会社セラク_20260831_訂正有報_S100XYO2.zip"
+  },
+  {
+   "dir": "6200_株式会社インソース",
+   "code": "6200",
+   "year": 2026,
+   "interim_tags": 139,
+   "currentyear_tags": 0,
+   "revenue": 7584187000.0,
+   "source_file": "6200_株式会社インソース_20260930_訂正有報_S100Y3GU.zip"
+  },
+  {
+   "dir": "6227_ＡＩメカテック株式会社",
+   "code": "6227",
+   "year": 2026,
+   "interim_tags": 173,
+   "currentyear_tags": 0,
+   "revenue": 14615821000.0,
+   "source_file": "6227_ＡＩメカテック株式会社_20260630_訂正有報_S100XKIM.zip"
+  },
+  {
+   "dir": "6233_ＫＬＡＳＳ株式会社",
+   "code": "6233",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 5239920000.0,
+   "source_file": "6233_ＫＬＡＳＳ株式会社_20260930_訂正有報_S100Y3Z2.zip"
+  },
+  {
+   "dir": "6239_株式会社ナガオカ",
+   "code": "6239",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 3040594000.0,
+   "source_file": "6239_株式会社ナガオカ_20260630_訂正有報_S100XKG7.zip"
+  },
+  {
+   "dir": "6255_株式会社エヌ・ピー・シー",
+   "code": "6255",
+   "year": 2026,
+   "interim_tags": 149,
+   "currentyear_tags": 0,
+   "revenue": 1124372000.0,
+   "source_file": "6255_株式会社エヌ・ピー・シー_20260831_訂正有報_S100XYP4.zip"
+  },
+  {
+   "dir": "6264_株式会社マルマエ",
+   "code": "6264",
+   "year": 2026,
+   "interim_tags": 167,
+   "currentyear_tags": 0,
+   "revenue": 8710000000.0,
+   "source_file": "6264_株式会社マルマエ_20260831_訂正有報_S100XY2C.zip"
+  },
+  {
+   "dir": "6267_ゼネラルパッカー株式会社",
+   "code": "6267",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 4593416000.0,
+   "source_file": "6267_ゼネラルパッカー株式会社_20260131_訂正有報_S100XQND.zip"
+  },
+  {
+   "dir": "6277_ホソカワミクロン株式会社",
+   "code": "6277",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 39910000000.0,
+   "source_file": "6277_ホソカワミクロン株式会社_20260930_訂正有報_S100Y2KF.zip"
+  },
+  {
+   "dir": "6284_日精エー・エス・ビー機械株式会社",
+   "code": "6284",
+   "year": 2026,
+   "interim_tags": 143,
+   "currentyear_tags": 0,
+   "revenue": 24041000000.0,
+   "source_file": "6284_日精エー・エス・ビー機械株式会社_20260930_訂正有報_S100Y41M.zip"
+  },
+  {
+   "dir": "6289_株式会社技研製作所",
+   "code": "6289",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 14094000000.0,
+   "source_file": "6289_株式会社技研製作所_20260228_訂正有報_S100XYLJ.zip"
+  },
+  {
+   "dir": "6309_巴工業株式会社",
+   "code": "6309",
+   "year": 2026,
+   "interim_tags": 184,
+   "currentyear_tags": 0,
+   "revenue": 30849000000.0,
+   "source_file": "6309_巴工業株式会社_20261031_訂正有報_S100YB20.zip"
+  },
+  {
+   "dir": "6316_株式会社丸山製作所",
+   "code": "6316",
+   "year": 2026,
+   "interim_tags": 174,
+   "currentyear_tags": 0,
+   "revenue": 20349000000.0,
+   "source_file": "6316_株式会社丸山製作所_20260930_訂正有報_S100Y3SM.zip"
+  },
+  {
+   "dir": "6327_北川精機株式会社",
+   "code": "6327",
+   "year": 2026,
+   "interim_tags": 151,
+   "currentyear_tags": 0,
+   "revenue": 2718438000.0,
+   "source_file": "6327_北川精機株式会社_20260630_訂正有報_S100XKX9.zip"
+  },
+  {
+   "dir": "6338_株式会社タカトリ",
+   "code": "6338",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 2733123000.0,
+   "source_file": "6338_株式会社タカトリ_20260331_訂正有報_S100Y3R9.zip"
+  },
+  {
+   "dir": "6340_澁谷工業株式会社",
+   "code": "6340",
+   "year": 2026,
+   "interim_tags": 176,
+   "currentyear_tags": 0,
+   "revenue": 63063000000.0,
+   "source_file": "6340_澁谷工業株式会社_20260630_訂正有報_S100XL0E.zip"
+  },
+  {
+   "dir": "6387_サムコ　株式会社",
+   "code": "6387",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": 7414000000.0,
+   "source_file": null
+  },
+  {
+   "dir": "6466_株式会社ＴＶＥ",
+   "code": "6466",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 6003520000.0,
+   "source_file": "6466_株式会社ＴＶＥ_20260930_訂正有報_S100Y33H.zip"
+  },
+  {
+   "dir": "6492_岡野バルブ製造株式会社",
+   "code": "6492",
+   "year": 2026,
+   "interim_tags": 173,
+   "currentyear_tags": 0,
+   "revenue": 5845000000.0,
+   "source_file": "6492_岡野バルブ製造株式会社_20260930_訂正有報_S100Y41T.zip"
+  },
+  {
+   "dir": "6496_株式会社中北製作所",
+   "code": "6496",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 14388459000.0,
+   "source_file": "6496_株式会社中北製作所_20260531_訂正有報_S100XEZB.zip"
+  },
+  {
+   "dir": "6505_東洋電機製造株式会社",
+   "code": "6505",
+   "year": 2026,
+   "interim_tags": 182,
+   "currentyear_tags": 0,
+   "revenue": 18179000000.0,
+   "source_file": "6505_東洋電機製造株式会社_20260531_訂正有報_S100XFH3.zip"
+  },
+  {
+   "dir": "6522_株式会社アスタリスク",
+   "code": "6522",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 760930000.0,
+   "source_file": "6522_株式会社アスタリスク_20260831_訂正有報_S100XU4B.zip"
+  },
+  {
+   "dir": "6535_株式会社アイモバイル",
+   "code": "6535",
+   "year": 2026,
+   "interim_tags": 139,
+   "currentyear_tags": 0,
+   "revenue": 16826000000.0,
+   "source_file": "6535_株式会社アイモバイル_20260731_訂正有報_S100XQLA.zip"
+  },
+  {
+   "dir": "6547_株式会社グリーンズ",
+   "code": "6547",
+   "year": 2026,
+   "interim_tags": 148,
+   "currentyear_tags": 0,
+   "revenue": 28501000000.0,
+   "source_file": "6547_株式会社グリーンズ_20260630_訂正有報_S100XJ01.zip"
+  },
+  {
+   "dir": "6548_株式会社旅工房",
+   "code": "6548",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 2814237000.0,
+   "source_file": "6548_株式会社旅工房_20260630_訂正有報_S100XL10.zip"
+  },
+  {
+   "dir": "6551_株式会社ツナググループ・ホールディングス",
+   "code": "6551",
+   "year": 2026,
+   "interim_tags": 136,
+   "currentyear_tags": 0,
+   "revenue": 8806284000.0,
+   "source_file": "6551_株式会社ツナググループ・ホールディングス_20260930_訂正有報_S100Y37T.zip"
+  },
+  {
+   "dir": "6552_株式会社ＧａｍｅＷｉｔｈ",
+   "code": "6552",
+   "year": 2026,
+   "interim_tags": 139,
+   "currentyear_tags": 0,
+   "revenue": 1962000000.0,
+   "source_file": "6552_株式会社ＧａｍｅＷｉｔｈ_20260531_訂正有報_S100XFOX.zip"
+  },
+  {
+   "dir": "6554_株式会社エスユーエス",
+   "code": "6554",
+   "year": 2026,
+   "interim_tags": 131,
+   "currentyear_tags": 0,
+   "revenue": 8034000000.0,
+   "source_file": "6554_株式会社エスユーエス_20260930_訂正有報_S100Y473.zip"
+  },
+  {
+   "dir": "6563_株式会社みらいワークス",
+   "code": "6563",
+   "year": 2026,
+   "interim_tags": 98,
+   "currentyear_tags": 0,
+   "revenue": 5846457000.0,
+   "source_file": "6563_株式会社みらいワークス_20260930_訂正有報_S100Y3UP.zip"
+  },
+  {
+   "dir": "6571_キュービーネットホールディングス株式会社",
+   "code": "6571",
+   "year": 2026,
+   "interim_tags": 140,
+   "currentyear_tags": 0,
+   "revenue": 13481000000.0,
+   "source_file": "6571_キュービーネットホールディングス株式会社_20260630_訂正有報_S100XKUP.zip"
+  },
+  {
+   "dir": "6577_株式会社ベストワンドットコム",
+   "code": "6577",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 1035750000.0,
+   "source_file": "6577_株式会社ベストワンドットコム_20260731_訂正有報_S100XO8X.zip"
+  },
+  {
+   "dir": "6597_ＨＰＣシステムズ株式会社",
+   "code": "6597",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 3269814000.0,
+   "source_file": "6597_ＨＰＣシステムズ株式会社_20260630_訂正有報_S100XKQD.zip"
+  },
+  {
+   "dir": "6662_株式会社ユビテック",
+   "code": "6662",
+   "year": 2026,
+   "interim_tags": 114,
+   "currentyear_tags": 0,
+   "revenue": 679149000.0,
+   "source_file": "6662_株式会社ユビテック_20260630_訂正有報_S100XJIG.zip"
+  },
+  {
+   "dir": "6668_株式会社アドテックプラズマテクノロジー",
+   "code": "6668",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 5460000000.0,
+   "source_file": "6668_株式会社アドテックプラズマテクノロジー_20260831_訂正有報_S100XY37.zip"
+  },
+  {
+   "dir": "6677_株式会社エスケーエレクトロニクス",
+   "code": "6677",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 14359096000.0,
+   "source_file": "6677_株式会社エスケーエレクトロニクス_20260930_訂正有報_S100Y2IZ.zip"
+  },
+  {
+   "dir": "6728_株式会社　アルバック",
+   "code": "6728",
+   "year": 2026,
+   "interim_tags": 187,
+   "currentyear_tags": 0,
+   "revenue": 123893000000.0,
+   "source_file": "6728_株式会社　アルバック_20260630_訂正有報_S100XJL5.zip"
+  },
+  {
+   "dir": "6731_株式会社ピクセラ",
+   "code": "6731",
+   "year": 2026,
+   "interim_tags": 150,
+   "currentyear_tags": 0,
+   "revenue": 602269000.0,
+   "source_file": "6731_株式会社ピクセラ_20260930_訂正有報_S100Y3UM.zip"
+  },
+  {
+   "dir": "6778_株式会社アルチザネットワークス",
+   "code": "6778",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 1122786000.0,
+   "source_file": "6778_株式会社アルチザネットワークス_20260131_訂正有報_S100XQGA.zip"
+  },
+  {
+   "dir": "6785_株式会社鈴木",
+   "code": "6785",
+   "year": 2026,
+   "interim_tags": 161,
+   "currentyear_tags": 0,
+   "revenue": 19267504000.0,
+   "source_file": "6785_株式会社鈴木_20260630_訂正有報_S100XK4N.zip"
+  },
+  {
+   "dir": "6838_株式会社多摩川ホールディングス",
+   "code": "6838",
+   "year": 2026,
+   "interim_tags": 146,
+   "currentyear_tags": 0,
+   "revenue": 3742889000.0,
+   "source_file": "6838_株式会社多摩川ホールディングス_20261031_訂正有報_S100YBBW.zip"
+  },
+  {
+   "dir": "6874_協立電機株式会社",
+   "code": "6874",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 17950690000.0,
+   "source_file": "6874_協立電機株式会社_20260630_訂正有報_S100XJTK.zip"
+  },
+  {
+   "dir": "6877_ＯＢＡＲＡ　ＧＲＯＵＰ株式会社",
+   "code": "6877",
+   "year": 2026,
+   "interim_tags": 161,
+   "currentyear_tags": 0,
+   "revenue": 36067000000.0,
+   "source_file": "6877_ＯＢＡＲＡ　ＧＲＯＵＰ株式会社_20260930_訂正有報_S100Y2PN.zip"
+  },
+  {
+   "dir": "6888_アクモス株式会社",
+   "code": "6888",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 2861000000.0,
+   "source_file": "6888_アクモス株式会社_20260630_訂正有報_S100XKUJ.zip"
+  },
+  {
+   "dir": "6905_コーセル株式会社",
+   "code": "6905",
+   "year": 2026,
+   "interim_tags": 187,
+   "currentyear_tags": 0,
+   "revenue": 11134000000.0,
+   "source_file": "6905_コーセル株式会社_20260520_訂正有報_S100XCYV.zip"
+  },
+  {
+   "dir": "6920_レーザーテック株式会社",
+   "code": "6920",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 128258000000.0,
+   "source_file": "6920_レーザーテック株式会社_20260630_訂正有報_S100XK07.zip"
+  },
+  {
+   "dir": "6965_浜松ホトニクス株式会社",
+   "code": "6965",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 112496000000.0,
+   "source_file": "6965_浜松ホトニクス株式会社_20260930_訂正有報_S100Y3HU.zip"
+  },
+  {
+   "dir": "7030_株式会社スプリックス",
+   "code": "7030",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 19099000000.0,
+   "source_file": "7030_株式会社スプリックス_20260930_訂正有報_S100Y2WN.zip"
+  },
+  {
+   "dir": "7034_株式会社プロレド・パートナーズ",
+   "code": "7034",
+   "year": 2026,
+   "interim_tags": 151,
+   "currentyear_tags": 0,
+   "revenue": 3171408000.0,
+   "source_file": "7034_株式会社プロレド・パートナーズ_20261031_訂正有報_S100YBVN.zip"
+  },
+  {
+   "dir": "7035_ａｎｄ　ｆａｃｔｏｒｙ株式会社",
+   "code": "7035",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 1424000000.0,
+   "source_file": "7035_ａｎｄ　ｆａｃｔｏｒｙ株式会社_20260831_訂正有報_S100XYPZ.zip"
+  },
+  {
+   "dir": "7041_ＣＲＧホールディングス株式会社",
+   "code": "7041",
+   "year": 2026,
+   "interim_tags": 161,
+   "currentyear_tags": 0,
+   "revenue": 8299139000.0,
+   "source_file": "7041_ＣＲＧホールディングス株式会社_20260930_訂正有報_S100Y498.zip"
+  },
+  {
+   "dir": "7063_株式会社Ｂｉｒｄｍａｎ",
+   "code": "7063",
+   "year": 2026,
+   "interim_tags": 139,
+   "currentyear_tags": 0,
+   "revenue": 166375000.0,
+   "source_file": "7063_株式会社Ｂｉｒｄｍａｎ_20260630_訂正有報_S100XL7D.zip"
+  },
+  {
+   "dir": "7065_ユーピーアール株式会社",
+   "code": "7065",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 7632013000.0,
+   "source_file": "7065_ユーピーアール株式会社_20260228_訂正有報_S100XYO1.zip"
+  },
+  {
+   "dir": "7066_株式会社ピアズ",
+   "code": "7066",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 3668616000.0,
+   "source_file": "7066_株式会社ピアズ_20260331_訂正有報_S100Y20W.zip"
+  },
+  {
+   "dir": "7068_フィードフォースグループ株式会社",
+   "code": "7068",
+   "year": 2026,
+   "interim_tags": 141,
+   "currentyear_tags": 0,
+   "revenue": 2371000000.0,
+   "source_file": "7068_フィードフォースグループ株式会社_20260531_訂正有報_S100XFRZ.zip"
+  },
+  {
+   "dir": "7069_株式会社サイバー・バズ",
+   "code": "7069",
+   "year": 2026,
+   "interim_tags": 161,
+   "currentyear_tags": 0,
+   "revenue": 4151615000.0,
+   "source_file": "7069_株式会社サイバー・バズ_20260930_訂正有報_S100Y4GH.zip"
+  },
+  {
+   "dir": "7071_株式会社アンビスホールディングス",
+   "code": "7071",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 25600000000.0,
+   "source_file": "7071_株式会社アンビスホールディングス_20260930_訂正有報_S100Y3ZE.zip"
+  },
+  {
+   "dir": "7072_株式会社インティメート・マージャー",
+   "code": "7072",
+   "year": 2026,
+   "interim_tags": 120,
+   "currentyear_tags": 0,
+   "revenue": 1809551000.0,
+   "source_file": "7072_株式会社インティメート・マージャー_20260930_訂正有報_S100Y44E.zip"
+  },
+  {
+   "dir": "7085_株式会社カーブスホールディングス",
+   "code": "7085",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 19967000000.0,
+   "source_file": "7085_株式会社カーブスホールディングス_20260831_訂正有報_S100XYA6.zip"
+  },
+  {
+   "dir": "7097_株式会社さくらさくプラス",
+   "code": "7097",
+   "year": 2026,
+   "interim_tags": 133,
+   "currentyear_tags": 0,
+   "revenue": 8315000000.0,
+   "source_file": "7097_株式会社さくらさくプラス_20260731_訂正有報_S100XQWL.zip"
+  },
+  {
+   "dir": "7110_株式会社クラシコム",
+   "code": "7110",
+   "year": 2026,
+   "interim_tags": 114,
+   "currentyear_tags": 0,
+   "revenue": 5278450000.0,
+   "source_file": "7110_株式会社クラシコム_20260731_訂正有報_S100XQNE.zip"
+  },
+  {
+   "dir": "7126_グローバルスタイル株式会社",
+   "code": "7126",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": 9489000000.0,
+   "source_file": null
+  },
+  {
+   "dir": "7131_のむら産業株式会社",
+   "code": "7131",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 3838624000.0,
+   "source_file": "7131_のむら産業株式会社_20261031_訂正有報_S100YASX.zip"
+  },
+  {
+   "dir": "7135_ジャパンクラフトホールディングス株式会社",
+   "code": "7135",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 6662259000.0,
+   "source_file": "7135_ジャパンクラフトホールディングス株式会社_20260630_訂正有報_S100XK9T.zip"
+  },
+  {
+   "dir": "7148_株式会社ＦＰＧ",
+   "code": "7148",
+   "year": 2026,
+   "interim_tags": 184,
+   "currentyear_tags": 0,
+   "revenue": 35586000000.0,
+   "source_file": "7148_株式会社ＦＰＧ_20260930_訂正有報_S100Y326.zip"
+  },
+  {
+   "dir": "7219_株式会社エッチ・ケー・エス",
+   "code": "7219",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 4424421000.0,
+   "source_file": "7219_株式会社エッチ・ケー・エス_20260831_訂正有報_S100XXQV.zip"
+  },
+  {
+   "dir": "7265_エイケン工業株式会社",
+   "code": "7265",
+   "year": 2026,
+   "interim_tags": 32,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7265_エイケン工業株式会社_20261031_訂正有報_S100YAV1.zip"
+  },
+  {
+   "dir": "7279_株式会社ハイレックスコーポレーション",
+   "code": "7279",
+   "year": 2026,
+   "interim_tags": 214,
+   "currentyear_tags": 0,
+   "revenue": 209107000000.0,
+   "source_file": "7279_株式会社ハイレックスコーポレーション_20261031_訂正有報_S100Y9WI.zip"
+  },
+  {
+   "dir": "7320_Ｓｏｌｖｖｙ株式会社",
+   "code": "7320",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 3276093000.0,
+   "source_file": "7320_Ｓｏｌｖｖｙ株式会社_20260630_訂正有報_S100XL75.zip"
+  },
+  {
+   "dir": "7325_株式会社アイリックコーポレーション",
+   "code": "7325",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 5282555000.0,
+   "source_file": "7325_株式会社アイリックコーポレーション_20260630_訂正有報_S100XL3P.zip"
+  },
+  {
+   "dir": "7351_株式会社グッドパッチ",
+   "code": "7351",
+   "year": 2026,
+   "interim_tags": 177,
+   "currentyear_tags": 0,
+   "revenue": 2578600000.0,
+   "source_file": "7351_株式会社グッドパッチ_20260831_訂正有報_S100XYO6.zip"
+  },
+  {
+   "dir": "7352_株式会社ＴＷＯＳＴＯＮＥ＆Ｓｏｎｓ",
+   "code": "7352",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 10661815000.0,
+   "source_file": "7352_株式会社ＴＷＯＳＴＯＮＥ＆Ｓｏｎｓ_20260831_訂正有報_S100XYOQ.zip"
+  },
+  {
+   "dir": "7356_Ｒｅｔｔｙ株式会社",
+   "code": "7356",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7356_Ｒｅｔｔｙ株式会社_20260930_訂正有報_S100Y3H0.zip"
+  },
+  {
+   "dir": "7361_株式会社ヒューマンクリエイションホールディングス",
+   "code": "7361",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 4477522000.0,
+   "source_file": "7361_株式会社ヒューマンクリエイションホールディングス_20260930_訂正有報_S100Y2Y1.zip"
+  },
+  {
+   "dir": "7369_株式会社メイホーホールディングス",
+   "code": "7369",
+   "year": 2026,
+   "interim_tags": 180,
+   "currentyear_tags": 0,
+   "revenue": 5866920000.0,
+   "source_file": "7369_株式会社メイホーホールディングス_20260630_訂正有報_S100XL4J.zip"
+  },
+  {
+   "dir": "7370_株式会社Ｅｎｊｉｎ",
+   "code": "7370",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 1125906000.0,
+   "source_file": "7370_株式会社Ｅｎｊｉｎ_20260531_訂正有報_S100XFSP.zip"
+  },
+  {
+   "dir": "7371_Ｚｅｎｋｅｎ株式会社",
+   "code": "7371",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 2717277000.0,
+   "source_file": "7371_Ｚｅｎｋｅｎ株式会社_20260630_訂正有報_S100XIUY.zip"
+  },
+  {
+   "dir": "7372_株式会社デコルテ・ホールディングス",
+   "code": "7372",
+   "year": 2026,
+   "interim_tags": 121,
+   "currentyear_tags": 0,
+   "revenue": 3169880000.0,
+   "source_file": "7372_株式会社デコルテ・ホールディングス_20260930_訂正有報_S100Y318.zip"
+  },
+  {
+   "dir": "7373_株式会社アイドマ・ホールディングス",
+   "code": "7373",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 7248775000.0,
+   "source_file": "7373_株式会社アイドマ・ホールディングス_20260831_訂正有報_S100XYC7.zip"
+  },
+  {
+   "dir": "7375_株式会社リファインバースグループ",
+   "code": "7375",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 2105322000.0,
+   "source_file": "7375_株式会社リファインバースグループ_20260630_訂正有報_S100XKLJ.zip"
+  },
+  {
+   "dir": "7376_ＢＣＣ株式会社",
+   "code": "7376",
+   "year": 2026,
+   "interim_tags": 151,
+   "currentyear_tags": 0,
+   "revenue": 923143000.0,
+   "source_file": "7376_ＢＣＣ株式会社_20260930_訂正有報_S100Y3XN.zip"
+  },
+  {
+   "dir": "7377_ＤＮホールディングス株式会社",
+   "code": "7377",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 17505868000.0,
+   "source_file": "7377_ＤＮホールディングス株式会社_20260630_訂正有報_S100XL7A.zip"
+  },
+  {
+   "dir": "7378_株式会社アシロ",
+   "code": "7378",
+   "year": 2026,
+   "interim_tags": 144,
+   "currentyear_tags": 0,
+   "revenue": 3560651000.0,
+   "source_file": "7378_株式会社アシロ_20261031_訂正有報_S100YBPA.zip"
+  },
+  {
+   "dir": "7409_ＡｅｒｏＥｄｇｅ株式会社",
+   "code": "7409",
+   "year": 2026,
+   "interim_tags": 20,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7409_ＡｅｒｏＥｄｇｅ株式会社_20260630_訂正有報_S100XKVM.zip"
+  },
+  {
+   "dir": "7420_佐鳥電機株式会社",
+   "code": "7420",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 78341000000.0,
+   "source_file": "7420_佐鳥電機株式会社_20260531_訂正有報_S100XFQC.zip"
+  },
+  {
+   "dir": "7434_株式会社オータケ",
+   "code": "7434",
+   "year": 2026,
+   "interim_tags": 145,
+   "currentyear_tags": 0,
+   "revenue": 17435685000.0,
+   "source_file": "7434_株式会社オータケ_20260531_訂正有報_S100XF2Z.zip"
+  },
+  {
+   "dir": "7445_株式会社ライトオン",
+   "code": "7445",
+   "year": 2026,
+   "interim_tags": 27,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7445_株式会社ライトオン_20260228_訂正有報_S100XYPY.zip"
+  },
+  {
+   "dir": "7446_東北化学薬品株式会社",
+   "code": "7446",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 18942154000.0,
+   "source_file": "7446_東北化学薬品株式会社_20260930_訂正有報_S100Y3KO.zip"
+  },
+  {
+   "dir": "7447_ナガイレーベン株式会社",
+   "code": "7447",
+   "year": 2026,
+   "interim_tags": 157,
+   "currentyear_tags": 0,
+   "revenue": 7861100000.0,
+   "source_file": "7447_ナガイレーベン株式会社_20260831_訂正有報_S100XY30.zip"
+  },
+  {
+   "dir": "7453_株式会社　良品計画",
+   "code": "7453",
+   "year": 2026,
+   "interim_tags": 200,
+   "currentyear_tags": 0,
+   "revenue": 438549000000.0,
+   "source_file": "7453_株式会社　良品計画_20260831_訂正有報_S100XY72.zip"
+  },
+  {
+   "dir": "7487_小津産業株式会社",
+   "code": "7487",
+   "year": 2026,
+   "interim_tags": 181,
+   "currentyear_tags": 0,
+   "revenue": 5473463000.0,
+   "source_file": "7487_小津産業株式会社_20260531_訂正有報_S100XF40.zip"
+  },
+  {
+   "dir": "7494_株式会社コナカ",
+   "code": "7494",
+   "year": 2026,
+   "interim_tags": 184,
+   "currentyear_tags": 0,
+   "revenue": 30255000000.0,
+   "source_file": "7494_株式会社コナカ_20260331_訂正有報_S100Y3V3.zip"
+  },
+  {
+   "dir": "7500_西川計測株式会社",
+   "code": "7500",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7500_西川計測株式会社_20260630_訂正有報_S100XKAO.zip"
+  },
+  {
+   "dir": "7505_扶桑電通株式会社",
+   "code": "7505",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 35264662000.0,
+   "source_file": "7505_扶桑電通株式会社_20260930_訂正有報_S100Y3LN.zip"
+  },
+  {
+   "dir": "7513_株式会社コジマ",
+   "code": "7513",
+   "year": 2026,
+   "interim_tags": 22,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7513_株式会社コジマ_20260228_訂正有報_S100XYBD.zip"
+  },
+  {
+   "dir": "7514_株式会社　ヒマラヤ",
+   "code": "7514",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 29005000000.0,
+   "source_file": "7514_株式会社　ヒマラヤ_20260831_訂正有報_S100XY7D.zip"
+  },
+  {
+   "dir": "7527_株式会社システムソフト",
+   "code": "7527",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 636249000.0,
+   "source_file": "7527_株式会社システムソフト_20260930_訂正有報_S100Y4CS.zip"
+  },
+  {
+   "dir": "7532_株式会社パン・パシフィック・インターナショナルホールディングス",
+   "code": "7532",
+   "year": 2026,
+   "interim_tags": 204,
+   "currentyear_tags": 0,
+   "revenue": 1210122000000.0,
+   "source_file": "7532_株式会社パン・パシフィック・インターナショナルホールディングス_20260630_訂正有報_S100XL11.zip"
+  },
+  {
+   "dir": "7539_株式会社アイナボホールディングス",
+   "code": "7539",
+   "year": 2026,
+   "interim_tags": 181,
+   "currentyear_tags": 0,
+   "revenue": 48258000000.0,
+   "source_file": "7539_株式会社アイナボホールディングス_20260331_訂正有報_S100Y34W.zip"
+  },
+  {
+   "dir": "7581_株式会社サイゼリヤ",
+   "code": "7581",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 142854000000.0,
+   "source_file": "7581_株式会社サイゼリヤ_20260228_訂正有報_S100XY7G.zip"
+  },
+  {
+   "dir": "7607_株式会社進和",
+   "code": "7607",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 44771956000.0,
+   "source_file": "7607_株式会社進和_20260831_訂正有報_S100XYCB.zip"
+  },
+  {
+   "dir": "7636_株式会社ハンズマン",
+   "code": "7636",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7636_株式会社ハンズマン_20260630_訂正有報_S100XK8G.zip"
+  },
+  {
+   "dir": "7640_株式会社トップカルチャー",
+   "code": "7640",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 9398979000.0,
+   "source_file": "7640_株式会社トップカルチャー_20260430_訂正有報_S100YBHT.zip"
+  },
+  {
+   "dir": "7643_株式会社ダイイチ",
+   "code": "7643",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7643_株式会社ダイイチ_20260930_訂正有報_S100Y3CE.zip"
+  },
+  {
+   "dir": "7646_株式会社ＰＬＡＮＴ",
+   "code": "7646",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7646_株式会社ＰＬＡＮＴ_20260920_訂正有報_S100Y13Z.zip"
+  },
+  {
+   "dir": "7673_ダイコー通産株式会社",
+   "code": "7673",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7673_ダイコー通産株式会社_20260531_訂正有報_S100XFMU.zip"
+  },
+  {
+   "dir": "7681_株式会社レオクラン",
+   "code": "7681",
+   "year": 2026,
+   "interim_tags": 175,
+   "currentyear_tags": 0,
+   "revenue": 24280794000.0,
+   "source_file": "7681_株式会社レオクラン_20260930_訂正有報_S100Y3O3.zip"
+  },
+  {
+   "dir": "7682_株式会社浜木綿",
+   "code": "7682",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7682_株式会社浜木綿_20260731_訂正有報_S100XPWR.zip"
+  },
+  {
+   "dir": "7692_株式会社アースインフィニティ",
+   "code": "7692",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": 5580000000.0,
+   "source_file": null
+  },
+  {
+   "dir": "7707_プレシジョン・システム・サイエンス株式会社",
+   "code": "7707",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 2534391000.0,
+   "source_file": "7707_プレシジョン・システム・サイエンス株式会社_20260630_訂正有報_S100XLJR.zip"
+  },
+  {
+   "dir": "7711_助川電気工業株式会社",
+   "code": "7711",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7711_助川電気工業株式会社_20260930_訂正有報_S100Y3YZ.zip"
+  },
+  {
+   "dir": "7713_シグマ光機株式会社",
+   "code": "7713",
+   "year": 2026,
+   "interim_tags": 162,
+   "currentyear_tags": 0,
+   "revenue": 5441746000.0,
+   "source_file": "7713_シグマ光機株式会社_20260531_訂正有報_S100XEUK.zip"
+  },
+  {
+   "dir": "7725_株式会社インターアクション",
+   "code": "7725",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 2131555000.0,
+   "source_file": "7725_株式会社インターアクション_20260531_訂正有報_S100XF8W.zip"
+  },
+  {
+   "dir": "7730_マニー株式会社",
+   "code": "7730",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 16106000000.0,
+   "source_file": "7730_マニー株式会社_20260831_訂正有報_S100XYSX.zip"
+  },
+  {
+   "dir": "7747_朝日インテック株式会社",
+   "code": "7747",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 71266000000.0,
+   "source_file": "7747_朝日インテック株式会社_20260630_訂正有報_S100XKTG.zip"
+  },
+  {
+   "dir": "7760_ＩＭＶ株式会社",
+   "code": "7760",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 11511000000.0,
+   "source_file": "7760_ＩＭＶ株式会社_20260930_訂正有報_S100Y3I6.zip"
+  },
+  {
+   "dir": "7781_株式会社平山ホールディングス",
+   "code": "7781",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 18799641000.0,
+   "source_file": "7781_株式会社平山ホールディングス_20260630_訂正有報_S100XLOG.zip"
+  },
+  {
+   "dir": "7792_株式会社コラントッテ",
+   "code": "7792",
+   "year": 2026,
+   "interim_tags": 18,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7792_株式会社コラントッテ_20260930_訂正有報_S100Y2BT.zip"
+  },
+  {
+   "dir": "7800_株式会社アミファ",
+   "code": "7800",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7800_株式会社アミファ_20260930_訂正有報_S100Y3YU.zip"
+  },
+  {
+   "dir": "7803_株式会社ブシロード",
+   "code": "7803",
+   "year": 2026,
+   "interim_tags": 172,
+   "currentyear_tags": 0,
+   "revenue": 27839039000.0,
+   "source_file": "7803_株式会社ブシロード_20260630_訂正有報_S100XL2C.zip"
+  },
+  {
+   "dir": "7804_株式会社ビーアンドピー",
+   "code": "7804",
+   "year": 2026,
+   "interim_tags": 150,
+   "currentyear_tags": 0,
+   "revenue": 2249020000.0,
+   "source_file": "7804_株式会社ビーアンドピー_20261031_訂正有報_S100Y9UJ.zip"
+  },
+  {
+   "dir": "7805_プリントネット株式会社",
+   "code": "7805",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "7805_プリントネット株式会社_20260831_訂正有報_S100XYPG.zip"
+  },
+  {
+   "dir": "7806_株式会社ＭＴＧ",
+   "code": "7806",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 66523000000.0,
+   "source_file": "7806_株式会社ＭＴＧ_20260930_訂正有報_S100Y3NA.zip"
+  },
+  {
+   "dir": "7808_株式会社シー・エス・ランバー",
+   "code": "7808",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 10096693000.0,
+   "source_file": "7808_株式会社シー・エス・ランバー_20260531_訂正有報_S100XFF7.zip"
+  },
+  {
+   "dir": "7809_株式会社壽屋",
+   "code": "7809",
+   "year": 2026,
+   "interim_tags": 150,
+   "currentyear_tags": 0,
+   "revenue": 8371972000.0,
+   "source_file": "7809_株式会社壽屋_20260630_訂正有報_S100XKSP.zip"
+  },
+  {
+   "dir": "7810_株式会社クロスフォー",
+   "code": "7810",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 2600885000.0,
+   "source_file": "7810_株式会社クロスフォー_20260131_訂正有報_S100XR9Q.zip"
+  },
+  {
+   "dir": "7812_株式会社クレステック",
+   "code": "7812",
+   "year": 2026,
+   "interim_tags": 195,
+   "currentyear_tags": 0,
+   "revenue": 9196760000.0,
+   "source_file": "7812_株式会社クレステック_20260630_訂正有報_S100XKOR.zip"
+  },
+  {
+   "dir": "7813_株式会社プラッツ",
+   "code": "7813",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 4013591000.0,
+   "source_file": "7813_株式会社プラッツ_20260630_訂正有報_S100X54I.zip"
+  },
+  {
+   "dir": "7818_株式会社トランザクション",
+   "code": "7818",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 14845946000.0,
+   "source_file": "7818_株式会社トランザクション_20260831_訂正有報_S100XYCK.zip"
+  },
+  {
+   "dir": "7819_粧美堂株式会社",
+   "code": "7819",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 11466973000.0,
+   "source_file": "7819_粧美堂株式会社_20260930_訂正有報_S100Y3XQ.zip"
+  },
+  {
+   "dir": "7821_前田工繊株式会社",
+   "code": "7821",
+   "year": 2026,
+   "interim_tags": 190,
+   "currentyear_tags": 0,
+   "revenue": 37904000000.0,
+   "source_file": "7821_前田工繊株式会社_20260630_訂正有報_S100XKYV.zip"
+  },
+  {
+   "dir": "7826_株式会社フルヤ金属",
+   "code": "7826",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 43900000000.0,
+   "source_file": "7826_株式会社フルヤ金属_20260630_訂正有報_S100XKFM.zip"
+  },
+  {
+   "dir": "7827_株式会社オービス",
+   "code": "7827",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 5578600000.0,
+   "source_file": "7827_株式会社オービス_20261031_訂正有報_S100YATS.zip"
+  },
+  {
+   "dir": "7839_株式会社ＳＨＯＥＩ",
+   "code": "7839",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 15002726000.0,
+   "source_file": "7839_株式会社ＳＨＯＥＩ_20260930_訂正有報_S100Y366.zip"
+  },
+  {
+   "dir": "7850_総合商研株式会社",
+   "code": "7850",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 10872639000.0,
+   "source_file": "7850_総合商研株式会社_20260731_訂正有報_S100XQNO.zip"
+  },
+  {
+   "dir": "7856_萩原工業株式会社",
+   "code": "7856",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 15721805000.0,
+   "source_file": "7856_萩原工業株式会社_20261031_訂正有報_S100Y9ZP.zip"
+  },
+  {
+   "dir": "7888_三光合成株式会社",
+   "code": "7888",
+   "year": 2026,
+   "interim_tags": 171,
+   "currentyear_tags": 0,
+   "revenue": 48914000000.0,
+   "source_file": "7888_三光合成株式会社_20260531_訂正有報_S100XF8T.zip"
+  },
+  {
+   "dir": "7921_株式会社ＴＡＫＡＲＡ　＆　ＣＯＭＰＡＮＹ",
+   "code": "7921",
+   "year": 2026,
+   "interim_tags": 187,
+   "currentyear_tags": 0,
+   "revenue": 16075951000.0,
+   "source_file": "7921_株式会社ＴＡＫＡＲＡ　＆　ＣＯＭＰＡＮＹ_20260531_訂正有報_S100XEX3.zip"
+  },
+  {
+   "dir": "7928_旭化学工業株式会社",
+   "code": "7928",
+   "year": 2026,
+   "interim_tags": 163,
+   "currentyear_tags": 0,
+   "revenue": 4542696000.0,
+   "source_file": "7928_旭化学工業株式会社_20260228_訂正有報_S100XYL1.zip"
+  },
+  {
+   "dir": "7962_株式会社キングジム",
+   "code": "7962",
+   "year": 2026,
+   "interim_tags": 188,
+   "currentyear_tags": 0,
+   "revenue": 17967230000.0,
+   "source_file": "7962_株式会社キングジム_20260620_訂正有報_S100XHXR.zip"
+  },
+  {
+   "dir": "7983_株式会社ミロク",
+   "code": "7983",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 6204878000.0,
+   "source_file": "7983_株式会社ミロク_20261031_訂正有報_S100YA8L.zip"
+  },
+  {
+   "dir": "8057_株式会社内田洋行",
+   "code": "8057",
+   "year": 2026,
+   "interim_tags": 190,
+   "currentyear_tags": 0,
+   "revenue": 174081000000.0,
+   "source_file": "8057_株式会社内田洋行_20260720_訂正有報_S100XOXK.zip"
+  },
+  {
+   "dir": "8077_トルク株式会社",
+   "code": "8077",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 10606144000.0,
+   "source_file": "8077_トルク株式会社_20261031_訂正有報_S100YAJ1.zip"
+  },
+  {
+   "dir": "8079_正栄食品工業株式会社",
+   "code": "8079",
+   "year": 2026,
+   "interim_tags": 178,
+   "currentyear_tags": 0,
+   "revenue": 70290007000.0,
+   "source_file": "8079_正栄食品工業株式会社_20261031_訂正有報_S100YAYS.zip"
+  },
+  {
+   "dir": "8127_ヤマトインターナショナル株式会社",
+   "code": "8127",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 10481125000.0,
+   "source_file": "8127_ヤマトインターナショナル株式会社_20260831_訂正有報_S100XXXU.zip"
+  },
+  {
+   "dir": "8151_株式会社東陽テクニカ",
+   "code": "8151",
+   "year": 2026,
+   "interim_tags": 190,
+   "currentyear_tags": 0,
+   "revenue": 21482222000.0,
+   "source_file": "8151_株式会社東陽テクニカ_20260930_訂正有報_S100Y32Q.zip"
+  },
+  {
+   "dir": "8254_株式会社さいか屋",
+   "code": "8254",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 2371457000.0,
+   "source_file": "8254_株式会社さいか屋_20260831_訂正有報_S100XYN8.zip"
+  },
+  {
+   "dir": "8783_ａｂｃ株式会社",
+   "code": "8783",
+   "year": 2026,
+   "interim_tags": 216,
+   "currentyear_tags": 0,
+   "revenue": 1172789000.0,
+   "source_file": "8783_ａｂｃ株式会社_20260831_訂正有報_S100XYSY.zip"
+  },
+  {
+   "dir": "8789_フィンテック　グローバル株式会社",
+   "code": "8789",
+   "year": 2026,
+   "interim_tags": 189,
+   "currentyear_tags": 0,
+   "revenue": 8011122000.0,
+   "source_file": "8789_フィンテック　グローバル株式会社_20260331_訂正有報_S100Y3ZH.zip"
+  },
+  {
+   "dir": "8894_株式会社ＲＥＶＯＬＵＴＩＯＮ",
+   "code": "8894",
+   "year": 2026,
+   "interim_tags": 188,
+   "currentyear_tags": 0,
+   "revenue": 12542000000.0,
+   "source_file": "8894_株式会社ＲＥＶＯＬＵＴＩＯＮ_20261031_訂正有報_S100YBT3.zip"
+  },
+  {
+   "dir": "8904_株式会社ＡＶＡＮＴＩＡ",
+   "code": "8904",
+   "year": 2026,
+   "interim_tags": 166,
+   "currentyear_tags": 0,
+   "revenue": 25524584000.0,
+   "source_file": "8904_株式会社ＡＶＡＮＴＩＡ_20260831_訂正有報_S100XYPR.zip"
+  },
+  {
+   "dir": "8908_株式会社毎日コムネット",
+   "code": "8908",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 9407792000.0,
+   "source_file": "8908_株式会社毎日コムネット_20260531_訂正有報_S100XF3J.zip"
+  },
+  {
+   "dir": "8912_株式会社エリアクエスト",
+   "code": "8912",
+   "year": 2026,
+   "interim_tags": 189,
+   "currentyear_tags": 0,
+   "revenue": 1233118000.0,
+   "source_file": "8912_株式会社エリアクエスト_20260630_訂正有報_S100XKBH.zip"
+  },
+  {
+   "dir": "8917_ファースト住建株式会社",
+   "code": "8917",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 18706434000.0,
+   "source_file": "8917_ファースト住建株式会社_20261031_訂正有報_S100YB2F.zip"
+  },
+  {
+   "dir": "8927_株式会社明豊エンタープライズ",
+   "code": "8927",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 14861227000.0,
+   "source_file": "8927_株式会社明豊エンタープライズ_20260731_訂正有報_S100XRD6.zip"
+  },
+  {
+   "dir": "8928_穴吹興産株式会社",
+   "code": "8928",
+   "year": 2026,
+   "interim_tags": 182,
+   "currentyear_tags": 0,
+   "revenue": 90210460000.0,
+   "source_file": "8928_穴吹興産株式会社_20260630_訂正有報_S100XLAS.zip"
+  },
+  {
+   "dir": "8944_株式会社ランドビジネス",
+   "code": "8944",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 14949136000.0,
+   "source_file": "8944_株式会社ランドビジネス_20260930_訂正有報_S100Y1KW.zip"
+  },
+  {
+   "dir": "8945_サンネクスタグループ株式会社",
+   "code": "8945",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 4121641000.0,
+   "source_file": "8945_サンネクスタグループ株式会社_20260630_訂正有報_S100XL46.zip"
+  },
+  {
+   "dir": "9028_株式会社ゼロ",
+   "code": "9028",
+   "year": 2026,
+   "interim_tags": 141,
+   "currentyear_tags": 0,
+   "revenue": 65841000000.0,
+   "source_file": "9028_株式会社ゼロ_20260630_訂正有報_S100XKLR.zip"
+  },
+  {
+   "dir": "9159_株式会社Ｗ　ＴＯＫＹＯ",
+   "code": "9159",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9159_株式会社Ｗ　ＴＯＫＹＯ_20260630_訂正有報_S100XL5J.zip"
+  },
+  {
+   "dir": "9162_株式会社ブリーチ",
+   "code": "9162",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 8734082000.0,
+   "source_file": "9162_株式会社ブリーチ_20260630_訂正有報_S100XL4F.zip"
+  },
+  {
+   "dir": "9163_株式会社ナレルグループ",
+   "code": "9163",
+   "year": 2026,
+   "interim_tags": 130,
+   "currentyear_tags": 0,
+   "revenue": 12669193000.0,
+   "source_file": "9163_株式会社ナレルグループ_20261031_訂正有報_S100YAX0.zip"
+  },
+  {
+   "dir": "9165_株式会社クオルテック",
+   "code": "9165",
+   "year": 2026,
+   "interim_tags": 20,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9165_株式会社クオルテック_20260630_訂正有報_S100XJQL.zip"
+  },
+  {
+   "dir": "9212_Ｇｒｅｅｎ　Ｅａｒｔｈ　Ｉｎｓｔｉｔｕｔｅ株式会社",
+   "code": "9212",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9212_Ｇｒｅｅｎ　Ｅａｒｔｈ　Ｉｎｓｔｉｔｕｔｅ株式会社_20260930_訂正有報_S100Y3WE.zip"
+  },
+  {
+   "dir": "9216_ビーウィズ株式会社",
+   "code": "9216",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 17939000000.0,
+   "source_file": "9216_ビーウィズ株式会社_20260531_訂正有報_S100XEXG.zip"
+  },
+  {
+   "dir": "9219_株式会社ギックス",
+   "code": "9219",
+   "year": 2026,
+   "interim_tags": 127,
+   "currentyear_tags": 0,
+   "revenue": 1331640000.0,
+   "source_file": "9219_株式会社ギックス_20260630_訂正有報_S100XL6G.zip"
+  },
+  {
+   "dir": "9225_ブリッジコンサルティンググループ株式会社",
+   "code": "9225",
+   "year": 2026,
+   "interim_tags": 26,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9225_ブリッジコンサルティンググループ株式会社_20260930_訂正有報_S100Y4E3.zip"
+  },
+  {
+   "dir": "9233_アジア航測株式会社",
+   "code": "9233",
+   "year": 2026,
+   "interim_tags": 168,
+   "currentyear_tags": 0,
+   "revenue": 23627908000.0,
+   "source_file": "9233_アジア航測株式会社_20260930_訂正有報_S100Y4AH.zip"
+  },
+  {
+   "dir": "9235_売れるネット広告社グループ株式会社",
+   "code": "9235",
+   "year": 2026,
+   "interim_tags": 148,
+   "currentyear_tags": 0,
+   "revenue": 733212000.0,
+   "source_file": "9235_売れるネット広告社グループ株式会社_20260731_訂正有報_S100XQQY.zip"
+  },
+  {
+   "dir": "9236_ジャパンＭ＆Ａソリューション株式会社",
+   "code": "9236",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9236_ジャパンＭ＆Ａソリューション株式会社_20261031_訂正有報_S100YA31.zip"
+  },
+  {
+   "dir": "9237_株式会社笑美面",
+   "code": "9237",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 1149069000.0,
+   "source_file": "9237_株式会社笑美面_20261031_訂正有報_S100YBC0.zip"
+  },
+  {
+   "dir": "9240_株式会社デリバリーコンサルティング",
+   "code": "9240",
+   "year": 2026,
+   "interim_tags": 140,
+   "currentyear_tags": 0,
+   "revenue": 1458450000.0,
+   "source_file": "9240_株式会社デリバリーコンサルティング_20260731_訂正有報_S100XQXO.zip"
+  },
+  {
+   "dir": "9241_株式会社フューチャーリンクネットワーク",
+   "code": "9241",
+   "year": 2026,
+   "interim_tags": 125,
+   "currentyear_tags": 0,
+   "revenue": 875571000.0,
+   "source_file": "9241_株式会社フューチャーリンクネットワーク_20260831_訂正有報_S100XYPL.zip"
+  },
+  {
+   "dir": "9242_メディア総研株式会社",
+   "code": "9242",
+   "year": 2026,
+   "interim_tags": 129,
+   "currentyear_tags": 0,
+   "revenue": 1252228000.0,
+   "source_file": "9242_メディア総研株式会社_20260731_訂正有報_S100XQ46.zip"
+  },
+  {
+   "dir": "9244_株式会社デジタリフト",
+   "code": "9244",
+   "year": 2026,
+   "interim_tags": 133,
+   "currentyear_tags": 0,
+   "revenue": 1763113000.0,
+   "source_file": "9244_株式会社デジタリフト_20260930_訂正有報_S100Y475.zip"
+  },
+  {
+   "dir": "9248_人・夢・技術グループ株式会社",
+   "code": "9248",
+   "year": 2026,
+   "interim_tags": 201,
+   "currentyear_tags": 0,
+   "revenue": 24791000000.0,
+   "source_file": "9248_人・夢・技術グループ株式会社_20260930_訂正有報_S100Y4E6.zip"
+  },
+  {
+   "dir": "9249_日本エコシステム株式会社",
+   "code": "9249",
+   "year": 2026,
+   "interim_tags": 169,
+   "currentyear_tags": 0,
+   "revenue": 7882661000.0,
+   "source_file": "9249_日本エコシステム株式会社_20260930_訂正有報_S100Y3SS.zip"
+  },
+  {
+   "dir": "9251_株式会社ＡＢ＆Ｃｏｍｐａｎｙ",
+   "code": "9251",
+   "year": 2026,
+   "interim_tags": 132,
+   "currentyear_tags": 0,
+   "revenue": 10780000000.0,
+   "source_file": "9251_株式会社ＡＢ＆Ｃｏｍｐａｎｙ_20261031_訂正有報_S100YB86.zip"
+  },
+  {
+   "dir": "9252_株式会社ラストワンマイル",
+   "code": "9252",
+   "year": 2026,
+   "interim_tags": 148,
+   "currentyear_tags": 0,
+   "revenue": 9655562000.0,
+   "source_file": "9252_株式会社ラストワンマイル_20260831_訂正有報_S100XYMD.zip"
+  },
+  {
+   "dir": "9258_株式会社ＣＳ－Ｃ",
+   "code": "9258",
+   "year": 2026,
+   "interim_tags": 167,
+   "currentyear_tags": 0,
+   "revenue": 1829818000.0,
+   "source_file": "9258_株式会社ＣＳ－Ｃ_20260930_訂正有報_S100Y46W.zip"
+  },
+  {
+   "dir": "9259_株式会社タカヨシホールディングス",
+   "code": "9259",
+   "year": 2026,
+   "interim_tags": 148,
+   "currentyear_tags": 0,
+   "revenue": 4020474000.0,
+   "source_file": "9259_株式会社タカヨシホールディングス_20260930_訂正有報_S100Y2ZH.zip"
+  },
+  {
+   "dir": "9262_株式会社シルバーライフ",
+   "code": "9262",
+   "year": 2026,
+   "interim_tags": 24,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9262_株式会社シルバーライフ_20260731_訂正有報_S100XQ1Q.zip"
+  },
+  {
+   "dir": "9264_ポエック株式会社",
+   "code": "9264",
+   "year": 2026,
+   "interim_tags": 189,
+   "currentyear_tags": 0,
+   "revenue": 5305731000.0,
+   "source_file": "9264_ポエック株式会社_20260831_訂正有報_S100XYAT.zip"
+  },
+  {
+   "dir": "9265_ヤマシタヘルスケアホールディングス株式会社",
+   "code": "9265",
+   "year": 2026,
+   "interim_tags": 153,
+   "currentyear_tags": 0,
+   "revenue": 30645000000.0,
+   "source_file": "9265_ヤマシタヘルスケアホールディングス株式会社_20260531_訂正有報_S100XEU8.zip"
+  },
+  {
+   "dir": "9267_Ｇｅｎｋｙ　ＤｒｕｇＳｔｏｒｅｓ株式会社",
+   "code": "9267",
+   "year": 2026,
+   "interim_tags": 142,
+   "currentyear_tags": 0,
+   "revenue": 109261000000.0,
+   "source_file": "9267_Ｇｅｎｋｙ　ＤｒｕｇＳｔｏｒｅｓ株式会社_20260620_訂正有報_S100XI5W.zip"
+  },
+  {
+   "dir": "9270_バリュエンスホールディングス株式会社",
+   "code": "9270",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 51970656000.0,
+   "source_file": "9270_バリュエンスホールディングス株式会社_20260831_訂正有報_S100XY08.zip"
+  },
+  {
+   "dir": "9273_コーア商事ホールディングス株式会社",
+   "code": "9273",
+   "year": 2026,
+   "interim_tags": 168,
+   "currentyear_tags": 0,
+   "revenue": 12654420000.0,
+   "source_file": "9273_コーア商事ホールディングス株式会社_20260630_訂正有報_S100XK39.zip"
+  },
+  {
+   "dir": "9278_ブックオフグループホールディングス株式会社",
+   "code": "9278",
+   "year": 2026,
+   "interim_tags": 176,
+   "currentyear_tags": 0,
+   "revenue": 61104000000.0,
+   "source_file": "9278_ブックオフグループホールディングス株式会社_20260531_訂正有報_S100XFBS.zip"
+  },
+  {
+   "dir": "9279_株式会社ギフトホールディングス",
+   "code": "9279",
+   "year": 2026,
+   "interim_tags": 161,
+   "currentyear_tags": 0,
+   "revenue": 21239059000.0,
+   "source_file": "9279_株式会社ギフトホールディングス_20261031_訂正有報_S100YB3V.zip"
+  },
+  {
+   "dir": "9330_株式会社揚羽",
+   "code": "9330",
+   "year": 2026,
+   "interim_tags": 18,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9330_株式会社揚羽_20260930_訂正有報_S100Y43A.zip"
+  },
+  {
+   "dir": "9331_株式会社キャスター",
+   "code": "9331",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 2249644000.0,
+   "source_file": "9331_株式会社キャスター_20260831_訂正有報_S100XWND.zip"
+  },
+  {
+   "dir": "9340_株式会社アソインターナショナル",
+   "code": "9340",
+   "year": 2026,
+   "interim_tags": 140,
+   "currentyear_tags": 0,
+   "revenue": 2021538000.0,
+   "source_file": "9340_株式会社アソインターナショナル_20260630_訂正有報_S100XL5W.zip"
+  },
+  {
+   "dir": "9342_株式会社スマサポ",
+   "code": "9342",
+   "year": 2026,
+   "interim_tags": 21,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9342_株式会社スマサポ_20260930_訂正有報_S100Y3PN.zip"
+  },
+  {
+   "dir": "9344_アクシスコンサルティング株式会社",
+   "code": "9344",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9344_アクシスコンサルティング株式会社_20260630_訂正有報_S100XKD5.zip"
+  },
+  {
+   "dir": "9346_株式会社ココルポート",
+   "code": "9346",
+   "year": 2026,
+   "interim_tags": 19,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9346_株式会社ココルポート_20260630_訂正有報_S100XIVO.zip"
+  },
+  {
+   "dir": "9361_伏木海陸運送株式会社",
+   "code": "9361",
+   "year": 2026,
+   "interim_tags": 212,
+   "currentyear_tags": 0,
+   "revenue": 7172213000.0,
+   "source_file": "9361_伏木海陸運送株式会社_20260630_訂正有報_S100XKFL.zip"
+  },
+  {
+   "dir": "9376_株式会社ユーラシア旅行社",
+   "code": "9376",
+   "year": 2026,
+   "interim_tags": 118,
+   "currentyear_tags": 0,
+   "revenue": 2502236000.0,
+   "source_file": "9376_株式会社ユーラシア旅行社_20260930_訂正有報_S100Y3SL.zip"
+  },
+  {
+   "dir": "9414_日本ＢＳ放送株式会社",
+   "code": "9414",
+   "year": 2026,
+   "interim_tags": 137,
+   "currentyear_tags": 0,
+   "revenue": 5834432000.0,
+   "source_file": "9414_日本ＢＳ放送株式会社_20260831_訂正有報_S100XXZV.zip"
+  },
+  {
+   "dir": "9417_株式会社スマートバリュー",
+   "code": "9417",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 2830939000.0,
+   "source_file": "9417_株式会社スマートバリュー_20260630_訂正有報_S100XL0N.zip"
+  },
+  {
+   "dir": "9418_株式会社Ｕ－ＮＥＸＴ　ＨＯＬＤＩＮＧＳ",
+   "code": "9418",
+   "year": 2026,
+   "interim_tags": 158,
+   "currentyear_tags": 0,
+   "revenue": 212823000000.0,
+   "source_file": "9418_株式会社Ｕ－ＮＥＸＴ　ＨＯＬＤＩＮＧＳ_20260831_訂正有報_S100XYBC.zip"
+  },
+  {
+   "dir": "9421_株式会社エヌジェイホールディングス",
+   "code": "9421",
+   "year": 2026,
+   "interim_tags": 136,
+   "currentyear_tags": 0,
+   "revenue": 5025468000.0,
+   "source_file": "9421_株式会社エヌジェイホールディングス_20260630_訂正有報_S100XISR.zip"
+  },
+  {
+   "dir": "9425_ＲｅＹｕｕ　Ｊａｐａｎ株式会社",
+   "code": "9425",
+   "year": 2026,
+   "interim_tags": 23,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9425_ＲｅＹｕｕ　Ｊａｐａｎ株式会社_20261031_訂正有報_S100YAUX.zip"
+  },
+  {
+   "dir": "9438_株式会社エムティーアイ",
+   "code": "9438",
+   "year": 2026,
+   "interim_tags": 165,
+   "currentyear_tags": 0,
+   "revenue": 15666453000.0,
+   "source_file": "9438_株式会社エムティーアイ_20260331_訂正有報_S100Y47X.zip"
+  },
+  {
+   "dir": "9439_株式会社エム・エイチ・グループ",
+   "code": "9439",
+   "year": 2026,
+   "interim_tags": 164,
+   "currentyear_tags": 0,
+   "revenue": 945339000.0,
+   "source_file": "9439_株式会社エム・エイチ・グループ_20260630_訂正有報_S100XKGJ.zip"
+  },
+  {
+   "dir": "9446_株式会社サカイホールディングス",
+   "code": "9446",
+   "year": 2026,
+   "interim_tags": 176,
+   "currentyear_tags": 0,
+   "revenue": 9173419000.0,
+   "source_file": "9446_株式会社サカイホールディングス_20260930_訂正有報_S100Y2H8.zip"
+  },
+  {
+   "dir": "9450_株式会社ファイバーゲート",
+   "code": "9450",
+   "year": 2026,
+   "interim_tags": 183,
+   "currentyear_tags": 0,
+   "revenue": 6774000000.0,
+   "source_file": "9450_株式会社ファイバーゲート_20260630_訂正有報_S100XK2G.zip"
+  },
+  {
+   "dir": "9476_株式会社中央経済社ホールディングス",
+   "code": "9476",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 1666403000.0,
+   "source_file": "9476_株式会社中央経済社ホールディングス_20260930_訂正有報_S100Y33X.zip"
+  },
+  {
+   "dir": "9514_株式会社エフオン",
+   "code": "9514",
+   "year": 2026,
+   "interim_tags": 156,
+   "currentyear_tags": 0,
+   "revenue": 9777000000.0,
+   "source_file": "9514_株式会社エフオン_20260630_訂正有報_S100XJUE.zip"
+  },
+  {
+   "dir": "9552_株式会社Ｍ＆Ａ総研ホールディングス",
+   "code": "9552",
+   "year": 2026,
+   "interim_tags": 144,
+   "currentyear_tags": 0,
+   "revenue": 10296511000.0,
+   "source_file": "9552_株式会社クオンツ総研ホールディングス_20260930_訂正有報_S100Y47P.zip"
+  },
+  {
+   "dir": "9553_株式会社マイクロアド",
+   "code": "9553",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 9633079000.0,
+   "source_file": "9553_株式会社マイクロアド_20260930_訂正有報_S100Y4H3.zip"
+  },
+  {
+   "dir": "9554_株式会社ＡＶｉＣ",
+   "code": "9554",
+   "year": 2026,
+   "interim_tags": 138,
+   "currentyear_tags": 0,
+   "revenue": 1856016000.0,
+   "source_file": "9554_株式会社ＡＶｉＣ_20260930_訂正有報_S100Y4GC.zip"
+  },
+  {
+   "dir": "9556_ＩＮＴＬＯＯＰ株式会社",
+   "code": "9556",
+   "year": 2026,
+   "interim_tags": 159,
+   "currentyear_tags": 0,
+   "revenue": 19356958000.0,
+   "source_file": "9556_ＩＮＴＬＯＯＰ株式会社_20260731_訂正有報_S100XQM3.zip"
+  },
+  {
+   "dir": "9557_株式会社エアークローゼット",
+   "code": "9557",
+   "year": 2026,
+   "interim_tags": 21,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9557_株式会社エアークローゼット_20260630_訂正有報_S100XL09.zip"
+  },
+  {
+   "dir": "9560_株式会社プログリット",
+   "code": "9560",
+   "year": 2026,
+   "interim_tags": 25,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9560_株式会社プログリット_20260831_訂正有報_S100XXTI.zip"
+  },
+  {
+   "dir": "9562_ビジネスコーチ株式会社",
+   "code": "9562",
+   "year": 2026,
+   "interim_tags": 135,
+   "currentyear_tags": 0,
+   "revenue": 740623000.0,
+   "source_file": "9562_ビジネスコーチ株式会社_20260930_訂正有報_S100Y3Z0.zip"
+  },
+  {
+   "dir": "9564_株式会社ＦＣＥ",
+   "code": "9564",
+   "year": 2026,
+   "interim_tags": 160,
+   "currentyear_tags": 0,
+   "revenue": 3434132000.0,
+   "source_file": "9564_株式会社ＦＣＥ_20260930_訂正有報_S100Y3YQ.zip"
+  },
+  {
+   "dir": "9565_ＧＬＯＥ株式会社",
+   "code": "9565",
+   "year": 2026,
+   "interim_tags": 145,
+   "currentyear_tags": 0,
+   "revenue": 1544650000.0,
+   "source_file": "9565_ＧＬＯＥ株式会社_20260630_訂正有報_S100YAK1.zip"
+  },
+  {
+   "dir": "9603_株式会社エイチ・アイ・エス",
+   "code": "9603",
+   "year": 2026,
+   "interim_tags": 214,
+   "currentyear_tags": 0,
+   "revenue": 193132000000.0,
+   "source_file": "9603_株式会社エイチ・アイ・エス_20261031_訂正有報_S100YB4A.zip"
+  },
+  {
+   "dir": "9651_日本プロセス株式会社",
+   "code": "9651",
+   "year": 2026,
+   "interim_tags": 131,
+   "currentyear_tags": 0,
+   "revenue": 5835114000.0,
+   "source_file": "9651_日本プロセス株式会社_20260531_訂正有報_S100XEJT.zip"
+  },
+  {
+   "dir": "9678_株式会社カナモト",
+   "code": "9678",
+   "year": 2026,
+   "interim_tags": 199,
+   "currentyear_tags": 0,
+   "revenue": 107952000000.0,
+   "source_file": "9678_株式会社カナモト_20261031_訂正有報_S100YARH.zip"
+  },
+  {
+   "dir": "9679_ホウライ株式会社",
+   "code": "9679",
+   "year": 2026,
+   "interim_tags": 28,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9679_ホウライ株式会社_20260930_訂正有報_S100Y1S5.zip"
+  },
+  {
+   "dir": "9699_ニシオホールディングス株式会社",
+   "code": "9699",
+   "year": 2026,
+   "interim_tags": 179,
+   "currentyear_tags": 0,
+   "revenue": 107888000000.0,
+   "source_file": "9699_ニシオホールディングス株式会社_20260930_訂正有報_S100Y329.zip"
+  },
+  {
+   "dir": "9746_株式会社　ＴＫＣ",
+   "code": "9746",
+   "year": 2026,
+   "interim_tags": 155,
+   "currentyear_tags": 0,
+   "revenue": 46825000000.0,
+   "source_file": "9746_株式会社　ＴＫＣ_20260930_訂正有報_S100Y3NT.zip"
+  },
+  {
+   "dir": "9765_株式会社オオバ",
+   "code": "9765",
+   "year": 2026,
+   "interim_tags": 154,
+   "currentyear_tags": 0,
+   "revenue": 7380753000.0,
+   "source_file": "9765_株式会社オオバ_20260531_訂正有報_S100XEJI.zip"
+  },
+  {
+   "dir": "9812_株式会社テーオーホールディングス",
+   "code": "9812",
+   "year": 2026,
+   "interim_tags": 168,
+   "currentyear_tags": 0,
+   "revenue": 11751030000.0,
+   "source_file": "9812_株式会社テーオーホールディングス_20260531_訂正有報_S100XFRS.zip"
+  },
+  {
+   "dir": "9823_株式会社マミーマートホールディングス",
+   "code": "9823",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 111739000000.0,
+   "source_file": "9823_株式会社マミーマートホールディングス_20260331_訂正有報_S100Y4IX.zip"
+  },
+  {
+   "dir": "9824_泉州電業株式会社",
+   "code": "9824",
+   "year": 2026,
+   "interim_tags": 178,
+   "currentyear_tags": 0,
+   "revenue": 76779000000.0,
+   "source_file": "9824_泉州電業株式会社_20261031_訂正有報_S100YAI2.zip"
+  },
+  {
+   "dir": "9869_加藤産業株式会社",
+   "code": "9869",
+   "year": 2026,
+   "interim_tags": 227,
+   "currentyear_tags": 0,
+   "revenue": 626921000000.0,
+   "source_file": "9869_加藤産業株式会社_20260930_訂正有報_S100Y2CY.zip"
+  },
+  {
+   "dir": "9941_太洋物産株式会社",
+   "code": "9941",
+   "year": 2026,
+   "interim_tags": 30,
+   "currentyear_tags": 0,
+   "revenue": null,
+   "source_file": "9941_太洋物産株式会社_20260930_訂正有報_S100Y3TD.zip"
+  },
+  {
+   "dir": "9978_株式会社文教堂グループホールディングス",
+   "code": "9978",
+   "year": 2026,
+   "interim_tags": 142,
+   "currentyear_tags": 0,
+   "revenue": 7403601000.0,
+   "source_file": "9978_株式会社文教堂グループホールディングス_20260831_訂正有報_S100XYHZ.zip"
+  },
+  {
+   "dir": "9979_株式会社大庄",
+   "code": "9979",
+   "year": 2026,
+   "interim_tags": 204,
+   "currentyear_tags": 0,
+   "revenue": 26617000000.0,
+   "source_file": "9979_株式会社大庄_20260831_訂正有報_S100XYCD.zip"
+  },
+  {
+   "dir": "9983_株式会社ファーストリテイリング",
+   "code": "9983",
+   "year": 2026,
+   "interim_tags": 170,
+   "currentyear_tags": 0,
+   "revenue": 2055227000000.0,
+   "source_file": "9983_株式会社ファーストリテイリング_20260831_訂正有報_S100XXP2.zip"
+  }
+ ],
+ "no_raw_suspects": []
+}

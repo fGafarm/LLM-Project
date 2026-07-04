@@ -1948,8 +1948,21 @@ def save_xbrl_json(company_code: str, company_name: str, year: str,
         except Exception as e:
             logger.warning(f"  ⚠️ 検証エラー: {e}")
 
+    # S0 T4 ガード: Interim* コンテキストのみのドキュメント (半期報告書) を年度ファイルとして
+    # 保存しない。daily_update の docType 誤ラベルで半期ZIPが年度抽出に流れ、売上が前年比
+    # 約-50%になる事故 (2026-05〜06, 591社) の再発防止。半期は {year}_Q2.json へ振替保存する
+    contexts = {t.get('context', '') for t in raw_tags.values() if isinstance(t, dict)}
+    has_annual_ctx = any(c.startswith('CurrentYear') for c in contexts)
+    has_interim_ctx = any(c.startswith(('Interim', 'CurrentInterim')) for c in contexts)
+    is_interim_doc = has_interim_ctx and not has_annual_ctx
+
     # 年度別JSON（標準フィールドのみ）
-    year_file = company_dir / f"{year}.json"
+    if is_interim_doc:
+        file_stem = f"{year}_Q2"
+        logger.warning(f"  ⚠️ Interim-onlyコンテキスト → 年度でなく半期として保存: {file_stem}.json ({source_file})")
+    else:
+        file_stem = str(year)
+    year_file = company_dir / f"{file_stem}.json"
 
     save_data = {
         "company_code": company_code,
@@ -1976,7 +1989,7 @@ def save_xbrl_json(company_code: str, company_name: str, year: str,
 
     # raw_tags（全タグ）を別ファイルに保存
     if raw_tags:
-        raw_file = company_dir / f"{year}_raw_tags.json"
+        raw_file = company_dir / f"{file_stem}_raw_tags.json"
         raw_save_data = {
             "company_code": company_code,
             "company_name": company_name,
