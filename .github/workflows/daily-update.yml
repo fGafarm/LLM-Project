@@ -55,12 +55,13 @@ jobs:
         run: |
           python daily_update.py --days 2
 
-      # S0 品質ゲート: 検算に落ちたデータ・推奨表現は本番に出さない (落ちたらpushしない)
+      # S0 品質ゲート: 検算に落ちたデータ・推奨表現・LLM謝罪文は本番に出さない (落ちたらpushしない)
       - name: Validate frontend data quality (S0 gates)
         working-directory: project/StockFlow/frontend
         run: |
           python scripts/validate_payout.py
           python scripts/scan_forbidden.py
+          python scripts/scan_report_quality.py
 
       - name: Upload changed data back to R2
         if: always()
