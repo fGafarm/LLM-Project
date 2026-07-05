@@ -285,6 +285,25 @@ def regenerate_frontend_full(log: logging.Logger):
     except Exception as e:
         log.error(f"  integrate_hidden_assets error: {e}")
 
+    # S0残: ランキング/スクリーニングの元データ (metrics_summary.json) も日次で再生成する。
+    # これを省くと企業データだけ更新されてランキングが古いままになる
+    metrics_script = STOCKFLOW_ROOT / "frontend" / "scripts" / "generate_metrics_summary.py"
+    log.info("  Running generate_metrics_summary.py...")
+    try:
+        result = subprocess.run(
+            [PYTHON, str(metrics_script)],
+            cwd=str(STOCKFLOW_ROOT / "frontend"),
+            capture_output=True, text=True, timeout=900,
+            encoding="utf-8", errors="replace",
+        )
+        if result.returncode != 0:
+            log.error(f"  generate_metrics_summary failed: {result.stderr[:500]}")
+        else:
+            for line in (result.stdout or "").splitlines()[-2:]:
+                log.info(f"    {line}")
+    except Exception as e:
+        log.error(f"  generate_metrics_summary error: {e}")
+
 
 # ===========================================================================
 # Step 3: Extract facilities
