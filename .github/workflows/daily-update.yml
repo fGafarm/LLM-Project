@@ -1,9 +1,13 @@
 name: Daily Stock Data Update
 
 on:
-  schedule:
-    # 21:00 UTC = 06:00 JST (daily)
-    - cron: '0 21 * * *'
+  # ⚠️ cron一時停止中 (2026-07-07): R2のxbrl_storeがローカルの全量復旧 (RECOVERY_2026-07-06.md)
+  # より古く、このままcronが走ると古いstoreからの再生成でサイトデータが巻き戻るため。
+  # 再開手順: ローカルで R2_* 認証を設定し
+  #   python r2_sync.py upload-changed financial_analysis_system/xbrl_store fixed_assets_store --since 259200
+  # を実行してR2を追いつかせてから、以下を復活させる (OPS.md §9):
+  # schedule:
+  #   - cron: '0 21 * * *'   # 21:00 UTC = 06:00 JST (daily)
   workflow_dispatch:
 
 jobs:
