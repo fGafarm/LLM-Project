@@ -201,21 +201,24 @@ def download_reports(docs: list[EdinetDoc], api_key: str, log: logging.Logger) -
 # ===========================================================================
 # Step 2b: Extract XBRL financial data from downloaded ZIPs
 # ===========================================================================
-def extract_xbrl_for(downloaded: list[dict], log: logging.Logger) -> set[str]:
+def extract_xbrl_for(downloaded: list[dict], log: logging.Logger) -> tuple[set[str], set[str]]:
     """新規DLされたZIPがある年度に対し xbrl_batch_extractor を --skip-existing で実行。
 
-    Returns: 影響を受けた fiscal_year のセット
+    Returns: (成功した fiscal_year のセット, 失敗した fiscal_year のセット)
+    失敗年を成功として返すと commit サマリが「抽出済み」と偽る (P0-2 の趣旨に反する)
     """
     if not downloaded:
-        return set()
+        return set(), set()
 
     new_zips = [d for d in downloaded if not d.get("skipped")]
     if not new_zips:
         log.info("  No new ZIPs to extract (all skipped)")
-        return set()
+        return set(), set()
 
     years_affected: set[int] = {d["fiscal_year"] for d in new_zips}
     log.info(f"  Extracting XBRL for fiscal years: {sorted(years_affected)}")
+    years_ok: set[str] = set()
+    years_failed: set[str] = set()
 
     script = PROJECT_ROOT / "financial_analysis_system" / "xbrl_batch_extractor.py"
     for year in sorted(years_affected):
@@ -224,6 +227,10 @@ def extract_xbrl_for(downloaded: list[dict], log: logging.Logger) -> set[str]:
             "--scan-folder", str(PDF_ROOT),
             "--years", str(year),
             "--skip-existing",
+            # 重要: extractor のCLIは env XBRL_STORE を見ず --output しか見ない。
+            # これを渡さないと CWD依存の ./xbrl_store (レガシー) に書いてしまう
+            # (2026-07-05事故: dailyの抽出が正史storeに一度も書けていなかった真因)
+            "--output", str(XBRL_STORE),
         ]
         log.info(f"  Running xbrl_batch_extractor --years {year} --skip-existing")
         try:
@@ -233,17 +240,24 @@ def extract_xbrl_for(downloaded: list[dict], log: logging.Logger) -> set[str]:
                 cmd, capture_output=True, text=True, timeout=1800,
                 encoding="utf-8", errors="replace", env=env,
             )
-            tail = (result.stdout or "").splitlines()[-15:]
+            # extractor は logging を stderr に出すため stdout だけでは何も残らない
+            # (2026-07-05 の抽出結果がログから追えなかった原因)。両ストリームを記録する
+            tail = ((result.stdout or "") + "\n" + (result.stderr or "")).strip().splitlines()[-15:]
             for line in tail:
                 log.info(f"    {line}")
             if result.returncode != 0:
                 log.error(f"  xbrl extract failed: {result.stderr[:500]}")
+                years_failed.add(str(year))
+            else:
+                years_ok.add(str(year))
         except subprocess.TimeoutExpired:
             log.error(f"  xbrl extract timeout for year {year}")
+            years_failed.add(str(year))
         except Exception as e:
             log.error(f"  xbrl extract error: {e}")
+            years_failed.add(str(year))
 
-    return {str(y) for y in years_affected}
+    return years_ok, years_failed
 
 
 # ===========================================================================
@@ -448,7 +462,24 @@ def regenerate_metrics(log: logging.Logger):
 # ===========================================================================
 # Step 7: Git commit + push
 # ===========================================================================
-def git_commit_push(affected_tickers: list[str], date_str: str, log: logging.Logger) -> bool:
+def build_run_summary(stats: dict, elapsed_sec: float) -> str:
+    """POSTMORTEM §4 P0-2: 実行サマリ1行 (commitメッセージ2行目 + logs/daily_summary_last.txt)."""
+    yrs = ",".join(sorted(stats["years_extracted"])) or "-"
+    summary = (f"EDINET {stats['edinet_docs']}件 / DL新規 {stats['downloaded_new']} / 年度抽出 {yrs} / "
+               f"設備 {stats['facilities']}社 / 短信PDF {stats['tanshin_pdf']} / 短信XBRL {stats['tanshin_xbrl']}")
+    if stats.get("extract_failed"):
+        summary += f" / ⚠️抽出失敗 {','.join(sorted(stats['extract_failed']))}"
+    summary += f" / 所要 {elapsed_sec / 60:.0f}分"
+    return summary
+
+
+def git_commit_push(affected_tickers: list[str], date_str: str, log: logging.Logger,
+                    summary_line: str | None = None) -> bool:
+    # CI では workflow の bot ステップが commit/push を担う (identity 未設定の偽エラー防止)
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        log.info("  CI環境: commit/push は workflow の bot ステップに委譲")
+        return False
+
     cwd = str(STOCKFLOW_ROOT)
 
     # Stage all frontend/public/data/ changes (xbrl re-extract may have touched many)
@@ -462,8 +493,12 @@ def git_commit_push(affected_tickers: list[str], date_str: str, log: logging.Log
 
     n_files = len([l for l in status.stdout.strip().splitlines() if l.strip()]) - 1  # last line is summary
     msg = f"daily: update {n_files} files ({date_str})"
+    commit_cmd = ["git", "commit", "-m", msg]
+    # POSTMORTEM §4 P0-2: 「エラーなく終わった」でなく「何件入ったか」を履歴から追えるようにする
+    if summary_line:
+        commit_cmd += ["-m", summary_line]
     result = subprocess.run(
-        ["git", "commit", "-m", msg],
+        commit_cmd,
         cwd=cwd, capture_output=True, text=True,
     )
     if result.returncode != 0:
@@ -686,6 +721,9 @@ def main():
     industry_map = load_industry_map()
 
     all_affected = []
+    run_stats = {"edinet_docs": 0, "downloaded_new": 0, "years_extracted": set(),
+                 "extract_failed": set(), "facilities": 0, "tanshin_pdf": 0, "tanshin_xbrl": 0}
+    t_start = time.time()
     for date_str in dates:
         log = setup_logging(date_str)
         t0 = time.time()
@@ -696,6 +734,7 @@ def main():
         # Step 1: Fetch
         log.info("Step 1: Fetch EDINET documents")
         docs = fetch_documents(date_str, api_key, industry_map, log)
+        run_stats["edinet_docs"] += len(docs)
         if not docs:
             log.info("No target documents. Done.")
             continue
@@ -705,19 +744,25 @@ def main():
         downloaded = download_reports(docs, api_key, log)
         new_count = sum(1 for d in downloaded if not d.get("skipped"))
         log.info(f"  Downloaded: {new_count} new, {len(downloaded) - new_count} skipped")
+        run_stats["downloaded_new"] += new_count
 
         # Step 2b: Extract XBRL financial data (新規 ZIP のみ年度単位で再抽出)
         if new_count > 0:
             log.info("Step 2b: Extract XBRL financial data")
-            years_extracted = extract_xbrl_for(downloaded, log)
+            years_extracted, years_failed = extract_xbrl_for(downloaded, log)
+            if years_failed:
+                run_stats["extract_failed"] |= years_failed
+                log.error(f"  XBRL extract FAILED for years: {sorted(years_failed)}")
             if years_extracted:
                 all_affected.append("__xbrl_changed__")  # marker for full regen
+                run_stats["years_extracted"] |= years_extracted
                 log.info(f"  XBRL years extracted: {sorted(years_extracted)}")
 
         # Step 3: Extract
         log.info("Step 3: Extract facilities")
         extracted = extract_facilities_for(downloaded, industry_map, log)
         log.info(f"  Extracted: {len(extracted)} companies")
+        run_stats["facilities"] += len(extracted)
 
         # Step 4-5: Calculate hidden assets + integrate (if any extracted)
         affected = []
@@ -744,26 +789,42 @@ def main():
                 all_affected.append("__tanshin_changed__")
             log.info(f"  Tanshin extracted: {n_tanshinn_extracted}")
 
+        run_stats["tanshin_pdf"] += n_tanshinn
+        run_stats["tanshin_xbrl"] += n_tanshinn_extracted
+
         elapsed = time.time() - t0
         log.info(f"Date {date_str} done in {elapsed:.1f}s: {len(docs)} EDINET docs, {new_count} downloaded, {len(extracted)} extracted, {len(affected)} calculated, {n_tanshinn} 短信PDF, {n_tanshinn_extracted} 短信XBRL→store")
 
-    if not all_affected:
-        print("No companies updated across all dates.")
-        return
-
-    # Step 5b: Run full frontend regeneration (xbrl_store→JSON + hidden assets)
     log = setup_logging(dates[-1])
-    log.info("Step 5b: Regenerate frontend (generate_all_companies + integrate_hidden_assets)")
-    regenerate_frontend_full(log)
-
-    # Step 6: Regenerate metrics (once for all dates)
-    log.info("Step 6: Regenerate metrics_summary")
-    regenerate_metrics(log)
-
-    # Step 7: Git commit + push
-    log.info("Step 7: Git commit + push")
     unique_tickers = list(dict.fromkeys(all_affected))
-    pushed = git_commit_push(unique_tickers, dates[-1], log)
+    pushed = False
+
+    # P0-2: 実行サマリを常に書き出す (CIのbot commitメッセージにも注入される)
+    summary_line = build_run_summary(run_stats, time.time() - t_start)
+    log.info(f"Run summary: {summary_line}")
+    try:
+        LOG_DIR.mkdir(parents=True, exist_ok=True)
+        (LOG_DIR / "daily_summary_last.txt").write_text(summary_line, encoding="utf-8")
+    except OSError:
+        pass
+
+    if not all_affected:
+        # 更新ゼロの日こそサイレント死の兆候。regen/commit はスキップするが監査は必ず走らせる
+        # (旧実装はここで return しており、死んでいる日ほど監査が走らない倒錯があった)
+        print("No companies updated across all dates.")
+        log.info("No companies updated - regen/commit をスキップし、監査 (Step 8/8b) のみ実行")
+    else:
+        # Step 5b: Run full frontend regeneration (xbrl_store→JSON + hidden assets)
+        log.info("Step 5b: Regenerate frontend (generate_all_companies + integrate_hidden_assets)")
+        regenerate_frontend_full(log)
+
+        # Step 6: Regenerate metrics (once for all dates)
+        log.info("Step 6: Regenerate metrics_summary")
+        regenerate_metrics(log)
+
+        # Step 7: Git commit + push
+        log.info("Step 7: Git commit + push")
+        pushed = git_commit_push(unique_tickers, dates[-1], log, summary_line)
 
     # Step 8: Audit - 過去N日のTDnet全件 vs xbrl_storeを突合し catastrophic miss を検知
     log.info("Step 8: Tanshin audit (TDnet vs xbrl_store)")
@@ -783,6 +844,31 @@ def main():
         if audit_result.returncode != 0:
             log.warning(f"  AUDIT WARNING: tanshin_audit returned {audit_result.returncode}")
             # exit code 1 にせず警告止まり (cron 自動実行を止めない)
+    except Exception as e:
+        log.error(f"  Audit error: {e}")
+
+    # Step 8b: Audit - EDINET提出一覧 vs pdf_xbrl ZIP vs xbrl_store (有報版 expected-vs-actual)
+    # POSTMORTEM_2026-07-05 §4 P0: 有報側に突合が無かったことがサイレント死の根因。
+    # tanshin_audit と同じく警告止まり (cron を止めない) だが、ログに named で残す。
+    log.info("Step 8b: Yuho audit (EDINET vs pdf_xbrl vs xbrl_store)")
+    yuho_cmd = [
+        PYTHON,
+        str(PROJECT_ROOT / "yuho_audit.py"),
+        "--days", "7", "--strict",
+    ]
+    try:
+        yuho_result = subprocess.run(
+            yuho_cmd, capture_output=True, text=True, timeout=900,
+            encoding="utf-8", errors="replace",
+            env={**os.environ, "PROJECT_ROOT": str(PROJECT_ROOT), "PDF_ROOT": str(PDF_ROOT),
+                 "XBRL_STORE": str(XBRL_STORE), "STOCKFLOW_ROOT": str(STOCKFLOW_ROOT)},
+        )
+        for line in (yuho_result.stdout or "").splitlines()[-20:]:
+            log.info(f"  {line}")
+        if yuho_result.returncode == 2:
+            log.error("  AUDIT CRITICAL: yuho_audit 環境エラー (junction/store/APIキー欠落の疑い)")
+        elif yuho_result.returncode != 0:
+            log.warning(f"  AUDIT WARNING: yuho_audit returned {yuho_result.returncode} (取込漏れあり)")
     except Exception as e:
         log.error(f"  Audit error: {e}")
 

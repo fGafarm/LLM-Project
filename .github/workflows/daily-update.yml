@@ -53,6 +53,9 @@ jobs:
           PDF_ROOT: ${{ github.workspace }}/project/pdf_xbrl
         working-directory: project
         run: |
+          # pdf_xbrl は git 非追跡・R2 download 対象外のため、fresh runner では存在せず
+          # daily_update.py が pre-check (sys.exit 1) で即死していた。CI では空で作る
+          mkdir -p pdf_xbrl
           python daily_update.py --days 2
 
       # S0 品質ゲート: 検算に落ちたデータ・推奨表現・LLM謝罪文は本番に出さない (落ちたらpushしない)
@@ -73,6 +76,9 @@ jobs:
         working-directory: project
         run: |
           python r2_sync.py upload-changed financial_analysis_system/xbrl_store fixed_assets_store --since 14400
+          # ZIP原本もR2へアーカイブ (E:ドライブ単独依存の解消。Actions単独運用への前提整備。
+          #  この run でDLした新規ZIPだけが対象なので容量・時間コストは小さい)
+          python r2_sync.py upload-changed pdf_xbrl --since 14400
 
       - name: Commit and push frontend changes
         id: push_frontend
@@ -89,7 +95,9 @@ jobs:
           DATE=$(date -u +%Y-%m-%d)
           # 送信前にdiff URLリスト用ファイルを生成
           git diff --cached --name-only > /tmp/changed.txt
-          git commit -m "daily: auto-update ($DATE) [bot]"
+          # P0-2: daily_update が書き出した実行サマリを commit メッセージ2行目に注入
+          SUMMARY=$(cat ../logs/daily_summary_last.txt 2>/dev/null || echo "no summary")
+          git commit -m "daily: auto-update ($DATE) [bot]" -m "$SUMMARY"
           git push origin main
           echo "pushed=true" >> $GITHUB_OUTPUT
 
@@ -102,6 +110,19 @@ jobs:
           # (Bing は IndexNow キーファイルを取得して検証するため、本番にキーが配置されてからping)
           sleep 60
           python scripts/indexnow_submit.py --mode changed --diff-file /tmp/changed.txt
+
+      # POSTMORTEM P0: 有報の expected-vs-actual 監査。取込漏れがあれば run を赤にして通知させる。
+      # push 後に置くのは意図的 — 取り込めた分の公開は止めず、欠落だけを警報にする。
+      # --days 2 は daily_update --days 2 と一致させる (CI の pdf_xbrl はこの run でDLした分しか無いため)
+      - name: Yuho ingestion audit (EDINET vs ZIP vs store)
+        if: always()
+        env:
+          EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
+          PROJECT_ROOT: ${{ github.workspace }}/project
+          PDF_ROOT: ${{ github.workspace }}/project/pdf_xbrl
+        working-directory: project
+        run: |
+          python yuho_audit.py --days 2 --strict
 
       - name: Upload log artifact
         if: always()

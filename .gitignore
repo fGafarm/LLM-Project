@@ -9,6 +9,7 @@ backend/keys/*.json
 keys/*.json
 *.pem
 *.key
+credentials.json
 
 # Outputs
 backend/output/
@@ -44,6 +45,15 @@ batch_progress*.json
 *.tmp
 _tmp_*
 chemstat*.png
+nul
+/*.png
+financial_analysis_system/*.log
+financial_analysis_system/output*/
+financial_analysis_system/company_data/
+financial_analysis_system/rag_db/
+financial_analysis_system/_dup_quarantine_*/
+company_data_progress.json
+rerun_progress.json
 
 # Untracked workspaces
 PDF_Getter/
