@@ -153,6 +153,11 @@ FALLBACK_TAGS = {
         ('jppfs_cor:OperatingRevenue2', 3),
         ('jpcrp_cor:OrdinaryIncomeSummaryOfBusinessResults', 4),  # 銀行業等：経常収益（優先度下げ：一般企業での誤マッチ防止）
         ('jppfs_cor:OrdinaryIncomeBNK', 4),  # 銀行業：経常収益
+        # 2026-07-06 追加 (yuho_audit の NO_REVENUE 実測113件から特定):
+        ('jpcrp_cor:NetSalesOfCompletedConstructionContractsSummaryOfBusinessResults', 2),  # 建設業: 完成工事高 (1950日本電設/1777川崎設備 で実測)
+        ('jppfs_cor:NetSalesOfCompletedConstructionContractsCNS', 3),  # 建設業 財務諸表本体
+        ('jppfs_cor:NetSalesOfCompletedConstructionContracts', 3),  # 同 別バリエーション
+        ('jppfs_cor:OperatingIncomeINS', 4),  # 保険業: 経常収益 (T&D 3.48兆/第一生命11.3兆/かんぽ5.6兆 で実測。銀行の経常収益と同じ扱い)
         ('ifrs-full:Revenue', 5),
     ],
     'cost_of_sales': [
@@ -1065,13 +1070,17 @@ def extract_xbrl_from_zip(zip_path: Path) -> Dict[str, Any]:
     if HAS_LXML:
         return _extract_with_lxml(xbrl_content)
     elif HAS_BS4:
+        # bs4経路は _raw_tags を返さないため保存側の Interim-only ガードが無効化され、
+        # 半期→年度混入 (S0 T4事故) がこの経路では再発しうる。単体のみフォールバックも無い。
+        # lxml が正: この警告が出る環境は要修復 (pip install lxml)
+        logger.warning(f"⚠️ lxml未導入のためbs4フォールバックで抽出: {zip_path.name} — Interimガード・単体フォールバック無効。lxml導入を推奨")
         return _extract_with_bs4(xbrl_content)
     else:
         logger.error("lxmlまたはbs4が必要です")
         return {}
 
 
-def _extract_with_lxml(xbrl_content: bytes) -> Dict[str, Any]:
+def _extract_with_lxml(xbrl_content: bytes, _allow_nonconsolidated: bool = False) -> Dict[str, Any]:
     """lxmlを使ったXBRL抽出 - 全タグ取得版"""
     
     try:
@@ -1108,11 +1117,11 @@ def _extract_with_lxml(xbrl_content: bytes) -> Dict[str, Any]:
         ('InterimInstant', 6),
     ]
     
-    def find_best_contexts(patterns, is_instant=False):
+    def find_best_contexts(patterns, is_instant=False, allow_nonconsolidated=False):
         """パターンにマッチするコンテキストを優先度順に返す"""
         matched = []
         for ctx_name in context_index.keys():
-            if 'NonConsolidated' in ctx_name:
+            if 'NonConsolidated' in ctx_name and not allow_nonconsolidated:
                 continue
             # 前年同期データ (Prior1*, Prior2*, ...) を除外
             if 'Prior' in ctx_name:
@@ -1133,16 +1142,18 @@ def _extract_with_lxml(xbrl_content: bytes) -> Dict[str, Any]:
         matched.sort(key=lambda x: x[1])
         return [m[0] for m in matched]
     
-    duration_contexts = find_best_contexts(duration_patterns, is_instant=False)
-    instant_contexts = find_best_contexts(instant_patterns, is_instant=True)
-    
+    duration_contexts = find_best_contexts(duration_patterns, is_instant=False,
+                                           allow_nonconsolidated=_allow_nonconsolidated)
+    instant_contexts = find_best_contexts(instant_patterns, is_instant=True,
+                                          allow_nonconsolidated=_allow_nonconsolidated)
+
     # フォールバック
     if not duration_contexts:
-        duration_contexts = [c for c in context_index.keys() 
-                           if 'NonConsolidated' not in c and 'Instant' not in c]
+        duration_contexts = [c for c in context_index.keys()
+                           if ('NonConsolidated' not in c or _allow_nonconsolidated) and 'Instant' not in c]
     if not instant_contexts:
-        instant_contexts = [c for c in context_index.keys() 
-                          if 'NonConsolidated' not in c and 'Duration' not in c]
+        instant_contexts = [c for c in context_index.keys()
+                          if ('NonConsolidated' not in c or _allow_nonconsolidated) and 'Duration' not in c]
     
     extracted = {}
     raw_tags = {}  # 全タグを保存
@@ -1226,11 +1237,24 @@ def _extract_with_lxml(xbrl_content: bytes) -> Dict[str, Any]:
     
     # 派生指標を計算
     _calculate_derived_metrics(extracted)
-    
+
     # raw_tagsも保存（未知タグを後で分析可能）
     extracted['_raw_tags'] = raw_tags
     extracted['_raw_tags_count'] = len(raw_tags)
-    
+
+    # 単体のみ企業フォールバック: 連結優先で抽出した結果コアの財務数値が全滅している場合
+    # (株式数などの非財務のみ)、財務が *_NonConsolidatedMember にしか無い単体のみ提出者
+    # (例: 9872北恵の半期は汎用 InterimDuration に非財務のみ、P/L・B/Sは単体コンテキスト)。
+    # 単体コンテキストを許可して一度だけ再抽出し、改善した時だけ採用する (連結企業は不変)。
+    _CORE_FIELDS = ('revenue', 'operating_income', 'ordinary_income', 'net_income', 'total_assets', 'total_equity')
+    if (not _allow_nonconsolidated
+            and all(extracted.get(k) is None for k in _CORE_FIELDS)
+            and any('NonConsolidated' in c for c in context_index)):
+        retry = _extract_with_lxml(xbrl_content, _allow_nonconsolidated=True)
+        if any(retry.get(k) is not None for k in _CORE_FIELDS):
+            logger.info("  単体のみ提出者と判定 → NonConsolidatedコンテキストで再抽出を採用")
+            return retry
+
     return extracted
 
 
@@ -1378,11 +1402,13 @@ def _calculate_derived_metrics(extracted: Dict):
             extracted['inventories'] = inv_sum
 
     # 棚卸資産回転率 = 売上高 / 棚卸資産
-    if 'revenue' in extracted and 'inventories' in extracted and extracted['inventories']:
+    # 回転率が0に丸まる零細売上 (2656ベクター等) でのゼロ除算、revenue=None でのTypeErrorを防御
+    if (extracted.get('revenue') or 0) > 0 and 'inventories' in extracted and extracted['inventories']:
         extracted['inventory_turnover_calc'] = round(extracted['revenue'] / extracted['inventories'], 2)
         # 棚卸資産回転日数
-        extracted['inventory_days_calc'] = round(365 / extracted['inventory_turnover_calc'], 1)
-    
+        if extracted['inventory_turnover_calc'] > 0:
+            extracted['inventory_days_calc'] = round(365 / extracted['inventory_turnover_calc'], 1)
+
     # 売上債権回転率 = 売上高 / 売上債権
     receivables = 0
     if 'trade_receivables' in extracted and extracted['trade_receivables']:
@@ -1392,9 +1418,10 @@ def _calculate_derived_metrics(extracted: Dict):
             receivables += extracted['notes_receivable']
         if 'accounts_receivable' in extracted and extracted['accounts_receivable']:
             receivables += extracted['accounts_receivable']
-    if receivables > 0 and 'revenue' in extracted:
+    if receivables > 0 and (extracted.get('revenue') or 0) > 0:
         extracted['receivables_turnover_calc'] = round(extracted['revenue'] / receivables, 2)
-        extracted['receivables_days_calc'] = round(365 / extracted['receivables_turnover_calc'], 1)
+        if extracted['receivables_turnover_calc'] > 0:
+            extracted['receivables_days_calc'] = round(365 / extracted['receivables_turnover_calc'], 1)
     
     # 仕入債務回転率 = 売上原価 / 仕入債務
     payables = 0
@@ -1405,9 +1432,10 @@ def _calculate_derived_metrics(extracted: Dict):
             payables += extracted['notes_payable']
         if 'accounts_payable' in extracted and extracted['accounts_payable']:
             payables += extracted['accounts_payable']
-    if payables > 0 and 'cost_of_sales' in extracted:
+    if payables > 0 and (extracted.get('cost_of_sales') or 0) > 0:
         extracted['payables_turnover_calc'] = round(extracted['cost_of_sales'] / payables, 2)
-        extracted['payables_days_calc'] = round(365 / extracted['payables_turnover_calc'], 1)
+        if extracted['payables_turnover_calc'] > 0:
+            extracted['payables_days_calc'] = round(365 / extracted['payables_turnover_calc'], 1)
     
     # CCC（キャッシュコンバージョンサイクル）= 売上債権回転日数 + 棚卸資産回転日数 - 仕入債務回転日数
     if all(key in extracted for key in ['receivables_days_calc', 'inventory_days_calc', 'payables_days_calc']):
@@ -1551,22 +1579,30 @@ def find_xbrl_zips(company_code: str, years: List[str], base_path: Path) -> List
     Returns: [(year, zip_path), ...]
     """
     results = []
-    
+
     for year in years:
         # 有報を優先
         for doc_type in ['有報', '四半期']:
             folder = base_path / year / doc_type
             if not folder.exists():
                 continue
-            
+
             # 企業コードで始まるZIPを検索
             zips = list(folder.glob(f"{company_code}_*.zip"))
             if zips:
-                # 最大サイズのものを選択（最新版の可能性が高い）
-                best_zip = max(zips, key=lambda x: x.stat().st_size)
-                results.append((year, best_zip))
+                results.append((year, pick_latest_zip(zips)))
                 break  # 有報があれば四半期は不要
-    
+
+        # 半期報告書は年度ドキュメントと独立に別エントリで返す。
+        # 保存側が半期を {year}_Q2.json へ振り替えるので年度データは汚さない。
+        # (2026-07-03 の 5942/9872 取込漏れの根治: 半期フォルダが年度モードで一切
+        #  スキャンされず、正しくラベルされた半期ZIPが誰にも読まれなかった)
+        interim_folder = base_path / year / '半期'
+        if interim_folder.exists():
+            zips = list(interim_folder.glob(f"{company_code}_*.zip"))
+            if zips:
+                results.append((year, pick_latest_zip(zips)))
+
     return results
 
 
@@ -1586,14 +1622,17 @@ def scan_all_zips(base_path: Path, years: List[str] = None) -> Dict[str, List[Tu
     for year_folder in year_folders:
         year = year_folder.name
 
-        for doc_type in ['有報', '四半期']:
+        # 半期も含める: 企業の「発見」に使われるリスト。半期しか提出していない企業
+        # (非3月決算の中間期など) も batch_process の対象に乗せる
+        for doc_type in ['有報', '四半期', '半期']:
             doc_folder = year_folder / doc_type
             if not doc_folder.exists():
                 continue
 
             for zip_path in doc_folder.glob("*.zip"):
                 # ファイル名から企業コードを抽出（例: 1301_極洋_有報_2022.zip）
-                match = re.match(r'^(\d{4,5})_', zip_path.name)
+                # 英数字コード (303A 等の新規IPO) も対象 (\d のみだと全員スキャン漏れ)
+                match = re.match(r'^([0-9A-Z]{4,5})_', zip_path.name)
                 if match:
                     company_code = match.group(1)
                     company_zips[company_code].append((year, zip_path))
@@ -1633,9 +1672,13 @@ def determine_quarter(filename: str, fy_end_month: int = 3) -> Optional[Tuple[in
     # 四半期番号を判定
     quarter = ((period_end_month - fy_end_month - 1) % 12) // 3 + 1
 
-    # 半期報告書 (_半期_): EDINET の文書日付表記が会計年度末日 (例 20260331) になるケースがある。
+    # 半期報告書: EDINET の文書日付表記が会計年度末日 (例 20260331) になるケースがある。
     # ZIP内部 instance は中間期末 (例 2025-09-30) を持つので、ここでは fiscal_year=YYYY, Q2 として返す。
-    if '_半期_' in filename and period_end_month == fy_end_month:
+    # 命名は旧 `_半期_` と daily_update T4以降の `_半期報告書_` / `_訂正半期報告書_` の両方に対応
+    # (`_四半期_` は前が「四」なのでこの正規表現に一致しない)。
+    # 注意: 非3月決算企業を四半期モードで処理する場合は --fy-end-month をその企業の決算月に
+    # 合わせること (日次経路は年度モード+Interim-onlyガードで処理されるためこの制約を受けない)
+    if re.search(r'_(訂正)?半期(報告書)?_', filename) and period_end_month == fy_end_month:
         return (period_end_year, 2)
 
     if quarter < 1 or quarter > 3:
@@ -1695,7 +1738,7 @@ def scan_all_quarterly_zips(base_path: Path, years: List[str] = None,
                 continue
 
             for zip_path in doc_folder.glob("*.zip"):
-                match = re.match(r'^(\d{4,5})_', zip_path.name)
+                match = re.match(r'^([0-9A-Z]{4,5})_', zip_path.name)
                 if not match:
                     continue
 
@@ -1713,6 +1756,59 @@ def scan_all_quarterly_zips(base_path: Path, years: List[str] = None,
         company_zips[code].sort(key=lambda x: x[0])
 
     return company_zips
+
+
+# ============================================================
+# --skip-existing の docID ベース判定 (POSTMORTEM_2026-07-05 R4)
+# ============================================================
+DOCID_PATTERN = re.compile(r'(S10[0-9][0-9A-Z]{4})')  # EDINET docID (例 S100YOAB)
+
+
+def extract_docid(name: str) -> Optional[str]:
+    """ファイル名/ソース名から EDINET docID を取り出す。短信(TDnet)由来などは None。"""
+    m = DOCID_PATTERN.search(name or "")
+    return m.group(1) if m else None
+
+
+def pick_latest_zip(zips: List[Path]) -> Path:
+    """同一企業・同一年フォルダ内から docID 降順 (最新提出優先) で1本選ぶ。
+
+    旧実装の「最大サイズ」選択は (a) 差分のみで小さい訂正報告書が永遠に選ばれない、
+    (b) 逆に大きい旧年度の訂正が本物の有報をシャドーイングする実害があった
+    (レビュー実測: KDDI 9433 の 2026.json に FY2025 訂正データが固定、恒久STALE 26社)。
+    docID はほぼ提出順で昇順のため、最新 docID = 最新提出。docID 無しはサイズで後順。
+    """
+    return max(zips, key=lambda z: (extract_docid(z.name) or "", z.stat().st_size))
+
+
+def should_skip_existing(existing_json: Path, zip_name: str) -> Tuple[bool, str]:
+    """--skip-existing の判定。「ファイルが存在する=正しい」を仮定しない (壊れ残骸の自己防衛防止)。
+
+    skipする  : 同一docIDを抽出済み / 既存の方が新しいdocID (古いZIPでのダウングレード防止)
+                / docID不明だが既存が健全 (従来挙動)
+    再抽出する: 既存JSONが壊れている / tanshin由来 (EDINETの方が網羅的)
+                / ZIPのdocIDの方が新しい (訂正有報・訂正半期の反映)
+    """
+    try:
+        data = json.loads(existing_json.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return False, "既存JSONが壊れている → 再抽出"
+    if data.get("source") == "tanshin":
+        return False, "既存tanshin → EDINETで上書き"
+    # 意味的な壊れ残骸 (parseはできるがコア財務が全滅) にブロック権を与えない (POSTMORTEM R4)
+    data_block = data.get("data") or {}
+    if not any(data_block.get(k) is not None for k in
+               ('revenue', 'operating_income', 'ordinary_income', 'net_income', 'total_assets', 'total_equity')):
+        return False, "既存のコア財務が全滅 (壊れ残骸) → 再抽出"
+    new_id = extract_docid(zip_name)
+    old_id = extract_docid(str(data.get("source_file") or ""))
+    if new_id is None or old_id is None:
+        return True, "既存データあり → スキップ"
+    if new_id == old_id:
+        return True, f"同一docID {new_id} 抽出済み → スキップ"
+    if new_id > old_id:  # docIDはほぼ提出順で昇順 (audit_yuho_coverage.py と同じ仮定)
+        return False, f"新docID {new_id} > 既存 {old_id} (訂正版) → 再抽出"
+    return True, f"既存 {old_id} の方が新しい → スキップ (ダウングレード防止)"
 
 
 def process_company_quarterly(company_code: str, years: List[str],
@@ -1747,13 +1843,16 @@ def process_company_quarterly(company_code: str, years: List[str],
 
     for output_key, zip_path in zips:
         try:
-            # --skip-existing: 既存JSONがあればスキップ
+            # --skip-existing: docID比較で判定 (同一docID→skip / 壊れ・tanshin・訂正版→再抽出)
             if skip_existing:
                 existing_json = company_dir / f"{output_key}.json"
                 if existing_json.exists():
-                    logger.info(f"  ⏭️ {output_key}: 既存データあり → スキップ")
-                    results["quarters_processed"].append(output_key)
-                    continue
+                    do_skip, reason = should_skip_existing(existing_json, zip_path.name)
+                    if do_skip:
+                        logger.info(f"  ⏭️ {output_key}: {reason}")
+                        results["quarters_processed"].append(output_key)
+                        continue
+                    logger.info(f"  🔄 {output_key}: {reason}")
 
             logger.info(f"  📄 {output_key}: {zip_path.name}")
 
@@ -1924,8 +2023,13 @@ def load_company_list_from_sheets() -> Dict[str, str]:
 def save_xbrl_json(company_code: str, company_name: str, year: str,
                    xbrl_data: Dict, source_file: str, output_base: Path,
                    validator: 'FinancialStatementValidator' = None,
-                   learner: 'TagLearningManager' = None):
-    """XBRLデータをJSONで保存（検証・学習機能付き）"""
+                   learner: 'TagLearningManager' = None,
+                   force_interim: bool = False):
+    """XBRLデータをJSONで保存（検証・学習機能付き）
+
+    force_interim: 半期フォルダ由来のZIP。コンテキスト推定に関わらず {year}_Q2.json へ保存する
+    (監査人異動注記等で CurrentYear* コンテキストを含む半期が年度ファイルを汚染した事故の根治)。
+    """
 
     # ディレクトリ作成
     company_dir = output_base / f"{company_code}_{company_name}"
@@ -1950,19 +2054,41 @@ def save_xbrl_json(company_code: str, company_name: str, year: str,
 
     # S0 T4 ガード: Interim* コンテキストのみのドキュメント (半期報告書) を年度ファイルとして
     # 保存しない。daily_update の docType 誤ラベルで半期ZIPが年度抽出に流れ、売上が前年比
-    # 約-50%になる事故 (2026-05〜06, 591社) の再発防止。半期は {year}_Q2.json へ振替保存する
+    # 約-50%になる事故 (2026-05〜06, 591社) の再発防止。半期は {year}_Q2.json へ振替保存する。
+    # 注: コンテキスト推定は「半期なのに CurrentYear* を含む」ケース (監査人異動注記・IFRS
+    # TextBlock等、実測5社) をすり抜けるため、フォルダ由来の force_interim が最優先。
     contexts = {t.get('context', '') for t in raw_tags.values() if isinstance(t, dict)}
     has_annual_ctx = any(c.startswith('CurrentYear') for c in contexts)
     has_interim_ctx = any(c.startswith(('Interim', 'CurrentInterim')) for c in contexts)
     is_interim_doc = has_interim_ctx and not has_annual_ctx
 
     # 年度別JSON（標準フィールドのみ）
-    if is_interim_doc:
+    if force_interim or is_interim_doc:
         file_stem = f"{year}_Q2"
-        logger.warning(f"  ⚠️ Interim-onlyコンテキスト → 年度でなく半期として保存: {file_stem}.json ({source_file})")
+        if force_interim and not is_interim_doc:
+            logger.warning(f"  ⚠️ 半期フォルダ由来 (コンテキストは年度風) → フォルダ情報を優先し {file_stem}.json に保存 ({source_file})")
+        else:
+            logger.warning(f"  ⚠️ Interim-onlyコンテキスト → 年度でなく半期として保存: {file_stem}.json ({source_file})")
     else:
         file_stem = str(year)
     year_file = company_dir / f"{file_stem}.json"
+
+    # スパース上書きガード: 訂正報告書等の部分XBRLが、既存の充実したEDINETデータを
+    # 丸ごと置換して劣化させる経路を遮断する (「古い/薄いデータが良いデータを上書きしない」)
+    _CORE = ('revenue', 'operating_income', 'ordinary_income', 'net_income', 'total_assets', 'total_equity')
+    if year_file.exists():
+        try:
+            _old = json.loads(year_file.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            _old = None
+        if _old and _old.get("source") != "tanshin":
+            _old_core = sum(1 for k in _CORE if (_old.get("data") or {}).get(k) is not None)
+            _new_core = sum(1 for k in _CORE if xbrl_data.get(k) is not None)
+            if _new_core < _old_core and _old_core >= 2:
+                logger.warning(
+                    f"  🛑 上書き拒否: 新抽出のコア項目 {_new_core} < 既存 {_old_core} "
+                    f"({source_file} はスパースな訂正/部分文書の疑い) → 既存 {file_stem}.json を保持")
+                return year_file, None, []
 
     save_data = {
         "company_code": company_code,
@@ -2017,13 +2143,17 @@ def update_company_summary(company_code: str, company_name: str, output_base: Pa
     if not company_dir.exists():
         return
     
-    # 全年度のJSONを読み込み
+    # 全年度のJSONを読み込み (年度ファイルのみ。_Q*/_raw_tags/_statements は対象外)
     years_data = {}
     for json_file in company_dir.glob("20*.json"):  # 2020.json, 2021.json, etc.
+        if any(s in json_file.name for s in ("_raw_tags", "_statements", "_Q")):
+            continue
         try:
             with open(json_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                year = data.get("fiscal_year", json_file.stem)
+                # fiscal_year は経路により int (tanshin由来) / str (有報由来) が混在するため
+                # str に正規化 (混在すると sorted()/max() が TypeError でバッチ全体を殺す)
+                year = str(data.get("fiscal_year") or json_file.stem)
                 years_data[year] = data.get("data", {})
         except:
             pass
@@ -2136,24 +2266,44 @@ def process_company(company_code: str, years: List[str],
 
     for year, zip_path in zips:
         try:
-            # --skip-existing: 既存JSONがあればスキップ
-            # ただし source=tanshin (TDnet 短信由来) はEDINETの方が網羅的なので上書き対象
+            # 半期ZIPは save_xbrl_json の Interim-only ガードで {year}_Q2.json に保存されるため
+            # skip判定の対象ファイルもそちらに合わせる (`_四半期_` はこの正規表現に一致しない)
+            is_interim_zip = bool(re.search(r'_(訂正)?半期(報告書)?_', zip_path.name))
+
+            # --skip-existing: docID比較で判定 (POSTMORTEM R4: ファイル存在ベース禁止)
+            # 社名表記ゆれの二重フォルダを全部確認する (先頭1つしか見ない旧バグの修正)
             if skip_existing:
-                existing_dirs = list(output_base.glob(f"{company_code}_*"))
-                if existing_dirs:
-                    existing_json = existing_dirs[0] / f"{year}.json"
+                target_stem = f"{year}_Q2" if is_interim_zip else str(year)
+                skip_this, reason = False, ""
+                for existing_dir in sorted(output_base.glob(f"{company_code}_*")):
+                    existing_json = existing_dir / f"{target_stem}.json"
                     if existing_json.exists():
-                        try:
-                            existing_data = json.loads(existing_json.read_text(encoding="utf-8"))
-                            existing_source = existing_data.get("source")
-                        except (json.JSONDecodeError, OSError):
-                            existing_source = None
-                        if existing_source != "tanshin":
-                            logger.info(f"  ⏭️ {year}: 既存データあり → スキップ")
-                            results["years_processed"].append(year)
-                            continue
-                        else:
-                            logger.info(f"  🔄 {year}: 既存tanshin → EDINETで上書き")
+                        do_skip, reason = should_skip_existing(existing_json, zip_path.name)
+                        if do_skip:
+                            skip_this = True
+                            break
+                    # 旧dailyの誤ラベル半期ZIP (名前は訂正有報等) はガードで {year}_Q2 に保存済み。
+                    # 同一docIDが _Q2 側に居れば再処理不要 (docID一致のみ。年度ZIPをQ2がブロックはしない)
+                    if not is_interim_zip:
+                        q2_json = existing_dir / f"{year}_Q2.json"
+                        if q2_json.exists():
+                            try:
+                                q2_src = str(json.loads(q2_json.read_text(encoding="utf-8")).get("source_file") or "")
+                            except (json.JSONDecodeError, OSError):
+                                q2_src = ""
+                            zid = extract_docid(zip_path.name)
+                            if zid and zid == extract_docid(q2_src):
+                                skip_this = True
+                                reason = f"同一docID {zid} は半期として抽出済み ({year}_Q2) → スキップ"
+                                break
+                if skip_this:
+                    logger.info(f"  ⏭️ {target_stem}: {reason}")
+                    # skip は years_processed と分離: 全skip企業の summary.json を毎回
+                    # 書き換えて mtime ベースの r2_sync 差分判定を汚染しないため
+                    results.setdefault("years_skipped", []).append(year)
+                    continue
+                if reason:
+                    logger.info(f"  🔄 {target_stem}: {reason}")
 
             logger.info(f"  📄 {year}: {zip_path.name}")
 
@@ -2165,11 +2315,12 @@ def process_company(company_code: str, years: List[str],
                 results["errors"].append(f"{year}: XBRL抽出失敗")
                 continue
 
-            # 保存（検証・学習付き）
+            # 保存（検証・学習付き）。半期フォルダ由来は保存先を {year}_Q2 に固定
             year_file, validation_report, new_tags = save_xbrl_json(
                 company_code, company_name, year,
                 xbrl_data, zip_path.name, output_base,
-                validator, learner
+                validator, learner,
+                force_interim=is_interim_zip,
             )
 
             results["years_processed"].append(year)
@@ -2202,10 +2353,15 @@ def process_company(company_code: str, years: List[str],
         except Exception as e:
             results["years_failed"].append(year)
             results["errors"].append(f"{year}: {str(e)}")
+            # ログ無しの握り潰しはサイレント失敗の温床 (2656のゼロ除算が3run気付かれなかった)
+            logger.error(f"  ❌ {year}: {e} ({zip_path.name})")
 
-    # サマリー更新
+    # サマリー更新 (1社のサマリ不整合でバッチ全体を止めない)
     if results["years_processed"]:
-        update_company_summary(company_code, company_name, output_base)
+        try:
+            update_company_summary(company_code, company_name, output_base)
+        except Exception as e:
+            logger.warning(f"  ⚠️ summary更新失敗 (継続): {company_code} {e}")
 
     return results
 
@@ -2277,8 +2433,9 @@ def batch_process(companies: List[str], years: List[str], output_base: Path,
         logger.info(f"📋 学習レポート保存: {report_file}")
 
     # サマリー出力
-    success = sum(1 for r in results if r["years_processed"])
-    failed = sum(1 for r in results if not r["years_processed"])
+    # 全skip (=既に最新) は成功扱い。真の失敗 = 抽出も skip も無かった企業
+    success = sum(1 for r in results if r["years_processed"] or r.get("years_skipped"))
+    failed = sum(1 for r in results if not r["years_processed"] and not r.get("years_skipped"))
 
     # 検証スコア集計
     if enable_validation:
