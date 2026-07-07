@@ -159,6 +159,21 @@ FALLBACK_TAGS = {
         ('jppfs_cor:NetSalesOfCompletedConstructionContracts', 3),  # 同 別バリエーション
         ('jppfs_cor:OperatingIncomeINS', 4),  # 保険業: 経常収益 (T&D 3.48兆/第一生命11.3兆/かんぽ5.6兆 で実測。銀行の経常収益と同じ扱い)
         ('ifrs-full:Revenue', 5),
+        # 2026-07-07 追加 (yuho_audit NO_REVENUE 残10社の raw_tags 実測+全社横断の衝突検証から特定。
+        #  マッチングはローカル名一致なので会社拡張タグにも効く。2025 raw にも同タグあり→migrateで過去年もバックフィル):
+        ('jpcrp_cor:Revenue2IFRSSummaryOfBusinessResults', 1),  # IFRS収益 第2変種 経営指標 (4819デジタルガレージ 409.7億)
+        ('jpigp_cor:Revenue2IFRS', 2),  # 同 財務諸表本体 (18社に存在、既存13社は優先度1の既存タグが勝つので不変)
+        ('jpcrp_cor:RevenueSummaryOfBusinessResults', 2),  # JGAAP「収益」純額表示 (2433博報堂DY 8,610億)
+        ('jpcrp_cor:RevenueRevOA', 3),  # 同 P/L本体 (博報堂DY)
+        ('jpcrp_cor:OperatingRevenuesSummaryOfBusinessResults', 2),  # 航空: 事業収入 (9204スカイマーク 1,104億)
+        ('jpcrp_cor:BusinessRevenueRevOA', 3),  # 同 P/L本体 (スカイマーク)
+        ('jpcrp_cor:OperatingRevenueSummaryOfBusinessResults', 2),  # 営業収益 (4591リボミック。小林洋行はOperatingRevenue1(1)が先に勝つ)
+        ('jpcrp_cor:OperatingRevenuesRevOA', 3),  # 同 P/L本体 (リボミック)
+        ('jpcrp_cor:GrossOperatingRevenueSummaryOfBusinessResults', 3),  # 小売FC: 営業総収入 (9946ミニストップ 917.9億)。⚠️3固定: ワークマン等はNetSales(2)優先
+        ('jppfs_cor:GrossOperatingRevenue', 3),  # 同 P/L本体
+        ('jpcrp_cor:BusinessRevenueKeyFinancialData', 3),  # 事業収益 経営指標 (4889レナサイエンス)
+        ('jpcrp_cor:ProceedsKeyFinancialData', 3),  # 広告業: 収益純額 (2156セーラー広告 22.2億)。⚠️GrossSales(総売上高)は参考値なので追加禁止
+        ('jppfs_cor:BusinessRevenue', 5),  # 事業収益 P/L本体 (予備)。⚠️5厳守: あおぞら銀行のBusinessRevenue=617億を経常収益(4)より下に置く
     ],
     'cost_of_sales': [
         ('jpigp_cor:CostOfSalesIFRS', 1),  # IFRS財務諸表本体

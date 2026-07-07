@@ -141,17 +141,36 @@ Claude Code なら `/recover-pipeline` がこの手順を対話で実行する (
 
 ## 9. 既知の未解決事項 (2026-07-06 更新)
 
-- [ ] **mainリポ push 承認** — 未pushコミット3件 + 本日の未コミット分 (--output修正 / yuho_audit /
-  health_check / 抽出器の半期スキャン+docID-skip / CI監査+ZIPアーカイブ / OPS・スキル群)。
-  **これをしないとCIは修正前コードのまま毎朝走る**
+- [x] **mainリポ push 完了 (2026-07-07 00:20)** — 8コミット (†G修正・T4根治・抽出器構造修正・監査常設・
+  OPS/docs・analyzer WIP・cron停止)。origin = 60211a9
+- [x] **StockFlow push 完了 (2026-07-07 00:30)** — 復旧反映3,602ファイル (eeef77b27)。
+  index 4,892→5,093社。ゲート4種PASS・7,327ファイル (20k上限の37%)
+- [ ] **🚨 R2同期 (最優先・cron再開の前提)**: R2のstoreはローカル全量復旧より古い。
+  R2_ACCOUNT_ID / R2_ACCESS_KEY_ID / R2_SECRET_ACCESS_KEY / R2_BUCKET を環境変数に設定して
+  `python r2_sync.py upload-changed financial_analysis_system/xbrl_store fixed_assets_store --since 259200`
+  → 完了後 .github/workflows/daily-update.yml の cron を復活 (コメント参照)。
+  **それまで日次cronは停止中** (巻き戻り防止。workflow_dispatchは可)
+- [ ] レポート層 vs store の売上検算監査: 汚染期間 (5/8〜7/6) に生成されたAIレポートの数値が
+  古い可能性 (実例: KDDI 9433 = レポート5.84兆 vs 有報6.07兆)。porta102 JSON の revenue と
+  store突合 → 乖離>1%を再生成対象に
 - [x] **全量復旧完了 (2026-07-06 深夜)**: 60日監査で OK 2,608 / MISSING 0 / NO_ZIP 0 / STALE 0 / 年度汚染 0。
   run3+run4 で tanshin→有報 1,096社・訂正再抽出 1,190・壊れ残骸再抽出 823・単体のみ採用 1,452・強制Q2 1,921。
   検疫 (可逆・`_dup_quarantine_20260706/`): 2027_Q2誤キー147社 / 誤ラベルZIP 444本 / 8887年度汚染 / 9552・6080誤キーQ2。
   **クラウド (R2) 系統には未反映** — push後、次のCI upload-changed --since が拾える時間内にローカルで
   `python r2_sync.py upload-all financial_analysis_system/xbrl_store` を実行するのが確実 (要ユーザー判断・数十分)
-- [ ] NO_REVENUE 残10社 (タグ変種バックログ): 博報堂DY/スカイマーク/ミニストップ/セーラー広告/創薬系4社
-  (売上ゼロが正当の可能性)/alpha 2社。raw_tags からタグ特定→FALLBACK_TAGS追加→migrate_revenue_tags の型
-- [ ] 過去年度 (2020-2024) の掃除: 単体のみ全欠損の回収 (2025/26は済み)・誤キーQ2 (source日付≠キー年) の全量検出
+- [x] NO_REVENUE 10社 → **0件 (2026-07-07)**: 7社タグ回収 (13タグ追加・衝突検証済) + 創薬3社は
+  ZERO_REVENUE_OK allowlist。migrate計 358ファイル回収。**60日監査: 欠落0/STALE0/汚染0 の完全クリーン**
+- [x] 誤キーQ2の全年度掃除: +125社検疫 (計272社)。要調査6件 (別docIDペア) は低優先
+- [x] **TW M1-M3 完了 (2026-07-07)**: store 764→1,079社×5年 (mopsovホスト1行修正・原本保全 raw_mops/)、
+  業種763件反映、tw_audit.py 常設 (quarter≠4=1,042件を公開ゲート対象として検知)、
+  ジェネレータに quarter=4 ゲート実装。**残: 金融業エンドポイント (NO_REVENUE 25社)・TPEx・M4公開はT9後**
+- [x] **US M1 完了**: us_yuho_audit.py 常設 (447社×3年: OK 1,268 / 真欠落2 / BDC定義27=タグ課題 /
+  1月末決算のラベルシフト吸収)。残: BRK-B系の欠落調査・BDC investment income タグ
+- [x] report_reconcile.py 常設: 表示層vs store 乖離 **232行** = LLM再生成バックログ
+  (logs/report_reconcile_last.json)。**要方針決定: 保険大手の収益定義 (保険収益IFRS vs 経常収益) の統一**
+- [ ] 過去年度 (2020-24) 掃除バッチ実行中 (2026-07-07未明起動) → 翌朝 /daily-ops で結果確認
+- [ ] **ユーザー手動2件**: ①R2同期→cron復活 (上記) ②`Enable-ScheduledTask -TaskName DailyStockFlowUpdate`
+  (分類器が自動実行を拒否したため)
 - [ ] 誤ラベル `訂正有報` ZIP (7/4朝の旧コードDL分、実体は半期) が `pdf_xbrl/2026/有報/` に残存。
   新skipロジックで無害化済みだが、`2026/半期/` への移動が望ましい (5942/9872 の2件)
 - [ ] レガシー root `xbrl_store/` の棚卸し — 7/5 に書かれた抽出物で正史に無いものが他にもある可能性

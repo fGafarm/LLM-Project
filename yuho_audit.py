@@ -64,6 +64,14 @@ KNOWN_UNEXTRACTABLE: set[str] = {
     "9257",  # YCPホールディングス (ケイマン法人、XBRLファイルなしを実測)
 }
 
+# 売上ゼロが正当な提出者 (臨床段階の創薬等、有報XBRLに収益系タグ自体が存在しないことを
+# 2026-07-07 に raw_tags 全数で実測確認)。revenue空でも NO_REVENUE にしない
+ZERO_REVENUE_OK: set[str] = {
+    "4598",  # Delta-Fly Pharma (179タグ中、収益系タグ皆無)
+    "520A",  # ジェイファーマ (補助金収入は営業外のみ)
+    "543A",  # ARCHION
+}
+
 
 def load_api_key() -> str:
     if ENV_FILE.exists():
@@ -211,7 +219,10 @@ def judge_store(doc: dict, store_idx: dict[str, list[Path]]) -> tuple[str, str]:
                 src = str(j.get("source_file") or "")
                 rev = (j.get("data") or {}).get("revenue")
                 if doc["doc_id"] in src:
-                    cand = (0, "OK", "") if rev else (1, "NO_REVENUE", f"{doc['ticker']} {fy} {doc['doc_id']} revenue空 ({d.name})")
+                    if rev is not None or doc["ticker"] in ZERO_REVENUE_OK:
+                        cand = (0, "OK", "")
+                    else:
+                        cand = (1, "NO_REVENUE", f"{doc['ticker']} {fy} {doc['doc_id']} revenue空 ({d.name})")
                 elif re.search(r"半期", src):
                     # 年度ファイルに半期由来のソース = S0 T4事故クラスの汚染
                     cand = (2, "INTERIM_AS_ANNUAL", f"{doc['ticker']} {fy}.json が半期データ ({src[-30:]}) = 年度汚染")

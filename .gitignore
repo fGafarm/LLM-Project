@@ -25,6 +25,10 @@ financial_analysis_system/xbrl_store/
 fixed_assets_store/
 land_price_data/
 pdf_xbrl/
+tw_financial_analysis/tw_xbrl_store/
+tw_financial_analysis/tw_xbrl_store_backup_*/
+tw_financial_analysis/raw_mops/
+us_financial_analysis/us_xbrl_store/
 
 # StockFlow lives in its own repo (fGafarm/kinmyakucode)
 StockFlow/
