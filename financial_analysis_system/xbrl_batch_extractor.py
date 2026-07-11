@@ -206,16 +206,38 @@ FALLBACK_TAGS = {
     'other_expenses': [  # その他の費用
         ('jpigp_cor:OtherExpensesIFRS', 1),  # IFRS財務諸表本体（推測）
     ],
+    # 2026-07-12 全面改訂 (記事54の短信vs有報突合でP0検出):
+    #   旧リストは銀行用フォールバックの経常利益タグ (OrdinaryIncomeLossSummaryOfBusinessResults 等) が
+    #   優先度1に居たため、J-GAAP企業の95-96%で「営業利益=経常利益」になっていた
+    #   (J-GAAP有報の経営指標サマリには営業利益が載らない → 経常サマリタグが常に先勝ち)。
+    #   新方針: ①財務諸表本体タグを最優先 (jpigp=IFRS本体 / jppfs=J-GAAP本体は同一文書内で排他)
+    #           ②サマリ変種はフォールバック ③経常利益による代用は全廃 —
+    #           銀行・保険等で営業利益概念が無い企業は None が正 (誤値より欠損)。
     'operating_income': [
-        ('jpcrp_cor:OperatingIncomeSummaryOfBusinessResults', 1),
-        ('jpcrp_cor:OperatingProfitLossIFRSKeyFinancialData', 1),  # IFRS（ソニー等）
-        ('jpcrp_cor:OperatingProfitLossIFRS', 1),  # IFRS（ソニー等、財務諸表本体）
-        ('jpigp_cor:OperatingProfitLossIFRS', 1),  # IFRS財務諸表本体（ユニクロ等）
-        ('jpcrp_cor:OperatingIncomeLossUSGAAPSummaryOfBusinessResults', 1),  # US-GAAP
-        ('jpcrp_cor:OrdinaryIncomeLossSummaryOfBusinessResults', 1),  # 銀行業等：経常利益を営業利益として扱う
-        ('jppfs_cor:OrdinaryIncome', 1),  # 銀行業：経常利益（注：revenueでも使用しているが優先度で制御）
-        ('jppfs_cor:OperatingIncome', 2),
-        ('ifrs-full:OperatingIncome', 3),
+        # 財務諸表本体 (最も確実。IFRS移行年のJ-GAAP参考表はサマリタグのみなので混入しない)
+        ('jpigp_cor:OperatingProfitLossIFRS', 1),  # IFRS本体 (トヨタ/ユニクロ等。jpcrp同名タグもローカル名一致で拾う)
+        ('jppfs_cor:OperatingIncome', 1),          # J-GAAP P/L本体 営業利益 (一般事業会社の本命、24,704件実測)
+        # 経営指標サマリ IFRS/US-GAAP変種 (本体タグ欠落時のフォールバック。2019-2026 rawの実測頻度順)
+        ('jpcrp_cor:OperatingProfitLossIFRSSummaryOfBusinessResults', 2),  # 183件
+        ('jpcrp_cor:OperatingProfitLossIFRSKeyFinancialData', 2),          # 37件 (ソニー等)
+        ('jpcrp_cor:OperatingIncomeIFRSSummaryOfBusinessResults', 2),      # 34件
+        ('jpcrp_cor:OperatingProfitIFRSSummaryOfBusinessResults', 2),      # 26件
+        ('jpcrp_cor:OperatingIncomeLossIFRSSummaryOfBusinessResults', 2),  # 19件
+        ('jpcrp_cor:OperatingIncomeLossUSGAAPSummaryOfBusinessResults', 2),  # US-GAAP 16件
+        ('jpcrp_cor:OperatingProfitIFRSKeyFinancialData', 2),              # 12件
+        ('jpcrp_cor:OperatingIncomeLossIFRSKeyFinancialData', 2),          # 5件
+        ('jpcrp_cor:OperatingProfitIFRS', 2),                              # 20件 (会社拡張)
+        ('jpcrp_cor:OperatingIncomeLossIFRS', 2),                          # 7件 (会社拡張)
+        # 経営指標サマリ J-GAAP変種 (営業利益をサマリに載せる少数様式のみ存在)
+        ('jpcrp_cor:OperatingIncomeSummaryOfBusinessResults', 3),          # 26件
+        ('jpcrp_cor:OperatingIncomeLossSummaryOfBusinessResults', 3),      # 25件
+        ('jpcrp_cor:OperatingProfitLossSummaryOfBusinessResults', 3),      # 11件
+        ('jpcrp_cor:OperatingProfitLossKeyFinancialData', 3),              # 10件
+        ('jpcrp_cor:OperatingProfitLossSummaryOfBusinessResluts', 3),      # 8件 (提出者typo実在)
+        ('jpcrp_cor:OperatingIncomeLossKeyFinancialData', 3),              # 6件
+        ('ifrs-full:OperatingIncome', 4),
+        # 🚫 経常利益タグ (jpcrp:OrdinaryIncomeLossSummaryOfBusinessResults / jppfs:OrdinaryIncome) は
+        #    絶対に再追加しないこと。経常利益は ordinary_income フィールドで別管理。
     ],
     'non_operating_income': [
         ('jppfs_cor:NonOperatingIncome', 1),
@@ -242,9 +264,12 @@ FALLBACK_TAGS = {
         ('jpigp_cor:FinanceIncomeIFRS', 3),
         ('ifrs-full:InterestIncome', 4),
     ],
+    # 2026-07-12 修正: 旧リストは OrdinaryIncomeSummaryOfBusinessResults (銀行/保険の経常「収益」=収入概念)
+    # が優先度1だったため、銀行の ordinary_income に経常収益が混入していた (MUFG: 経常利益2.67兆のところ13.6兆)。
+    # 経常収益は revenue フィールド側で扱う (revenueリストに残置)。
     'ordinary_income': [
-        ('jpcrp_cor:OrdinaryIncomeSummaryOfBusinessResults', 1),
-        ('jppfs_cor:OrdinaryIncome', 2),
+        ('jppfs_cor:OrdinaryIncome', 1),  # P/L本体 経常利益 (銀行含む全J-GAAP。IFRS企業には存在しない=Noneが正)
+        ('jpcrp_cor:OrdinaryIncomeLossSummaryOfBusinessResults', 2),  # 経営指標サマリ 経常利益 (本体欠落時)
     ],
     'extraordinary_income': [
         ('jppfs_cor:ExtraordinaryIncome', 1),
@@ -262,13 +287,17 @@ FALLBACK_TAGS = {
         ('jpigp_cor:IncomeTaxExpenseIFRS', 1),  # IFRS財務諸表本体（日立等）
         ('jppfs_cor:IncomeTaxes', 2),
     ],
+    # 2026-07-12 修正 (記事54 large_cases: 東京海上8766/MS&AD8725/グローリー6457/オプティマス9268等):
+    #   IFRS移行年の有報は「IFRS経営指標」と「J-GAAP参考経営指標」の両サマリタグが当年Durationで併存し、
+    #   旧リストは J-GAAPサマリが先頭だったため参考値がIFRS正値に勝っていた (103件実測、全て誤格納)。
+    #   財務諸表本体タグ (jpigp=IFRS / jppfs=J-GAAP、同一文書内で排他) を基準判別として最優先に。
     'net_income': [
-        ('jpcrp_cor:ProfitLossAttributableToOwnersOfParentSummaryOfBusinessResults', 1),
-        ('jpcrp_cor:ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults', 1),  # IFRS
-        ('jpcrp_cor:NetIncomeLossAttributableToOwnersOfParentUSGAAPSummaryOfBusinessResults', 1),  # US-GAAP
         ('jpigp_cor:ProfitLossAttributableToOwnersOfParentIFRS', 1),  # IFRS財務諸表本体（親会社持分）
-        ('jpigp_cor:ProfitLossIFRS', 2),  # IFRS財務諸表本体（税引後利益合計）
-        ('jppfs_cor:ProfitLossAttributableToOwnersOfParent', 3),
+        ('jppfs_cor:ProfitLossAttributableToOwnersOfParent', 1),      # J-GAAP財務諸表本体（親会社持分）
+        ('jpcrp_cor:ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults', 2),  # IFRSサマリ
+        ('jpcrp_cor:NetIncomeLossAttributableToOwnersOfParentUSGAAPSummaryOfBusinessResults', 2),  # US-GAAPサマリ
+        ('jpcrp_cor:ProfitLossAttributableToOwnersOfParentSummaryOfBusinessResults', 2),  # J-GAAPサマリ (IFRS移行年は参考表にも当年値が残るため必ずIFRS系の後)
+        ('jpigp_cor:ProfitLossIFRS', 3),  # IFRS財務諸表本体（税引後利益合計）
         ('jppfs_cor:ProfitLoss', 4),
         ('ifrs-full:ProfitLossAttributableToOwnersOfParent', 5),
     ],
@@ -280,12 +309,14 @@ FALLBACK_TAGS = {
     
     # ========== B/S項目（貸借対照表）Instant context ==========
     # 資産の部
+    # 2026-07-12 修正: net_income と同じIFRS移行年デュアル表問題 (116件実測)。本体タグ最優先に。
     'total_assets': [
-        ('jpcrp_cor:TotalAssetsSummaryOfBusinessResults', 1),
-        ('jpcrp_cor:TotalAssetsIFRSSummaryOfBusinessResults', 1),  # IFRS
-        ('jpcrp_cor:TotalAssetsUSGAAPSummaryOfBusinessResults', 1),  # US-GAAP
         ('jpigp_cor:AssetsIFRS', 1),  # IFRS財務諸表本体
-        ('jppfs_cor:TotalAssets', 2),
+        ('jppfs_cor:Assets', 1),      # J-GAAP B/S本体 資産合計 (2026-07-12追加)
+        ('jpcrp_cor:TotalAssetsIFRSSummaryOfBusinessResults', 2),  # IFRSサマリ
+        ('jpcrp_cor:TotalAssetsUSGAAPSummaryOfBusinessResults', 2),  # US-GAAPサマリ
+        ('jpcrp_cor:TotalAssetsSummaryOfBusinessResults', 2),  # J-GAAPサマリ (IFRS移行年は参考表にも当年値が残るためIFRS系の後)
+        ('jppfs_cor:TotalAssets', 3),
         ('ifrs-full:Assets', 3),
     ],
     'current_assets': [
@@ -472,15 +503,17 @@ FALLBACK_TAGS = {
     ],
     
     # 純資産の部
+    # 2026-07-12 修正: net_income と同じIFRS移行年デュアル表問題 (107件実測)。本体タグ最優先に。
+    # 親会社持分のみのタグは総額系タグが無い場合の最終フォールバックへ降格 (概念が狭い)。
     'total_equity': [
-        ('jpcrp_cor:NetAssetsSummaryOfBusinessResults', 1),
-        ('jpcrp_cor:EquityIFRSSummaryOfBusinessResults', 1),  # IFRS
-        ('jpcrp_cor:EquityIncludingPortionAttributableToNonControllingInterestIFRSSummaryOfBusinessResults', 1),  # IFRS（非支配持分含む）
-        ('jpcrp_cor:EquityIncludingPortionAttributableToNonControllingInterestUSGAAPSummaryOfBusinessResults', 1),  # US-GAAP（非支配持分含む）
-        ('jpcrp_cor:EquityAttributableToOwnersOfParentIFRSSummaryOfBusinessResults', 1),  # IFRS（親会社持分）
-        ('jpcrp_cor:EquityAttributableToOwnersOfParentUSGAAPSummaryOfBusinessResults', 1),  # US-GAAP（親会社持分）
-        ('jpigp_cor:EquityIFRS', 1),  # IFRS財務諸表本体
-        ('jppfs_cor:NetAssets', 2),
+        ('jpigp_cor:EquityIFRS', 1),   # IFRS財務諸表本体（非支配持分含む資本合計）
+        ('jppfs_cor:NetAssets', 1),    # J-GAAP B/S本体 純資産合計
+        ('jpcrp_cor:EquityIncludingPortionAttributableToNonControllingInterestIFRSSummaryOfBusinessResults', 2),  # IFRSサマリ（非支配持分含む）
+        ('jpcrp_cor:EquityIFRSSummaryOfBusinessResults', 2),  # IFRSサマリ
+        ('jpcrp_cor:EquityIncludingPortionAttributableToNonControllingInterestUSGAAPSummaryOfBusinessResults', 2),  # US-GAAPサマリ（非支配持分含む）
+        ('jpcrp_cor:NetAssetsSummaryOfBusinessResults', 2),  # J-GAAPサマリ (IFRS移行年は参考表にも当年値が残るためIFRS系の後)
+        ('jpcrp_cor:EquityAttributableToOwnersOfParentIFRSSummaryOfBusinessResults', 3),  # IFRS（親会社持分のみ）
+        ('jpcrp_cor:EquityAttributableToOwnersOfParentUSGAAPSummaryOfBusinessResults', 3),  # US-GAAP（親会社持分のみ）
         ('ifrs-full:Equity', 3),
     ],
     'shareholders_equity': [

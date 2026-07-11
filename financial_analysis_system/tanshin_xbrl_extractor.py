@@ -89,39 +89,57 @@ TANSHIN_TAG_MAP = {
 @dataclass
 class TanshinExtractResult:
     ticker: str
-    fiscal_year: int  # 終了年 (e.g. 2026年3月期 → 2026)
-    period_end: str  # YYYY-MM-DD
-    quarter: Optional[int]  # None=annual, 1/2/3=Q1/Q2/Q3
+    fiscal_year: int  # 会計年度の終了年 (e.g. 2026年3月期 → 2026)
+    period_end: str  # YYYY-MM-DD (通期=年度末 / 四半期・中間=当該期間末)
+    quarter: Optional[int]  # None=annual, 1/2/3=Q1/Q2(中間)/Q3
     announcement_date: str  # YYYY-MM-DD
     accounting_type: str  # "JP" or "IFRS"
     data: dict
+    submission_no: Optional[int] = None  # 提出連番 (01=初回, 02=1回目の訂正, ...)
+    source_file: Optional[str] = None  # 元 ZIP ファイル名 (監査用)
 
 
-# Quarter suffix in TDnet filename: 01=annual, 02=Q1, 03=Q2/半期, 04=Q3
-QUARTER_SUFFIX_MAP = {"01": None, "02": 1, "03": 2, "04": 3}
+# ------------------------------------------------------------------
+# TDnet ファイル名の form code:
+#   tse-{p}{c}ed{gaap}{kind}-{code}-{period_end}-{seq}-{filing_date}-...
+#     p: a=通期決算短信, s=中間(半期)決算短信, q=四半期決算短信 (Q1/Q3, 旧制度のQ2含む)
+#     c: c=連結, n=非連結
+#     gaap: jp / if / us
+#     kind: fr=Attachment, sm/sy=Summary 等
+#
+#   ⚠ {seq} (period_end と発表日の間の2桁) は「提出連番」であり四半期コードではない。
+#     訂正短信で 02, 03... と増える。ここを四半期と誤読すると通期の訂正短信が
+#     偽の {year}_Q1.json として store を汚染する (2026-07 P1事故の根因)。
+#     四半期番号はファイル名からは判別できないため Summary 内の xbrli:context
+#     (CurrentAccumulatedQn) から解決し、判別不能なら取り込まない (誤値より欠損)。
+# ------------------------------------------------------------------
+_FORM_PERIOD_MAP = {"a": "annual", "s": "semi", "q": "quarterly"}
 
 
 def _parse_filename(name: str) -> Optional[tuple]:
-    """Parse TDnet ixbrl filename like:
-    tse-acedjpfr-76020-2026-03-31-01-2026-05-13-... (J-GAAP Attachment)
-    tse-acediffr-64570-2026-03-31-01-2026-05-15-... (IFRS Attachment)
-    tse-acedusfr-...                                   (US-GAAP Attachment)
+    """Parse TDnet Attachment iXBRL filename like:
+    tse-acedjpfr-76020-2026-03-31-01-2026-05-13-... (通期 J-GAAP, 初回)
+    tse-acediffr-45020-2026-03-31-02-2026-06-05-... (通期 IFRS, 訂正=連番02)
+    tse-qnedjpfr-130A0-2026-03-31-01-2026-05-11-... (四半期, period_end=四半期末)
+    tse-scedjpfr-14380-2026-03-31-01-2026-05-15-... (中間)
 
-    Returns: (ticker, period_end YYYY-MM-DD, quarter or None, announcement YYYY-MM-DD)
+    Returns: (ticker, period_end YYYY-MM-DD, form_period, submission_no,
+              announcement YYYY-MM-DD)
+    form_period: "annual" | "semi" | "quarterly"
     """
     m = re.search(
-        r"tse-(?:aced|aned|qned)(?:jp|if|us)(?:fr|sm|cn)-([0-9A-Z]{4,5})-(\d{4}-\d{2}-\d{2})-(\d{2})-(\d{4}-\d{2}-\d{2})",
+        r"tse-([asq])([cn])ed(?:jp|if|us)[a-z]{2}-([0-9A-Z]{4,5})-(\d{4}-\d{2}-\d{2})-(\d{2})-(\d{4}-\d{2}-\d{2})",
         name,
     )
     if not m:
         return None
-    ticker_raw = m.group(1)
+    form_period = _FORM_PERIOD_MAP[m.group(1)]
+    ticker_raw = m.group(3)
     ticker = ticker_raw[:4]  # strip check digit (alpha-numeric tickers like 130A0 → 130A)
-    period_end = m.group(2)
-    suffix = m.group(3)
-    announcement = m.group(4)
-    quarter = QUARTER_SUFFIX_MAP.get(suffix)
-    return ticker, period_end, quarter, announcement
+    period_end = m.group(4)
+    submission_no = int(m.group(5))
+    announcement = m.group(6)
+    return ticker, period_end, form_period, submission_no, announcement
 
 
 def _parse_summary_only_filename(name: str) -> Optional[tuple]:
@@ -129,61 +147,84 @@ def _parse_summary_only_filename(name: str) -> Optional[tuple]:
     tse-acedjpsm-59380-20260518359380-ixbrl.htm
     tse-acedifsm-59380-20260518359380-ixbrl.htm
     tse-qnedjpsm-130A0-202605113130A0-ixbrl.htm (alpha-numeric ticker)
+    tse-scedjpsy-13830-20260615313830-ixbrl.htm (中間は kind=sy の場合あり)
 
-    Returns: (ticker, announcement YYYY-MM-DD)
+    Returns: (ticker, form_period, announcement YYYY-MM-DD)
     """
     m = re.search(
-        r"tse-(?:aced|aned|qned)(?:jp|if|us)sm-([0-9A-Z]{4,5})-(\d{8})[0-9A-Z]+-ixbrl",
+        r"tse-([asq])([cn])ed(?:jp|if|us)s[a-z]-([0-9A-Z]{4,5})-(\d{8})[0-9A-Z]+-ixbrl",
         name,
     )
     if not m:
         return None
-    ticker = m.group(1)[:4]
-    dt = m.group(2)
+    form_period = _FORM_PERIOD_MAP[m.group(1)]
+    ticker = m.group(3)[:4]
+    dt = m.group(4)
     announcement = f"{dt[:4]}-{dt[4:6]}-{dt[6:8]}"
-    return ticker, announcement
+    return ticker, form_period, announcement
 
 
-def _extract_period_end_from_context(content: str) -> Optional[tuple]:
-    """Extract (period_end, quarter) by reading <xbrli:context> periods.
+def _quarter_from_duration(start: str, end: str) -> Optional[int]:
+    """累計期間の日数から四半期を推定 (Q1≈3ヶ月, Q2≈6ヶ月, Q3≈9ヶ月)."""
+    try:
+        days = (datetime.fromisoformat(end) - datetime.fromisoformat(start)).days
+    except ValueError:
+        return None
+    if 80 <= days <= 100:
+        return 1
+    if 170 <= days <= 195:
+        return 2
+    if 260 <= days <= 290:
+        return 3
+    return None
 
-    Looks for the CurrentYearDuration or CurrentQuarterDuration context.
-    Returns (period_end_str, quarter int or None).
+
+def _extract_context_periods(content: str) -> dict:
+    """Summary 内の <xbrli:context> から期間情報を抽出.
+
+    Returns dict:
+      year_end:    CurrentYearDuration の endDate。
+                   通期短信では当期末 / 四半期・中間短信では会計年度末 (通期予想 context)。
+      acc_end:     CurrentAccumulatedQn / CurrentYTDDuration の endDate (四半期・中間の期間末)。
+      acc_quarter: 上記 context id から判定した 1/2/3。id に Qn が無い (YTD のみ) 場合は
+                   期間の日数から推定。判別不能なら None。
     """
-    # Find context blocks with id containing 'Current'
     context_pattern = re.compile(
         r'<xbrli:context\s+id="([^"]+)">(.*?)</xbrli:context>',
         re.DOTALL,
     )
+    start_pattern = re.compile(r"<xbrli:startDate>(\d{4}-\d{2}-\d{2})</xbrli:startDate>")
     end_pattern = re.compile(r"<xbrli:endDate>(\d{4}-\d{2}-\d{2})</xbrli:endDate>")
 
-    current_year_end = None
-    current_q_end = None
-    quarter = None
+    year_end = None
+    acc_end = None
+    acc_start = None
+    acc_quarter = None
     for m in context_pattern.finditer(content):
         cid, body = m.group(1), m.group(2)
         em = end_pattern.search(body)
         if not em:
             continue
         end_date = em.group(1)
+        if cid.startswith("Prior"):
+            continue
         if "CurrentAccumulatedQ1" in cid:
-            current_q_end = end_date
-            quarter = 1
-        elif "CurrentAccumulatedQ2" in cid or "CurrentYTDDuration" in cid:
-            if quarter is None:
-                current_q_end = end_date
-                quarter = 2
+            acc_end, acc_quarter = end_date, 1
+        elif "CurrentAccumulatedQ2" in cid:
+            acc_end, acc_quarter = end_date, 2
         elif "CurrentAccumulatedQ3" in cid:
-            current_q_end = end_date
-            quarter = 3
-        elif "CurrentYearDuration" in cid:
-            current_year_end = end_date
+            acc_end, acc_quarter = end_date, 3
+        elif "CurrentYTDDuration" in cid and acc_quarter is None:
+            sm_ = start_pattern.search(body)
+            acc_end = end_date
+            acc_start = sm_.group(1) if sm_ else None
+        elif "CurrentYearDuration" in cid and year_end is None:
+            year_end = end_date
 
-    if current_year_end:
-        return current_year_end, None
-    if current_q_end:
-        return current_q_end, quarter
-    return None
+    if acc_quarter is None and acc_end and acc_start:
+        acc_quarter = _quarter_from_duration(acc_start, acc_end)
+
+    return {"year_end": year_end, "acc_end": acc_end, "acc_quarter": acc_quarter}
 
 
 def _to_number(s: str) -> Optional[float]:
@@ -215,30 +256,53 @@ def extract_tanshin_data(zip_bytes: bytes) -> Optional[TanshinExtractResult]:
     content = zf.read(summary_path).decode("utf-8", errors="replace")
 
     # Parse filename → period info. Strategy:
-    # 1. Try Attachment iXBRLs (have period_end-suffix-announcement in filename)
-    # 2. Fallback: parse Summary filename (ticker + announcement only) + read
-    #    <xbrli:context> in Summary content to get period_end.
+    # 1. Try Attachment iXBRLs (have period_end-seq-announcement in filename)
+    # 2. Fallback: parse Summary filename (ticker + form + announcement only)
+    # いずれの場合も、四半期番号・会計年度は Summary 内の <xbrli:context> から
+    # 解決する (ファイル名の2桁は提出連番であり四半期コードではない)。
     attach_paths = [n for n in zf.namelist() if "/Attachment/" in n and n.endswith("-ixbrl.htm")]
-    parsed = None
-    for p in attach_paths:
-        parsed = _parse_filename(Path(p).name)
-        if parsed:
-            break
+    # 訂正 ZIP は連番のみ増えて日付が当初発表日のまま残る (例: -02-2026-05-11-)。
+    # 複数世代の Attachment が同居する可能性に備え、(発表日, 連番) 最大を採用。
+    parses = [p for p in (_parse_filename(Path(n).name) for n in attach_paths) if p]
+    parsed = max(parses, key=lambda t: (t[4], t[3])) if parses else None
 
-    if not parsed:
-        # Summary-only: derive ticker+announcement from Summary filename,
-        # and period_end+quarter from xbrli:context inside Summary content.
+    submission_no: Optional[int] = None
+    period_end: Optional[str] = None
+    if parsed:
+        ticker, period_end, form_period, submission_no, announcement = parsed
+    else:
+        # Summary-only: derive ticker+form+announcement from Summary filename.
         sum_parse = _parse_summary_only_filename(Path(summary_path).name)
-        period_info = _extract_period_end_from_context(content)
-        if sum_parse and period_info:
-            ticker, announcement = sum_parse
-            period_end, quarter = period_info
-            parsed = (ticker, period_end, quarter, announcement)
+        if not sum_parse:
+            return None
+        ticker, form_period, announcement = sum_parse
 
-    if not parsed:
-        return None
-    ticker, period_end, quarter, announcement = parsed
-    fiscal_year = int(period_end[:4])
+    ctx_periods = _extract_context_periods(content)
+
+    if form_period == "annual":
+        quarter = None
+        if period_end is None:
+            period_end = ctx_periods.get("year_end")
+        if not period_end:
+            return None
+        fiscal_year = int(period_end[:4])
+    else:
+        # 中間・四半期: 会計年度末は CurrentYearDuration (通期予想 context) の
+        # endDate から取得。四半期番号は中間なら常に 2、四半期短信は
+        # CurrentAccumulatedQn context から。どちらかが判別できなければ
+        # 取り込まない (誤値より欠損)。
+        fy_end = ctx_periods.get("year_end")
+        if form_period == "semi":
+            quarter = 2
+        else:
+            quarter = ctx_periods.get("acc_quarter")
+        if quarter is None or not fy_end:
+            return None
+        fiscal_year = int(fy_end[:4])
+        if period_end is None:
+            period_end = ctx_periods.get("acc_end")
+        if not period_end:
+            return None
 
     # IFRS or J-GAAP detection by presence of "Revenue" tag
     accounting_type = "IFRS" if "tse-ed-t:Revenue" in content else "JP"
@@ -324,6 +388,7 @@ def extract_tanshin_data(zip_bytes: bytes) -> Optional[TanshinExtractResult]:
         announcement_date=announcement,
         accounting_type=accounting_type,
         data=data,
+        submission_no=submission_no,
     )
 
 
@@ -355,6 +420,14 @@ def write_to_xbrl_store(
             if existing.get("source") != "tanshin":
                 # EDINET data exists; don't overwrite
                 return None
+            # 訂正短信ガード: 既存 tanshin がより新しい発表・連番なら巻き戻さない。
+            # 注意: 訂正 ZIP の Attachment 日付は当初発表日のまま連番だけ増えるため
+            # (例: -02-2026-05-11-)、発表日単独でなく (発表日, 連番) で比較する。
+            existing_ann = existing.get("announcement_date") or ""
+            existing_seq = existing.get("submission_no") or 0
+            new_seq = result.submission_no or 0
+            if (existing_ann, existing_seq) > (result.announcement_date, new_seq):
+                return None
         except (json.JSONDecodeError, OSError):
             pass  # Treat as missing → overwrite
 
@@ -367,6 +440,8 @@ def write_to_xbrl_store(
         "announcement_date": result.announcement_date,
         "accounting_type": result.accounting_type,
         "source": "tanshin",
+        "submission_no": result.submission_no,
+        "source_file": result.source_file,
         "extracted_at": datetime.now().isoformat(),
         "data": result.data,
         "validation": {"score": 100.0, "warnings": [], "errors": []},
@@ -389,6 +464,7 @@ def process_zip_file(
     result = extract_tanshin_data(zb)
     if not result:
         return None
+    result.source_file = zip_path.name
     # Fall back to ticker as company name if not provided
     name = company_name or f"company_{result.ticker}"
     return write_to_xbrl_store(result, xbrl_store, name, overwrite=overwrite)
