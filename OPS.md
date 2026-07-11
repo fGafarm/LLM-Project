@@ -137,7 +137,16 @@ Claude Code なら `/recover-pipeline` がこの手順を対話で実行する (
   読み取り専用で診断を logs\ops_advice.md に書く)。登録コマンドはファイル冒頭コメント参照
 - `weekly_audit.bat` — 週次ディープ監査 (日曜09:00推奨)。同上
 - **push・タスク有効化・外部投稿を伴う操作は自動化しない** (人間の承認ゲートを残す)
-- X投稿系は `safe_schedule.py` の3重ガード + パイロット1件 + キュー目視が憲法 (自動化上限はそこまで)
+
+**X運用 (2026-07-11 体制化 — `/x-daily` スキルが正式フロー):**
+- 工程: 候補選定 (fetch_tdnet --list-only) → 文面生成 (STYLE_GUIDE) → append_queue →
+  **`x_auto_poster/x_preflight.py` PASS必須** → 🛑ユーザー承認 → パイロット1件 (safe_schedule 4段ガード) →
+  キュー+タイムライン目視 → バッチ (--max-fails 2) → `x_preflight.py --archive-stale` でキュー掃除
+- 密度: 既定5件/日、15件超は密度確認、**50件/日は明示指示時のみ** (preflightが50超を機械拒否)
+- キューURL: `x.com/compose/post/unsent/scheduled` (旧URLは404)。Chrome: `start_chrome_debug.bat` (port 9222)
+- Claudeがブラウザ操作系 (safe_schedule/_run_batch_generic) を承認なしに実行することは無い
+- 事故一次資料: `memory/feedback_x_scheduling_live_post_bug.md` (4/19ライブ誤爆) — selects/インジケータが
+  出ない時は仕様変更を疑い即中断
 
 ## 9. 既知の未解決事項 (2026-07-06 更新)
 
