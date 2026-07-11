@@ -176,7 +176,13 @@ Claude Code なら `/recover-pipeline` がこの手順を対話で実行する (
 - [x] **US M1 完了**: us_yuho_audit.py 常設 (447社×3年: OK 1,268 / 真欠落2 / BDC定義27=タグ課題 /
   1月末決算のラベルシフト吸収)。残: BRK-B系の欠落調査・BDC investment income タグ
 - [x] report_reconcile.py 常設: 表示層vs store 乖離 **232行** = LLM再生成バックログ
-  (logs/report_reconcile_last.json)。**要方針決定: 保険大手の収益定義 (保険収益IFRS vs 経常収益) の統一**
+  (logs/report_reconcile_last.json)。再生成は qwen3:14b で技術的に可能 (GPU長時間ジョブ・
+  1本目 nvidia-smi 監視ルール適用) — 次回の監視付きセッションで
+- [ ] **要方針決定: 保険業の「売上」定義** — 実測: IFRS17組 (東京海上/SOMPO/MS&AD) は有報XBRLに
+  InsuranceRevenueIFRS が無く store は経常収益系 (5-7兆円台)、旧レポート表示は保険収益 (8千億-1.3兆台) で乖離。
+  選択肢 (a) **全保険=経常収益で統一** (銀行と整合・タグ安定。推奨。過去年度も raw_tags から再マイグレートすれば
+  時系列連続) / (b) IFRS17組のみ保険収益 (基準準拠だが社間比較が割れ・タグ供給不安定)。
+  → ユーザー判断後、migrate_revenue_tags + レポート再生成で反映
 - [ ] 過去年度 (2020-24) 掃除バッチ実行中 (2026-07-07未明起動) → 翌朝 /daily-ops で結果確認
 - [ ] **ユーザー手動2件**: ①R2同期→cron復活 (上記) ②`Enable-ScheduledTask -TaskName DailyStockFlowUpdate`
   (分類器が自動実行を拒否したため)

@@ -124,9 +124,19 @@ def frontend_us_tickers() -> list[str]:
     return sorted(set(out))
 
 
+# 複数クラス上場のticker衝突 (company_tickers.json のCIK後勝ち上書きでBクラスが消える)。
+# storeフォルダは勝った方のticker名 → 監査側で別名解決する
+TICKER_ALIAS = {"BRK-B": "BRK-A"}
+
+
 def store_dir_for(ticker: str) -> Path | None:
-    hits = list(US_STORE.glob(f"{ticker}_*"))
-    return hits[0] if hits else None
+    for t in (ticker, TICKER_ALIAS.get(ticker, "")):
+        if not t:
+            continue
+        hits = list(US_STORE.glob(f"{t}_*"))
+        if hits:
+            return hits[0]
+    return None
 
 
 def main() -> int:

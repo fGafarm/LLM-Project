@@ -5,6 +5,8 @@ APIキー不要・完全無料
 データソース:
   - 損益計算書: /opendata/t187ap06_L_ci (一般産業)
   - 貸借対照表: /opendata/t187ap07_L_ci (一般産業)
+  - 金融業種P/L: /opendata/t187ap06_L_{basi,fh,ins,bd,mim} (銀行/金融持株/保険/証券/綜合)
+  - 金融業種B/S: /opendata/t187ap07_L_{basi,fh,ins,bd,mim}
   - 月次売上: /opendata/t187ap05_P
   - PER/PBR/配当: /exchangeReport/BWIBBU_ALL
 
@@ -68,6 +70,92 @@ BS_MAPPING = {
     "非控制權益": "non_controlling_interests",
     "權益總額": "total_equity",
     "每股參考淨值": "book_value_per_share",
+}
+
+# ---------------------------------------------------------------------------
+# 金融5業種 (basi=銀行, fh=金融持株, ins=保険, bd=証券, mim=綜合)
+# キー体系は業種ごとに異なる (2026-07-11 全キー実測: scratchpad/twse_analysis.txt)
+# ---------------------------------------------------------------------------
+FIN_INDUSTRIES = ("basi", "fh", "ins", "bd", "mim")
+
+# 千元→元スケールの除外キー (元単位のまま格納するもの)
+NO_SCALE_KEYS = {"eps_basic", "book_value_per_share"}
+
+# 業種別P/Lマッピング。fh はAPI側バグがあるため extract_fh_pl() で個別処理
+FIN_PL_MAPPING = {
+    "basi": {
+        "利息淨收益": "net_interest_income",
+        "利息以外淨損益": "non_interest_income",
+        "營業費用": "operating_expenses",
+        "繼續營業單位稅前淨利（淨損）": "income_before_tax",
+        "所得稅費用（利益）": "income_tax",
+        "本期淨利（淨損）": "net_income",
+        "淨利（損）歸屬於母公司業主": "net_income_parent",
+        "本期綜合損益總額（稅後）": "comprehensive_income",
+        "基本每股盈餘（元）": "eps_basic",
+    },
+    "ins": {
+        # IFRS17移行で「營業收入/營業成本/營業費用」のキー名は陳腐化 (費用は負値あり)。
+        # revenueは 營業收入+營業成本 の近似導出 (下記 revenue_definition フラグ付与)
+        "營業利益（損失）": "operating_income",
+        "營業外收入及支出": "non_operating_income",
+        "繼續營業單位稅前純益（純損）": "income_before_tax",
+        "所得稅費用（利益）": "income_tax",
+        "本期淨利（淨損）": "net_income",
+        "淨利（淨損）歸屬於母公司業主": "net_income_parent",
+        "本期綜合損益總額": "comprehensive_income",
+        "基本每股盈餘（元）": "eps_basic",
+    },
+    "bd": {
+        "收益": "revenue",
+        "支出及費用": "operating_expenses",
+        "營業利益": "operating_income",
+        "營業外損益": "non_operating_income",
+        "稅前淨利（淨損）": "income_before_tax",
+        "所得稅費用（利益）": "income_tax",
+        "本期淨利（淨損）": "net_income",
+        "淨利（損）歸屬於母公司業主": "net_income_parent",
+        "本期綜合損益總額": "comprehensive_income",
+        "基本每股盈餘（元）": "eps_basic",
+    },
+    "mim": {
+        "收入": "revenue",
+        "支出": "operating_expenses",
+        "繼續營業單位稅前淨利（淨損）": "income_before_tax",
+        "所得稅費用（利益）": "income_tax",
+        "本期淨利（淨損）": "net_income",
+        "淨利（淨損）歸屬於母公司業主": "net_income_parent",
+        "本期綜合損益總額": "comprehensive_income",
+        "基本每股盈餘（元）": "eps_basic",
+    },
+}
+
+# 業種別B/Sマッピング。金融3業種 (basi/fh/ins) は「總計」、bd/mim はciと同じ「總額」体系
+_FIN_BS_TOTALS = {
+    "資產總計": "total_assets",
+    "負債總計": "total_liabilities",
+    "權益總計": "total_equity",
+    "股本": "share_capital",
+    "資本公積": "capital_surplus",
+    "保留盈餘": "retained_earnings",
+    "庫藏股票": "treasury_stock",
+    "每股參考淨值": "book_value_per_share",
+}
+FIN_BS_MAPPING = {
+    "basi": {
+        **_FIN_BS_TOTALS,
+        "歸屬於母公司業主之權益合計": "equity_parent",
+        "非控制權益": "non_controlling_interests",
+    },
+    "fh": {
+        **_FIN_BS_TOTALS,
+        "歸屬於母公司業主之權益": "equity_parent",  # fhのみ「合計」なし
+        "非控制權益": "non_controlling_interests",
+    },
+    # ins: 個別負債はAPI側欠落で不整合のため、合計3点+株本系のみマップ
+    "ins": dict(_FIN_BS_TOTALS),
+    "bd": BS_MAPPING,   # ciと同一キー体系
+    "mim": BS_MAPPING,  # ciと同一キー体系
 }
 
 
@@ -215,6 +303,179 @@ def process_balance_sheets(records: list) -> dict:
             companies[code]["years"][year] = {}
         companies[code]["years"][year]["bs"] = data
     return companies
+
+
+def approx_equal(a: float, b: float, rel: float = 0.002, abs_tol: float = 10.0) -> bool:
+    """算術検証用の近似一致 (千元単位・端数許容)"""
+    return abs(a - b) <= max(abs_tol, rel * max(abs(a), abs(b)))
+
+
+def scale_thousands(data: dict) -> dict:
+    """千元→元スケール (EPS・每股參考淨值・文字列フラグは除外)"""
+    out = {}
+    for k, v in data.items():
+        if isinstance(v, (int, float)) and k not in NO_SCALE_KEYS:
+            out[k] = v * 1000
+        else:
+            out[k] = v
+    return out
+
+
+def extract_fh_pl(rec: dict) -> dict | None:
+    """fh (金融持株) P/L抽出 — API側の値ズレバグ対応 (2026-07-11実測)
+
+    TWSE APIのfh P/Lは「所得稅費用」キーが欠落しており、値が1キー分ずれて格納:
+      - val(利息以外淨收益)       = 実際はトップライン淨收益
+      - val(營業費用)             = 実際は繼續營業單位稅前損益
+      - val(繼續營業單位稅前損益) = 実際は所得稅費用
+    (繼續營業單位本期淨利 以降は整合。全13社で算術検証済み)
+
+    算術でズレ版/正常版 (TWSEが将来修正した場合) を自動判別し、
+    どちらも成立しないレコードは None を返して取り込まない (検証層テーゼ)。
+    値は千元単位のまま返す (スケールは呼び出し側)。
+    """
+    nii = parse_number(rec.get("利息淨收益", ""))
+    other_net = parse_number(rec.get("其他收益及費損淨額", ""))
+    non_ii = parse_number(rec.get("利息以外淨收益", ""))
+    net_rev = parse_number(rec.get("淨收益", ""))
+    opex = parse_number(rec.get("營業費用", ""))
+    pretax = parse_number(rec.get("繼續營業單位稅前損益", ""))
+    net_income = parse_number(rec.get("本期稅後淨利（淨損）", ""))
+
+    # ズレの影響を受けない共通フィールド (繼續營業單位本期淨利 以降)
+    common = {}
+    for zh_key, en_key in (
+        ("本期稅後淨利（淨損）", "net_income"),
+        ("淨利（淨損）歸屬於母公司業主", "net_income_parent"),
+        ("本期綜合損益總額", "comprehensive_income"),
+        ("基本每股盈餘（元）", "eps_basic"),
+    ):
+        val = parse_number(rec.get(zh_key, ""))
+        if val is not None:
+            common[en_key] = val
+
+    # ズレ版判定: NII+其他收益及費損淨額 ≈ val(利息以外淨收益) かつ
+    #             val(營業費用)-val(繼續營業單位稅前損益) ≈ 本期稅後淨利
+    shifted = (
+        None not in (nii, other_net, non_ii, opex, pretax, net_income)
+        and approx_equal(nii + other_net, non_ii)
+        and approx_equal(opex - pretax, net_income)
+    )
+    if shifted:
+        data = dict(common)
+        data["revenue"] = non_ii                  # 実体: 淨收益 (トップライン)
+        data["net_interest_income"] = nii
+        data["non_interest_income"] = other_net   # 実体: 利息以外淨收益
+        data["income_before_tax"] = opex          # 実体: 稅前損益
+        data["income_tax"] = pretax               # 実体: 所得稅費用
+        return data
+
+    # 正常版判定: NII + val(利息以外淨收益) ≈ val(淨收益)
+    normal = (
+        None not in (nii, non_ii, net_rev)
+        and approx_equal(nii + non_ii, net_rev)
+    )
+    if normal:
+        data = dict(common)
+        data["revenue"] = net_rev
+        data["net_interest_income"] = nii
+        data["non_interest_income"] = non_ii
+        if opex is not None:
+            data["operating_expenses"] = opex
+        if pretax is not None:
+            data["income_before_tax"] = pretax
+        tax = parse_number(rec.get("所得稅費用（利益）", ""))
+        if tax is None and pretax is not None:
+            cont_ni = parse_number(rec.get("繼續營業單位本期淨利（淨損）", ""))
+            if cont_ni is not None:
+                tax = pretax - cont_ni
+        if tax is not None:
+            data["income_tax"] = tax
+        return data
+
+    return None
+
+
+def fetch_financial_industries() -> tuple[dict, dict]:
+    """金融5業種 (basi/fh/ins/bd/mim) のP/L・B/SをOpenAPIから取得
+
+    戻り値 (pl_companies, bs_companies) は process_income_statements /
+    process_balance_sheets と同形式。main() で一般業(ci)の結果にマージする。
+    """
+    pl_all: dict = {}
+    bs_all: dict = {}
+
+    for ind in FIN_INDUSTRIES:
+        dropped: set = set()  # fh算術検証NGの (code, year)
+
+        # --- P/L ---
+        records = fetch_api(f"/opendata/t187ap06_L_{ind}")
+        for rec in records:
+            code = rec.get("公司代號", "").strip()
+            if not code:
+                continue
+            year = roc_to_ad(rec.get("年度", ""))
+            quarter = rec.get("季別", "")
+            name = rec.get("公司名稱", "").strip()
+
+            if ind == "fh":
+                data = extract_fh_pl(rec)
+                if data is None:
+                    print(f"  [WARN] fh {code} {name} FY{year}: P/L算術検証不成立 "
+                          f"(ズレ版/正常版とも) — 取込スキップ")
+                    dropped.add((code, year))
+                    continue
+            else:
+                data = {}
+                for zh_key, en_key in FIN_PL_MAPPING[ind].items():
+                    val = parse_number(rec.get(zh_key, ""))
+                    if val is not None:
+                        data[en_key] = val
+                if ind == "basi":
+                    # 銀行: revenue = 利息淨收益 + 利息以外淨損益 の導出
+                    if "net_interest_income" in data and "non_interest_income" in data:
+                        data["revenue"] = (data["net_interest_income"]
+                                           + data["non_interest_income"])
+                elif ind == "ins":
+                    # 保険: IFRS17でキー名陳腐化。營業收入+營業成本 を近似revenueとする
+                    rev = parse_number(rec.get("營業收入", ""))
+                    cost = parse_number(rec.get("營業成本", ""))
+                    if rev is not None:
+                        data["revenue"] = rev + (cost if cost is not None else 0.0)
+                        data["revenue_definition"] = "insurance_ifrs17_approx"
+
+            data = scale_thousands(data)
+            if code not in pl_all:
+                pl_all[code] = {"name": name, "years": {}}
+            pl_all[code]["years"][year] = {"quarter": quarter, "pl": data}
+
+        # --- B/S ---
+        records = fetch_api(f"/opendata/t187ap07_L_{ind}")
+        for rec in records:
+            code = rec.get("公司代號", "").strip()
+            if not code:
+                continue
+            year = roc_to_ad(rec.get("年度", ""))
+            name = rec.get("公司名稱", "").strip()
+            if (code, year) in dropped:
+                # P/L検証NGの年はB/Sも出さない (quarter情報はP/L側にしか無く、
+                # B/S単独保存は quarter="4" 既定値で年度誤認するリスクがあるため)
+                print(f"  [WARN] fh {code} {name} FY{year}: P/L検証NGに伴いB/Sも取込スキップ")
+                continue
+
+            data = {}
+            for zh_key, en_key in FIN_BS_MAPPING[ind].items():
+                val = parse_number(rec.get(zh_key, ""))
+                if val is not None:
+                    data[en_key] = val
+            data = scale_thousands(data)
+
+            if code not in bs_all:
+                bs_all[code] = {"name": name, "years": {}}
+            bs_all[code]["years"].setdefault(year, {})["bs"] = data
+
+        time.sleep(1)  # rate limit
+    return pl_all, bs_all
 
 
 def process_valuation(records: list) -> dict:
@@ -433,6 +694,25 @@ def main():
     bs_raw = fetch_api(ENDPOINTS["balance_sheet"])
     bs_companies = process_balance_sheets(bs_raw)
     print(f"  {len(bs_companies)} companies")
+
+    # 1.5. 金融5業種 (basi/fh/ins/bd/mim) — 一般業(ci)に無い企業をOpenAPIから追加
+    print("\n[2.5/4] Financial industries (basi/fh/ins/bd/mim, OpenAPI)...")
+    fin_pl, fin_bs = fetch_financial_industries()
+    print(f"  P/L: {len(fin_pl)} companies, B/S: {len(fin_bs)} companies")
+    for code, fin_data in fin_pl.items():
+        if code not in pl_companies:
+            pl_companies[code] = fin_data
+        else:
+            for year, ydata in fin_data["years"].items():
+                if year not in pl_companies[code]["years"]:
+                    pl_companies[code]["years"][year] = ydata
+    for code, fin_data in fin_bs.items():
+        if code not in bs_companies:
+            bs_companies[code] = fin_data
+        else:
+            for year, ydata in fin_data["years"].items():
+                if year not in bs_companies[code]["years"]:
+                    bs_companies[code]["years"][year] = ydata
 
     # 2. 過去データ (MOPS AJAX)
     print("\n[3/4] Historical data (MOPS, 5 years)...")
