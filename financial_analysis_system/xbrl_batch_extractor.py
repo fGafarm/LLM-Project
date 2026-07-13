@@ -1081,6 +1081,83 @@ INSTANT_FIELDS = {
 
 
 # ============================================================
+# 棚卸資産 構成タグ / 経常利益 GAAPガード (2026-07-13 P1修正)
+# ============================================================
+# 記事70検算で発覚: 'inventories' の合計タグ (Inventories/InventoriesCAIFRS) が無い提出者への
+# 旧フォールバックは merchandise+work_in_progress+raw_materials+supplies の4フィールド合算のみで、
+# 販売用不動産 (RealEstateForSale系)・未成工事支出金 (CostsOnUncompletedConstructionContracts系)・
+# 商品/製品の単独表記 (Merchandise/FinishedGoods単独) 等を含まず、不動産・建設・小売で系統的過小
+# だった (FY2025実測673社。大和ハウス 345億→25,705億、良品計画 2億→1,700億 等)。
+# ⚠️ 二重計上防止: 合計タグがある社は合計優先 (FALLBACK_TAGS['inventories'] が先にマッチするので
+#    このリストは合計タグ不在時のみ使われる)。結合タグ (MerchandiseAndFinishedGoods等) と
+#    単独タグ (Merchandise等) はB/S表示上排他 — FY2025全3,869社実測で共存0件。
+INVENTORY_COMPONENT_TAGS = [
+    # 商品・製品
+    'MerchandiseAndFinishedGoods', 'MerchandiseAndFinishedGoodsCAIFRS',
+    'Merchandise', 'MerchandiseCAIFRS', 'FinishedGoods', 'FinishedGoodsCAIFRS',
+    'SemiFinishedGoods',
+    # 仕掛品
+    'WorkInProcess', 'WorkInProcessCAIFRS',
+    # 原材料・貯蔵品
+    'RawMaterialsAndSupplies', 'RawMaterialsAndSuppliesCAIFRS', 'RawMaterialsAndSuppliesCNS',
+    'RawMaterials', 'RawMaterialsCAIFRS', 'Supplies', 'ProductionSuppliesCAIFRS',
+    'SuppliesAndOtherCAIFRS',
+    # 業種固有 (不動産・建設・サービス)
+    'RealEstateForSale', 'RealEstateForSaleCNS', 'RealEstateForSaleInProcess',
+    'CostsOnUncompletedConstructionContractsCNS',
+    'CostsOnUncompletedConstructionContractsAndOtherCNS',
+    'CostsOnUncompletedServices',
+    'OtherInventories',
+]
+
+
+def sum_inventory_components(raw_tags: Dict[str, Any]) -> Optional[float]:
+    """raw_tagsから棚卸資産の構成タグ (B/S Instantコンテキスト) を合算する。1つも無ければ None。
+    migrate_inventories_ordinary.py と共用 (extractorと修復スクリプトの挙動一致を保証)。
+    ⚠️ Prior*Instant は除外必須: 四半期報告書は instant_patterns に CurrentQuarterInstant が無く
+    フォールバック経路で前期末残高 (Prior1YearInstant) が raw_tags に残ることがある
+    (2721 2021_Q1 の RealEstateForSale で実測)。"""
+    total = 0.0
+    found = False
+    for name in INVENTORY_COMPONENT_TAGS:
+        td = raw_tags.get(name)
+        if not isinstance(td, dict):
+            continue
+        v = td.get('value')
+        ctx = td.get('context') or ''
+        if isinstance(v, (int, float)) and 'Instant' in ctx and 'Prior' not in ctx:
+            total += v
+            found = True
+    return total if found else None
+
+
+def ordinary_income_is_foreign_gaap_artifact(raw_tags: Dict[str, Any]) -> bool:
+    """IFRS/US-GAAP連結提出者にマッチした ordinary_income が「日本基準参考表・単体」由来かを判定。
+
+    2026-07-13 P1修正 (帝人3401型): IFRS移行年の有報は経営指標サマリに「日本基準」参考表を併載し、
+    その経常利益が jpcrp_cor:OrdinaryIncomeLossSummaryOfBusinessResults として素の
+    CurrentYearDuration コンテキストで打刻される (帝人3401 FY2025 = 123.7億)。また単体のみ再抽出
+    (allow_nonconsolidated) を経たIFRS企業では単体 jppfs_cor:OrdinaryIncome が混入する (2130等)。
+    IFRS/US-GAAPに経常利益概念は無いため、連結本表がIFRS (jpigp名前空間) / US-GAAP
+    (USGAAPサマリタグ) の提出者で、P/L本体の経常利益が連結コンテキストに存在しない場合は
+    参考表または単体値 → ordinary_income は None (キー無し) が正。
+    J-GAAP企業 (銀行・保険含む) と単体のみ提出者は外国基準タグを持たないため影響しない。
+    """
+    body = raw_tags.get('OrdinaryIncome')
+    if (isinstance(body, dict) and isinstance(body.get('value'), (int, float))
+            and 'NonConsolidated' not in (body.get('context') or '')):
+        return False  # J-GAAP連結P/L本体の経常利益が存在 → 本物 (保護)
+    for name, td in raw_tags.items():
+        if not isinstance(td, dict) or not isinstance(td.get('value'), (int, float)):
+            continue
+        full = td.get('full_tag') or ''
+        # jpigp = IFRS財務諸表本体タクソノミ。full_tag欠落の旧raw用に局所名IFRSでもフォールバック判定
+        if 'jpigp' in full or 'USGAAP' in name or (not full and 'IFRS' in name):
+            return True
+    return False
+
+
+# ============================================================
 # XBRL抽出関数
 # ============================================================
 def extract_xbrl_from_zip(zip_path: Path) -> Dict[str, Any]:
@@ -1282,9 +1359,13 @@ def _extract_with_lxml(xbrl_content: bytes, _allow_nonconsolidated: bool = False
         
         if best_value is not None:
             extracted[field_name] = best_value
-    
+
+    # 経常利益: IFRS/US-GAAP連結提出者への日本基準参考表・単体値の混入を遮断 (帝人3401型, 2026-07-13)
+    if 'ordinary_income' in extracted and ordinary_income_is_foreign_gaap_artifact(raw_tags):
+        del extracted['ordinary_income']
+
     # 派生指標を計算
-    _calculate_derived_metrics(extracted)
+    _calculate_derived_metrics(extracted, raw_tags)
 
     # raw_tagsも保存（未知タグを後で分析可能）
     extracted['_raw_tags'] = raw_tags
@@ -1366,8 +1447,11 @@ def _extract_with_bs4(xbrl_content: bytes) -> Dict[str, Any]:
     return extracted
 
 
-def _calculate_derived_metrics(extracted: Dict):
-    """派生指標を計算（拡張版）"""
+def _calculate_derived_metrics(extracted: Dict, raw_tags: Optional[Dict] = None):
+    """派生指標を計算（拡張版）
+
+    raw_tags を渡すと棚卸資産フォールバックが構成タグ網羅合算 (INVENTORY_COMPONENT_TAGS) になる。
+    省略時 (bs4経路・旧呼び出し元) は旧4フィールド合算のまま。"""
     
     # ========== 収益性指標 ==========
     # ROE = 純利益 / 純資産
@@ -1443,9 +1527,14 @@ def _calculate_derived_metrics(extracted: Dict):
     if 'revenue' in extracted and 'total_assets' in extracted and extracted['total_assets']:
         extracted['asset_turnover_calc'] = round(extracted['revenue'] / extracted['total_assets'], 2)
     
-    # 棚卸資産: コンポーネントから合計を補完
+    # 棚卸資産: 合計タグが無い場合はコンポーネントから補完
+    # 2026-07-13 P1修正: 旧4フィールド合算は販売用不動産・未成工事支出金・商品/製品の単独表記を
+    # 含まず不動産・建設・小売で系統的過小 (673社) → INVENTORY_COMPONENT_TAGS 網羅合算に置換。
+    # raw_tags が無い経路 (bs4等) は旧ロジック温存
     if 'inventories' not in extracted or not extracted.get('inventories'):
-        inv_sum = sum(extracted.get(k, 0) or 0 for k in ['merchandise', 'work_in_progress', 'raw_materials', 'supplies'])
+        inv_sum = sum_inventory_components(raw_tags) if raw_tags else None
+        if inv_sum is None:
+            inv_sum = sum(extracted.get(k, 0) or 0 for k in ['merchandise', 'work_in_progress', 'raw_materials', 'supplies'])
         if inv_sum > 0:
             extracted['inventories'] = inv_sum
 
