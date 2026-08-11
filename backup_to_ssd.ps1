@@ -47,6 +47,15 @@ foreach ($d in $dirs) {
     Add-Content $log "EXIT $LASTEXITCODE : $d`r`n"
 }
 
+# Claude Code の永続メモリ (プロジェクト外 ~/.claude 配下、git非管理)
+$claudeMem = Join-Path $env:USERPROFILE ".claude\projects\c--Users-shun-nabeno-Desktop-Local-LLM-Project\memory"
+if (Test-Path $claudeMem) {
+    Write-Host ">> claude memory"
+    robocopy $claudeMem (Join-Path $dst "_claude_memory") /E /R:1 /W:1 /NFL /NDL /NP /NJH | Select-Object -Last 8 | Add-Content $log
+    if ($LASTEXITCODE -ge 8) { $failed += "_claude_memory" }
+    Add-Content $log "EXIT $LASTEXITCODE : _claude_memory`r`n"
+}
+
 foreach ($f in $files) {
     $from = Join-Path $src $f
     $to   = Join-Path $dst $f
