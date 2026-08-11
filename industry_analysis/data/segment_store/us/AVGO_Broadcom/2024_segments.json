@@ -1,0 +1,51 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "AVGO",
+  "company_name": "Broadcom",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 2,
+  "segments": [
+    {
+      "segment_id": "AVGO_Semiconductor_solutions",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Semiconductor solutions",
+      "values": {
+        "revenue_external": 30096000000,
+        "revenue_total": 30096000000,
+        "operating_profit": 16759000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides semiconductor solutions, including chips and related products for various industries."
+    },
+    {
+      "segment_id": "AVGO_Infrastructure_software",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Infrastructure software",
+      "values": {
+        "revenue_external": 21478000000,
+        "revenue_total": 21478000000,
+        "operating_profit": 13977000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Offers infrastructure software solutions, including networking and data center software products."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "No corporate eliminations or reconciliation data disclosed for 2024."
+  },
+  "reporting_note": "Data extracted from Broadcom's 2024 fiscal year 10-K filing. All revenue and operating income figures converted from millions to actual dollars. Segment asset data not disclosed in the provided excerpt.",
+  "consolidated_totals_reference": {
+    "revenue": 51574000000,
+    "operating_income": 13463000000,
+    "total_assets": 165645000000
+  }
+}

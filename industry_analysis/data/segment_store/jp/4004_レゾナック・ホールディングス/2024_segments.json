@@ -1,0 +1,161 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "4004",
+  "company_name": "レゾナック・ホールディングス",
+  "edinet_code": "E00885",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-12-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\4004_株式会社レゾナック・ホールディングス_20241231_有報_S100VHA9.zip",
+  "segment_count": 6,
+  "segments": [
+    {
+      "segment_id": "E00751_SemiconductorAndElectronicMaterialsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E00751-000:SemiconductorAndElectronicMaterialsReportableSegmentMember",
+      "segment_label_ja": "半導体・電子材料",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 445139000000.0,
+        "revenue_total": 450108000000.0,
+        "employees": 8143,
+        "capex": 51440000000.0,
+        "depreciation": 41651000000.0,
+        "rd_expense": 20899000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "revenue_total": "RevenueIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E00751_MobilityReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E00751-000:MobilityReportableSegmentMember",
+      "segment_label_ja": "モビリティ",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 215528000000.0,
+        "revenue_total": 217462000000.0,
+        "employees": 6143,
+        "capex": 10904000000.0,
+        "depreciation": 18417000000.0,
+        "rd_expense": 6380000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "revenue_total": "RevenueIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E00751_InnovationEnablingMaterialsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E00751-000:InnovationEnablingMaterialsReportableSegmentMember",
+      "segment_label_ja": "イノベーション材料",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 97001000000.0,
+        "revenue_total": 109782000000.0,
+        "employees": 1847,
+        "capex": 5115000000.0,
+        "depreciation": 5941000000.0,
+        "rd_expense": 2754000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "revenue_total": "RevenueIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E00751_ChemicalsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E00751-000:ChemicalsReportableSegmentMember",
+      "segment_label_ja": "ケミカル",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 517186000000.0,
+        "revenue_total": 530248000000.0,
+        "employees": 3633,
+        "capex": 21823000000.0,
+        "depreciation": 20279000000.0,
+        "rd_expense": 1942000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "revenue_total": "RevenueIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_OtherOperatingSegmentsAxisMember",
+      "segment_member_qname": "jpcrp_cor:OtherOperatingSegmentsAxisMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "employees": 4170
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    },
+    {
+      "segment_id": "std_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_member_qname": "jpcrp_cor:OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 116626000000.0,
+        "revenue_total": 123276000000.0,
+        "depreciation": 9237000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "revenue_total": "RevenueIFRS",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    }
+  ],
+  "reportable_total": {
+    "segment_id": "std_ReportableSegmentsMember",
+    "segment_member_qname": "jpcrp_cor:ReportableSegmentsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_external": 1274854000000.0,
+      "revenue_total": 1307600000000.0,
+      "employees": 19766,
+      "depreciation": 86288000000.0
+    },
+    "source_concepts": {
+      "revenue_external": "RevenueFromExternalCustomersIFRS",
+      "revenue_total": "RevenueIFRS",
+      "employees": "NumberOfEmployees",
+      "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+    }
+  },
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_total": -39396000000.0,
+      "depreciation": 2501000000.0
+    },
+    "source_concepts": {
+      "revenue_total": "RevenueIFRS",
+      "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+    }
+  }
+}

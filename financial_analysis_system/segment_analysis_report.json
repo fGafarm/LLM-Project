@@ -1,0 +1,2804 @@
+{
+  "summary": {
+    "total_files": 427,
+    "issue_counts": {
+      "NO_SEGMENT": 239,
+      "OK": 152,
+      "YOY_ALL_SAME": 1,
+      "PARTIAL_NA": 10,
+      "COPY_FROM_TOTAL": 5,
+      "ALL_SAME": 2,
+      "ALL_NA": 18
+    },
+    "variance_cases": 14
+  },
+  "issue_examples": {
+    "NO_SEGMENT": [
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": null,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2023,
+        "total_revenue": 2721.7,
+        "segments": [],
+        "issue_details": "セグメント情報が見つからない"
+      }
+    ],
+    "OK": [
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事セグメント",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品セグメント",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪セグメント",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流サービスセグメント",
+            "revenue": 423.0,
+            "revenue_str": "423百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 4セグメント、4個の売上高取得"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事セグメント",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円（+1.8%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品セグメント",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円（+1.8%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪セグメント",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円（+1.8%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流サービスセグメント",
+            "revenue": 423.0,
+            "revenue_str": "423百万円（+1.8%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 4セグメント、4個の売上高取得"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他",
+            "revenue": 423.0,
+            "revenue_str": "423百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 4セグメント、4個の売上高取得"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流サービス",
+            "revenue": 423.0,
+            "revenue_str": "423百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 4セグメント、4個の売上高取得"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円 (+1.5%)",
+            "yoy": 1.5,
+            "yoy_str": "(+1.5%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円 (+14.1%)",
+            "yoy": 14.1,
+            "yoy_str": "(+14.1%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円 (-1.9%)",
+            "yoy": -1.9,
+            "yoy_str": "(-1.9%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流サービス",
+            "revenue": 423.0,
+            "revenue_str": "423百万円 (+30.7%)",
+            "yoy": 30.7,
+            "yoy_str": "(+30.7%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 4セグメント、4個の売上高取得"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事セグメント",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品セグメント",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪セグメント",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流サービスセグメント",
+            "revenue": 423.0,
+            "revenue_str": "423百万円 (前年比 +1.8%)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 4セグメント、4個の売上高取得"
+      },
+      {
+        "ticker": "1332",
+        "company_name": "株式会社ニッスイ",
+        "fiscal_year": 2024,
+        "total_revenue": 8313.8,
+        "segments": [
+          {
+            "name": "水産事業",
+            "revenue": 336892.0,
+            "revenue_str": "336,892百万円（+102.6%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品事業",
+            "revenue": 443297.0,
+            "revenue_str": "443,297百万円（+116.0%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ファイン事業",
+            "revenue": 15696.0,
+            "revenue_str": "15,696百万円（△62.5%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流事業",
+            "revenue": 15213.0,
+            "revenue_str": "15,213百万円（△98.2%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他",
+            "revenue": 20275.0,
+            "revenue_str": "20,275百万円（+117.9%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 5セグメント、5個の売上高取得"
+      },
+      {
+        "ticker": "1332",
+        "company_name": "株式会社ニッスイ",
+        "fiscal_year": 2025,
+        "total_revenue": 8861.3,
+        "segments": [
+          {
+            "name": "水産事業",
+            "revenue": 364057.0,
+            "revenue_str": "364,057百万円 (+108.1%)",
+            "yoy": 108.1,
+            "yoy_str": "(+108.1%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品事業",
+            "revenue": 471058.0,
+            "revenue_str": "471,058百万円 (+106.3%)",
+            "yoy": 106.3,
+            "yoy_str": "(+106.3%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ファイン事業",
+            "revenue": 15844.0,
+            "revenue_str": "15,844百万円 (+100.9%)",
+            "yoy": 100.9,
+            "yoy_str": "(+100.9%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流事業",
+            "revenue": 16536.0,
+            "revenue_str": "16,536百万円 (+108.7%)",
+            "yoy": 108.7,
+            "yoy_str": "(+108.7%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他",
+            "revenue": 18628.0,
+            "revenue_str": "18,628百万円 (-1,646百万円)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 5セグメント、5個の売上高取得"
+      },
+      {
+        "ticker": "1605",
+        "company_name": "株式会社ＩＮＰＥＸ",
+        "fiscal_year": 2024,
+        "total_revenue": 22658.4,
+        "segments": [
+          {
+            "name": "① 国内石油・天然ガス事業（国内O&G）",
+            "revenue": 216900.0,
+            "revenue_str": "2,169億円",
+            "yoy": -12.1,
+            "yoy_str": "(-12.1%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "② 海外石油・天然ガス事業（海外O&G）− イクシスプロジェクト",
+            "revenue": 373200.0,
+            "revenue_str": "3,732億円",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "③ 海外石油・天然ガス事業（海外O&G）− その他のプロジェクト",
+            "revenue": 657900.0,
+            "revenue_str": "1兆6,579億円",
+            "yoy": 8.5,
+            "yoy_str": "(+8.5%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 3セグメント、3個の売上高取得"
+      },
+      {
+        "ticker": "1721",
+        "company_name": "コムシスホールディングス株式会社",
+        "fiscal_year": 2024,
+        "total_revenue": 5711.9,
+        "segments": [
+          {
+            "name": "日本コムシスグループ",
+            "revenue": 103742.0,
+            "revenue_str": "103,742百万円（前年比+XX%）[P.5]",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "サンワコムシスエンジニアリンググループ",
+            "revenue": 47666.0,
+            "revenue_str": "47,666百万円（前年比+XX%）[P.5]",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ＴＯＳＹＳグループ",
+            "revenue": 20912.0,
+            "revenue_str": "20,912百万円（前年比+XX%）[P.5]",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "つうけんグループ",
+            "revenue": 36089.0,
+            "revenue_str": "36,089百万円（前年比+XX%）[P.5]",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ＮＤＳグループ",
+            "revenue": 40061.0,
+            "revenue_str": "40,061百万円（前年比+XX%）[P.5]",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ＳＹＳＫＥＮグループ",
+            "revenue": 22652.0,
+            "revenue_str": "22,652百万円（前年比+XX%）[P.5]",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "コムシス情報システムグループ",
+            "revenue": 1534.0,
+            "revenue_str": "1,534百万円（前年比+XX%）[P.5]",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "北陸電話工事グループ",
+            "revenue": 6822.0,
+            "revenue_str": "6,822百万円（前年比+XX%）[P.5]",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "正常: 8セグメント、8個の売上高取得"
+      }
+    ],
+    "YOY_ALL_SAME": [
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事セグメント",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円 (+1.8%)",
+            "yoy": 1.8,
+            "yoy_str": "(+1.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品セグメント",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円 (+1.8%)",
+            "yoy": 1.8,
+            "yoy_str": "(+1.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪セグメント",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円 (+1.8%)",
+            "yoy": 1.8,
+            "yoy_str": "(+1.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流サービスセグメント",
+            "revenue": 1176.0,
+            "revenue_str": "1,176百万円 (+1.8%)",
+            "yoy": 1.8,
+            "yoy_str": "(+1.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他",
+            "revenue": 1176.0,
+            "revenue_str": "1,176百万円 (+1.8%)",
+            "yoy": 1.8,
+            "yoy_str": "(+1.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "; 全セグメントが同一YoY（1.8%）"
+      }
+    ],
+    "PARTIAL_NA": [
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事セグメント",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円（前年比+1.8%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品セグメント",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円（前年比+5.1%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪セグメント",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円（前年比-1.2%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他セグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流サービスセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "2/5セグメントがN/A"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事セグメント",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円（前年比+1.8%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品セグメント",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円（前年比+5.1%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪セグメント",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円（前年比-1.2%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "物流サービスセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "1/4セグメントがN/A"
+      },
+      {
+        "ticker": "1301",
+        "company_name": "株式会社　極洋",
+        "fiscal_year": 2022,
+        "total_revenue": 2535.8,
+        "segments": [
+          {
+            "name": "水産商事セグメント",
+            "revenue": 120796.0,
+            "revenue_str": "120,796百万円（前年比+1.8%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品セグメント",
+            "revenue": 96883.0,
+            "revenue_str": "96,883百万円（前年比+5.1%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "鰹・鮪セグメント",
+            "revenue": 34295.0,
+            "revenue_str": "34,295百万円（前年比-1.2%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他セグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "1/4セグメントがN/A"
+      },
+      {
+        "ticker": "5201",
+        "company_name": "ＡＧＣ株式会社",
+        "fiscal_year": 2024,
+        "total_revenue": 20676.0,
+        "segments": [
+          {
+            "name": "建築ガラス",
+            "revenue": 593600.0,
+            "revenue_str": "5,936億円（前年比+3.4%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "オートモーティブ",
+            "revenue": 593600.0,
+            "revenue_str": "5,936億円（前年比+3.4%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ライフサイエンス",
+            "revenue": 141200.0,
+            "revenue_str": "1,412億円（前年比+11.4%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "エッセンシャルケミカルズ",
+            "revenue": 593600.0,
+            "revenue_str": "5,936億円（前年比+3.4%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ディスプレイ",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "電子",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "パフォーマンスケミカルズ",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "3/7セグメントがN/A"
+      },
+      {
+        "ticker": "6758",
+        "company_name": "ソニーグループ株式会社",
+        "fiscal_year": 2022,
+        "total_revenue": 99215.1,
+        "segments": [
+          {
+            "name": "ゲーム＆ネットワークサービス (G&NS)",
+            "revenue": 2739800.0,
+            "revenue_str": "27,398億円（+1,245億円） (P.16)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "エレクトロニクス製品＆ソリューション (EP&S)",
+            "revenue": 2339200.0,
+            "revenue_str": "23,392億円（+1,038億円） (P.15)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "画像センサー＆ソリューション (IS&S)",
+            "revenue": 1076400.0,
+            "revenue_str": "10,764億円（+555億円） (P.15)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "音楽",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "映画",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "金融",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "3/6セグメントがN/A"
+      },
+      {
+        "ticker": "7011",
+        "company_name": "三菱重工業株式会社",
+        "fiscal_year": 2025,
+        "total_revenue": 50271.8,
+        "segments": [
+          {
+            "name": "1. エナジーセグメント",
+            "revenue": 181579.6,
+            "revenue_str": "1,815.796億円",
+            "yoy": 5.3,
+            "yoy_str": "(+5.3%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "2. プラント・インフラセグメント",
+            "revenue": 852112.0000000001,
+            "revenue_str": "8,521.12億円",
+            "yoy": 2.3,
+            "yoy_str": "(+2.3%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "3. 航空・防衛・宇宙セグメント",
+            "revenue": null,
+            "revenue_str": "データなし",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "4. 物流・冷熱・ドライブシステムセグメント",
+            "revenue": null,
+            "revenue_str": "データなし",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "2/4セグメントがN/A"
+      },
+      {
+        "ticker": "7733",
+        "company_name": "オリンパス株式会社",
+        "fiscal_year": 2025,
+        "total_revenue": 9973.3,
+        "segments": [
+          {
+            "name": "消化器内視鏡ソリューション事業",
+            "revenue": 997329.9999999999,
+            "revenue_str": "9,973.3億円（前年比+6.5%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "サージカルインターベンション事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "内視鏡事業セグメント",
+            "revenue": 586652.0,
+            "revenue_str": "586,652百万円（前年比不明）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "治療機器事業セグメント",
+            "revenue": 360687.0,
+            "revenue_str": "360,687百万円（前年比不明）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "1/4セグメントがN/A"
+      },
+      {
+        "ticker": "9009",
+        "company_name": "京成電鉄株式会社",
+        "fiscal_year": 2025,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "運輸業",
+            "revenue": 90581.0,
+            "revenue_str": "90,581百万円（+2.3%） (P.7)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "流通業",
+            "revenue": 46977.0,
+            "revenue_str": "46,977百万円（+1.8%） (P.7)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "不動産業",
+            "revenue": 10577.0,
+            "revenue_str": "10,577百万円（-2.1%） (P.7)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "1/4セグメントがN/A"
+      },
+      {
+        "ticker": "9983",
+        "company_name": "株式会社ファーストリテイリング",
+        "fiscal_year": 2022,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "国内ユニクロ事業",
+            "revenue": 810200.0,
+            "revenue_str": "8,102億円（前年比-3.8%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "海外ユニクロ事業",
+            "revenue": 1118700.0,
+            "revenue_str": "11,187億円（前年比+20.3%） (P.4)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ジーユー事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "グローバルブランド事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "2/4セグメントがN/A"
+      },
+      {
+        "ticker": "9983",
+        "company_name": "株式会社ファーストリテイリング",
+        "fiscal_year": 2025,
+        "total_revenue": 34005.4,
+        "segments": [
+          {
+            "name": "国内ユニクロ事業",
+            "revenue": 26000.0,
+            "revenue_str": "1兆260億円（+10.1%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "海外ユニクロ事業",
+            "revenue": 910200.0,
+            "revenue_str": "1兆9,102億円（+11.6%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "グレーターチャイナ",
+            "revenue": 650200.0,
+            "revenue_str": "6,502億円（-4.0%）",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ジーユー事業",
+            "revenue": null,
+            "revenue_str": "記載なし",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "1/4セグメントがN/A"
+      }
+    ],
+    "COPY_FROM_TOTAL": [
+      {
+        "ticker": "1801",
+        "company_name": "大成建設株式会社",
+        "fiscal_year": 2024,
+        "total_revenue": 17650.2,
+        "segments": [
+          {
+            "name": "① 土木事業",
+            "revenue": 1765020.0,
+            "revenue_str": "17,650.2億円 (+19.3%) (P.5)",
+            "yoy": 19.3,
+            "yoy_str": "(+19.3%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "② 建築事業",
+            "revenue": 1765020.0,
+            "revenue_str": "17,650.2億円 (+2.1%) (P.5)",
+            "yoy": 2.1,
+            "yoy_str": "(+2.1%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "③ 開発事業",
+            "revenue": 1765020.0,
+            "revenue_str": "17,650.2億円 (+10.3%) (P.5)",
+            "yoy": 10.3,
+            "yoy_str": "(+10.3%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "④ その他",
+            "revenue": 1765020.0,
+            "revenue_str": "17,650.2億円 (+6.8%) (P.5)",
+            "yoy": 6.8,
+            "yoy_str": "(+6.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全4セグメントが全社売上高（17650.2億円）と同一"
+      },
+      {
+        "ticker": "2802",
+        "company_name": "味の素株式会社",
+        "fiscal_year": 2024,
+        "total_revenue": 14392.3,
+        "segments": [
+          {
+            "name": "① 調味料・食品セグメント",
+            "revenue": 1439230.0,
+            "revenue_str": "14,392.3億円",
+            "yoy": 5.9,
+            "yoy_str": "(+5.9%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "② 冷凍食品セグメント",
+            "revenue": 1439230.0,
+            "revenue_str": "14,392.3億円",
+            "yoy": 5.9,
+            "yoy_str": "(+5.9%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "③ ヘルスケア等セグメント",
+            "revenue": 1439230.0,
+            "revenue_str": "14,392.3億円",
+            "yoy": 5.9,
+            "yoy_str": "(+5.9%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全3セグメントが全社売上高（14392.3億円）と同一"
+      },
+      {
+        "ticker": "4689",
+        "company_name": "ＬＩＮＥヤフー株式会社",
+        "fiscal_year": 2025,
+        "total_revenue": 19174.8,
+        "segments": [
+          {
+            "name": "1. PayPay連結事業",
+            "revenue": 1917480.0,
+            "revenue_str": "19,174.8億円 (+23.8%)",
+            "yoy": 23.8,
+            "yoy_str": "(+23.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "2. メディア事業",
+            "revenue": 1917480.0,
+            "revenue_str": "19,174.8億円 (+10.8%)",
+            "yoy": 10.8,
+            "yoy_str": "(+10.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "3. コマース事業",
+            "revenue": 1917480.0,
+            "revenue_str": "19,174.8億円 (+6.7%)",
+            "yoy": 6.7,
+            "yoy_str": "(+6.7%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全3セグメントが全社売上高（19174.8億円）と同一"
+      },
+      {
+        "ticker": "5711",
+        "company_name": "三菱マテリアル株式会社",
+        "fiscal_year": 2025,
+        "total_revenue": 19620.8,
+        "segments": [
+          {
+            "name": "金属事業",
+            "revenue": 1962080.0,
+            "revenue_str": "19,620.8億円 (+38.1%) (P.3)",
+            "yoy": 38.1,
+            "yoy_str": "(+38.1%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "高機能製品",
+            "revenue": 1962080.0,
+            "revenue_str": "19,620.8億円 (+4.4%) (P.3)",
+            "yoy": 4.4,
+            "yoy_str": "(+4.4%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "加工事業",
+            "revenue": 1962080.0,
+            "revenue_str": "19,620.8億円 (+6.3%) (P.4)",
+            "yoy": 6.3,
+            "yoy_str": "(+6.3%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "再生可能エネルギー事業",
+            "revenue": 1962080.0,
+            "revenue_str": "19,620.8億円 (+79.5%) (P.4)",
+            "yoy": 79.5,
+            "yoy_str": "(+79.5%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他事業",
+            "revenue": 1962080.0,
+            "revenue_str": "19,620.8億円 (-1.8%) (P.4)",
+            "yoy": -1.8,
+            "yoy_str": "(-1.8%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全5セグメントが全社売上高（19620.8億円）と同一"
+      },
+      {
+        "ticker": "6674",
+        "company_name": "株式会社　ジーエス・ユアサ　コーポレーション",
+        "fiscal_year": 2025,
+        "total_revenue": 5803.4,
+        "segments": [
+          {
+            "name": "自動車電池事業",
+            "revenue": 580340.0,
+            "revenue_str": "5,803.4億円 (+4.3%)",
+            "yoy": 4.3,
+            "yoy_str": "(+4.3%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "産業電池電源事業",
+            "revenue": 580340.0,
+            "revenue_str": "5,803.4億円 (+3.2%)",
+            "yoy": 3.2,
+            "yoy_str": "(+3.2%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "車載用リチウムイオン電池事業",
+            "revenue": 580340.0,
+            "revenue_str": "5,803.4億円 (-2.4%)",
+            "yoy": -2.4,
+            "yoy_str": "(-2.4%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他事業",
+            "revenue": 580340.0,
+            "revenue_str": "5,803.4億円 (+4.1%)",
+            "yoy": 4.1,
+            "yoy_str": "(+4.1%)",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全4セグメントが全社売上高（5803.4億円）と同一"
+      }
+    ],
+    "ALL_SAME": [
+      {
+        "ticker": "2501",
+        "company_name": "サッポロホールディングス株式会社",
+        "fiscal_year": 2022,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "国内酒類事業",
+            "revenue": 478420.0,
+            "revenue_str": "4,784.2億円（-3%） (P.4)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "国際事業",
+            "revenue": 478420.0,
+            "revenue_str": "4,784.2億円（+42%） (P.4)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "食品・飲料事業",
+            "revenue": 478420.0,
+            "revenue_str": "4,784.2億円（+2%） (P.5)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "外食事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全3セグメントが同一売上高（478420.0百万円）"
+      },
+      {
+        "ticker": "6758",
+        "company_name": "ソニーグループ株式会社",
+        "fiscal_year": 2022,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "G&N S分野",
+            "revenue": 8396700.0,
+            "revenue_str": "83,967.0億円（+3.7%） (P.3)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "EP&S分野",
+            "revenue": 8396700.0,
+            "revenue_str": "83,967.0億円（+13.1%） (P.49)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "I&SS分野",
+            "revenue": 8396700.0,
+            "revenue_str": "83,967.0億円（+6.3%） (P.49)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "金融分野",
+            "revenue": 8396700.0,
+            "revenue_str": "83,967.0億円（+4.1%） (P.49)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全4セグメントが同一売上高（8396700.0百万円）"
+      }
+    ],
+    "ALL_NA": [
+      {
+        "ticker": "3092",
+        "company_name": "株式会社ＺＯＺＯ",
+        "fiscal_year": 2025,
+        "total_revenue": 2131.3,
+        "segments": [
+          {
+            "name": "ZOZOTOWN",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ZOZOCOSME",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "WEAR by ZOZO",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "LINEヤフーコマース",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全5セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "4689",
+        "company_name": "ＬＩＮＥヤフー株式会社",
+        "fiscal_year": 2024,
+        "total_revenue": 18146.6,
+        "segments": [
+          {
+            "name": "メディア事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "コマース事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "戦略事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全4セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "5019",
+        "company_name": "出光興産株式会社",
+        "fiscal_year": 2025,
+        "total_revenue": 91902.2,
+        "segments": [
+          {
+            "name": "6. その他",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全1セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "6501",
+        "company_name": "株式会社日立製作所",
+        "fiscal_year": 2022,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "ITセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "エネルギーセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "インダストリーセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "モビリティセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ライフセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "オートモティブシステムセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "日立建機",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "日立金属",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全8セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "6501",
+        "company_name": "株式会社日立製作所",
+        "fiscal_year": 2022,
+        "total_revenue": 102646.0,
+        "segments": [
+          {
+            "name": "ITセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "エネルギーセグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "インダストリー",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "モビリティ",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ライフ",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "オートモティブシステム",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "日立建機",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "日立金属",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全8セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "6501",
+        "company_name": "株式会社日立製作所",
+        "fiscal_year": 2023,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "デジタルシステム＆サービス",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "グリーンエナジー＆モビリティ",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "コネクティブインダストリーズ",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "オートモティブシステム",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "日立金属",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "日立建機",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全7セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "6532",
+        "company_name": "株式会社ベイカレント",
+        "fiscal_year": 2025,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "コンサルティング事業セグメント",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全1セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "6758",
+        "company_name": "ソニーグループ株式会社",
+        "fiscal_year": 2023,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "G&NS分野",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "I&SS分野",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "音楽分野",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "映画分野",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "ET&S分野",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "金融分野",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全6セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "7012",
+        "company_name": "川崎重工業株式会社",
+        "fiscal_year": 2025,
+        "total_revenue": 21293.2,
+        "segments": [
+          {
+            "name": "航空宇宙システム事業",
+            "revenue": null,
+            "revenue_str": "N/A (前年比増加)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "車両事業",
+            "revenue": null,
+            "revenue_str": "N/A (前年比増加)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "エネルギーソリューション＆マリン事業",
+            "revenue": null,
+            "revenue_str": "N/A (前年比増加)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "精密機械・ロボット事業",
+            "revenue": null,
+            "revenue_str": "N/A (前年比増加)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "パワースポーツ＆エンジン事業",
+            "revenue": null,
+            "revenue_str": "N/A (前年比増加)",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全5セグメントの売上高がN/A"
+      },
+      {
+        "ticker": "7203",
+        "company_name": "トヨタ自動車株式会社",
+        "fiscal_year": 2022,
+        "total_revenue": null,
+        "segments": [
+          {
+            "name": "自動車事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "金融事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          },
+          {
+            "name": "その他の事業",
+            "revenue": null,
+            "revenue_str": "N/A",
+            "yoy": null,
+            "yoy_str": "",
+            "profit": null,
+            "profit_str": "",
+            "source_page": ""
+          }
+        ],
+        "issue_details": "全3セグメントの売上高がN/A"
+      }
+    ]
+  },
+  "variance_report": {
+    "1301_2022": {
+      "num_files": 19,
+      "segment_counts": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        4,
+        0,
+        0,
+        4,
+        4,
+        0,
+        0,
+        4,
+        0,
+        5,
+        5,
+        4,
+        4
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "OK",
+        "OK",
+        "OK",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "OK",
+        "OK",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "OK",
+        "NO_SEGMENT",
+        "YOY_ALL_SAME",
+        "PARTIAL_NA",
+        "PARTIAL_NA",
+        "PARTIAL_NA"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": []
+    },
+    "1301_2023": {
+      "num_files": 2,
+      "segment_counts": [
+        0,
+        0
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": false,
+      "revenue_variance": []
+    },
+    "2501_2022": {
+      "num_files": 4,
+      "segment_counts": [
+        4,
+        5,
+        5,
+        5
+      ],
+      "issue_types": [
+        "ALL_SAME",
+        "OK",
+        "OK",
+        "OK"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": [
+        {
+          "segment": "国内酒類事業",
+          "values": [
+            478420.0,
+            478420.0,
+            478420.0,
+            478420.0
+          ],
+          "variance": 0.0
+        },
+        {
+          "segment": "国際事業",
+          "values": [
+            478420.0,
+            478420.0,
+            478420.0,
+            478420.0
+          ],
+          "variance": 0.0
+        },
+        {
+          "segment": "食品・飲料事業",
+          "values": [
+            478420.0,
+            478420.0,
+            478420.0,
+            478420.0
+          ],
+          "variance": 0.0
+        },
+        {
+          "segment": "外食事業",
+          "values": [
+            27009.0,
+            27009.0,
+            27009.0
+          ],
+          "variance": 0.0
+        }
+      ]
+    },
+    "2502_2022": {
+      "num_files": 4,
+      "segment_counts": [
+        5,
+        0,
+        5,
+        0
+      ],
+      "issue_types": [
+        "OK",
+        "NO_SEGMENT",
+        "OK",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": [
+        {
+          "segment": "酒類事業",
+          "values": [
+            9729.0,
+            9729.0
+          ],
+          "variance": 0.0
+        },
+        {
+          "segment": "飲料事業",
+          "values": [
+            4901.0,
+            4901.0
+          ],
+          "variance": 0.0
+        },
+        {
+          "segment": "食品事業",
+          "values": [
+            1150.0,
+            1150.0
+          ],
+          "variance": 0.0
+        },
+        {
+          "segment": "国際事業",
+          "values": [
+            2497.0,
+            2497.0
+          ],
+          "variance": 0.0
+        },
+        {
+          "segment": "その他事業",
+          "values": [
+            295.0,
+            295.0
+          ],
+          "variance": 0.0
+        }
+      ]
+    },
+    "2503_2022": {
+      "num_files": 2,
+      "segment_counts": [
+        0,
+        0
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": false,
+      "revenue_variance": []
+    },
+    "2914_2022": {
+      "num_files": 4,
+      "segment_counts": [
+        0,
+        0,
+        0,
+        3
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "OK"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": []
+    },
+    "2914_2023": {
+      "num_files": 2,
+      "segment_counts": [
+        0,
+        0
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": false,
+      "revenue_variance": []
+    },
+    "2914_2024": {
+      "num_files": 2,
+      "segment_counts": [
+        3,
+        0
+      ],
+      "issue_types": [
+        "OK",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": []
+    },
+    "4063_2022": {
+      "num_files": 5,
+      "segment_counts": [
+        4,
+        0,
+        4,
+        4,
+        0
+      ],
+      "issue_types": [
+        "OK",
+        "NO_SEGMENT",
+        "OK",
+        "OK",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": [
+        {
+          "segment": "生活環境基盤材料事業",
+          "values": [
+            857189.0,
+            8571.0,
+            857179.9999999999
+          ],
+          "variance": 848618.0
+        },
+        {
+          "segment": "電子材料事業",
+          "values": [
+            708979.0,
+            7089.0,
+            708980.0
+          ],
+          "variance": 701891.0
+        },
+        {
+          "segment": "機能材料事業",
+          "values": [
+            395626.0,
+            3956.0,
+            395630.0
+          ],
+          "variance": 391674.0
+        },
+        {
+          "segment": "加工・商事・技術サービス事業",
+          "values": [
+            112632.0,
+            1126.0,
+            112630.0
+          ],
+          "variance": 111506.0
+        }
+      ]
+    },
+    "4063_2024": {
+      "num_files": 4,
+      "segment_counts": [
+        4,
+        0,
+        4,
+        0
+      ],
+      "issue_types": [
+        "OK",
+        "NO_SEGMENT",
+        "OK",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": [
+        {
+          "segment": "生活環境基盤材料事業",
+          "values": [
+            1308171.0,
+            102770.0
+          ],
+          "variance": 1205401.0
+        },
+        {
+          "segment": "電子材料事業",
+          "values": [
+            265459.0,
+            850440.0
+          ],
+          "variance": 584981.0
+        },
+        {
+          "segment": "機能材料事業",
+          "values": [
+            445278.0,
+            425250.0
+          ],
+          "variance": 20028.0
+        },
+        {
+          "segment": "加工・商事・技術サービス事業",
+          "values": [
+            1015249.0,
+            128970.0
+          ],
+          "variance": 886279.0
+        }
+      ]
+    },
+    "6501_2022": {
+      "num_files": 5,
+      "segment_counts": [
+        0,
+        8,
+        0,
+        8,
+        8
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "ALL_NA",
+        "NO_SEGMENT",
+        "ALL_NA",
+        "OK"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": []
+    },
+    "6758_2022": {
+      "num_files": 8,
+      "segment_counts": [
+        4,
+        5,
+        0,
+        0,
+        6,
+        5,
+        0,
+        0
+      ],
+      "issue_types": [
+        "ALL_SAME",
+        "OK",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "PARTIAL_NA",
+        "OK",
+        "NO_SEGMENT",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": [
+        {
+          "segment": "G&N S分野",
+          "values": [
+            8396700.0,
+            2739800.0,
+            2739800.0,
+            2739800.0
+          ],
+          "variance": 5656900.0
+        },
+        {
+          "segment": "EP&S分野",
+          "values": [
+            8396700.0,
+            2339200.0,
+            2339200.0,
+            1139700.0
+          ],
+          "variance": 7257000.0
+        },
+        {
+          "segment": "I&SS分野",
+          "values": [
+            8396700.0,
+            1076400.0,
+            1076400.0,
+            2339200.0
+          ],
+          "variance": 7320300.0
+        },
+        {
+          "segment": "金融分野",
+          "values": [
+            8396700.0,
+            1524811.0,
+            1076400.0
+          ],
+          "variance": 7320300.0
+        }
+      ]
+    },
+    "6758_2023": {
+      "num_files": 2,
+      "segment_counts": [
+        6,
+        0
+      ],
+      "issue_types": [
+        "ALL_NA",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": []
+    },
+    "7203_2022": {
+      "num_files": 11,
+      "segment_counts": [
+        3,
+        3,
+        0,
+        0,
+        2,
+        2,
+        2,
+        0,
+        2,
+        0,
+        0
+      ],
+      "issue_types": [
+        "ALL_NA",
+        "ALL_NA",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "OK",
+        "OK",
+        "OK",
+        "NO_SEGMENT",
+        "OK",
+        "NO_SEGMENT",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": [
+        {
+          "segment": "自動車事業",
+          "values": [
+            8214740.0,
+            25103190.0,
+            25103190.0,
+            25103190.0
+          ],
+          "variance": 16888450.0
+        },
+        {
+          "segment": "金融事業",
+          "values": [
+            10897946.0,
+            2162237.0,
+            2162237.0,
+            2162237.0
+          ],
+          "variance": 8735709.0
+        }
+      ]
+    },
+    "7203_2023": {
+      "num_files": 2,
+      "segment_counts": [
+        8,
+        3
+      ],
+      "issue_types": [
+        "OK",
+        "OK"
+      ],
+      "issue_type_variance": false,
+      "revenue_variance": [
+        {
+          "segment": "自動車事業",
+          "values": [
+            820000.0,
+            33820000.0
+          ],
+          "variance": 33000000.0
+        },
+        {
+          "segment": "金融事業",
+          "values": [
+            809600.0,
+            2809600.0
+          ],
+          "variance": 2000000.0
+        },
+        {
+          "segment": "その他事業",
+          "values": [
+            224900.0,
+            1224900.0
+          ],
+          "variance": 1000000.0
+        }
+      ]
+    },
+    "7974_2022": {
+      "num_files": 5,
+      "segment_counts": [
+        0,
+        1,
+        2,
+        2,
+        0
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "ALL_NA",
+        "OK",
+        "OK",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": []
+    },
+    "8306_2022": {
+      "num_files": 5,
+      "segment_counts": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "NO_SEGMENT",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": false,
+      "revenue_variance": []
+    },
+    "9983_2022": {
+      "num_files": 5,
+      "segment_counts": [
+        4,
+        4,
+        4,
+        0,
+        4
+      ],
+      "issue_types": [
+        "OK",
+        "OK",
+        "PARTIAL_NA",
+        "NO_SEGMENT",
+        "OK"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": [
+        {
+          "segment": "国内ユニクロ事業",
+          "values": [
+            810200.0,
+            810200.0,
+            810200.0,
+            810200.0
+          ],
+          "variance": 0.0
+        },
+        {
+          "segment": "海外ユニクロ事業",
+          "values": [
+            118700.0,
+            1118700.0,
+            1118700.0,
+            1118700.0
+          ],
+          "variance": 1000000.0
+        },
+        {
+          "segment": "ジーユー事業",
+          "values": [
+            4800.0,
+            4800.0,
+            249438.0
+          ],
+          "variance": 244638.0
+        },
+        {
+          "segment": "グローバルブランド事業",
+          "values": [
+            1300.0,
+            1300.0,
+            108204.0
+          ],
+          "variance": 106904.0
+        }
+      ]
+    },
+    "9984_2022": {
+      "num_files": 5,
+      "segment_counts": [
+        0,
+        5,
+        0,
+        5,
+        0
+      ],
+      "issue_types": [
+        "NO_SEGMENT",
+        "OK",
+        "NO_SEGMENT",
+        "OK",
+        "NO_SEGMENT"
+      ],
+      "issue_type_variance": true,
+      "revenue_variance": []
+    }
+  }
+}

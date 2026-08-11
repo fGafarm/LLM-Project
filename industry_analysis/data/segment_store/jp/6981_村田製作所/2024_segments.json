@@ -1,0 +1,116 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6981",
+  "company_name": "村田製作所",
+  "edinet_code": "E01959",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-03-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6981_株式会社村田製作所_20240331_有報_S100TSIJ.zip",
+  "segment_count": 4,
+  "segments": [
+    {
+      "segment_id": "E01914_ComponentsReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01914-000:ComponentsReportableSegmentsMember",
+      "segment_label_ja": "コンポーネント",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 933771000000.0,
+        "revenue_total": 942512000000.0,
+        "operating_profit": 234181000000.0,
+        "segment_assets": 1779194000000.0,
+        "employees": 39450,
+        "capex": 138231000000.0,
+        "depreciation": 98461000000.0,
+        "rd_expense": 37591000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "revenue_total": "RevenueIFRS",
+        "operating_profit": "OperatingProfitLossIFRS",
+        "segment_assets": "AssetsIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01914_DevicesAndModulesReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01914-000:DevicesAndModulesReportableSegmentsMember",
+      "segment_label_ja": "デバイス・モジュール",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 695236000000.0,
+        "revenue_total": 695251000000.0,
+        "operating_profit": -12999000000.0,
+        "segment_assets": 1205362000000.0,
+        "employees": 28074,
+        "capex": 72642000000.0,
+        "depreciation": 73686000000.0,
+        "rd_expense": 88753000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "revenue_total": "RevenueIFRS",
+        "operating_profit": "OperatingProfitLossIFRS",
+        "segment_assets": "AssetsIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_OtherReportableSegmentsMember",
+      "segment_member_qname": "jpcrp_cor:OtherReportableSegmentsMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 11151000000.0,
+        "revenue_total": 67506000000.0,
+        "operating_profit": -5735000000.0,
+        "segment_assets": 53339000000.0,
+        "employees": 1996,
+        "capex": 8658000000.0,
+        "depreciation": 3726000000.0,
+        "rd_expense": 6158000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "revenue_total": "RevenueIFRS",
+        "operating_profit": "OperatingProfitLossIFRS",
+        "segment_assets": "AssetsIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 3645
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": "消去又は全社",
+    "segment_label_en": null,
+    "values": {
+      "revenue_total": -65111000000.0
+    },
+    "source_concepts": {
+      "revenue_total": "RevenueIFRS"
+    }
+  }
+}

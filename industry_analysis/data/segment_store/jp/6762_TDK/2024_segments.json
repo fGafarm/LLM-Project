@@ -1,0 +1,140 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6762",
+  "company_name": "TDK",
+  "edinet_code": "E01870X",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-03-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6762_ＴＤＫ株式会社_20240331_有報_S100TOOW.zip",
+  "segment_count": 6,
+  "segments": [
+    {
+      "segment_id": "E01780_PassiveComponentsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01780-000:PassiveComponentsReportableSegmentMember",
+      "segment_label_ja": "受動部品",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 53886000000.0,
+        "segment_assets": 906017000000.0,
+        "employees": 33678,
+        "capex": 81374000000.0,
+        "depreciation": 48312000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "segment_assets": "AssetsIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "E01780_SensorApplicationProductsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01780-000:SensorApplicationProductsReportableSegmentMember",
+      "segment_label_ja": "センサ応用製品",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 6042000000.0,
+        "segment_assets": 386344000000.0,
+        "employees": 7567,
+        "capex": 34341000000.0,
+        "depreciation": 18514000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "segment_assets": "AssetsIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "E01780_MagneticApplicationProductsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01780-000:MagneticApplicationProductsReportableSegmentMember",
+      "segment_label_ja": "磁気応用製品",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": -35589000000.0,
+        "segment_assets": 476949000000.0,
+        "employees": 9297,
+        "capex": 23006000000.0,
+        "depreciation": 24608000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "segment_assets": "AssetsIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "E01780_EnergyApplicationProductsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01780-000:EnergyApplicationProductsReportableSegmentMember",
+      "segment_label_ja": "エナジー応用製品",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 195654000000.0,
+        "segment_assets": 1786018000000.0,
+        "employees": 43198,
+        "capex": 70417000000.0,
+        "depreciation": 88345000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "segment_assets": "AssetsIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "std_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_member_qname": "jpcrp_cor:OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": -1799000000.0,
+        "segment_assets": 67616000000.0,
+        "employees": 5239,
+        "depreciation": 1426000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "segment_assets": "AssetsIFRS",
+        "employees": "NumberOfEmployees",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 2474
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "operating_profit": -45301000000.0,
+      "segment_assets": -207640000000.0,
+      "depreciation": 9341000000.0
+    },
+    "source_concepts": {
+      "operating_profit": "OperatingProfitLossIFRS",
+      "segment_assets": "AssetsIFRS",
+      "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+    }
+  }
+}

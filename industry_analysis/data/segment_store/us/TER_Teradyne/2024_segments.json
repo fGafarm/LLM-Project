@@ -1,0 +1,53 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "TER",
+  "company_name": "Teradyne",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 2,
+  "segments": [
+    {
+      "segment_id": "TER_Semiconductor_Test",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Semiconductor Test",
+      "values": {
+        "revenue_external": 2123920000,
+        "revenue_total": 2123920000,
+        "operating_profit": 558168000,
+        "segment_assets": 1287219000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "The Semiconductor Test segment includes operations related to the design, manufacturing and marketing of semiconductor test products and services inclusive of storage and system level test products."
+    },
+    {
+      "segment_id": "TER_Robotics",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Robotics",
+      "values": {
+        "revenue_external": 364848000,
+        "revenue_total": 364848000,
+        "operating_profit": -77552000,
+        "segment_assets": 742017000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "The Robotics segment includes operations related to the design, manufacturing and marketing of collaborative robotic arms and autonomous mobile robots."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": 62746000,
+    "note": "System Test and Wireless Test are included within the 'All other' segments category."
+  },
+  "reporting_note": "As of December 31, 2024, Teradyne has two reportable segments (Semiconductor Test and Robotics). Each of the reportable segments continues to represent an individual operating segment.",
+  "consolidated_totals_reference": {
+    "revenue": 2819880000,
+    "operating_income": 593788000,
+    "total_assets": 3708714000
+  }
+}

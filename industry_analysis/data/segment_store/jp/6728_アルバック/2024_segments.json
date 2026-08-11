@@ -1,0 +1,125 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6728",
+  "company_name": "アルバック",
+  "edinet_code": "E01870",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-06-30",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6728_株式会社　アルバック_20240630_有報_S100UFES.zip",
+  "segment_count": 3,
+  "segments": [
+    {
+      "segment_id": "E01589_VacuumEquipmentBusinessReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01589-000:VacuumEquipmentBusinessReportableSegmentsMember",
+      "segment_label_ja": "真空機器事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 212314000000.0,
+        "revenue_total": 212959000000.0,
+        "revenue_internal": 645000000.0,
+        "operating_profit": 26146000000.0,
+        "segment_assets": 318979000000.0,
+        "employees": 4601,
+        "capex": 19580000000.0,
+        "depreciation": 7235000000.0,
+        "rd_expense": 12403000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01589_VacuumApplicationBusinessReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01589-000:VacuumApplicationBusinessReportableSegmentsMember",
+      "segment_label_ja": "真空応用事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 48801000000.0,
+        "revenue_total": 52520000000.0,
+        "revenue_internal": 3719000000.0,
+        "operating_profit": 3563000000.0,
+        "segment_assets": 66640000000.0,
+        "employees": 938,
+        "capex": 1958000000.0,
+        "depreciation": 1948000000.0,
+        "rd_expense": 910000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 695
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    }
+  ],
+  "reportable_total": {
+    "segment_id": "std_ReportableSegmentsMember",
+    "segment_member_qname": "jpcrp_cor:ReportableSegmentsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_external": 261115000000.0,
+      "revenue_total": 265480000000.0,
+      "revenue_internal": 4364000000.0,
+      "operating_profit": 29708000000.0,
+      "segment_assets": 385618000000.0,
+      "capex": 21539000000.0,
+      "depreciation": 9183000000.0
+    },
+    "source_concepts": {
+      "revenue_external": "RevenuesFromExternalCustomers",
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "segment_assets": "Assets",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  },
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_total": -4364000000.0,
+      "revenue_internal": -4364000000.0,
+      "operating_profit": 62000000.0,
+      "segment_assets": 3035000000.0,
+      "depreciation": -2000000.0
+    },
+    "source_concepts": {
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "segment_assets": "Assets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  }
+}

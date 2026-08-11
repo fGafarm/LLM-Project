@@ -1,0 +1,81 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "MU",
+  "company_name": "Micron",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 4,
+  "segments": [
+    {
+      "segment_id": "MU_Compute_and_Networking_Business_Unit_CNBU_",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Compute and Networking Business Unit (CNBU)",
+      "values": {
+        "revenue_external": 9513000000,
+        "revenue_total": 9513000000,
+        "operating_profit": 980000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Includes memory products and solutions sold into the data center, PC, graphics, and networking markets."
+    },
+    {
+      "segment_id": "MU_Mobile_Business_Unit_MBU_",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Mobile Business Unit (MBU)",
+      "values": {
+        "revenue_external": 6354000000,
+        "revenue_total": 6354000000,
+        "operating_profit": 114000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Includes memory and storage products sold into the smartphone and other mobile-device markets."
+    },
+    {
+      "segment_id": "MU_Embedded_Business_Unit_EBU_",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Embedded Business Unit (EBU)",
+      "values": {
+        "revenue_external": 4614000000,
+        "revenue_total": 4614000000,
+        "operating_profit": 199000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Includes memory and storage products and solutions sold into the intelligent edge through the automotive, industrial, and consumer embedded markets."
+    },
+    {
+      "segment_id": "MU_Storage_Business_Unit_SBU_",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Storage Business Unit (SBU)",
+      "values": {
+        "revenue_external": 4592000000,
+        "revenue_total": 4592000000,
+        "operating_profit": -362000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Includes SSDs and component-level storage solutions sold into the data center, PC, and consumer markets."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "Segments include CNBU, MBU, EBU, and SBU. 'All Other' revenue ($38M) and operating income ($17M) are included in reconciling items. No corporate eliminations data disclosed."
+  },
+  "reporting_note": "Data converted from millions to actual dollars. Segment assets not disclosed in filing. 'All Other' segment included in reconciling items per SEC guidelines.",
+  "consolidated_totals_reference": {
+    "revenue": 25111000000,
+    "operating_income": 1304000000,
+    "total_assets": 69416000000
+  }
+}

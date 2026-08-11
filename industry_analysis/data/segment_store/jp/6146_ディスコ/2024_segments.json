@@ -1,0 +1,31 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6146",
+  "company_name": "ディスコ",
+  "edinet_code": "E02052",
+  "fiscal_year": 2024,
+  "single_segment_fallback": true,
+  "fiscal_period_end": null,
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6146_株式会社ディスコ_20240331_有報_S100TNLG.zip",
+  "segment_count": 1,
+  "segments": [
+    {
+      "segment_id": "6146_WHOLE_COMPANY",
+      "segment_member_qname": "",
+      "segment_label_ja": "ディスコ(全社 / 単一セグメント)",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 307554000000.0,
+        "revenue_total": 307554000000.0,
+        "operating_profit": 122393000000.0,
+        "segment_assets": 556058000000.0,
+        "capex": 16519000000.0
+      },
+      "source_concepts": {
+        "note": "xbrl_store aggregate (single segment)"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": null
+}

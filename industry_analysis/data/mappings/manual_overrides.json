@@ -1,0 +1,98 @@
+{
+  "_comment": "LLM/rule の明らかな誤分類を手動訂正。キーは (company_code, segment_name_normalized_short). 完全一致で override",
+  "overrides": [
+    {
+      "company_code": "AMAT",
+      "segment_name_match": "Semiconductor Systems",
+      "new_category_id": "semi.equipment",
+      "new_category_label": "半導体製造装置",
+      "rationale": "AMAT の Semiconductor Systems は Etch/CVD/CMP/Epi など複合装置。露光装置ではない(ASML 専業)。"
+    },
+    {
+      "company_code": "AMAT",
+      "segment_name_match": "Display",
+      "new_category_id": "_other.non_semi",
+      "new_category_label": "半導体以外の事業",
+      "rationale": "Display 事業は OLED 向け装置。半導体装置ではない。"
+    },
+    {
+      "company_code": "TER",
+      "segment_name_match": "Semiconductor Test",
+      "new_category_id": "semi.equipment.test",
+      "new_category_label": "テスタ・プローバ",
+      "rationale": "Teradyne の Semiconductor Test はテスタ。メモリではない。"
+    },
+    {
+      "company_code": "6965",
+      "segment_name_match": "画像計測機器",
+      "new_category_id": "_other.non_semi",
+      "new_category_label": "半導体以外の事業",
+      "rationale": "浜松ホトニクスの画像計測機器はX線・医療・産業用計測。CMOSイメージセンサーと混同しやすいがデバイスは別。"
+    },
+    {
+      "company_code": "6965",
+      "segment_name_match": "その他・全社",
+      "new_category_id": "_other.unspecified",
+      "new_category_label": "未分類・全社"
+    },
+    {
+      "company_code": "4004",
+      "segment_name_match": "その他・全社",
+      "new_category_id": "_other.unspecified",
+      "new_category_label": "未分類・全社"
+    },
+    {
+      "company_code": "6762",
+      "segment_name_match": "エナジー応用製品",
+      "new_category_id": "_other.non_semi",
+      "new_category_label": "半導体以外の事業",
+      "rationale": "TDK のエナジー応用製品はリチウムイオンバッテリー等で半導体ではない。"
+    },
+    {
+      "company_code": "6762",
+      "segment_name_match": "センサ応用製品",
+      "new_category_id": "semi.device.analog",
+      "new_category_label": "アナログ・ミックスドシグナル",
+      "rationale": "TDK センサは MEMS/磁気センサ、半導体カテゴリに含める。"
+    },
+    {
+      "company_code": "4183",
+      "segment_name_match": "ライフ&ヘルスケア・ソリューション",
+      "new_category_id": "_other.non_semi",
+      "new_category_label": "半導体以外の事業"
+    },
+    {
+      "company_code": "4183",
+      "segment_name_match": "モビリティソリューション",
+      "new_category_id": "_other.non_semi",
+      "new_category_label": "半導体以外の事業"
+    },
+    {
+      "company_code": "4183",
+      "segment_name_match": "ICTソリューション",
+      "new_category_id": "semi.materials.other",
+      "new_category_label": "その他電子材料",
+      "rationale": "三井化学 ICT ソリューションは半導体封止材等の電子材料。"
+    },
+    {
+      "company_code": "4183",
+      "segment_name_match": "ベーシック&グリーン・マテリアルズ",
+      "new_category_id": "_other.non_semi",
+      "new_category_label": "半導体以外の事業",
+      "rationale": "PP/PE/フェノール等基礎化学品で半導体ではない。"
+    },
+    {
+      "company_code": "6504",
+      "segment_name_match": "食品流通",
+      "new_category_id": "_other.non_semi",
+      "new_category_label": "半導体以外の事業"
+    },
+    {
+      "company_code": "LRCX",
+      "segment_name_match": "manufacturing and servicing of wafer processing semiconductor manufacturing equipment",
+      "new_category_id": "semi.equipment.etch",
+      "new_category_label": "エッチング装置",
+      "rationale": "Lam Research の主力は Etch 装置(CVD/ALD の一部もあるが、Etch 寡占プレーヤー)"
+    }
+  ]
+}

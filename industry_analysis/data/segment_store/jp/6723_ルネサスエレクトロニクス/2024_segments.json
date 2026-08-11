@@ -1,0 +1,113 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6723",
+  "company_name": "ルネサスエレクトロニクス",
+  "edinet_code": "E02694",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2023-12-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6723_ルネサスエレクトロニクス株式会社_unknown_訂正有報_S100TDHU.zip",
+  "segment_count": 4,
+  "segments": [
+    {
+      "segment_id": "E02081_AutomotiveReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E02081-000:AutomotiveReportableSegmentMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 695040000000.0,
+        "operating_profit": 238713000000.0,
+        "depreciation": 40492000000.0,
+        "revenue_total": 695040000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "operating_profit": "OperatingProfitLossIFRS",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "revenue_total": "synthesized_from_external_plus_internal"
+      }
+    },
+    {
+      "segment_id": "E02081_IndustrialInfrastructureIoTReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E02081-000:IndustrialInfrastructureIoTReportableSegmentMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 764707000000.0,
+        "operating_profit": 259029000000.0,
+        "depreciation": 39760000000.0,
+        "revenue_total": 764707000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "operating_profit": "OperatingProfitLossIFRS",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "revenue_total": "synthesized_from_external_plus_internal"
+      }
+    },
+    {
+      "segment_id": "std_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_member_qname": "jpcrp_cor:OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 9960000000.0,
+        "operating_profit": 3482000000.0,
+        "revenue_total": 9960000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenueFromExternalCustomersIFRS",
+        "operating_profit": "OperatingProfitLossIFRS",
+        "revenue_total": "synthesized_from_external_plus_internal"
+      }
+    },
+    {
+      "segment_id": "E02081_AdjustmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E02081-000:AdjustmentMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 414000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS"
+      }
+    }
+  ],
+  "reportable_total": {
+    "segment_id": "std_TotalOfReportableSegmentsAndOthersMember",
+    "segment_member_qname": "jpcrp_cor:TotalOfReportableSegmentsAndOthersMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_external": 1469707000000.0,
+      "operating_profit": 501638000000.0,
+      "depreciation": 80252000000.0,
+      "revenue_total": 1469707000000.0
+    },
+    "source_concepts": {
+      "revenue_external": "RevenueFromExternalCustomersIFRS",
+      "operating_profit": "OperatingProfitLossIFRS",
+      "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+      "revenue_total": "synthesized_from_external_plus_internal"
+    }
+  },
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_external": -292000000.0,
+      "operating_profit": -110872000000.0,
+      "depreciation": 105757000000.0,
+      "revenue_total": -292000000.0
+    },
+    "source_concepts": {
+      "revenue_external": "RevenueFromExternalCustomersIFRS",
+      "operating_profit": "OperatingProfitLossIFRS",
+      "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+      "revenue_total": "synthesized_from_external_plus_internal"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "TXN",
+  "company_name": "Texas Instruments",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 3,
+  "segments": [
+    {
+      "segment_id": "TXN_Analog",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Analog",
+      "values": {
+        "revenue_external": 12161000000,
+        "revenue_total": 12161000000,
+        "operating_profit": 4608000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells analog and signal chain products, including power management and signal processing solutions for a wide range of applications."
+    },
+    {
+      "segment_id": "TXN_Embedded_Processing",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Embedded Processing",
+      "values": {
+        "revenue_external": 2533000000,
+        "revenue_total": 2533000000,
+        "operating_profit": 352000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides microcontrollers and processors for embedded systems, serving industries such as automotive, industrial, and consumer electronics."
+    },
+    {
+      "segment_id": "TXN_Other",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Other",
+      "values": {
+        "revenue_external": 947000000,
+        "revenue_total": 947000000,
+        "operating_profit": 505000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Includes DLP® products, calculators, and custom ASICs, serving niche markets and specialized applications."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "No corporate eliminations or reconciliation details disclosed in the provided excerpt."
+  },
+  "reporting_note": "Data reflects 2024 fiscal year. Segment assets not disclosed in the filing. Revenue and operating income figures converted from millions to actual dollars.",
+  "consolidated_totals_reference": {
+    "revenue": 15641000000,
+    "operating_income": 5465000000,
+    "total_assets": 35509000000
+  }
+}

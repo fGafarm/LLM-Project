@@ -1,0 +1,91 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6315",
+  "company_name": "TOWA",
+  "edinet_code": "E01770",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-03-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6315_ＴＯＷＡ株式会社_20240331_有報_S100TSSM.zip",
+  "segment_count": 3,
+  "segments": [
+    {
+      "segment_id": "E01708_SemiconductorEquipmentReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01708-000:SemiconductorEquipmentReportableSegmentsMember",
+      "segment_label_ja": "半導体製造装置事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 45903845000.0,
+        "revenue_total": 45903845000.0,
+        "operating_profit": 8097933000.0,
+        "segment_assets": 83366305000.0,
+        "employees": 1809,
+        "capex": 1665669000.0,
+        "depreciation": 2347829000.0,
+        "rd_expense": 885000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01708_FinePlasticMoldReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01708-000:FinePlasticMoldReportableSegmentsMember",
+      "segment_label_ja": "ファインプラスチック成形品事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 2150867000.0,
+        "revenue_total": 2150867000.0,
+        "operating_profit": 458335000.0,
+        "segment_assets": 2709307000.0,
+        "employees": 76,
+        "capex": 275317000.0,
+        "depreciation": 111341000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation"
+      }
+    },
+    {
+      "segment_id": "E01708_LaserProcessingMachinesMember",
+      "segment_member_qname": "jpcrp030000-asr_E01708-000:LaserProcessingMachinesMember",
+      "segment_label_ja": "レーザ加工装置事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 2417087000.0,
+        "revenue_total": 2417087000.0,
+        "operating_profit": 105560000.0,
+        "segment_assets": 1786220000.0,
+        "employees": 100,
+        "capex": 63364000.0,
+        "depreciation": 50061000.0,
+        "rd_expense": 78000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": null
+}

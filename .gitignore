@@ -33,6 +33,14 @@ us_financial_analysis/us_xbrl_store/
 # StockFlow lives in its own repo (fGafarm/kinmyakucode)
 StockFlow/
 
+# Generated outputs (large, regenerable locally)
+/output/
+/output_v10/
+/rag_db/
+financial_analysis_system/financial_analysis_system/
+us_financial_analysis/output/
+us_financial_analysis/*.log
+
 # Reports (large, locally generated)
 financial_analysis_system/Report*/
 financial_analysis_system/log/

@@ -1,0 +1,66 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "AMAT",
+  "company_name": "Applied Materials",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 3,
+  "segments": [
+    {
+      "segment_id": "AMAT_Semiconductor_Systems",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Semiconductor Systems",
+      "values": {
+        "revenue_external": 18797000000,
+        "revenue_total": 18797000000,
+        "operating_profit": 6790000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides semiconductor manufacturing equipment and services for the production of integrated circuits, including systems for deposition, etch, and lithography processes."
+    },
+    {
+      "segment_id": "AMAT_Applied_Global_Services",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Applied Global Services",
+      "values": {
+        "revenue_external": 5543000000,
+        "revenue_total": 5543000000,
+        "operating_profit": 1555000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Offers spare parts, equipment maintenance, and service agreements for semiconductor manufacturing equipment."
+    },
+    {
+      "segment_id": "AMAT_Display",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Display",
+      "values": {
+        "revenue_external": 1331000000,
+        "revenue_total": 1331000000,
+        "operating_profit": 243000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides equipment and services for the production of flat panel displays, including deposition and etch systems."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": 114000000,
+    "corporate_eliminations_operating_income": -800000000,
+    "note": "Includes unallocated net revenue, cost of products sold, and expenses, as well as severance charges."
+  },
+  "reporting_note": "Segment data for 2024 is derived from the reconciliation table in the 10-K, with values converted from millions to actual dollars.",
+  "consolidated_totals_reference": {
+    "revenue": 27176000000,
+    "operating_income": 7867000000,
+    "total_assets": 34409000000
+  }
+}

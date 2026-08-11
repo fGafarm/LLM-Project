@@ -1,0 +1,31 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "3436",
+  "company_name": "SUMCO",
+  "edinet_code": "E01151",
+  "fiscal_year": 2024,
+  "single_segment_fallback": true,
+  "fiscal_period_end": null,
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\3436_株式会社ＳＵＭＣＯ_unknown_訂正有報_S100TD5S.zip",
+  "segment_count": 1,
+  "segments": [
+    {
+      "segment_id": "3436_WHOLE_COMPANY",
+      "segment_member_qname": "",
+      "segment_label_ja": "SUMCO(全社 / 単一セグメント)",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 425941000000.0,
+        "revenue_total": 425941000000.0,
+        "operating_profit": 72627000000.0,
+        "segment_assets": 1073087000000.0,
+        "capex": 315415000000.0
+      },
+      "source_concepts": {
+        "note": "xbrl_store aggregate (single segment)"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": null
+}

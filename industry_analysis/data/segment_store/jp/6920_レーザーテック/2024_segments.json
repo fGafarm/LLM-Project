@@ -1,0 +1,31 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6920",
+  "company_name": "レーザーテック",
+  "edinet_code": "E02304",
+  "fiscal_year": 2024,
+  "single_segment_fallback": true,
+  "fiscal_period_end": null,
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6920_レーザーテック株式会社_20240630_有報_S100UFKD.zip",
+  "segment_count": 1,
+  "segments": [
+    {
+      "segment_id": "6920_WHOLE_COMPANY",
+      "segment_member_qname": "",
+      "segment_label_ja": "レーザーテック(全社 / 単一セグメント)",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 213506000000.0,
+        "revenue_total": 213506000000.0,
+        "operating_profit": 82021000000.0,
+        "segment_assets": 271288000000.0,
+        "capex": 2533000000.0
+      },
+      "source_concepts": {
+        "note": "xbrl_store aggregate (single segment)"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": null
+}

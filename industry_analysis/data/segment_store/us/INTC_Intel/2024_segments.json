@@ -1,0 +1,66 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "INTC",
+  "company_name": "Intel",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 3,
+  "segments": [
+    {
+      "segment_id": "INTC_Intel_Products",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Intel Products",
+      "values": {
+        "revenue_external": 48949000000,
+        "revenue_total": 48949000000,
+        "operating_profit": 13189000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells fabless semiconductor products, including CPUs, chipsets, and other computing components."
+    },
+    {
+      "segment_id": "INTC_Intel_Foundry",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Intel Foundry",
+      "values": {
+        "revenue_external": 17543000000,
+        "revenue_total": 17543000000,
+        "operating_profit": -13408000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides semiconductor foundry services, manufacturing chips for third-party customers."
+    },
+    {
+      "segment_id": "INTC_All_Other",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "All Other",
+      "values": {
+        "revenue_external": 3824000000,
+        "revenue_total": 3824000000,
+        "operating_profit": -84000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Includes non-core businesses and other operations not classified under Intel Products or Intel Foundry."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": -17215000000,
+    "corporate_eliminations_operating_income": -157000000,
+    "note": "Intersegment eliminations and corporate unallocated expenses are reconciled to consolidated totals."
+  },
+  "reporting_note": "Segments reflect separate fabless semiconductor and foundry operations with intersegment eliminations for consolidation.",
+  "consolidated_totals_reference": {
+    "revenue": 53101000000,
+    "operating_income": -11678000000,
+    "total_assets": 196485000000
+  }
+}

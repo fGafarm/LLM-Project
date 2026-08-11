@@ -1,0 +1,35 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "LRCX",
+  "company_name": "Lam Research",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 1,
+  "segments": [
+    {
+      "segment_id": "LRCX_manufacturing_and_servicing_of_wafer_processing_semiconductor_manufacturing_equipment",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "manufacturing and servicing of wafer processing semiconductor manufacturing equipment",
+      "values": {
+        "revenue_external": 14905386000,
+        "revenue_total": 14905386000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Manufactures and services wafer processing semiconductor manufacturing equipment."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "The company has one reportable segment. Geographic revenue and asset data are disclosed separately and not classified as segments."
+  },
+  "reporting_note": "The company operates in one aggregated reportable segment: manufacturing and servicing of wafer processing semiconductor manufacturing equipment. Geographic revenue and long-lived asset data are disclosed separately in Note 19 but are not classified as reportable segments.",
+  "consolidated_totals_reference": {
+    "revenue": 14905386000,
+    "operating_income": 4263913000,
+    "total_assets": 18744728000
+  }
+}

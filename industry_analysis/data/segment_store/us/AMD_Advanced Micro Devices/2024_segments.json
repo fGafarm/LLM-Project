@@ -1,0 +1,81 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "AMD",
+  "company_name": "Advanced Micro Devices",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 4,
+  "segments": [
+    {
+      "segment_id": "AMD_Data_Center",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Data Center",
+      "values": {
+        "revenue_external": 12579000000,
+        "revenue_total": 12579000000,
+        "operating_profit": 3482000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells CPUs, GPUs, and other components for data center applications."
+    },
+    {
+      "segment_id": "AMD_Client",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Client",
+      "values": {
+        "revenue_external": 7054000000,
+        "revenue_total": 7054000000,
+        "operating_profit": 897000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells CPUs, APUs, and chipsets for desktops and notebooks."
+    },
+    {
+      "segment_id": "AMD_Gaming",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Gaming",
+      "values": {
+        "revenue_external": 2595000000,
+        "revenue_total": 2595000000,
+        "operating_profit": 290000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells discrete GPUs, semi-custom SoC products, and development services for gaming."
+    },
+    {
+      "segment_id": "AMD_Embedded",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Embedded",
+      "values": {
+        "revenue_external": 3557000000,
+        "revenue_total": 3557000000,
+        "operating_profit": 1421000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells embedded CPUs, GPUs, APUs, FPGAs, SOMs, and Adaptive SoC products for industrial and embedded applications."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "All Other category includes amortization, stock-based compensation, acquisition-related costs, restructuring charges, and licensing gains, but no segment assets are allocated to reportable segments."
+  },
+  "reporting_note": "The company does not discretely allocate assets to its operating segments.",
+  "consolidated_totals_reference": {
+    "revenue": 25785000000,
+    "operating_income": 1900000000,
+    "total_assets": 69226000000
+  }
+}

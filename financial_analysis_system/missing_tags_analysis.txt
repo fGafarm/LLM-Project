@@ -1,0 +1,14 @@
+=== IFRS Tags found in both companies ===
+Common jpigp_cor tags: 116
+
+P/L Important Tags (both companies have):
+  CostOfSalesIFRS
+    Hitachi: 7705981000000.0
+    Uniqlo: 1094263000000.0
+  GrossProfitIFRS
+    Hitachi: 2558621000000.0
+    Uniqlo: 1206859000000.0
+  NetCashProvidedByUsedInOperatingActivitiesIFRS
+    Hitachi: 729943000000.0
+    Uniqlo: 430817000000.0
+  NotesRevenueConsolidatedFinancialStatementsIFRSTextBlock

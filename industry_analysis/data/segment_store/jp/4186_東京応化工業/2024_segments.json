@@ -1,0 +1,27 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "4186",
+  "company_name": "東京応化工業",
+  "edinet_code": "E00833",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-12-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\4186_東京応化工業株式会社_20241231_有報_S100VIMD.zip",
+  "segment_count": 1,
+  "segments": [
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 1996
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": null
+}

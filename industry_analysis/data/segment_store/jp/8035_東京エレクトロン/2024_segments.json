@@ -1,0 +1,31 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "8035",
+  "company_name": "東京エレクトロン",
+  "edinet_code": "E02652",
+  "fiscal_year": 2024,
+  "single_segment_fallback": true,
+  "fiscal_period_end": null,
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\8035_東京エレクトロン株式会社_20240331_有報_S100TM39.zip",
+  "segment_count": 1,
+  "segments": [
+    {
+      "segment_id": "8035_WHOLE_COMPANY",
+      "segment_member_qname": "",
+      "segment_label_ja": "東京エレクトロン(全社 / 単一セグメント)",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 1830527000000.0,
+        "revenue_total": 1830527000000.0,
+        "operating_profit": 463185000000.0,
+        "segment_assets": 2456462000000.0,
+        "capex": 121800000000.0
+      },
+      "source_concepts": {
+        "note": "xbrl_store aggregate (single segment)"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": null
+}

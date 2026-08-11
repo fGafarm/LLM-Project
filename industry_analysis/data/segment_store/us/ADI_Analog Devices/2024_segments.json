@@ -1,0 +1,77 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "ADI",
+  "company_name": "Analog Devices",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 4,
+  "segments": [
+    {
+      "segment_id": "ADI_Industrial",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Industrial",
+      "values": {
+        "revenue_external": 4314280000,
+        "revenue_total": 4314280000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells products used in industrial applications, including automation, process control, and industrial equipment."
+    },
+    {
+      "segment_id": "ADI_Automotive",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Automotive",
+      "values": {
+        "revenue_external": 2827439000,
+        "revenue_total": 2827439000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides semiconductor solutions for automotive applications such as safety systems, infotainment, and power management."
+    },
+    {
+      "segment_id": "ADI_Communications",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Communications",
+      "values": {
+        "revenue_external": 1080496000,
+        "revenue_total": 1080496000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Offers analog and mixed-signal products for communication infrastructure, including wired and wireless networks."
+    },
+    {
+      "segment_id": "ADI_Consumer",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Consumer",
+      "values": {
+        "revenue_external": 1204942000,
+        "revenue_total": 1204942000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells semiconductor components for consumer electronics, including audio, video, and portable devices."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "No explicit corporate eliminations or reconciliation sections disclosed in the provided excerpt."
+  },
+  "reporting_note": "Operating income and segment assets data not disclosed for any segment in the provided 10-K excerpt.",
+  "consolidated_totals_reference": {
+    "revenue": 9427157000,
+    "operating_income": 2032798000,
+    "total_assets": 48228277000
+  }
+}

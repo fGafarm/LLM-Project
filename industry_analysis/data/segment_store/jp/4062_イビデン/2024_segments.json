@@ -1,0 +1,175 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "4062",
+  "company_name": "イビデン",
+  "edinet_code": "E00926",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-03-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\4062_イビデン株式会社_20240331_有報_S100TLL3.zip",
+  "segment_count": 6,
+  "segments": [
+    {
+      "segment_id": "E00775_ElectronicsReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E00775-000:ElectronicsReportableSegmentsMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 190700000000.0,
+        "revenue_total": 190708000000.0,
+        "revenue_internal": 8000000.0,
+        "operating_profit": 27276000000.0,
+        "segment_assets": 381513000000.0,
+        "employees": 5772,
+        "capex": 136938000000.0,
+        "depreciation": 36703000000.0,
+        "rd_expense": 17023000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E00775_CeramicsReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E00775-000:CeramicsReportableSegmentsMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 96481000000.0,
+        "revenue_total": 96519000000.0,
+        "revenue_internal": 37000000.0,
+        "operating_profit": 13356000000.0,
+        "segment_assets": 145751000000.0,
+        "employees": 2487,
+        "capex": 5171000000.0,
+        "depreciation": 4978000000.0,
+        "rd_expense": 3023000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_member_qname": "jpcrp_cor:OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 83329000000.0,
+        "revenue_total": 98348000000.0,
+        "revenue_internal": 15018000000.0,
+        "operating_profit": 7057000000.0,
+        "segment_assets": 135216000000.0,
+        "employees": 2464,
+        "capex": 1866000000.0,
+        "depreciation": 2245000000.0,
+        "rd_expense": 182000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 652
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    },
+    {
+      "segment_id": "E00775_CorporateOtherMember",
+      "segment_member_qname": "jpcrp030000-asr_E00775-000:CorporateOtherMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "capex": 4473000000.0
+      },
+      "source_concepts": {
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc"
+      }
+    },
+    {
+      "segment_id": "std_UnallocatedAmountsAndEliminationMember",
+      "segment_member_qname": "jpcrp_cor:UnallocatedAmountsAndEliminationMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {},
+      "source_concepts": {}
+    }
+  ],
+  "reportable_total": {
+    "segment_id": "std_TotalOfReportableSegmentsAndOthersMember",
+    "segment_member_qname": "jpcrp_cor:TotalOfReportableSegmentsAndOthersMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_external": 370511000000.0,
+      "revenue_total": 385576000000.0,
+      "revenue_internal": 15064000000.0,
+      "operating_profit": 47690000000.0,
+      "segment_assets": 662481000000.0,
+      "capex": 143976000000.0,
+      "depreciation": 43927000000.0
+    },
+    "source_concepts": {
+      "revenue_external": "RevenuesFromExternalCustomers",
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "segment_assets": "Assets",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  },
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_total": -15064000000.0,
+      "revenue_internal": -15064000000.0,
+      "operating_profit": -121000000.0,
+      "segment_assets": 467509000000.0,
+      "capex": 2607000000.0,
+      "depreciation": 2105000000.0
+    },
+    "source_concepts": {
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "segment_assets": "Assets",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  }
+}

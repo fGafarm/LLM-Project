@@ -1,0 +1,206 @@
+# 半導体業界 PoC 対象企業 (JP 20社 + US 15社)
+# value_chain: equipment / materials / devices / components / eda_ip / foundry
+# primary_focus: 半導体セグメントに属する売上比率が目安となる分類(参考情報)
+
+jp:
+  # --- 半導体製造装置 ---
+  - code: "8035"
+    name: 東京エレクトロン
+    edinet: E02652
+    value_chain: equipment
+    primary_focus: 0.99
+    note: 全社実質半導体装置
+  - code: "6857"
+    name: アドバンテスト
+    edinet: E02241
+    value_chain: equipment
+    primary_focus: 0.99
+  - code: "7735"
+    name: SCREEN ホールディングス
+    edinet: E02270
+    value_chain: equipment
+    primary_focus: 0.80
+    note: SPE 以外にグラフィック等
+  - code: "6146"
+    name: ディスコ
+    edinet: E02052
+    value_chain: equipment
+    primary_focus: 0.99
+    note: ダイシング/グラインダ主力
+  - code: "6920"
+    name: レーザーテック
+    edinet: E02304
+    value_chain: equipment
+    primary_focus: 0.95
+    note: EUVマスク検査
+  - code: "6728"
+    name: アルバック
+    edinet: E01870
+    value_chain: equipment
+    primary_focus: 0.60
+  - code: "6315"
+    name: TOWA
+    edinet: E01770
+    value_chain: equipment
+    primary_focus: 0.90
+    note: モールディング装置
+  # --- 半導体材料 ---
+  - code: "4063"
+    name: 信越化学工業
+    edinet: E00776
+    value_chain: materials
+    primary_focus: 0.40
+    note: 電子材料/シリコーン他
+  - code: "3436"
+    name: SUMCO
+    edinet: E01151
+    value_chain: materials
+    primary_focus: 0.99
+  - code: "4186"
+    name: 東京応化工業
+    edinet: E00833
+    value_chain: materials
+    primary_focus: 0.90
+    note: フォトレジスト主力
+  - code: "4062"
+    name: イビデン
+    edinet: E00926
+    value_chain: materials
+    primary_focus: 0.70
+    note: パッケージ基板
+  - code: "4183"
+    name: 三井化学
+    edinet: E00806
+    value_chain: materials
+    primary_focus: 0.10
+  - code: "4004"
+    name: レゾナック・ホールディングス
+    edinet: E00885
+    value_chain: materials
+    primary_focus: 0.50
+    note: 旧昭和電工、半導体材料集約
+  # --- 半導体デバイス/車載・パワー ---
+  - code: "6723"
+    name: ルネサスエレクトロニクス
+    edinet: E02694
+    value_chain: devices
+    primary_focus: 0.99
+  - code: "6963"
+    name: ローム
+    edinet: E02081
+    value_chain: devices
+    primary_focus: 0.95
+  - code: "6504"
+    name: 富士電機
+    edinet: E01738
+    value_chain: devices
+    primary_focus: 0.20
+    note: パワー半導体
+  - code: "6758"
+    name: ソニーグループ
+    edinet: E01777
+    value_chain: devices
+    primary_focus: 0.15
+    note: CMOSイメージセンサー(I&SS)
+  # --- 電子部品(半導体周辺) ---
+  - code: "6981"
+    name: 村田製作所
+    edinet: E01959
+    value_chain: components
+    primary_focus: 0.80
+    note: MLCC他
+  - code: "6762"
+    name: TDK
+    edinet: E01870X  # 仮、要確認
+    value_chain: components
+    primary_focus: 0.50
+  - code: "6965"
+    name: 浜松ホトニクス
+    edinet: E02103
+    value_chain: devices
+    primary_focus: 0.70
+    note: 光半導体/PMT
+
+us:
+  # --- Devices ---
+  - ticker: NVDA
+    name: NVIDIA
+    cik: 1045810
+    value_chain: devices
+    primary_focus: 0.99
+    note: GPU/Accelerated Computing
+  - ticker: AMD
+    name: Advanced Micro Devices
+    cik: 2488
+    value_chain: devices
+    primary_focus: 0.99
+  - ticker: INTC
+    name: Intel
+    cik: 50863
+    value_chain: devices
+    primary_focus: 0.99
+  - ticker: QCOM
+    name: Qualcomm
+    cik: 804328
+    value_chain: devices
+    primary_focus: 0.99
+  - ticker: AVGO
+    name: Broadcom
+    cik: 1730168
+    value_chain: devices
+    primary_focus: 0.70
+    note: Semi + Infrastructure Software
+  - ticker: TXN
+    name: Texas Instruments
+    cik: 97210
+    value_chain: devices
+    primary_focus: 0.99
+  - ticker: MU
+    name: Micron
+    cik: 723125
+    value_chain: devices
+    primary_focus: 0.99
+    note: メモリ
+  - ticker: ADI
+    name: Analog Devices
+    cik: 6281
+    value_chain: devices
+    primary_focus: 0.99
+  # --- Equipment ---
+  - ticker: AMAT
+    name: Applied Materials
+    cik: 6951
+    value_chain: equipment
+    primary_focus: 0.99
+  - ticker: LRCX
+    name: Lam Research
+    cik: 707549
+    value_chain: equipment
+    primary_focus: 0.99
+  - ticker: KLAC
+    name: KLA
+    cik: 319201
+    value_chain: equipment
+    primary_focus: 0.99
+  - ticker: TER
+    name: Teradyne
+    cik: 97210  # 要確認
+    value_chain: equipment
+    primary_focus: 0.80
+  # --- EDA/IP ---
+  - ticker: CDNS
+    name: Cadence Design Systems
+    cik: 813672
+    value_chain: eda_ip
+    primary_focus: 0.99
+  - ticker: SNPS
+    name: Synopsys
+    cik: 883241
+    value_chain: eda_ip
+    primary_focus: 0.99
+  # --- Materials (Specialty) ---
+  - ticker: ENTG
+    name: Entegris
+    cik: 1101302
+    value_chain: materials
+    primary_focus: 0.99

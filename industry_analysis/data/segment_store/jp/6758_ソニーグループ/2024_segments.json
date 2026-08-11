@@ -1,0 +1,211 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6758",
+  "company_name": "ソニーグループ",
+  "edinet_code": "E01777",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-03-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6758_ソニーグループ株式会社_20240331_有報_S100TS7P.zip",
+  "segment_count": 11,
+  "segments": [
+    {
+      "segment_id": "E01777_GameAndNetworkServicesReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01777-000:GameAndNetworkServicesReportableSegmentMember",
+      "segment_label_ja": "ゲーム＆ネットワークサービス",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 290184000000.0,
+        "employees": 12700,
+        "depreciation": 123065000000.0,
+        "rd_expense": 281600000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "employees": "NumberOfEmployees",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01777_MusicReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01777-000:MusicReportableSegmentMember",
+      "segment_label_ja": "音楽",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 301662000000.0,
+        "employees": 11300,
+        "capex": 67112000000.0,
+        "depreciation": 84576000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "E01777_PicturesReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01777-000:PicturesReportableSegmentMember",
+      "segment_label_ja": "映画",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 117702000000.0,
+        "employees": 9500,
+        "capex": 63391000000.0,
+        "depreciation": 541106000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "E01777_ElectronicsProductsAndSolutionsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01777-000:ElectronicsProductsAndSolutionsReportableSegmentMember",
+      "segment_label_ja": "エンタテインメント・テクノロジー＆サービス",
+      "segment_label_en": null,
+      "values": {
+        "employees": 38700,
+        "rd_expense": 154800000000.0
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01777_ImagingAndSensingSolutionsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01777-000:ImagingAndSensingSolutionsReportableSegmentMember",
+      "segment_label_ja": "イメージング＆センシング・ソリューション",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 193541000000.0,
+        "employees": 19700,
+        "depreciation": 247900000000.0,
+        "rd_expense": 219200000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "employees": "NumberOfEmployees",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01777_FinancialServicesReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01777-000:FinancialServicesReportableSegmentMember",
+      "segment_label_ja": "金融",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 173576000000.0,
+        "employees": 13600,
+        "capex": 22880000000.0,
+        "depreciation": 27689000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "std_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_member_qname": "jpcrp_cor:OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 1900,
+        "capex": 31674000000.0,
+        "rd_expense": 45400000000.0
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 5600
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    },
+    {
+      "segment_id": "E01777_GandNSEPandSandIandSSReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01777-000:GandNSEPandSandIandSSReportableSegmentsMember",
+      "segment_label_ja": "Ｇ＆ＮＳ、ＥＴ＆Ｓ及びＩ＆ＳＳ",
+      "segment_label_en": null,
+      "values": {
+        "capex": 697554000000.0
+      },
+      "source_concepts": {
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc"
+      }
+    },
+    {
+      "segment_id": "E01777_EntertainmentTechnologyAndServicesReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01777-000:EntertainmentTechnologyAndServicesReportableSegmentMember",
+      "segment_label_ja": "エンタテインメント・テクノロジー＆サービス",
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 187399000000.0,
+        "depreciation": 101676000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "std_OtherReportableSegmentsMember",
+      "segment_member_qname": "jpcrp_cor:OtherReportableSegmentsMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {
+        "operating_profit": 1600000000.0,
+        "depreciation": 4830000000.0
+      },
+      "source_concepts": {
+        "operating_profit": "OperatingProfitLossIFRS",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    }
+  ],
+  "reportable_total": {
+    "segment_id": "std_TotalOfReportableSegmentsAndOthersMember",
+    "segment_member_qname": "jpcrp_cor:TotalOfReportableSegmentsAndOthersMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "depreciation": 1130842000000.0
+    },
+    "source_concepts": {
+      "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+    }
+  },
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": "全社（共通）及びセグメント間取引消去",
+    "segment_label_en": null,
+    "values": {
+      "operating_profit": -56833000000.0,
+      "depreciation": 14139000000.0
+    },
+    "source_concepts": {
+      "operating_profit": "OperatingProfitLossIFRS",
+      "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "CDNS",
+  "company_name": "Cadence Design Systems",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 1,
+  "segments": [
+    {
+      "segment_id": "CDNS_Cadence_Design_Systems",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Cadence Design Systems",
+      "values": {
+        "revenue_external": 4641264000,
+        "revenue_total": 4641264000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides electronic design automation (EDA) software and services for semiconductor and system design, marketed and supported through subsidiaries globally."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "The company operates as one reportable operating segment. No separate corporate eliminations or reconciliation items are disclosed."
+  },
+  "reporting_note": "Cadence operates as one operating segment. The CEO evaluates performance and allocates resources based on consolidated results, including net income.",
+  "consolidated_totals_reference": {
+    "revenue": 4641264000,
+    "operating_income": 1350763000,
+    "total_assets": 8974482000
+  }
+}

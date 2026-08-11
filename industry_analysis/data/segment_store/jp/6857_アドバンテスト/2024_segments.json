@@ -1,0 +1,86 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6857",
+  "company_name": "アドバンテスト",
+  "edinet_code": "E02241",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-03-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6857_株式会社アドバンテスト_20240331_有報_S100TTJ3.zip",
+  "segment_count": 4,
+  "segments": [
+    {
+      "segment_id": "E01950_SemiconductorAndComponentTestSystemBusinessReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01950-000:SemiconductorAndComponentTestSystemBusinessReportableSegmentMember",
+      "segment_label_ja": "半導体・部品テストシステム事業",
+      "segment_label_en": null,
+      "values": {
+        "employees": 3503,
+        "capex": 9300000000.0,
+        "depreciation": 14926000000.0
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "E01950_MechatronicsSystemBusinessReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01950-000:MechatronicsSystemBusinessReportableSegmentMember",
+      "segment_label_ja": "メカトロニクス関連事業",
+      "segment_label_en": null,
+      "values": {
+        "employees": 682,
+        "capex": 1200000000.0,
+        "depreciation": 1300000000.0
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "E01950_ServicesSupportAndOthersReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01950-000:ServicesSupportAndOthersReportableSegmentMember",
+      "segment_label_ja": "サービス他",
+      "segment_label_en": null,
+      "values": {
+        "employees": 2353,
+        "capex": 9500000000.0,
+        "depreciation": 8836000000.0
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees",
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc",
+        "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+      }
+    },
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 228
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    }
+  ],
+  "reportable_total": null,
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": "消去または全社",
+    "segment_label_en": null,
+    "values": {
+      "depreciation": 1042000000.0
+    },
+    "source_concepts": {
+      "depreciation": "DepreciationAndAmortizationOperatingExpensesIFRS"
+    }
+  }
+}

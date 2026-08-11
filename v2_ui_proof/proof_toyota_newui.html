@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>トヨタ自動車(7203) | 金脈コード — 新デザイン × 実データ試作</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16213B; --navy2:#27407A; --gold:#C9A227; --gold-d:#8A6D10; --gold-bg:#F6EFD8;
+    --bg:#F2F4F7; --card:#FFFFFF; --ink:#1F2430; --mut:#6B7280; --line:#E2E6EC;
+    --red:#B3403A; --green:#2C6E49; --ice:#EDF1F8;
+    --mincho:"Shippori Mincho",serif;
+    --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:14px;line-height:1.7}
+  .num{font-variant-numeric:tabular-nums}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .siteHead{background:var(--navy);color:#fff;padding:10px 0}
+  .siteHead .wrap{display:flex;align-items:center;gap:18px}
+  .brand{font-family:var(--mincho);font-weight:700;font-size:19px;letter-spacing:.12em;color:#fff}
+  .brand b{color:var(--gold)}
+  .searchBox{flex:1;max-width:380px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:6px;padding:6px 12px;color:#C9D4E8;font-size:12px}
+  .siteNav{display:flex;gap:16px;font-size:12px;color:#C9D4E8}
+  .proofTag{background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:2px 10px;border-radius:99px}
+  .coHead{background:var(--card);border-bottom:1px solid var(--line)}
+  .coHead .wrap{padding:22px 20px 0}
+  .coMeta{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+  .coCode{font-family:var(--mincho);color:var(--gold-d);font-size:15px;letter-spacing:.08em}
+  .coName{font-family:var(--mincho);font-size:27px;font-weight:700;letter-spacing:.04em}
+  .coTags{display:flex;gap:8px;margin-left:auto}
+  .tag{font-size:11px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:2px 10px;background:#fff}
+  .watch{font-size:12px;border:1px solid var(--gold);color:var(--gold-d);border-radius:6px;padding:4px 12px;background:var(--gold-bg)}
+  .updated{font-size:11px;color:var(--mut);margin-top:6px}
+  .tabs{display:flex;gap:2px;margin-top:16px;overflow-x:auto}
+  .tab{padding:10px 18px;font-size:13.5px;font-weight:700;color:var(--mut);border-bottom:3px solid transparent;white-space:nowrap}
+  .tab.on{color:var(--navy);border-bottom-color:var(--gold)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;box-shadow:0 1px 3px rgba(22,33,59,.05)}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:1.4fr 1fr}
+  .eyebrow{font-size:11px;letter-spacing:.18em;color:var(--gold-d);font-weight:700;margin-bottom:6px}
+  .secTitle{font-family:var(--mincho);font-size:18px;font-weight:700;margin-bottom:4px}
+  .secNote{font-size:11.5px;color:var(--mut)}
+  .conf{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;border-radius:99px;padding:1px 9px;font-weight:700}
+  .conf.hi{background:#E7F1EB;color:var(--green)}
+  .conf.md{background:var(--gold-bg);color:var(--gold-d)}
+  .src{font-size:10.5px;color:var(--mut)}
+  .src a{color:var(--navy2);border-bottom:1px dotted var(--navy2);text-decoration:none}
+  .hero{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:16px;align-items:stretch;margin-top:26px}
+  .answer{position:relative;padding-left:34px}
+  .answer .rail{position:absolute;left:10px;top:18px;bottom:18px;width:18px;writing-mode:vertical-rl;font-family:var(--mincho);font-size:10.5px;letter-spacing:.3em;color:var(--gold-d);border-left:2px solid var(--gold);padding-left:4px}
+  .bigNum{font-family:var(--mincho);font-size:40px;font-weight:700;line-height:1.1}
+  .bigNum small{font-size:16px;font-weight:700;color:var(--mut);margin-left:2px}
+  .deltaNote{font-size:12px;color:var(--green);font-weight:700;margin-top:6px}
+  .gauge{display:flex;align-items:center;gap:14px}
+  .gaugeRing{width:84px;height:84px;border-radius:50%;background:conic-gradient(var(--gold) 0 63%, var(--ice) 63% 100%);display:flex;align-items:center;justify-content:center}
+  .gaugeRing i{width:62px;height:62px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-family:var(--mincho);font-weight:700;font-size:19px}
+  .donutWrap{display:flex;gap:16px;align-items:center}
+  .donut{width:104px;height:104px;border-radius:50%;background:conic-gradient(var(--navy) 0 83%, var(--navy2) 83% 91.6%, var(--gold) 91.6% 100%)}
+  .legendDot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:1px}
+  .segList{font-size:12px;line-height:2}
+  .kpiStrip{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:16px}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .kpi .l{font-size:10.5px;color:var(--mut)}
+  .kpi .v{font-family:var(--mincho);font-size:18px;font-weight:700;margin-top:2px}
+  .kpi .c{font-size:10.5px;font-weight:700;margin-top:1px}
+  .pos{color:var(--green)}.neg{color:var(--red)}
+  .wfArea{display:flex;align-items:flex-end;gap:5%;height:230px;padding:10px 8px 0;border-bottom:2px solid var(--line);position:relative;margin-top:24px}
+  .wfCol{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;position:relative}
+  .wfBar{width:100%;border-radius:4px 4px 0 0;transition:all .45s ease;position:relative}
+  .wfBar.float{position:absolute;left:0;right:0;border-radius:4px}
+  .wfVal{position:absolute;top:-22px;left:0;right:0;text-align:center;font-family:var(--mincho);font-weight:700;font-size:13px}
+  .wfLabels{display:flex;gap:5%;padding:8px 8px 0}
+  .wfLabels div{flex:1;text-align:center;font-size:11px;color:var(--mut);line-height:1.45}
+  .scenario{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .scenario button{border:0;background:#fff;padding:7px 16px;font-size:12.5px;font-weight:700;color:var(--mut);font-family:var(--sans)}
+  .scenario button.on{background:var(--navy);color:var(--gold)}
+  table.data{width:100%;border-collapse:collapse;font-size:12.5px}
+  table.data th{background:var(--navy);color:#fff;font-weight:700;text-align:left;padding:8px 12px;font-size:11.5px}
+  table.data td{border-bottom:1px solid var(--line);padding:9px 12px}
+  table.data td.r{text-align:right;font-variant-numeric:tabular-nums}
+  .footNote{font-size:11px;color:var(--mut);background:var(--ice);border-radius:8px;padding:12px 16px;margin-top:16px}
+  .mt16{margin-top:16px}.mt24{margin-top:24px}
+  .panelTitle{font-family:var(--mincho);font-size:15px;font-weight:700;margin:30px 0 0;color:var(--navy)}
+</style>
+</head>
+<body>
+
+<header class="siteHead">
+  <div class="wrap">
+    <div class="brand">金脈<b>コード</b></div>
+    <div class="searchBox">企業名・証券コード・指標で検索…</div>
+    <nav class="siteNav"><span>ランキング</span><span>スクリーナー</span><span>年収</span><span>指標辞典</span><span>EN</span></nav>
+    <span class="proofTag">実データ試作 7203</span>
+  </div>
+</header>
+
+<div class="coHead">
+  <div class="wrap">
+    <div class="coMeta">
+      <span class="coCode">7203 / 東証プライム</span>
+      <h1 class="coName">トヨタ自動車</h1>
+      <div class="coTags">
+        <span class="tag">輸送用機器</span>
+        <span class="tag">IFRS・連結</span>
+        <span class="watch">☆ ウォッチ</span>
+      </div>
+    </div>
+    <div class="updated">最終更新: 2025年3月期 有価証券報告書 反映済み（EDINET S100VWVY）｜ 含み資産は2024年度ベース ｜ 全数値に出典リンクあり</div>
+    <nav class="tabs">
+      <div class="tab on">概要</div>
+      <div class="tab">本当のバランスシート</div>
+      <div class="tab">セグメント</div>
+      <div class="tab">年収・人事</div>
+      <div class="tab">データ検証</div>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- ===== 概要: 答えファースト ===== -->
+  <div class="hero">
+    <div class="card answer">
+      <div class="rail">何で稼ぐか</div>
+      <div class="eyebrow">SEGMENT</div>
+      <div class="donutWrap">
+        <div class="donut"></div>
+        <div class="segList">
+          <span class="legendDot" style="background:var(--navy)"></span>自動車 83.0%<br>
+          <span class="legendDot" style="background:var(--navy2)"></span>金融 8.6%<br>
+          <span class="legendDot" style="background:var(--gold)"></span>その他 8.4%
+        </div>
+      </div>
+      <div class="secNote mt16">売上の約83%が自動車事業。金融(販売金融)が利益率15.4%で稼ぎ頭の一角。</div>
+    </div>
+
+    <div class="card answer">
+      <div class="rail">隠れた価値</div>
+      <div class="eyebrow">HIDDEN ASSETS — 土地の含み益</div>
+      <div class="bigNum num" style="color:var(--navy)">+4.84<small>兆円</small></div>
+      <div class="secNote">賃貸等不動産・土地の含み益（中立シナリオ・税効果前）</div>
+      <div class="deltaNote">土地簿価 2,361億円 → 推定時価 5.08兆円（<b>21.5倍</b>）。取得は戦前(1933年)で簿価は実勢より過小の可能性。</div>
+      <div class="src mt16">根拠: <b>本当のバランスシート</b>タブ（L01地価公示・取引価格・用途地域から推定）</div>
+    </div>
+
+    <div class="card answer">
+      <div class="rail">健全かどうか</div>
+      <div class="eyebrow">資産の質・健全性</div>
+      <div class="gauge">
+        <div class="gaugeRing"><i>63</i></div>
+        <div style="font-size:12px">
+          自己資本比率 <b class="pos">39.4%</b><br>
+          ネットD/EBITDA <b style="color:var(--gold-d)">4.23x</b>(金融含む)<br>
+          含み資産 抽出信頼度 <span class="conf md">medium 0.63</span>
+        </div>
+      </div>
+      <div class="secNote mt16">ROE 12.9% / ROIC 4.4%。データ抽出Confidence: 95.7%（恒等式チェック通過）。</div>
+    </div>
+  </div>
+
+  <!-- KPIストリップ -->
+  <div class="kpiStrip">
+    <div class="kpi"><div class="l">売上高</div><div class="v num">48.0兆</div><div class="c pos num">+6.5%</div></div>
+    <div class="kpi"><div class="l">営業利益</div><div class="v num">4.8兆</div><div class="c neg num">-10.4%</div></div>
+    <div class="kpi"><div class="l">純利益</div><div class="v num">4.8兆</div><div class="c neg num">-3.6%</div></div>
+    <div class="kpi"><div class="l">営業利益率</div><div class="v num">10.0%</div><div class="c">—</div></div>
+    <div class="kpi"><div class="l">ROE</div><div class="v num">12.9%</div><div class="c">—</div></div>
+    <div class="kpi"><div class="l">PER</div><div class="v num">7.3x</div><div class="c">—</div></div>
+  </div>
+
+  <!-- ===== 本当のバランスシート(含み資産) ウォーターフォール ===== -->
+  <div class="panelTitle">本当のバランスシート — 土地の簿価 vs 推定時価</div>
+  <div class="card mt16">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
+      <div>
+        <div class="eyebrow">TRUE BALANCE SHEET</div>
+        <div class="secTitle">土地簿価 2,361億円 → 推定時価 <span id="navv" class="num">5.08兆円</span>（<span id="scn">中立</span>）</div>
+        <div class="secNote">含み益 <b id="gain" class="num" style="color:var(--navy);font-size:16px">+4.84兆円</b>（市場価値 ÷ 簿価 = <b>21.5倍</b>）</div>
+      </div>
+      <div class="scenario" id="scnBtns">
+        <button data-s="cons">保守</button>
+        <button data-s="base" class="on">中立</button>
+        <button data-s="full">強気</button>
+      </div>
+    </div>
+
+    <div class="wfArea" id="wf">
+      <div class="wfCol"><div class="wfBar" id="b1" style="background:var(--navy2)"><div class="wfVal num">2,361億</div></div></div>
+      <div class="wfCol"><div class="wfBar float" id="b2" style="background:var(--green)"><div class="wfVal num pos" id="v2">+4.84兆</div></div></div>
+      <div class="wfCol"><div class="wfBar" id="b3" style="background:var(--gold)"><div class="wfVal num" id="v3">5.08兆</div></div></div>
+    </div>
+    <div class="wfLabels">
+      <div>土地簿価<br>(連結B/S)</div>
+      <div>含み益<br><span id="l2">中立: +4.84兆</span></div>
+      <div><b>推定時価</b></div>
+    </div>
+    <div class="secNote mt16" id="scnDesc">中立シナリオ: 地価公示・取引価格の中央値ベースで推定した時価。3シナリオは hiddenAssets.scenarios の実データ。</div>
+  </div>
+
+  <div class="grid g2 mt16">
+    <div class="card">
+      <h4 style="font-size:13.5px;font-weight:700;margin-bottom:10px">内訳 — 何がいくらあるのか（実データ）</h4>
+      <table class="data">
+        <tr><th>項目</th><th style="text-align:right">金額</th><th>出典 / 信頼度</th></tr>
+        <tr><td>対象施設数 / 価格付け済</td><td class="r num">20件 / 10件</td><td><span class="conf hi">カバー率 97.4%</span></td></tr>
+        <tr><td>土地簿価（価格付け対象）</td><td class="r num">2,361億円</td><td><span class="conf hi">タグ一致</span></td></tr>
+        <tr><td>推定時価（中立）</td><td class="r num">5.08兆円</td><td><span class="conf md">地価DB推定</span></td></tr>
+        <tr><td>含み益（保守）</td><td class="r num">2.21兆円</td><td class="src">P25ベース</td></tr>
+        <tr><td>含み益（中立）</td><td class="r num pos">+4.84兆円</td><td class="src"><a href="#">地点別明細</a></td></tr>
+        <tr><td>含み益（強気）</td><td class="r num">5.58兆円</td><td class="src">P75ベース</td></tr>
+      </table>
+      <div class="src mt16">取得時代: 戦前(1933年) → 簿価は実勢より過小と推定（bookBiasHint: likely_understated）。</div>
+    </div>
+    <div class="card">
+      <h4 style="font-size:13.5px;font-weight:700;margin-bottom:10px">サブ指標</h4>
+      <table class="data">
+        <tr><th>指標</th><th style="text-align:right">値</th><th>意味</th></tr>
+        <tr><td>市場価値 / 簿価 倍率</td><td class="r num"><b>21.5x</b></td><td style="font-size:11px">業界P95(21.5)水準の土地含み</td></tr>
+        <tr><td>含み益 / 土地簿価</td><td class="r num"><b>20.5</b></td><td style="font-size:11px">簿価の約20倍の含み益</td></tr>
+        <tr><td>抽出Confidence</td><td class="r num">0.63</td><td style="font-size:11px">medium（分散やや大）</td></tr>
+        <tr><td>事業集中度 HHI</td><td class="r num">7,032</td><td style="font-size:11px">自動車83% に集中</td></tr>
+      </table>
+      <div class="footNote">⚠ 試作メモ: 「開示PBR→実質PBR」の対比表示には時価総額(株数×株価)が必要で、現状データに株価フィールドが無いため後でバックエンド補完予定。含み益・3シナリオ・倍率は実データ。自社利用不動産の含みは時価開示対象外で本指標に含まれない。</div>
+    </div>
+  </div>
+
+  <div class="footNote">これは「キンミャクコードv2」提案の企業ページUIを、トヨタ自動車(7203)の<b>実データ</b>（public/data/7203.json）に結線した試作です。数値は hiddenAssets.scenarios / summary / kpis / segments / metrics の実値。架空企業ではありません。</div>
+</main>
+
+<script>
+  // 3シナリオ = hiddenAssets.scenarios の実データ (百万円→兆円)
+  const SCN={
+    cons:{name:'保守', gainMil:2213957, label:'保守: P25(下限)ベースの含み益', l2:'保守: +2.21兆'},
+    base:{name:'中立', gainMil:4840535, label:'中立シナリオ: 地価公示・取引価格の中央値ベースで推定した時価。', l2:'中立: +4.84兆'},
+    full:{name:'強気', gainMil:5578948, label:'強気: P75(上限)ベースの含み益', l2:'強気: +5.58兆'}
+  };
+  const BOOK_MIL=236142; // 土地簿価(百万円)
+  const fmtCho=mil=>{const cho=mil/1000000; return cho>=1? cho.toFixed(2)+'兆円' : Math.round(mil/100)+'億円';};
+  const btns=document.querySelectorAll('#scnBtns button');
+  function set(key){
+    btns.forEach(b=>b.classList.toggle('on',b.dataset.s===key));
+    const d=SCN[key]; const marketMil=BOOK_MIL+d.gainMil;
+    const MAX=6000000, H=230-30, px=v=>Math.round(v/MAX*H);
+    const b1=document.getElementById('b1'),b2=document.getElementById('b2'),b3=document.getElementById('b3');
+    b1.style.height=px(BOOK_MIL)+'px';
+    b2.style.height=px(d.gainMil)+'px'; b2.style.bottom=px(BOOK_MIL)+'px';
+    b3.style.height=px(marketMil)+'px';
+    document.getElementById('v2').textContent='+'+fmtCho(d.gainMil);
+    document.getElementById('v3').textContent=fmtCho(marketMil);
+    document.getElementById('navv').textContent=fmtCho(marketMil);
+    document.getElementById('gain').textContent='+'+fmtCho(d.gainMil);
+    document.getElementById('scn').textContent=d.name;
+    document.getElementById('scnDesc').textContent=d.label;
+    document.getElementById('l2').textContent=d.l2;
+  }
+  btns.forEach(b=>b.addEventListener('click',()=>set(b.dataset.s)));
+  set('base');
+</script>
+</body>
+</html>

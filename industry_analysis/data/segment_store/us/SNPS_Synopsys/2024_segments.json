@@ -1,0 +1,51 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "SNPS",
+  "company_name": "Synopsys",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 2,
+  "segments": [
+    {
+      "segment_id": "SNPS_Design_Automation",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Design Automation",
+      "values": {
+        "revenue_external": 4221122000,
+        "revenue_total": 4221122000,
+        "operating_profit": 1631885000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides electronic design automation software tools for semiconductor chip design and verification."
+    },
+    {
+      "segment_id": "SNPS_Design_IP",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Design IP",
+      "values": {
+        "revenue_external": 1906314000,
+        "revenue_total": 1906314000,
+        "operating_profit": 730174000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells intellectual property (IP) cores and platform solutions for semiconductor design."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "Total assets by segment are not disclosed as the CODM does not use them for performance evaluation or resource allocation."
+  },
+  "reporting_note": "Software Integrity segment results are excluded as they are presented as discontinued operations. All financial figures converted from thousands to actual dollars.",
+  "consolidated_totals_reference": {
+    "revenue": 6127436000,
+    "operating_income": 1355711000,
+    "total_assets": 13073561000
+  }
+}

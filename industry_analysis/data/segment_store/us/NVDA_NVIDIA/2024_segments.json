@@ -1,0 +1,51 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "NVDA",
+  "company_name": "NVIDIA",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "segment_count": 2,
+  "segments": [
+    {
+      "segment_id": "NVDA_Compute_Networking",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Compute & Networking",
+      "values": {
+        "revenue_external": 47405000000,
+        "revenue_total": 47405000000,
+        "operating_profit": 32016000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Provides computing and networking solutions, including data center infrastructure, AI accelerators, and networking hardware for enterprise and cloud computing applications."
+    },
+    {
+      "segment_id": "NVDA_Graphics",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "Graphics",
+      "values": {
+        "revenue_external": 13517000000,
+        "revenue_total": 13517000000,
+        "operating_profit": 5846000000
+      },
+      "source_concepts": {
+        "source": "10K_LLM_extraction"
+      },
+      "description": "Sells graphics processing units (GPUs) for gaming consoles, PCs, and professional visualization tools used in design, engineering, and media production."
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "All Other category includes reconciling items such as stock-based compensation, unallocated costs, acquisition-related expenses, IP-related costs, and other non-recurring charges not allocated to reportable segments."
+  },
+  "reporting_note": "The company reports two operating segments: Compute & Networking and Graphics. The 'All Other' category contains reconciling items not attributable to specific segments. Segment assets are not disclosed as the CODM does not review asset information by segment.",
+  "consolidated_totals_reference": {
+    "revenue": 60922000000,
+    "operating_income": 32972000000,
+    "total_assets": 65728000000
+  }
+}

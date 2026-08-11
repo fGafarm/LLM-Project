@@ -1,0 +1,37 @@
+{
+  "source": "us_10k_llm",
+  "ticker": "KLAC",
+  "company_name": "KLA",
+  "fiscal_year": 2024,
+  "model": "qwen3:14b",
+  "single_segment_fallback": true,
+  "segment_count": 1,
+  "segments": [
+    {
+      "segment_id": "KLAC_WHOLE_COMPANY",
+      "segment_member_qname": "",
+      "segment_label_ja": null,
+      "segment_label_en": "KLA (whole company / single segment)",
+      "values": {
+        "revenue_external": 9812247000,
+        "revenue_total": 9812247000,
+        "segment_assets": 15433566000
+      },
+      "source_concepts": {
+        "source": "us_xbrl_store_aggregate_single_segment"
+      },
+      "description": null
+    }
+  ],
+  "reconciling": {
+    "corporate_eliminations_revenue": null,
+    "corporate_eliminations_operating_income": null,
+    "note": "No segment data found in the provided excerpt. The text references Note 19 for segment reporting but does not include the actual segment names, revenues, operating incomes, or asset data in the excerpted content."
+  },
+  "reporting_note": "The provided 10-K excerpt does not contain the specific segment-level financial data (revenue, operating income, assets) or segment names required for extraction. References to segment reporting are indirect (e.g., 'Refer to Note 19...'), but Note 19 itself is not included in the text.",
+  "consolidated_totals_reference": {
+    "revenue": 9812247000,
+    "operating_income": null,
+    "total_assets": 15433566000
+  }
+}

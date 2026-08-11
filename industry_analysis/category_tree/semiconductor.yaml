@@ -1,0 +1,439 @@
+# 半導体業界カテゴリツリー (v0.1, 2026-04-19)
+# 設計方針:
+#   - 製品ベース(事業所ベースではない)
+#   - 半導体バリューチェーンの主要領域を Level 4 まで展開
+#   - "aliases" はマッピング時のキーワードヒント (JP/EN混在)
+#   - "_other.*" は半導体以外/全社/消去 用の逃げバケツ
+
+- id: semi
+  level: 1
+  name_ja: 半導体
+  name_en: Semiconductor
+  children:
+
+    # ===== デバイス =====
+    - id: semi.device
+      level: 2
+      name_ja: 半導体デバイス
+      name_en: Semiconductor Devices
+      children:
+        - id: semi.device.logic_gpu
+          level: 3
+          name_ja: ロジック・GPU・アクセラレータ
+          name_en: Logic / GPU / Accelerator
+          aliases:
+            - GPU
+            - ロジックIC
+            - アクセラレータ
+            - Accelerated Computing
+            - Data Center
+            - Compute & Networking
+            - Graphics
+            - ASIC
+            - FPGA
+        - id: semi.device.cpu_mcu
+          level: 3
+          name_ja: CPU・MCU・SoC
+          name_en: CPU / MCU / SoC
+          aliases:
+            - CPU
+            - マイコン
+            - MCU
+            - Microcontroller
+            - Client Computing
+            - Automotive SoC
+            - Handset
+            - QCT
+        - id: semi.device.memory
+          level: 3
+          name_ja: メモリ(DRAM/NAND)
+          name_en: Memory (DRAM/NAND)
+          aliases:
+            - DRAM
+            - NAND
+            - メモリ
+            - Memory
+            - Storage
+            - SSD
+        - id: semi.device.analog
+          level: 3
+          name_ja: アナログ・ミックスドシグナル
+          name_en: Analog / Mixed-signal
+          aliases:
+            - アナログ
+            - Analog
+            - Mixed-signal
+            - Embedded Processing
+            - Industrial
+        - id: semi.device.power
+          level: 3
+          name_ja: パワー半導体
+          name_en: Power Semiconductor
+          aliases:
+            - パワー半導体
+            - Power Semiconductor
+            - SiC
+            - IGBT
+            - パワーモジュール
+            - パワエレ
+            - Power Electronics
+        - id: semi.device.image_sensor
+          level: 3
+          name_ja: イメージセンサー
+          name_en: Image Sensor
+          aliases:
+            - CMOS
+            - CIS
+            - Image Sensor
+            - イメージング
+            - Imaging & Sensing
+            - I&SS
+            - CMOSイメージセンサー
+        - id: semi.device.optical
+          level: 3
+          name_ja: 光半導体・光電子
+          name_en: Optical / Optoelectronic
+          aliases:
+            - LED
+            - Laser Diode
+            - 光半導体
+            - 光電子
+            - フォトダイオード
+            - 光検出器
+            - PMT
+            - SiPM
+            - オプト
+        - id: semi.device.rf_wireless
+          level: 3
+          name_ja: 通信・RF・ワイヤレス
+          name_en: RF / Wireless / Connectivity
+          aliases:
+            - RF
+            - Wireless
+            - Connectivity
+            - Modem
+            - WiFi
+            - 5G
+            - 通信IC
+        - id: semi.device.auto
+          level: 3
+          name_ja: 車載半導体
+          name_en: Automotive Semiconductor
+          aliases:
+            - Automotive
+            - 車載
+            - Vehicle
+            - Automotive Business
+        - id: semi.device.discrete
+          level: 3
+          name_ja: ディスコート・小信号
+          name_en: Discrete / Small-signal
+          aliases:
+            - ディスクリート
+            - Discrete
+            - Small-signal
+            - ダイオード
+
+    # ===== 製造装置 =====
+    - id: semi.equipment
+      level: 2
+      name_ja: 半導体製造装置
+      name_en: Semiconductor Equipment
+      children:
+        - id: semi.equipment.litho
+          level: 3
+          name_ja: 露光装置
+          name_en: Lithography
+          aliases:
+            - 露光
+            - Lithography
+            - Exposure
+            - EUV
+            - Stepper
+        - id: semi.equipment.coater_dev
+          level: 3
+          name_ja: コータ・デベロッパ
+          name_en: Coater / Developer (Track)
+          aliases:
+            - 塗布現像
+            - Coater
+            - Developer
+            - Track
+        - id: semi.equipment.etch
+          level: 3
+          name_ja: エッチング装置
+          name_en: Etch
+          aliases:
+            - エッチング
+            - Etch
+            - Plasma Etch
+        - id: semi.equipment.deposition
+          level: 3
+          name_ja: 成膜装置(CVD/PVD/ALD/Epi)
+          name_en: Deposition (CVD/PVD/ALD/Epi)
+          aliases:
+            - 成膜
+            - CVD
+            - PVD
+            - ALD
+            - Epitaxy
+            - Deposition
+            - Thermal Processing
+        - id: semi.equipment.cmp_clean
+          level: 3
+          name_ja: 洗浄・CMP
+          name_en: Cleaning / CMP
+          aliases:
+            - 洗浄
+            - Cleaning
+            - CMP
+            - Polishing
+        - id: semi.equipment.inspection
+          level: 3
+          name_ja: 検査・測定(Inspection/Metrology)
+          name_en: Inspection / Metrology
+          aliases:
+            - 検査
+            - 測定
+            - Inspection
+            - Metrology
+            - Defect Review
+            - Mask Inspection
+            - EUV Mask
+        - id: semi.equipment.test
+          level: 3
+          name_ja: テスタ・プローバ
+          name_en: Test / Prober (ATE)
+          aliases:
+            - テスター
+            - テスタ
+            - Test
+            - ATE
+            - Automated Test Equipment
+            - Prober
+        - id: semi.equipment.dicing_grind
+          level: 3
+          name_ja: ダイシング・グラインダ
+          name_en: Dicing / Grinder
+          aliases:
+            - ダイシング
+            - Dicing
+            - Grinder
+            - Back Grind
+            - Kiru
+            - Kezuru
+            - Migaku
+        - id: semi.equipment.assembly_package
+          level: 3
+          name_ja: 組立・パッケージング装置
+          name_en: Assembly / Packaging Equipment
+          aliases:
+            - パッケージング
+            - Packaging
+            - Bonding
+            - ワイヤボンダ
+            - モールディング
+            - Molding
+        - id: semi.equipment.ion_implant
+          level: 3
+          name_ja: イオン注入装置
+          name_en: Ion Implant
+          aliases:
+            - イオン注入
+            - Ion Implant
+
+    # ===== 材料 =====
+    - id: semi.materials
+      level: 2
+      name_ja: 半導体材料
+      name_en: Semiconductor Materials
+      children:
+        - id: semi.materials.wafer
+          level: 3
+          name_ja: シリコンウェハー・SOI
+          name_en: Silicon Wafer
+          aliases:
+            - ウェハ
+            - ウェハー
+            - Silicon Wafer
+            - シリコン単結晶
+            - SOI
+            - 半導体シリコン
+        - id: semi.materials.photo
+          level: 3
+          name_ja: フォトレジスト・現像剤
+          name_en: Photoresist
+          aliases:
+            - フォトレジスト
+            - Photoresist
+            - 感光材
+            - 現像液
+        - id: semi.materials.substrate
+          level: 3
+          name_ja: パッケージ基板・インターポーザ
+          name_en: Package Substrate / Interposer
+          aliases:
+            - 基板
+            - ICパッケージ基板
+            - Package Substrate
+            - ABF
+            - Interposer
+            - Flip Chip
+        - id: semi.materials.cmp_slurry
+          level: 3
+          name_ja: CMPスラリー・パッド
+          name_en: CMP Slurry / Pad
+          aliases:
+            - CMP
+            - Slurry
+            - スラリー
+            - CMPパッド
+        - id: semi.materials.gas
+          level: 3
+          name_ja: 電子材料ガス
+          name_en: Electronic Gases
+          aliases:
+            - 特殊ガス
+            - Electronic Gas
+            - Process Gas
+            - Specialty Gas
+        - id: semi.materials.chem
+          level: 3
+          name_ja: 電子材料薬液
+          name_en: Wet Chemicals
+          aliases:
+            - 薬液
+            - Wet Chemical
+            - 超純水以外の電子薬液
+            - Solvent
+        - id: semi.materials.target
+          level: 3
+          name_ja: ターゲット・スパッタ材
+          name_en: Sputter Target
+          aliases:
+            - ターゲット
+            - Target
+            - Sputter
+            - 高純度金属材
+        - id: semi.materials.micro_contam
+          level: 3
+          name_ja: 濾過・純化・搬送(Microcontamination Control)
+          name_en: Microcontamination Control
+          aliases:
+            - Microcontamination
+            - Filtration
+            - Purifier
+            - Liquid Systems
+            - Gas Systems
+            - Mass Flow
+        - id: semi.materials.other
+          level: 3
+          name_ja: その他電子材料
+          name_en: Other Electronic Materials
+          aliases:
+            - Electronic Materials
+            - 電子材料
+            - パッケージ材料
+            - Underfill
+            - Die Attach
+
+    # ===== EDA/IP =====
+    - id: semi.eda_ip
+      level: 2
+      name_ja: EDA・半導体IP
+      name_en: EDA / Semiconductor IP
+      aliases:
+        - EDA
+        - Electronic Design Automation
+        - Semiconductor IP
+        - Design Automation
+        - IP Cores
+        - Design & Verification
+        - System Design
+        - IC Digital Design
+      children:
+        - id: semi.eda_ip.eda_tools
+          level: 3
+          name_ja: EDAツール
+          name_en: EDA Tools
+          aliases:
+            - Design Automation
+            - EDA Software
+            - Digital Design
+        - id: semi.eda_ip.ip_cores
+          level: 3
+          name_ja: 半導体IPコア
+          name_en: IP Cores
+          aliases:
+            - IP Core
+            - Design IP
+            - Semiconductor IP
+
+    # ===== 周辺電子部品 =====
+    - id: semi.components
+      level: 2
+      name_ja: 電子部品(半導体周辺)
+      name_en: Electronic Components
+      children:
+        - id: semi.components.mlcc
+          level: 3
+          name_ja: MLCC・積層セラミックコンデンサ
+          name_en: MLCC / Ceramic Capacitor
+          aliases:
+            - MLCC
+            - 積層セラミック
+            - Ceramic Capacitor
+            - Capacitor
+            - コンデンサ
+        - id: semi.components.inductor
+          level: 3
+          name_ja: インダクタ・コイル
+          name_en: Inductor / Coil
+          aliases:
+            - インダクタ
+            - Inductor
+            - Coil
+            - コイル
+        - id: semi.components.filter_saw
+          level: 3
+          name_ja: SAW/BAWフィルタ
+          name_en: SAW / BAW Filter
+          aliases:
+            - SAW
+            - BAW
+            - Filter
+            - フィルタ
+            - RF Filter
+
+# ===== 半導体以外 / 逃げバケツ =====
+- id: _other
+  level: 1
+  name_ja: 対象外/その他
+  children:
+    - id: _other.non_semi
+      level: 2
+      name_ja: 半導体以外の事業
+      aliases:
+        - 医療機器
+        - 工作機械
+        - 家電
+        - 建機
+        - 化学(非半導体)
+        - PVD for non-semi
+        - General Industrial
+        - Healthcare
+        - Consumer
+        - Industrial Solutions
+    - id: _other.unspecified
+      level: 2
+      name_ja: 未分類・全社・消去
+      aliases:
+        - その他
+        - 全社
+        - 調整
+        - 消去
+        - Corporate
+        - Eliminations
+        - Other
+        - Reconciling Items
+        - All Other

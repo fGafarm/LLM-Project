@@ -1,0 +1,207 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6965",
+  "company_name": "浜松ホトニクス",
+  "edinet_code": "E02103",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-09-30",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6965_浜松ホトニクス株式会社_20240930_有報_S100UZ7A.zip",
+  "segment_count": 6,
+  "segments": [
+    {
+      "segment_id": "E01955_ElectronTubeReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01955-000:ElectronTubeReportableSegmentsMember",
+      "segment_label_ja": "電子管",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 77679000000.0,
+        "revenue_total": 78456000000.0,
+        "revenue_internal": 776000000.0,
+        "operating_profit": 23818000000.0,
+        "segment_assets": 81419000000.0,
+        "employees": 2132,
+        "capex": 6283000000.0,
+        "depreciation": 5726000000.0,
+        "rd_expense": 3555000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01955_OptoSemiconductorReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01955-000:OptoSemiconductorReportableSegmentsMember",
+      "segment_label_ja": "光半導体",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 78191000000.0,
+        "revenue_total": 78862000000.0,
+        "revenue_internal": 670000000.0,
+        "operating_profit": 17894000000.0,
+        "segment_assets": 111216000000.0,
+        "employees": 1864,
+        "capex": 19580000000.0,
+        "depreciation": 6976000000.0,
+        "rd_expense": 2387000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01955_ImagingAndMeasurementInstrumentsReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01955-000:ImagingAndMeasurementInstrumentsReportableSegmentsMember",
+      "segment_label_ja": "画像計測機器",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 32746000000.0,
+        "revenue_total": 32827000000.0,
+        "revenue_internal": 81000000.0,
+        "operating_profit": 10420000000.0,
+        "segment_assets": 30643000000.0,
+        "employees": 639,
+        "capex": 3925000000.0,
+        "depreciation": 1298000000.0,
+        "rd_expense": 745000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01955_LaserReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E01955-000:LaserReportableSegmentsMember",
+      "segment_label_ja": "レーザ",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 10716000000.0,
+        "revenue_total": 10819000000.0,
+        "revenue_internal": 103000000.0,
+        "operating_profit": -204000000.0,
+        "segment_assets": 49153000000.0,
+        "employees": 585,
+        "capex": 32935000000.0,
+        "depreciation": 559000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation"
+      }
+    },
+    {
+      "segment_id": "std_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_member_qname": "jpcrp_cor:OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 4627000000.0,
+        "revenue_total": 4756000000.0,
+        "revenue_internal": 129000000.0,
+        "operating_profit": 1129000000.0,
+        "segment_assets": 7792000000.0,
+        "employees": 483,
+        "capex": 609000000.0,
+        "depreciation": 267000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation"
+      }
+    },
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "employees": 692
+      },
+      "source_concepts": {
+        "employees": "NumberOfEmployees"
+      }
+    }
+  ],
+  "reportable_total": {
+    "segment_id": "std_TotalOfReportableSegmentsAndOthersMember",
+    "segment_member_qname": "jpcrp_cor:TotalOfReportableSegmentsAndOthersMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_external": 203961000000.0,
+      "revenue_total": 205722000000.0,
+      "revenue_internal": 1760000000.0,
+      "operating_profit": 53058000000.0,
+      "segment_assets": 280224000000.0,
+      "capex": 63334000000.0,
+      "depreciation": 14829000000.0
+    },
+    "source_concepts": {
+      "revenue_external": "RevenuesFromExternalCustomers",
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "segment_assets": "Assets",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  },
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_total": -1760000000.0,
+      "revenue_internal": -1760000000.0,
+      "operating_profit": -20940000000.0,
+      "segment_assets": 154410000000.0,
+      "capex": 419000000.0,
+      "depreciation": 1865000000.0
+    },
+    "source_concepts": {
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "segment_assets": "Assets",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  }
+}

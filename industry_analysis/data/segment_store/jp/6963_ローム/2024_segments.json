@@ -1,0 +1,183 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "6963",
+  "company_name": "ローム",
+  "edinet_code": "E02081",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-03-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\6963_ローム株式会社_20240331_有報_S100TS31.zip",
+  "segment_count": 6,
+  "segments": [
+    {
+      "segment_id": "E01953_ICsReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01953-000:ICsReportableSegmentMember",
+      "segment_label_ja": "ＬＳＩ",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 207222000000.0,
+        "revenue_total": 208948000000.0,
+        "revenue_internal": 1726000000.0,
+        "operating_profit": 21269000000.0,
+        "segment_assets": 224103000000.0,
+        "capex": 42714000000.0,
+        "depreciation": 32443000000.0,
+        "rd_expense": 24179000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01953_DiscreteSemiconductorDevicesReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01953-000:DiscreteSemiconductorDevicesReportableSegmentMember",
+      "segment_label_ja": "半導体素子",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 201948000000.0,
+        "revenue_total": 206192000000.0,
+        "revenue_internal": 4243000000.0,
+        "operating_profit": 12964000000.0,
+        "segment_assets": 336532000000.0,
+        "capex": 130969000000.0,
+        "depreciation": 34632000000.0,
+        "rd_expense": 18451000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "E01953_ModulesReportableSegmentMember",
+      "segment_member_qname": "jpcrp030000-asr_E01953-000:ModulesReportableSegmentMember",
+      "segment_label_ja": "モジュール",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 32908000000.0,
+        "revenue_total": 32978000000.0,
+        "revenue_internal": 70000000.0,
+        "operating_profit": 2005000000.0,
+        "segment_assets": 16833000000.0,
+        "capex": 1188000000.0,
+        "depreciation": 2510000000.0,
+        "rd_expense": 1074000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_member_qname": "jpcrp_cor:OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 25701000000.0,
+        "revenue_total": 25765000000.0,
+        "revenue_internal": 64000000.0,
+        "operating_profit": 2154000000.0,
+        "segment_assets": 24532000000.0,
+        "capex": 1808000000.0,
+        "depreciation": 2741000000.0,
+        "rd_expense": 717000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "segment_assets": "Assets",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation",
+        "rd_expense": "ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"
+      }
+    },
+    {
+      "segment_id": "std_CorporateSharedMember",
+      "segment_member_qname": "jpcrp_cor:CorporateSharedMember",
+      "segment_label_ja": "その他・全社",
+      "segment_label_en": null,
+      "values": {
+        "capex": 10074000000.0
+      },
+      "source_concepts": {
+        "capex": "CapitalExpendituresOverviewOfCapitalExpendituresEtc"
+      }
+    },
+    {
+      "segment_id": "std_UnallocatedAmountsAndEliminationMember",
+      "segment_member_qname": "jpcrp_cor:UnallocatedAmountsAndEliminationMember",
+      "segment_label_ja": null,
+      "segment_label_en": null,
+      "values": {},
+      "source_concepts": {}
+    }
+  ],
+  "reportable_total": {
+    "segment_id": "std_TotalOfReportableSegmentsAndOthersMember",
+    "segment_member_qname": "jpcrp_cor:TotalOfReportableSegmentsAndOthersMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_external": 467780000000.0,
+      "revenue_total": 473885000000.0,
+      "revenue_internal": 6104000000.0,
+      "operating_profit": 38394000000.0,
+      "segment_assets": 602002000000.0,
+      "capex": 176681000000.0,
+      "depreciation": 72328000000.0
+    },
+    "source_concepts": {
+      "revenue_external": "RevenuesFromExternalCustomers",
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "segment_assets": "Assets",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  },
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_total": -6104000000.0,
+      "revenue_internal": -6104000000.0,
+      "operating_profit": 4932000000.0,
+      "segment_assets": 879272000000.0,
+      "capex": 10074000000.0,
+      "depreciation": -258000000.0
+    },
+    "source_concepts": {
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "segment_assets": "Assets",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  }
+}

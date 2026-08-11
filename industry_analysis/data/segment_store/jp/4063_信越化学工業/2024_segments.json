@@ -1,0 +1,151 @@
+{
+  "source": "jp_xbrl",
+  "company_code": "4063",
+  "company_name": "信越化学工業",
+  "edinet_code": "E00776",
+  "fiscal_year": 2024,
+  "single_segment_fallback": false,
+  "fiscal_period_end": "2024-03-31",
+  "xbrl_zip": "E:\\PDF\\PDF+XBRL\\2024\\有報\\4063_信越化学工業株式会社_20240331_有報_S100TO0V.zip",
+  "segment_count": 4,
+  "segments": [
+    {
+      "segment_id": "E00776_InfrastructureMaterialsReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E00776-000:InfrastructureMaterialsReportableSegmentsMember",
+      "segment_label_ja": "生活環境基盤材料事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 1010275000000.0,
+        "revenue_total": 1015249000000.0,
+        "revenue_internal": 4974000000.0,
+        "operating_profit": 321961000000.0,
+        "employees": 1862,
+        "capex": 128438000000.0,
+        "depreciation": 78254000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation"
+      }
+    },
+    {
+      "segment_id": "E00776_ElectronicsMaterialsReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E00776-000:ElectronicsMaterialsReportableSegmentsMember",
+      "segment_label_ja": "電子材料事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 850442000000.0,
+        "revenue_total": 855385000000.0,
+        "revenue_internal": 4943000000.0,
+        "operating_profit": 272165000000.0,
+        "employees": 12451,
+        "capex": 211342000000.0,
+        "depreciation": 105632000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation"
+      }
+    },
+    {
+      "segment_id": "E00776_FunctionalMaterialsReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E00776-000:FunctionalMaterialsReportableSegmentsMember",
+      "segment_label_ja": "機能材料事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 425250000000.0,
+        "revenue_total": 445278000000.0,
+        "revenue_internal": 20027000000.0,
+        "operating_profit": 85004000000.0,
+        "employees": 4334,
+        "capex": 52539000000.0,
+        "depreciation": 38466000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation"
+      }
+    },
+    {
+      "segment_id": "E00776_DiversifiedBusinessReportableSegmentsMember",
+      "segment_member_qname": "jpcrp030000-asr_E00776-000:DiversifiedBusinessReportableSegmentsMember",
+      "segment_label_ja": "加工・商事・技術サービス事業",
+      "segment_label_en": null,
+      "values": {
+        "revenue_external": 128969000000.0,
+        "revenue_total": 273459000000.0,
+        "revenue_internal": 144489000000.0,
+        "operating_profit": 24156000000.0,
+        "employees": 7357,
+        "capex": 18223000000.0,
+        "depreciation": 5621000000.0
+      },
+      "source_concepts": {
+        "revenue_external": "RevenuesFromExternalCustomers",
+        "revenue_total": "NetSales",
+        "revenue_internal": "TransactionsWithOtherSegments",
+        "operating_profit": "OperatingIncome",
+        "employees": "NumberOfEmployees",
+        "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+        "depreciation": "DepreciationSegmentInformation"
+      }
+    }
+  ],
+  "reportable_total": {
+    "segment_id": "std_ReportableSegmentsMember",
+    "segment_member_qname": "jpcrp_cor:ReportableSegmentsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_external": 2414937000000.0,
+      "revenue_total": 2589372000000.0,
+      "revenue_internal": 174435000000.0,
+      "operating_profit": 703288000000.0,
+      "capex": 410544000000.0,
+      "depreciation": 227974000000.0
+    },
+    "source_concepts": {
+      "revenue_external": "RevenuesFromExternalCustomers",
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  },
+  "reconciling": {
+    "segment_id": "std_ReconcilingItemsMember",
+    "segment_member_qname": "jpcrp_cor:ReconcilingItemsMember",
+    "segment_label_ja": null,
+    "segment_label_en": null,
+    "values": {
+      "revenue_total": -174435000000.0,
+      "revenue_internal": -174435000000.0,
+      "operating_profit": -2249000000.0,
+      "capex": -3658000000.0,
+      "depreciation": -1226000000.0
+    },
+    "source_concepts": {
+      "revenue_total": "NetSales",
+      "revenue_internal": "TransactionsWithOtherSegments",
+      "operating_profit": "OperatingIncome",
+      "capex": "IncreaseInPropertyPlantAndEquipmentAndIntangibleAssets",
+      "depreciation": "DepreciationSegmentInformation"
+    }
+  }
+}
